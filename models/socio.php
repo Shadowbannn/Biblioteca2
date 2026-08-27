@@ -6,12 +6,12 @@ class Socio {
     private string $nombre;
     private string $apellido;
     private string $cedula;
-    private int    $telefono;
-    private string    $fecha_registro;
+    private string    $telefono;
+    private int    $fecha_registro;
 
     // --- CONSTRUCTOR ---
     public function __construct(string $nombre, string $apellido, string $cedula,
-                                int $telefono, string $fecha_registro,
+                                string $telefono, int $fecha_registro,
                                 ?int $id = null) {
         $this->nombre          = $nombre;
         $this->apellido        = $apellido;
@@ -62,7 +62,7 @@ class Socio {
             $f['nombre'],
             $f['apellido'],
             $f['cedula'],
-            (int) $f['telefono'],
+            (string) $f['telefono'],
             (int) $f['fecha_registro'],
             (int) $f['id'],
         );
@@ -100,7 +100,7 @@ class Socio {
     }
 
     public static function crear(PDO $pdo, string $nombre, string $apellido, int $cedula, string $telefono,
-                                  string $fecha_registro, int $id): bool {
+                                  int $fecha_registro, int $id): bool {
         $stmt = $pdo->prepare(
             "INSERT INTO socios (nombre, apellido, cedula, fecha_registro, telefono, id)
              VALUES (?, ?, ?, ?, ?, ?)"
@@ -109,7 +109,7 @@ class Socio {
     }
 
     public static function actualizar(PDO $pdo, string $nombre, string $apellido, int $cedula, string $telefono,
-                                  string $fecha_registro, int $id): bool {
+                                  int $fecha_registro, int $id): bool {
         $stmt = $pdo->prepare(
             "UPDATE socios
              SET nombre = ?, apellido = ?, cedula = ?, telefono = ?, fecha_registro = ?,

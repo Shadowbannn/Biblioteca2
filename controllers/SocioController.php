@@ -43,7 +43,6 @@ function crearSocio() {
     global $pdo;
 
     $nombre         = trim($_POST['nombre'] ?? '');
-    $apellido       = trim($_POST['apellido'] ?? '');
     $cedula         = trim($_POST['cedula'] ?? '');
     $telefono       = $_POST['telefono'] ?? '';
     $fecha_registro = $_POST['fecha_registro'] ?? '';
@@ -56,7 +55,7 @@ function crearSocio() {
     }
 
 
-    Socio::crear($pdo, $nombre, $apellido, $cedula, (int) $telefono, (string) $fecha_registro);
+    Socio::crear($pdo, $nombre, $apellido, $cedula, (string) $telefono, (int) $fecha_registro);
 
     header('Location: index.php?accion=listarSocios');
     exit;
@@ -67,7 +66,6 @@ function editarSocio() {
 
     $id             = (int) ($_POST['id'] ?? 0);
     $nombre         = trim($_POST['nombre'] ?? '');
-    $apellido       = trim($_POST['apellido'] ?? '');
     $cedula         = trim($_POST['cedula'] ?? '');
     $telefono       = $_POST['telefono'] ?? '';
     $fecha_registro = $_POST['fecha_registro'] ?? '';
@@ -82,7 +80,7 @@ function editarSocio() {
 
  
 
-    Socio::actualizar($pdo, $id, $nombre, $apellido, $cedula, (int) $telefono, (string) $fecha_registro);
+    Socio::actualizar($pdo, $id, $nombre, $apellido, $cedula, (string) $telefono, (int) $fecha_registro);
 
     header('Location: index.php?accion=listarSocio');
     exit;

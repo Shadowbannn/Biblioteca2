@@ -35,44 +35,24 @@ $esEdicion = isset($socio);
                        placeholder="Nombre"
                        value="<?= $esEdicion ? htmlspecialchars($socio->getNombre()) : '' ?>" required>
 
-                <input type="text" name="autor" id="autor" class="form-control mb-3"
-                       placeholder="Autor"
-                       value="<?= $esEdicion ? htmlspecialchars($libro->getAutor()) : '' ?>" required>
+                <input type="text" name="cedula" id="cedula" class="form-control mb-3"
+                       placeholder="Cedula"
+                       value="<?= $esEdicion ? htmlspecialchars($socio->getCedula()) : '' ?>" required>
 
-                <input type="number" name="anio" id="anio" class="form-control mb-3"
-                       placeholder="Año"
-                       value="<?= $esEdicion ? $libro->getAnioPublicacion() : '' ?>" required>
+                <input type="number" name="telefono" id="telefono" class="form-control mb-3"
+                       placeholder="Telefono"
+                       value="<?= $esEdicion ? $socio->getTelefono() : '' ?>" required>
 
-                <input type="number" name="paginas" id="paginas" class="form-control mb-3"
-                       placeholder="Páginas"
-                       value="<?= $esEdicion ? $libro->getCantidadPaginas() : '' ?>" required>
+                <input type="date" name="fecharegistro" id="fecharegistro" class="form-control mb-3"
+                       placeholder="Fecha de registro"
+                       value="<?= $esEdicion ? $socio->getFecharegistro() : '' ?>" required>
 
-                <input type="text" name="genero" id="genero" class="form-control mb-3"
-                       placeholder="Género (ej: Fantasia, Juvenil)"
-                       value="<?= $esEdicion ? htmlspecialchars($libro->getGenero()) : '' ?>">
-
-                <?php if ($esEdicion): ?>
-                    <label>Portada actual</label><br>
-                    <div class="mb-2">
-                        <?php if (!empty($libro->getPortada())): ?>
-                            <img src="uploads/portadas/<?= htmlspecialchars($libro->getPortada()) ?>"
-                                 alt="Portada actual" class="portada-preview" style="max-width:150px;">
-                        <?php else: ?>
-                            <p class="text-muted">Este libro no tiene portada.</p>
-                        <?php endif; ?>
-                    </div>
-                    <label>Cambiar portada (opcional)</label>
-                <?php else: ?>
-                    <label>Portada</label>
-                <?php endif; ?>
-
-                <input type="file" name="portada" class="form-control mb-3" accept="image/*">
 
                 <button type="submit" class="btn btn-success w-100 mb-2">
-                    <?= $esEdicion ? 'Guardar Cambios' : 'Crear libro' ?>
+                    <?= $esEdicion ? 'Guardar Cambios' : 'Crear socio' ?>
                 </button>
 
-                <a href="index.php?accion=listarLibros" class="btn btn-danger w-100">
+                <a href="index.php?accion=listarSocios" class="btn btn-danger w-100">
                     Cancelar
                 </a>
 
