@@ -2,7 +2,10 @@
 require_once __DIR__ . '/includes/seguridad.php';
 require_once __DIR__ . '/config/conexion.php';
 require_once __DIR__ . '/models/Libro.php';
+require_once __DIR__ . '/models/Socio.php';
 require_once __DIR__ . '/controllers/LibroController.php';
+require_once __DIR__ . '/controllers/SocioController.php';
+
 
 $accion = $_GET['accion'] ?? 'inicio';
 
@@ -12,37 +15,47 @@ switch ($accion) {
         require __DIR__ . '/views/inicio.php';
         break;
 
-    // --- Libros ---
+        //LIBROS//
+        
     case 'listarLibros':
         listarLibros();
         break;
     case 'formCrearLibro':
         formCrearLibro();
         break;
-    case 'crearLibro':
+    case 'crearLibro';
         crearLibro();
         break;
-    case 'formEditarLibro':
-        formEditarLibro();
-        break;
-    case 'editarLibro':
+    case 'formEditarLibro';
         editarLibro();
         break;
-    case 'eliminarLibro':
+    case 'eliminarLibro';
         eliminarLibro();
         break;
 
-    // --- Socios y Prestamos: todavía no existen en este proyecto.
-    // Cuando los armes, siguiendo el mismo patrón, agregás sus casos acá
-    // (ej: listarSocios, crearSocio, etc.), cada uno llamando a su propio
-    // controlador (SocioController.php, PrestamoController.php).
+    // SOCIOS //
+        
     case 'listarSocios':
-    case 'listarPrestamos':
-        http_response_code(501);
-        echo "Este módulo todavía no está armado en MVC.";
+        listarSocios();
         break;
+    case 'formCrearSocio':
+        formCrearSocio();
+        break;
+    case 'crearSocio';
+        crearSocio();
+        break;
+    case 'formEditarSocio';
+        editarSocio();
+        break;
+    case 'eliminarSocio';
+        eliminarSocio();
+        break;
+
+    // PRESTAMOS //
 
     default:
         http_response_code(404);
-        echo "Página no encontrada";
+        echo "Página no encontrada chaval";
+
 }
+?>

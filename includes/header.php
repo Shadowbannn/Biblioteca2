@@ -13,8 +13,8 @@
 
 <nav>
     <a href="index.php">
-        <img src="https://www.utu.edu.uy/wp-content/themes/balpadraUTU/src/test/images/Logo%20UTU%20PNG/Logo%20UTU%20-%20Escudo%20Dorado%20Letras%20Blancas%20Fondo%20Transparente.png"
-             alt="Inicio" style="width: 200px; height: auto;">
+        <img src="img/logo.png"
+             alt="Inicio" style="width: 270px; height: auto;">
     </a>
 
     <ul>
