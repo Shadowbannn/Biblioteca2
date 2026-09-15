@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-08-2026 a las 06:33:14
+-- Tiempo de generación: 15-09-2026 a las 23:46:06
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -627,8 +627,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (731, '1. Wigetta', 'Vegetta777 y Willyrex', 2016, 166, 1, 'Juvenil', 'portada_6a67c35feffdc8.67595858.jpg'),
 (732, 'Mi amigo Hipojico', 'Magdalena Heiguera', 2015, 45, 1, 'Infantil', NULL),
 (733, 'Vandalia', 'Helen Velando', 2010, 279, 1, 'Ficcion,Aventura', NULL),
-(734, 'It\'s Kind of a Funny Story', 'Ned Vizzini', 2006, 444, 1, 'Juvenil', 'portada_6a7a78b21107c9.05169741.jpg'),
-(985, '15', 'Franz Kafka', 2054, 436, 1, 'Ciencia ficción', '');
+(734, 'It\'s Kind of a Funny Story', 'Ned Vizzini', 2006, 444, 1, 'Juvenil', 'portada_6a7a78b21107c9.05169741.jpg');
 
 -- --------------------------------------------------------
 
@@ -638,11 +637,11 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 
 CREATE TABLE `prestamos` (
   `id` int(11) NOT NULL,
-  `libro_id` int(11) NOT NULL,
-  `socio_id` int(11) NOT NULL,
-  `fecha_prestamo` date NOT NULL DEFAULT curdate(),
+  `libroId` int(11) NOT NULL,
+  `socioId` int(11) NOT NULL,
+  `fechaPrestamo` text DEFAULT NULL,
   `fecha_devolucion_estimada` date NOT NULL,
-  `fecha_devolucion_real` date DEFAULT NULL,
+  `libroTitulo` text DEFAULT NULL,
   `estado` enum('reservado','prestado','devuelto','cancelado') NOT NULL DEFAULT 'reservado',
   `creado_en` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -651,7 +650,7 @@ CREATE TABLE `prestamos` (
 -- Volcado de datos para la tabla `prestamos`
 --
 
-INSERT INTO `prestamos` (`id`, `libro_id`, `socio_id`, `fecha_prestamo`, `fecha_devolucion_estimada`, `fecha_devolucion_real`, `estado`, `creado_en`) VALUES
+INSERT INTO `prestamos` (`id`, `libroId`, `socioId`, `fechaPrestamo`, `fecha_devolucion_estimada`, `libroTitulo`, `estado`, `creado_en`) VALUES
 (1, 253, 11, '2026-07-23', '2026-07-28', NULL, 'prestado', '2026-07-27 23:33:37');
 
 -- --------------------------------------------------------
@@ -728,8 +727,8 @@ ALTER TABLE `libros`
 --
 ALTER TABLE `prestamos`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `libro_id` (`libro_id`),
-  ADD KEY `socio_id` (`socio_id`);
+  ADD KEY `libro_id` (`libroId`),
+  ADD KEY `socio_id` (`socioId`);
 
 --
 -- Indices de la tabla `socios`
@@ -781,8 +780,8 @@ ALTER TABLE `usuarios`
 -- Filtros para la tabla `prestamos`
 --
 ALTER TABLE `prestamos`
-  ADD CONSTRAINT `prestamos_ibfk_1` FOREIGN KEY (`libro_id`) REFERENCES `libros` (`id`),
-  ADD CONSTRAINT `prestamos_ibfk_2` FOREIGN KEY (`socio_id`) REFERENCES `socios` (`id`);
+  ADD CONSTRAINT `prestamos_ibfk_1` FOREIGN KEY (`libroId`) REFERENCES `libros` (`id`),
+  ADD CONSTRAINT `prestamos_ibfk_2` FOREIGN KEY (`socioId`) REFERENCES `socios` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
