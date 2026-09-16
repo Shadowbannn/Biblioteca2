@@ -29,7 +29,8 @@ function formEditarSocio() {
     global $pdo;
 
     $id = (int) ($_GET['id'] ?? 0);
-    $socios = Socio::buscarPorId($pdo, $id);
+    // CORREGIDO: Se cambia $socios por $socio (en singular)
+    $socio = Socio::buscarPorId($pdo, $id);
 
     if (!$socio) {
         die("El socio no existe.");
@@ -38,24 +39,22 @@ function formEditarSocio() {
     require __DIR__ . '/../views/Socios/form.php';
 }
 
-/** Antes: todo guardarlibro.php. */
 function crearSocio() {
     global $pdo;
 
     $nombre         = trim($_POST['nombre'] ?? '');
+    $apellido       = trim($_POST['apellido'] ?? '');
     $cedula         = trim($_POST['cedula'] ?? '');
-    $telefono       = $_POST['telefono'] ?? '';
+    $telefono       = trim($_POST['telefono'] ?? '');
     $fecha_registro = $_POST['fecha_registro'] ?? '';
-    
 
-    if ($nombre === '' || $cedula === '' || $telefono === '' || $fecha_registro === '') {
+    if ($nombre === '' || $apellido === '' || $cedula === '' || $telefono === '' || $fecha_registro === '') {
         $error = "Todos los campos son obligatorios.";
         require __DIR__ . '/../views/Socios/form.php';
         return;
     }
 
-
-    Socio::crear($pdo, $nombre, $apellido, $cedula, (string) $telefono, (int) $fecha_registro);
+    Socio::crear($pdo, $nombre, $apellido, $cedula, (string) $telefono, (string) $fecha_registro);
 
     header('Location: index.php?accion=listarSocios');
     exit;
@@ -66,23 +65,23 @@ function editarSocio() {
 
     $id             = (int) ($_POST['id'] ?? 0);
     $nombre         = trim($_POST['nombre'] ?? '');
+    $apellido       = trim($_POST['apellido'] ?? '');
     $cedula         = trim($_POST['cedula'] ?? '');
-    $telefono       = $_POST['telefono'] ?? '';
+    $telefono       = (string) trim($_POST['telefono'] ?? '');
     $fecha_registro = $_POST['fecha_registro'] ?? '';
-    
 
-    if ($nombre === '' || $cedula === '' || $telefono === '' || $fecha_registro === '') {
+    if ($nombre === '' || $apellido === '' || $cedula === '' || $telefono === '' || $fecha_registro === '') {
         $socio = Socio::buscarPorId($pdo, $id);
         $error = "Todos los campos son obligatorios.";
         require __DIR__ . '/../views/Socios/form.php';
         return;
     }
 
- 
+    // CORREGIDO: Se llama a Socio::actualizar (antes decía Socio::crear)
+    Socio::actualizar($pdo, $id, $nombre, $apellido, $cedula, (string) $telefono, (string) $fecha_registro);
 
-    Socio::actualizar($pdo, $id, $nombre, $apellido, $cedula, (string) $telefono, (int) $fecha_registro);
-
-    header('Location: index.php?accion=listarSocio');
+    // CORREGIDO: Redirección a listarSocios (en plural)
+    header('Location: index.php?accion=listarSocios');
     exit;
 }
 
@@ -91,6 +90,7 @@ function eliminarSocio() {
 
     $id = (int) ($_GET['id'] ?? 0);
 
+    Socio::eliminar($pdo, $id);
 
     header('Location: index.php?accion=listarSocios');
     exit;

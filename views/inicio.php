@@ -1,6 +1,6 @@
 <?php require __DIR__ . '/../includes/header.php'; ?>
 
-<h1 class="titulo"><br><br><b>Bienvenidos</b></h1>
+<h1 class="titulo"><br><br><b>Bienvenido <?= htmlspecialchars($_SESSION["usuario"] ?? '') ?></b></h1>
 
 <div class="row mt-5">
 

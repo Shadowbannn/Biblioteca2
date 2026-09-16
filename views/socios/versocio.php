@@ -44,7 +44,7 @@
                                 <b>Cedula:</b> <?= $socio->getCedula() ?><br>
                                 <b>ID:</b> <?= $socio->getId() ?><br>
                                 <b>Telefono:</b> <?= ($socio->getTelefono()) ?><br>
-                                <b>Fecha de Registro:</b> <?= ($socio->getFecharegistro()) ?><br>
+                                <b>Registrado/a:</b> <?= ($socio->getFecharegistro()) ?><br>
                             </p>
 
                             <div class="mt-auto d-flex gap-2">

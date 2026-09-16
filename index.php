@@ -3,11 +3,15 @@ require_once __DIR__ . '/includes/seguridad.php';
 require_once __DIR__ . '/config/conexion.php';
 require_once __DIR__ . '/models/Libro.php';
 require_once __DIR__ . '/models/Socio.php';
+require_once __DIR__ . '/models/Prestamo.php';
+require_once __DIR__ . '/login/crud-user/models/user.php';
 require_once __DIR__ . '/controllers/LibroController.php';
 require_once __DIR__ . '/controllers/SocioController.php';
+require_once __DIR__ . '/controllers/PrestamoController.php';
+require_once __DIR__ . '/login/crud-user/controller/usercontroller.php';
 
-
-$accion = $_GET['accion'] ?? 'inicio';
+// Leemos la acción tanto de $_GET como de $_POST (por si se envía el formulario vía POST)
+$accion = $_REQUEST['accion'] ?? 'inicio';
 
 switch ($accion) {
 
@@ -15,7 +19,7 @@ switch ($accion) {
         require __DIR__ . '/views/inicio.php';
         break;
 
-        //LIBROS//
+    // LIBROS //
         
     case 'listarLibros':
         listarLibros();
@@ -23,13 +27,16 @@ switch ($accion) {
     case 'formCrearLibro':
         formCrearLibro();
         break;
-    case 'crearLibro';
+    case 'crearLibro':
         crearLibro();
         break;
-    case 'formEditarLibro';
-        editarLibro();
+    case 'formEditarLibro':
+        formEditarLibro(); // CORREGIDO: Muestra el formulario de edición
         break;
-    case 'eliminarLibro';
+    case 'editarLibro':
+        editarLibro();     // AGREGADO: Procesa los datos enviados por el formulario
+        break;
+    case 'eliminarLibro':
         eliminarLibro();
         break;
 
@@ -41,17 +48,60 @@ switch ($accion) {
     case 'formCrearSocio':
         formCrearSocio();
         break;
-    case 'crearSocio';
+    case 'crearSocio':
         crearSocio();
         break;
-    case 'formEditarSocio';
-        editarSocio();
+    case 'formEditarSocio':
+        formEditarSocio(); // CORREGIDO
         break;
-    case 'eliminarSocio';
+    case 'editarSocio':
+        editarSocio();     // AGREGADO
+        break;
+    case 'eliminarSocio':
         eliminarSocio();
         break;
 
     // PRESTAMOS //
+
+    case 'listarPrestamos':
+        listarPrestamos();
+        break;
+    case 'formCrearPrestamo':
+        formCrearPrestamo();
+        break;
+    case 'crearPrestamo':
+        crearPrestamo();
+        break;
+    case 'formEditarPrestamo':
+        formEditarPrestamo(); // CORREGIDO
+        break;
+    case 'editarPrestamo':
+        editarPrestamo();     // AGREGADO
+        break;
+    case 'eliminarPrestamo':
+        eliminarPrestamo();
+        break;
+
+    // USUARIOS (cuentas del sistema) //
+
+    case 'listarUsuarios':
+        listarUsuarios();
+        break;
+    case 'formCrearUsuario':
+        formCrearUsuario();
+        break;
+    case 'crearUsuario':
+        crearUsuario();
+        break;
+    case 'formEditarUsuario':
+        formEditarUsuario();
+        break;
+    case 'editarUsuario':
+        editarUsuario();
+        break;
+    case 'eliminarUsuario':
+        eliminarUsuario();
+        break;
 
     default:
         http_response_code(404);

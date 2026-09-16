@@ -27,26 +27,33 @@ $esEdicion = isset($libro);
             <form action="index.php?accion=<?= $esEdicion ? 'editarLibro' : 'crearLibro' ?>"
                   method="POST" enctype="multipart/form-data">
 
+
                 <?php if ($esEdicion): ?>
                     <input type="hidden" name="id" value="<?= $libro->getId() ?>">
                 <?php endif; ?>
 
+
+                <label for="titulo" class="form-label">Libro</label>
                 <input type="text" name="titulo" id="titulo" class="form-control mb-3"
                        placeholder="Título"
                        value="<?= $esEdicion ? htmlspecialchars($libro->getTitulo()) : '' ?>" required>
 
+                <label for="autor" class="form-label">Autor</label>
                 <input type="text" name="autor" id="autor" class="form-control mb-3"
                        placeholder="Autor"
                        value="<?= $esEdicion ? htmlspecialchars($libro->getAutor()) : '' ?>" required>
 
+                <label for="anio" class="form-label">Año de publicación</label>
                 <input type="number" name="anio" id="anio" class="form-control mb-3"
                        placeholder="Año"
                        value="<?= $esEdicion ? $libro->getAnioPublicacion() : '' ?>" required>
 
+                <label for="paginas" class="form-label">Cantidad de páginas</label>
                 <input type="number" name="paginas" id="paginas" class="form-control mb-3"
                        placeholder="Páginas"
                        value="<?= $esEdicion ? $libro->getCantidadPaginas() : '' ?>" required>
 
+                <label for="genero" class="form-label">Género</label>       
                 <input type="text" name="genero" id="genero" class="form-control mb-3"
                        placeholder="Género (ej: Fantasia, Juvenil)"
                        value="<?= $esEdicion ? htmlspecialchars($libro->getGenero()) : '' ?>">

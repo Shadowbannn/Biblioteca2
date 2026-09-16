@@ -20,9 +20,9 @@
     <ul>
         <li><a href="index.php"><b>Inicio</b></a></li>
         <li><a href="index.php?accion=listarLibros"><b>Libros</b></a></li>
-        <li><a href="index.php?accion=listarSocios"><b>Usuarios</b></a></li>
+        <li><a href="index.php?accion=listarSocios"><b>Socios</b></a></li>
         <li><a href="index.php?accion=listarPrestamos"><b>Prestamos</b></a></li>
-        <li><a href="logout.php"><b>Cerrar sesión</b></a></li>
+        <li><a href="../carpeta2/login/logout.php"><b>Cerrar sesión</b></a></li>
     </ul>
 </nav>
 

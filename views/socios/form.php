@@ -31,19 +31,28 @@ $esEdicion = isset($socio);
                     <input type="hidden" name="id" value="<?= $socio->getId() ?>">
                 <?php endif; ?>
 
+                <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" name="nombre" id="nombre" class="form-control mb-3"
                        placeholder="Nombre"
                        value="<?= $esEdicion ? htmlspecialchars($socio->getNombre()) : '' ?>" required>
+                       
+                <label for="apellido" class="form-label">Apellido</label>      
+                <input type="text" name="apellido" id="apellido" class="form-control mb-3"
+                       placeholder="Apellido"
+                       value="<?= $esEdicion ? htmlspecialchars($socio->getApellido()) : '' ?>" required> 
 
+                <label for="cedula" class="form-label">Cédula</label>
                 <input type="text" name="cedula" id="cedula" class="form-control mb-3"
                        placeholder="Cedula"
                        value="<?= $esEdicion ? htmlspecialchars($socio->getCedula()) : '' ?>" required>
 
+                <label for="telefono" class="form-label">Teléfono</label>
                 <input type="number" name="telefono" id="telefono" class="form-control mb-3"
                        placeholder="Telefono"
                        value="<?= $esEdicion ? $socio->getTelefono() : '' ?>" required>
 
-                <input type="date" name="fecharegistro" id="fecharegistro" class="form-control mb-3"
+                <label for="fecha_registro" class="form-label">Fecha de registro</label>
+                <input type="date" name="fecha_registro" id="fecha_registro" class="form-control mb-3"
                        placeholder="Fecha de registro"
                        value="<?= $esEdicion ? $socio->getFecharegistro() : '' ?>" required>
 

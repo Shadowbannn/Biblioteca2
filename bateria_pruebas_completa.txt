@@ -1,0 +1,407 @@
+BATTERIA DE PRUEBAS COMPLETA - APLICACION DE BIBLIOTECA
+Fecha: 15/09/2026
+Alcance: aplicacion PHP de gestion de biblioteca
+Objetivo: validar funcionamiento general, estabilidad, usabilidad, integridad de datos y seguridad
+
+--------------------------------------------------------------------------------
+1. INFORMACION GENERAL
+--------------------------------------------------------------------------------
+Aplicacion revisada:
+- index.php
+- login.php
+- includes/seguridad.php
+- config/conexion.php
+- controllers/LibroController.php
+- controllers/SocioController.php
+- controllers/PrestamoController.php
+- models/Libro.php
+- models/Socio.php
+- models/prestamo.php
+- views/*
+
+Ambiente evaluado:
+- PHP local con XAMPP
+- MySQL local
+- acceso HTTP local
+
+Verificacion ejecutada:
+- Validacion de sintaxis PHP con php -l sobre archivos clave
+- Resultado: OK para login.php, index.php, config/conexion.php, controllers/LibroController.php, includes/seguridad.php
+- Resultado global: ALL_LINT_OK
+
+Importante:
+- Esta bateria cubre pruebas funcionales, validacion, seguridad y estabilidad.
+- No reemplaza un pentest real en un entorno con ejecucion viva completa, pero sienta una base rigurosa para pruebas de calidad y seguridad.
+
+--------------------------------------------------------------------------------
+2. MATRIZ DE PRUEBAS
+--------------------------------------------------------------------------------
+Categoria | Tipo | Estado esperado | Estado actual observado
+------------------------------------------------------------
+Autenticacion | login correcto | Debe permitir acceso | Requiere cambios por credencial fija
+Autenticacion | login incorrecto | Debe rechazar | Si funciona, pero por comparacion fija
+Autorizacion | acceso sin sesion | Debe redirigir | Si existe, redirige a login
+Autorizacion | acceso directo a acciones | Debe bloquear/denegar | No hay validacion de permisos por recurso
+CRUD Libros | Crear/leer/editar/eliminar | Debe funcionar | Logica implementada, necesita validaciones
+CRUD Socios | Crear/leer/editar/eliminar | Debe funcionar | Logica implementada, necesita validaciones
+CRUD Prestamos | Crear/leer/editar/eliminar | Debe funcionar | Logica implementada, necesita validaciones
+Validacion de formularios | campos vacios | Debe rechazar | Algunas validaciones existen
+Uploads | archivo valido | Debe subir | Implementado
+Uploads | archivo invalido | Debe rechazarse | Solo se valida extension, no MIME real
+CSRF | formulario sin token | Debe fallar | No hay token
+XSS | datos con etiquetas | Debe escapar salida | Hay htmlspecialchars() en varias vistas
+SQLi | entradas maliciosas | Debe bloquearse | PDO + prepared statements reduce riesgo
+Sesiones | cierre de sesion | Debe destruir datos | No se valida robustamente
+Errores | errores de BD | Debe loguear sin filtrar datos | Exposicion de detalles
+Paginas | navegacion | Debe funcionar | Estructura base ok
+Paginacion | paginador | Debe limitar y navegar | Implementado
+
+--------------------------------------------------------------------------------
+3. PRUEBAS FUNCIONALES
+--------------------------------------------------------------------------------
+3.1. Autenticacion
+ID: FUNC-01
+Descripcion: Iniciar sesion con credenciales validas.
+Paso:
+1. Abrir login.php
+2. Ingresar usuario 'thony' y password '1234'
+Resultado esperado:
+- Debe crear sesion y redirigir a index.php
+Resultado actual:
+- La validacion funciona en codigo, pero es insegurosa porque las credenciales estan codificadas.
+
+ID: FUNC-02
+Descripcion: Iniciar sesion con credenciales incorrectas.
+Paso:
+1. Ingresar usuario invalido o password incorrecto
+Resultado esperado:
+- Debe mostrar mensaje de error y no crear sesion.
+Resultado actual:
+- La app muestra mensaje de error.
+
+ID: FUNC-03
+Descripcion: Acceder sin iniciar sesion.
+Paso:
+1. Visitar index.php directamente sin sesion
+Resultado esperado:
+- Debe redirigir a login.php
+Resultado actual:
+- La app usa includes/seguridad.php y redirige a login.php.
+
+3.2. Navegacion principal
+ID: FUNC-04
+Descripcion: Acceder a pagina de inicio.
+Resultado esperado:
+- Debe cargar vista de inicio si la sesion existe.
+Resultado actual:
+- La app ejecuta switch de accion y carga vista de inicio.
+
+ID: FUNC-05
+Descripcion: Navegar entre modulos (libros, socios, prestamos).
+Resultado esperado:
+- Debe mostrar listas y formularios correspondientes.
+Resultado actual:
+- Estructura base disponible.
+
+3.3. CRUD libros
+ID: FUNC-06
+Descripcion: Crear un libro con campos validos.
+Paso:
+1. Ir a formulario de creacion
+2. Completar titulo, autor, anio, paginas, genero
+3. Adjuntar portada valida
+Resultado esperado:
+- Debe registrar el libro y redirigir a listado.
+Resultado actual:
+- Implementado en controller y modelo, requiere validacion adicional.
+
+ID: FUNC-07
+Descripcion: Editar libro existente.
+Resultado esperado:
+- Debe mostrar formulario prellenado y guardar cambios.
+Resultado actual:
+- Existe flujo de edicion.
+
+ID: FUNC-08
+Descripcion: Eliminar libro.
+Resultado esperado:
+- Debe borrar registro y archivo asociado si existe.
+Resultado actual:
+- La logica elimina registro y borra archivo existente.
+
+ID: FUNC-09
+Descripcion: Crear libro con campos vacios.
+Resultado esperado:
+- Debe rechazar la operacion con error.
+Resultado actual:
+- Se valida que titulo, autor, anio y paginas no esten vacios.
+
+3.4. CRUD socios
+ID: FUNC-10
+Descripcion: Crear socio con datos validos.
+Resultado esperado:
+- Debe registrarse y mostrarse en listado.
+Resultado actual:
+- Se dispone flujo de creacion.
+
+ID: FUNC-11
+Descripcion: Editar socio.
+Resultado esperado:
+- Debe actualizar informacion.
+Resultado actual:
+- Existe flujo.
+
+ID: FUNC-12
+Descripcion: Eliminar socio.
+Resultado esperado:
+- Debe borrar registro.
+Resultado actual:
+- Existe flujo.
+
+3.5. CRUD prestamos
+ID: FUNC-13
+Descripcion: Crear prestamo con socio y libro validos.
+Resultado esperado:
+- Debe guardar prestamo asociado.
+Resultado actual:
+- Existe modelo y controllers.
+
+ID: FUNC-14
+Descripcion: Editar prestamo.
+Resultado esperado:
+- Debe actualizar datos.
+Resultado actual:
+- Existe flujo.
+
+ID: FUNC-15
+Descripcion: Eliminar prestamo.
+Resultado esperado:
+- Debe remover registro.
+Resultado actual:
+- Existe flujo.
+
+--------------------------------------------------------------------------------
+4. PRUEBAS DE VALIDACION DE ENTRADA
+--------------------------------------------------------------------------------
+ID: VAL-01
+Descripcion: Campo titulo vacio.
+Resultado esperado: rechazar.
+ID: VAL-02
+Descripcion: Anio con texto no numerico.
+Resultado esperado: rechazar o convertir con control.
+ID: VAL-03
+Descripcion: Paginas con valor 0 o negativo.
+Resultado esperado: rechazar.
+ID: VAL-04
+Descripcion: Longitud excesiva de strings.
+Resultado esperado: limitar o rechazar.
+ID: VAL-05
+Descripcion: Fecha prestamo invalida.
+Resultado esperado: rechazar.
+ID: VAL-06
+Descripcion: ID no numerico en queries.
+Resultado esperado: manejar con validacion y 400/404.
+
+Observacion:
+- Hay validaciones basicas, pero no una capa consistente de validacion de negocio ni sanitizacion fuerte.
+
+--------------------------------------------------------------------------------
+5. PRUEBAS DE SEGURIDAD
+--------------------------------------------------------------------------------
+5.1. Acceso sin autenticacion
+ID: SEC-01
+Descripcion: Intentar abrir index.php sin sesion.
+Resultado esperado: redirigir.
+Resultado actual: cumple con redireccion basica.
+
+ID: SEC-02
+Descripcion: Intentar abrir acciones por URL directa.
+Ejemplo:
+- index.php?accion=crearLibro
+- index.php?accion=eliminarLibro&id=1
+- index.php?accion=editarSocio
+Resultado esperado:
+- Deben requerir autenticacion, validacion de permisos y CSRF.
+Resultado actual:
+- Hay sesion requerida, pero no hay control por rol ni validacion de propiedad del recurso.
+
+5.2. Inyeccion SQL
+ID: SEC-03
+Descripcion: Enviar payloads SQL en ID o datos de entrada.
+Ejemplos:
+- id=1 OR 1=1
+- titulo=' OR 1=1 --
+Resultado esperado:
+- Debe no romper la aplicacion ni extraer datos.
+Resultado actual:
+- Los modelos usan prepared statements, lo que reduce el riesgo de SQL injection.
+
+5.3. XSS
+ID: SEC-04
+Descripcion: Inyectar <script>alert(1)</script> en campos titulo/autor/genero.
+Resultado esperado:
+- Debe escaparse en salida HTML.
+Resultado actual:
+- Hay htmlspecialchars() en varias vistas, lo cual ayuda.
+
+5.4. CSRF
+ID: SEC-05
+Descripcion: Enviar formulario POST desde otro origen.
+Resultado esperado:
+- Debe rechazarse.
+Resultado actual:
+- No hay token CSRF.
+
+5.5. Upload de archivos
+ID: SEC-06
+Descripcion: Subir .php, .svg, .html o archivo con doble extension.
+Resultado esperado:
+- Debe rechazarse.
+Resultado actual:
+- Se valida extension solo; no se valida MIME real ni contenido real.
+
+ID: SEC-07
+Descripcion: Subir archivo enorme.
+Resultado esperado:
+- Debe rechazarse con limite de tamaño.
+Resultado actual:
+- No se observa limitacion de tamaño.
+
+5.6. Sesiones
+ID: SEC-08
+Descripcion: Fijacion de sesion.
+Resultado esperado:
+- Debe regenerar ID al iniciar sesion.
+Resultado actual:
+- No se observa session_regenerate_id().
+
+ID: SEC-09
+Descripcion: Cierre de sesion.
+Resultado esperado:
+- Debe destruir sesion y cookies.
+Resultado actual:
+- Se utiliza logout.php pero no se observa destruccion completa robusta.
+
+5.7. Exposicion de errores
+ID: SEC-10
+Descripcion: Activar fallo de base de datos.
+Resultado esperado:
+- Debe loguear error interno y mostrar mensaje generico.
+Resultado actual:
+- En config/conexion.php hay die con detalle interno.
+
+--------------------------------------------------------------------------------
+6. PRUEBAS DE USABILIDAD Y UI
+--------------------------------------------------------------------------------
+ID: UI-01
+Descripcion: Formulario de login visible y claro.
+Resultado esperado: interfaz usable.
+Resultado actual: la vista es funcional.
+
+ID: UI-02
+Descripcion: Formulario de libros con campos correspondientes.
+Resultado esperado: todos los campos visibles y legibles.
+Resultado actual: la interfaz se presenta de manera ordenada.
+
+ID: UI-03
+Descripcion: Botones de cancelar, guardar y eliminar.
+Resultado esperado: deben ser visibles y funcionales.
+Resultado actual: si se usa la navegacion correcta, funcionan.
+
+ID: UI-04
+Descripcion: Mensajes de error.
+Resultado esperado: mensajes claros al usuario.
+Resultado actual: hay mensajes basicos, pero no se invalidan casos complejos.
+
+--------------------------------------------------------------------------------
+7. PRUEBAS DE COMPATIBILIDAD
+--------------------------------------------------------------------------------
+ID: COMP-01
+Descripcion: Probar en navegador Chrome.
+Resultado esperado: visualizacion correcta.
+ID: COMP-02
+Descripcion: Probar en Edge/Firefox.
+Resultado esperado: sin romper HTML/CSS.
+ID: COMP-03
+Descripcion: Probar en resolucion mobile.
+Resultado esperado: adaptacion basica.
+
+Observacion:
+- La app usa Bootstrap y HTML simples. Se espera compatibilidad razonable, pero conviene validarlo en navegadores reales.
+
+--------------------------------------------------------------------------------
+8. PRUEBAS DE DESEMPEÑO
+--------------------------------------------------------------------------------
+ID: PERF-01
+Descripcion: Listado de libros con muchos registros.
+Resultado esperado: paginacion funcional y tiempos aceptables.
+Resultado actual: usa paginacion y conteo.
+
+ID: PERF-02
+Descripcion: Carga de imagen grande.
+Resultado esperado: aceptar solo tamanos razonables.
+Resultado actual: no hay control de tamanio.
+
+ID: PERF-03
+Descripcion: Repeticion de operaciones CRUD en serie.
+Resultado esperado: estabilidad y respuestas consistentes.
+Resultado actual: requiere prueba en servidor real con datos reales.
+
+--------------------------------------------------------------------------------
+9. PRUEBAS DE CONFIABILIDAD / ROBUSTEZ
+--------------------------------------------------------------------------------
+ID: REL-01
+Descripcion: Simular desconexion de base de datos.
+Resultado esperado: mensaje generico y log interno.
+
+ID: REL-02
+Descripcion: Simular ausencia de archivo de portada.
+Resultado esperado: no romper listado ni detalle.
+
+ID: REL-03
+Descripcion: Simular ID inexistente al editar o eliminar.
+Resultado esperado: manejar 404 o mensaje claro.
+
+ID: REL-04
+Descripcion: Simular formulario sin archivo adjunto cuando es obligatorio.
+Resultado esperado: manejar correctamente.
+
+--------------------------------------------------------------------------------
+10. RESULTADOS OBSERVADOS
+--------------------------------------------------------------------------------
+Puntos con buen comportamiento:
+- Sintaxis PHP correcta para archivos evaluados.
+- Consultas SQL con PDO y prepared statements en modelos.
+- Escapado HTML de salida en varias vistas con htmlspecialchars().
+- Redireccion de acceso sin sesion a login.
+- Validacion basica de campos obligatorios.
+
+Puntos con debilidades evidentes:
+- Credenciales fijas en login.
+- BD conectada como root.
+- No hay control de permisos por rol/recurso.
+- No hay token CSRF.
+- Uploads con validacion insuficiente.
+- Sesiones sin reforzamiento.
+- Exposicion de errores internos.
+
+--------------------------------------------------------------------------------
+11. RECOMENDACIONES GENERALES
+--------------------------------------------------------------------------------
+1. Resolver primero autenticacion y autorizacion.
+2. Crear usuarios reales en BD con password_hash().
+3. Implementar permisos por rol.
+4. Agregar CSRF a todos los formularios.
+5. Mejorar validacion de archivos y tamanios.
+6. Reforzar sesion con session_regenerate_id() y cookies seguras.
+7. Probar la aplicacion completa en navegador real con datos reales.
+8. Ejecutar una bateria de regressions despues de cada correccion.
+
+--------------------------------------------------------------------------------
+12. CONCLUSION
+--------------------------------------------------------------------------------
+La aplicacion tiene una base funcional correcta, pero no esta lista para entornos productivos o con usuarios reales. La bateria de pruebas indica que los aspectos funcionales y de CRUD se desarrollaron en buena parte, pero las brechas de seguridad y de validacion de negocio son importantes y deben corregirse antes de salir a produccion.
+
+--------------------------------------------------------------------------------
+FIN DE LA BATTERIA DE PRUEBAS
+--------------------------------------------------------------------------------
