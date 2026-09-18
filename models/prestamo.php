@@ -44,7 +44,7 @@ class Prestamo {
     }
 
     public static function buscarPorId(PDO $pdo, int $id): ?Prestamo {
-        $stmt = $pdo->prepare("SELECT p.*, l.titulo, l.autor, l.portada, s.nombre, s.apellido
+        $stmt = $pdo->prepare("SELECT p.*, l.titulo, l.autor, l.portada, s.nombre
         FROM prestamos p
         INNER JOIN libros l ON p.libroId = l.id
         INNER JOIN socios s ON p.socioId = s.id
@@ -85,9 +85,8 @@ class Prestamo {
     public static function listarPaginado(PDO $pdo, int $paginaActual, int $porPagina): array {
         $inicio = ($paginaActual - 1) * $porPagina;
 
-        $stmt = $pdo->prepare("
-            SELECT p.id, p.socioId, p.libroId, p.fechaPrestamo,
-                   CONCAT(s.nombre, ' ', s.apellido) AS socioNombre,
+        $stmt = $pdo->prepare("SELECT p.id, p.socioId, p.libroId, p.fechaPrestamo,
+                   CONCAT(s.nombre) AS socioNombre,
                    l.titulo AS libroTitulo
             FROM prestamos p
             INNER JOIN socios s ON p.socioId = s.id

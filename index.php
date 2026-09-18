@@ -31,10 +31,10 @@ switch ($accion) {
         crearLibro();
         break;
     case 'formEditarLibro':
-        formEditarLibro(); // CORREGIDO: Muestra el formulario de edición
+        formEditarLibro(); 
         break;
     case 'editarLibro':
-        editarLibro();     // AGREGADO: Procesa los datos enviados por el formulario
+        editarLibro();     
         break;
     case 'eliminarLibro':
         eliminarLibro();
@@ -52,10 +52,10 @@ switch ($accion) {
         crearSocio();
         break;
     case 'formEditarSocio':
-        formEditarSocio(); // CORREGIDO
+        formEditarSocio(); 
         break;
     case 'editarSocio':
-        editarSocio();     // AGREGADO
+        editarSocio();    
         break;
     case 'eliminarSocio':
         eliminarSocio();
@@ -103,9 +103,33 @@ switch ($accion) {
         eliminarUsuario();
         break;
 
-    default:
+default:
         http_response_code(404);
-        echo "Página no encontrada chaval";
+        
+        // Imprimimos la etiqueta <pre> para que el HTML respete el formato del arte ASCII
+        echo "<pre>";
+        echo <<<EOT
 
+    ░██████████ ░█████████  ░█████████    ░██████   ░█████████         ░██████  ░█████████                     
+    ░██         ░██     ░██ ░██     ░██  ░██   ░██  ░██     ░██       ░██   ░██ ░██    ░██                     
+    ░██         ░██     ░██ ░██     ░██ ░██     ░██ ░██     ░██       ░██             ░██                      
+    ░█████████  ░█████████  ░█████████  ░██     ░██ ░█████████        ░███████       ░██                       
+    ░██         ░██   ░██   ░██   ░██   ░██     ░██ ░██   ░██         ░██   ░██     ░██                        
+    ░██         ░██    ░██  ░██    ░██   ░██   ░██  ░██    ░██        ░██   ░██     ░██                        
+    ░██████████ ░██     ░██ ░██     ░██   ░██████   ░██     ░██        ░██████      ░██                        
+                                                                                                            
+                                                                                                            
+    ██████   █████   ██████  ██ ███    ██  █████      ███    ██  ██████      ███████ ███    ██  ██████  ██████  ███    ██ ████████ ██████   █████  ██████   █████  
+    ██   ██ ██   ██ ██       ██ ████   ██ ██   ██     ████   ██ ██    ██     ██      ████   ██ ██      ██    ██ ████   ██    ██    ██   ██ ██   ██ ██   ██ ██   ██ 
+    ██████  ███████ ██   ███ ██ ██ ██  ██ ███████     ██ ██  ██ ██    ██     █████   ██ ██  ██ ██      ██    ██ ██ ██  ██    ██    ██████  ███████ ██   ██ ███████ 
+    ██      ██   ██ ██    ██ ██ ██  ██ ██ ██   ██     ██  ██ ██ ██    ██     ██      ██  ██ ██ ██      ██    ██ ██  ██ ██    ██    ██   ██ ██   ██ ██   ██ ██   ██ 
+    ██      ██   ██  ██████  ██ ██   ████ ██   ██     ██   ████  ██████      ███████ ██   ████  ██████  ██████  ██   ████    ██    ██   ██ ██   ██ ██████  ██   ██ 
+                                                                                                                                                                
+                                                                                                                                                               
+                                                                                                            
+                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+EOT;
+        break; // Cerramos el caso default
 }
 ?>

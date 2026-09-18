@@ -36,10 +36,10 @@ $esEdicion = isset($socio);
                        placeholder="Nombre"
                        value="<?= $esEdicion ? htmlspecialchars($socio->getNombre()) : '' ?>" required>
                        
-                <label for="apellido" class="form-label">Apellido</label>      
-                <input type="text" name="apellido" id="apellido" class="form-control mb-3"
-                       placeholder="Apellido"
-                       value="<?= $esEdicion ? htmlspecialchars($socio->getApellido()) : '' ?>" required> 
+                <label for="clase" class="form-label">Clase</label>      
+                <input type="text" name="clase" id="clase" class="form-control mb-3"
+                       placeholder="Clase"
+                       value="<?= $esEdicion ? htmlspecialchars($socio->getClase()) : '' ?>" required> 
 
                 <label for="cedula" class="form-label">Cédula</label>
                 <input type="text" name="cedula" id="cedula" class="form-control mb-3"
@@ -55,6 +55,24 @@ $esEdicion = isset($socio);
                 <input type="date" name="fecha_registro" id="fecha_registro" class="form-control mb-3"
                        placeholder="Fecha de registro"
                        value="<?= $esEdicion ? $socio->getFecharegistro() : '' ?>" required>
+
+                       
+                <?php if ($esEdicion): ?>
+                    <label>Foto actual</label><br>
+                    <div class="mb-2">
+                        <?php if (!empty($socio->getFoto())): ?>
+                            <img src="uploads/fotos/<?= htmlspecialchars($socio->getFoto()) ?>"
+                                 alt="Foto actual" class="foto-preview" style="max-width:150px;">
+                        <?php else: ?>
+                            <p class="text-muted" style="color: white;">Este socio no tiene foto.</p>
+                        <?php endif; ?>
+                    </div>
+                    <label>Cambiar foto (opcional)</label>
+                <?php else: ?>
+                    <label>Foto</label>
+                <?php endif; ?>
+
+                <input type="file" name="foto" class="form-control mb-3" accept="image/*">
 
 
                 <button type="submit" class="btn btn-success w-100 mb-2">

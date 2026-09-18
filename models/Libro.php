@@ -23,6 +23,9 @@ class Libro {
         $this->portada           = $portada;
     }
 
+    // =========================
+    // GETTERS
+    // =========================
    
     public function getId() {
         return $this->id;

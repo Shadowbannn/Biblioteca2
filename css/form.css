@@ -19,7 +19,7 @@ body {
     color: #ffffff;
     font-family: 'Inter', Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    background-image: url(https://media.admagazine.com/photos/6585f181bbe8ec0403994e1f/16:9/w_2560,c_limit/the-library-b2-hotel-zurich.jpg);
+    background-image: url("../img/form.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -53,7 +53,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     color: white;
     text-align: left;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(17px);
     background: rgba(0, 0, 0, 0.25);
 
 }
@@ -142,6 +142,11 @@ body {
 }
 
 .form-card small.text-muted {
+    font-size: 0.75rem;
+}
+
+.text-muted {
+    color: #c9c9c9 !important;
     font-size: 0.8rem;
 }
 
@@ -163,19 +168,4 @@ body {
     border-radius: var(--radius-sm);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     background-color: #eee;
-}
-
-
-/* ---------- Barra de progreso (importación CSV) ---------- */
-
-.progress {
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.15);
-    overflow: hidden;
-}
-
-.progress-bar {
-    background-color: var(--color-accent);
-    color: #141414;
-    font-weight: 600;
 }

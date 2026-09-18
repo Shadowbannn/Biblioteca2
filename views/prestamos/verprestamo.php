@@ -1,6 +1,6 @@
 <?php require __DIR__ . '/../../includes/header.php'; ?>
 
-<h1 class="titulo mt-5"><br><b>Préstamos</b></h1>
+<h1 class="titulo mt-5"><b>Préstamos</b></h1>
 
 <div class="mb-3">
     <a href="index.php?accion=formCrearPrestamo" class="btn btn-success">

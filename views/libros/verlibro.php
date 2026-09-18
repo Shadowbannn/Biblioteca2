@@ -1,6 +1,6 @@
 <?php require __DIR__ . '/../../includes/header.php'; ?>
 
-<h1 class="titulo mt-5"><br><b>Libros</b></h1>
+<h1 class="titulo mt-5"><b>Libros</b></h1>
 
 <div class="mb-3">
     <a href="index.php?accion=formCrearLibro" class="btn btn-success">
@@ -80,5 +80,4 @@
 <div class="mt-3">
     <a href="index.php" class="btn btn-secondary">← Volver al inicio</a>
 </div>
-
 <?php require __DIR__ . '/../../includes/footer.php'; ?>

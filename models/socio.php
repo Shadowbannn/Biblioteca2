@@ -4,24 +4,27 @@ class Socio
 {
     private ?int $id;
     private string $nombre;
-    private string $apellido;
+    private string $clase;
     private string $cedula;
     private string $telefono;
     private string $fecha_registro;
+    private ?string $foto;
 
     public function __construct(
         string $nombre,
-        string $apellido,
+        string $clase,
         string $cedula,
         string $telefono,
         string $fecha_registro,
+        string $foto = null,
         ?int $id = null
     ) {
         $this->nombre = $nombre;
-        $this->apellido = $apellido;
+        $this->clase = $clase;
         $this->cedula = $cedula;
         $this->telefono = $telefono;
         $this->fecha_registro = $fecha_registro;
+        $this->foto = $foto;
         $this->id = $id;
     }
 
@@ -39,9 +42,9 @@ class Socio
         return $this->nombre;
     }
 
-    public function getApellido(): string
+    public function getClase(): string
     {
-        return $this->apellido;
+        return $this->clase;
     }
 
     public function getCedula(): string
@@ -59,13 +62,18 @@ class Socio
         return $this->fecha_registro;
     }
 
+    public function getFoto(): ?string
+    {
+        return $this->foto;
+    }
+
   
     
 
     public function mostrarInfo(): void
     {
         echo "Nombre          : {$this->nombre}\n";
-        echo "Apellido        : {$this->apellido}\n";
+        echo "Clase           : {$this->clase}\n";
         echo "Cedula          : {$this->cedula}\n";
         echo "Telefono        : {$this->telefono}\n";
         echo "Fecha registro  : {$this->fecha_registro}\n";
@@ -78,10 +86,11 @@ class Socio
     {
         return new Socio(
             (string) $f['nombre'],
-            (string) $f['apellido'],
+            (string) $f['clase'],
             (string) $f['cedula'],
             (string) $f['telefono'],
             (string) $f['fecha_registro'],
+            isset($f['foto']) ? (string) $f['foto'] : null,
             isset($f['id']) ? (int) $f['id'] : null
         );
     }
@@ -163,23 +172,25 @@ class Socio
     public static function crear(
         PDO $pdo,
         string $nombre,
-        string $apellido,
+        string $clase,
         string $cedula,
         string $telefono,
-        string $fecha_registro
+        string $fecha_registro,
+        string $foto = null
     ): bool {
         $stmt = $pdo->prepare(
             "INSERT INTO socios
-            (nombre, apellido, cedula, telefono, fecha_registro)
-            VALUES (?, ?, ?, ?, ?)"
+            (nombre, clase, cedula, telefono, fecha_registro, foto)
+            VALUES (?, ?, ?, ?, ?, ?)"
         );
 
         return $stmt->execute([
             $nombre,
-            $apellido,
+            $clase,
             $cedula,
             $telefono,
-            $fecha_registro
+            $fecha_registro,
+            $foto
         ]);
     }
 
@@ -189,23 +200,25 @@ class Socio
         PDO $pdo,
         int $id,
         string $nombre,
-        string $apellido,
+        string $clase,
         string $cedula,
         string $telefono,
-        string $fecha_registro
+        string $fecha_registro,
+        string $foto = null
     ): bool {
         $stmt = $pdo->prepare(
             "UPDATE socios
-             SET nombre = ?, apellido = ?, cedula = ?, telefono = ?, fecha_registro = ?
+             SET nombre = ?, clase = ?, cedula = ?, telefono = ?, fecha_registro = ?, foto = ?
              WHERE id = ?"
         );
 
         return $stmt->execute([
             $nombre,
-            $apellido,
+            $clase,
             $cedula,
             $telefono,
             $fecha_registro,
+            $foto,
             $id
         ]);
     }

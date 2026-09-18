@@ -39,7 +39,7 @@ $esEdicion = isset($prestamo) && is_object($prestamo);
                         <?php foreach ($socios as $s): ?>
                             <option value="<?= $s->getId() ?>" 
                                 <?= ($esEdicion && $prestamo->getSocioId() == $s->getId()) ? 'selected' : '' ?>>
-                                <?= htmlspecialchars($s->getNombre() . ' ' . $s->getApellido()) ?> (Cédula: <?= htmlspecialchars($s->getCedula()) ?>)
+                                <?= htmlspecialchars($s->getNombre()) ?> (Cédula: <?= htmlspecialchars($s->getCedula()) ?>)
                             </option>
                         <?php endforeach; ?>
                     <?php endif; ?>

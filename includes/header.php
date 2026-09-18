@@ -26,4 +26,6 @@
     </ul>
 </nav>
 
-<div class="container">
+<div class="container" style="
+    margin-top: 50px;
+    padding-top: 10px;">
