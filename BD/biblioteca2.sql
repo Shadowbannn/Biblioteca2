@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-09-2026 a las 23:46:06
+-- Tiempo de generación: 18-09-2026 a las 21:50:21
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -96,7 +96,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (55, 'Las aventuras de Tom Sawyer', 'Mark Twain', 0, 264, 1, 'fisico, favorites-all-time, usa', 'portada_6a55773216c753.23954881.jpg'),
 (56, 'El Color Púrpura', 'Alice Walker', 1982, 220, 1, 'Ficcion', 'portada_6a55913ec9b460.95889597.jpg'),
 (57, 'La Isla de los Vientos prohibidos', 'Helen Velando', 2015, 192, 1, 'Novela', 'portada_6a6300d17d2063.17361147.jpg'),
-(58, 'Caja de secretos', 'Carmen Vazquez-Vigo', 1989, 112, 1, 'Juvenil', 'portada_6a5594008fd3a3.61918759.jpg'),
 (59, 'La historia de Ernesto', 'Mercè Company', 1986, 70, 1, 'espana', 'portada_6a557737e61623.48388681.jpg'),
 (60, 'El silencio de la ciudad blanca (La ciudad blanca, #1)', 'Eva García Sáenz de Urturi', 2016, 482, 1, 'espana', NULL),
 (61, '1930: El viaje', 'Ana Solari', 2023, 221, 1, 'fisico, uruguay', NULL),
@@ -116,9 +115,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (76, 'En la cuerda floja', 'Philippe Petit', 2003, 280, 1, 'fisico, francia', NULL),
 (77, 'Hashish', 'Henry de Monfreid', 1933, 285, 1, 'fisico, francia', NULL),
 (78, 'The Hollow Places', 'T. Kingfisher', 2020, 341, 1, 'usa', NULL),
-(80, 'Canyon Passage', 'Ernest Haycox', 1945, 252, 1, 'fisico, usa', NULL),
 (81, 'Los trabajos nocturnos', 'Amalia Jamilis', 1971, 111, 1, 'fisico, argentina', NULL),
-(82, 'And Tango Makes Three', 'Justin Richardson', 2005, 32, 1, 'usa', NULL),
 (83, 'La larga marcha', 'Stephen  King', 1979, 352, 1, 'usa', NULL),
 (84, 'Friend or Foe', 'Michael Morpurgo', 1979, 122, 1, 'fisico, inglaterra', NULL),
 (85, 'El faro del fin del mundo', 'Jules Verne', 1905, 172, 1, 'fisico, francia', NULL),
@@ -133,7 +130,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (97, 'El grito de la lechuza', 'Patricia Highsmith', 1962, 357, 1, 'Ficcion,Misterio,Crimen,Thriller', 'portada_6a63003c307b71.13805414.jpg'),
 (98, 'El Color Que Cayo del Cielo', 'H.P. Lovecraft', 1994, 35, 1, 'Horror', 'portada_6a5594f72c9566.26092202.jpg'),
 (99, 'Si te dicen que caí', 'Juan Marsé', 1973, 320, 1, 'fisico', NULL),
-(100, 'Ao Haru Ride Complete Magna Set Vol. 1-13 by Io Sakisaka', 'Io Sakisaka', 2012, 1300, 1, 'Manga', NULL),
 (101, 'Eleanor & Park', 'Rainbow Rowell', 2012, 432, 1, '', 'portada_6a5577765d8dd5.71815105.jpg'),
 (102, 'Uzumaki', 'Junji Ito', 1998, 653, 1, '', NULL),
 (104, 'El Instituto', 'Stephen  King', 2019, 624, 1, 'fisico', NULL),
@@ -163,7 +159,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (129, 'The House Across the Lake', 'Riley Sager', 2022, 369, 1, 'Misterio,Thriller', NULL),
 (153, 'Los Isleros', 'Ernesto L. Castro', 1984, 317, 1, 'Novela,Historico', NULL),
 (154, '¡Hola Doctor!', 'Willy Breinholst', 1988, 126, 1, 'Humor', 'portada_6a62b3e46b44d7.64486289.jpg'),
-(155, 'Cielos de barro', 'Dulce Chacón', 2001, 312, 1, 'Novela,Historico', 'portada_6a6293f80deeb4.19912399.jpg'),
 (157, 'La puerta', 'Manel Loureiro', 2020, 352, 1, 'Terror', NULL),
 (158, 'No Te Rias Pepe', 'Keiko Kasza', 1997, 0, 1, 'Infantil', 'portada_6a6293fb71b074.00602439.jpg'),
 (160, 'Invisible Women: Data Bias in a World Designed for Men', 'Caroline Criado Pérez', 2019, 448, 1, 'No ficcion,Ensayo', 'portada_6a6293fee3d599.47885731.jpg'),
@@ -187,15 +182,12 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (179, 'La cabaña junto al lago', 'Rachel Caine', 2020, 351, 1, 'Terror, Thriller', 'portada_6a62941f506b36.04498449.jpg'),
 (181, 'Under Water', 'Tara Menon', 2026, 224, 1, 'Ficcion', NULL),
 (182, 'The Secret Garden', 'Frances Hodgson Burnett', 1995, 60, 1, 'Clasico,Infantil', NULL),
-(183, 'Anna Karenina', 'Leo Tolstoy', 2012, 964, 1, 'Clasico,Novela', 'portada_6a6294248877b9.10670443.jpg'),
 (184, 'Corazón: Diario de un niño', 'Edmondo de Amicis', 2015, 321, 1, 'Clasico,Infantil', NULL),
 (185, 'La hora veinticinco', 'Constantin Virgil Gheorghiu', 1977, 387, 1, 'Novela', NULL),
 (186, 'The King\'s General (Pocket Books #75055)', 'Daphne du Maurier', 1965, 0, 1, 'Novela,Historico', NULL),
 (187, 'A Theatre of Love', 'Barbara Cartland', 1991, 156, 1, 'Romance', 'portada_6a6294282137b3.21583277.jpg'),
 (188, 'La última princesa de Manchuria', 'Bihua Lee', 1995, 287, 1, 'Ficcion,Historico', NULL),
-(189, 'Bajo El Sol de Kenia (Spanish Edition)', 'Barbara Wood', 1992, 0, 1, 'Novela, Saga familiar', NULL),
 (190, 'The Curse of the Ruby Necklace (Sweet Valley Twins Super Chiller, #5)', 'Francine Pascal', 1993, 183, 1, 'Juvenil', 'portada_6a62942c9d2361.02635772.jpg'),
-(191, 'Algo tan parecido al amor (rúst.)', 'Carmen Amoraga', 2007, 270, 1, 'Romance', NULL),
 (192, 'El gran Meaulnes', 'Alain-Fournier', 2005, 304, 1, 'Clasico', 'portada_6a6294301fef71.04249206.jpg'),
 (193, 'Dead Cold (Chief Inspector Armand Gamache #2)', 'Louise Penny', 2006, 0, 1, 'Misterio', 'portada_6a6294317652d9.96749833.jpg'),
 (194, 'Happy Birthday, Danny and the Dinosaur! (Danny and the Dinosaur, #2)', 'Syd Hoff', 1997, 32, 1, 'Infantil', 'portada_6a629433910b58.21971710.jpg'),
@@ -211,7 +203,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (204, 'Única mirando al mar', 'Fernando Contreras Castro', 1993, 109, 1, 'Ficcion,Literaria', 'portada_6a6294436ead33.56712330.jpg'),
 (205, 'Tuanda do Quênia', 'Cristina Von', 2011, 0, 1, 'Infantil,Aventura', NULL),
 (206, 'La fuerza de papa', 'Evelyn Aixalá Pozas', 0, 0, 1, 'Infantil', NULL),
-(207, 'Cabe na Mala - Coleção Mico Maneco (Em Portuguese do Brasil)', 'Ana Maria Machado', 2012, 0, 1, 'Infantil', NULL),
 (209, 'I Want My Hat Back', 'Jon Klassen', 2011, 40, 1, 'Infantil', 'portada_6a629448d6f7b7.40592894.jpg'),
 (210, 'O Outro Lado da Meia-Noite', 'Sidney Sheldon', 0, 390, 1, 'Thriller, Novela', NULL),
 (211, 'Médicos', 'Henry Denker', 1982, 350, 1, 'Novela', NULL),
@@ -222,9 +213,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (216, 'Rust-Colored Rain (Wrack and Ruin #1)', 'Otto Schafer', 2023, 238, 1, 'Terror', NULL),
 (217, 'Creepy Carrots! (Jasper Rabbit\'s Creepy Tales!)', 'Aaron Reynolds', 2012, 32, 1, 'Infantil', 'portada_6a6294524e64e8.77255237.jpg'),
 (218, 'Sirga', 'René Guillot', 1993, 0, 1, 'Aventura,Infantil', NULL),
-(219, 'Almendra', 'Sohn Won-Pyung', 2020, 256, 1, 'Ficcion,Literaria', NULL),
-(220, 'Abandon', 'Blake Crouch', 2012, 437, 1, 'Thriller', NULL),
-(221, 'A Feather on the Breath of God', 'Sigrid Nunez', 2005, 193, 1, 'Ficcion,Literaria', NULL),
 (222, 'A Far-Flung Life', 'M.L. Stedman', 2026, 431, 1, 'Ficcion,Literaria', 'portada_6a6294575e12a2.53796219.jpg'),
 (223, '1984', 'George Orwell', 2013, 350, 1, 'Clasico,Distopia', 'portada_6a629458bc0ef4.92807667.jpg'),
 (224, 'La vida de Pi', 'Yann Martel', 2012, 416, 1, 'Ficcion,Literaria', 'portada_6a62945a284eb2.89020865.jpg'),
@@ -267,14 +255,11 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (273, 'Emma al borde del abismo', 'Marcos Vázquez', 2014, 150, 1, 'Ficcion,Juvenil', NULL),
 (275, 'Malú: Diario íntimo de una perra', 'Ignacio Martínez', 2001, 66, 1, 'Humor,Ficcion', NULL),
 (276, 'La pareja de al lado', 'Shari Lapena', 2017, 390, 1, 'Thriller', NULL),
-(277, 'Agencia Matrimonial Para Ricos', 'Farahad Zama', 2009, 336, 1, 'Ficcion,Comedia', 'portada_6a6294a7c1c6d8.15349440.jpg'),
 (278, 'Harry Potter and the Sorcerer\'s Stone (Harry Potter, #1)', 'J.K. Rowling', 2003, 309, 1, 'Fantasia', NULL),
 (279, 'Diario', 'Ana Frank', 2003, 384, 1, 'Memoria,No ficcion historica', 'portada_6a6294aa9dc838.41377812.jpg'),
-(280, 'Carta a un niño que nunca nació', 'Oriana Fallaci', 1992, 123, 1, 'Ficcion,Literaria', 'portada_6a6294ac9ac688.44335689.jpg'),
 (283, 'La nostalgia de los átomos', 'Linus Reichlin', 2009, 352, 1, 'Ficcion,Literaria', 'portada_6a6294b1674176.45680654.jpg'),
 (284, 'Uma professora muito maluquinha', 'Ziraldo', 1995, 116, 1, 'Infantil', NULL),
 (286, 'Harry Potter and the Prisoner of Azkaban (Harry Potter, #3)', 'J.K. Rowling', 2004, 547, 1, 'Fantasia', 'portada_6a6294b73a6292.52779490.jpg'),
-(287, 'Cianuro, Espumoso', 'Agatha Christie', 2015, 216, 1, 'Misterio clasico', NULL),
 (288, 'En Busca De LA Cuidad Sumergida/Search for the Sunken City (Puzzle Adventure Series)', 'Martin Oliver', 0, 0, 1, 'Infantil,Aventura', 'portada_6a6294bab217c2.29663391.jpg'),
 (289, 'Sangre bajo cero (Alex McKnight, #1)', 'Steve Hamilton', 2007, 320, 1, 'Misterio,Thriller', NULL),
 (290, 'El Dia Del Chacal (Grandes Novelistas)', 'Frederick Forsyth', 1973, 0, 1, 'Terror', NULL),
@@ -296,7 +281,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (307, 'Cigarette Anthology, シガレットアンソロジー', 'Inio Asano', 2015, 184, 1, 'Manga', NULL),
 (308, 'La chica a la orilla del mar (Umibe no Onnanoko, #1-2)', 'Inio Asano', 2021, 410, 1, 'Manga', NULL),
 (309, 'Oyasumi Punpun Obra Completa (Oyasumi Punpun, #1-13)', 'Inio Asano', 2019, 2960, 1, 'Manga', NULL),
-(312, 'Aluga-se para Temporada', 'Mary Kay Andrews', 2012, 368, 1, 'Romance, Ficcion', NULL),
 (313, 'Uno siempre cambia al amor de su vida', 'Amalia Andrade Arango', 2015, 189, 1, 'No ficcion,Humor', NULL),
 (314, 'Fangs', 'Sarah Andersen', 2020, 100, 1, 'Comic,Romance', 'portada_6a6294e2776327.55538471.jpg'),
 (315, 'Adulthood Is a Myth (Sarah\'s Scribbles, #1)', 'Sarah Andersen', 2016, 110, 1, 'Comic,Humor', 'portada_6a6294e531f352.00592640.jpg'),
@@ -311,24 +295,19 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (335, 'The Cookie Fiasco (Elephant & Piggie Like Reading!, #1)', 'Dan Santat', 2016, 64, 1, 'Infantil', 'portada_6a6294fd4104a9.91071670.jpg'),
 (336, 'The Kissing Hand', 'Audrey Penn', 1998, 32, 1, 'Infantil', 'portada_6a6294ff5d85e3.06411034.jpg'),
 (337, 'Go, Dog. Go!', 'P.D. Eastman', 1961, 64, 1, 'Infantil', 'portada_6a62950170fa94.54391737.jpg'),
-(341, 'Asfixia', 'Alex Mírez', 2016, 504, 1, 'Romance', NULL),
-(352, 'Agustina La Payasa', 'Otfried Preußler', 2002, 41, 1, 'Infantil', NULL),
 (357, 'Lili, Libertad', 'Gonzalo Moure Trenor', 2005, 112, 1, 'Juvenil', 'portada_6a62951e448594.93037636.jpg'),
 (370, 'Milk and honey', 'Rupi Kaur', 2014, 204, 1, 'Poesia', 'portada_6a62952fbf2028.40363979.jpg'),
 (371, 'Las uvas de la ira', 'John Steinbeck', 2009, 637, 1, 'Clasico', NULL),
 (372, 'Stephanie\'s Ponytail (Munsch for Kids)', 'Robert Munsch', 1996, 24, 1, 'Infantil', 'portada_6a6295333a9bd9.47143655.jpg'),
 (373, 'From My Window', 'Otávio Júnior', 2020, 40, 1, 'Infantil,Comic', 'portada_6a6295348c7344.49792938.jpg'),
 (374, 'La larga marcha', 'Stephen King', 2019, 352, 1, 'Ficcion,Distopia', NULL),
-(381, 'Café', 'Babi Cedillo', 0, 0, 1, 'Ficcion,Romance', NULL),
 (384, 'Turma da Mônica Jovem (Segunda Série) #29 - O mundo de Maria Cebola', 'Mauricio de Sousa', 2019, 130, 1, 'Comic,Infantil', NULL),
 (389, 'De la tierra a la luna/La vuelta al mundo en 80 días', 'Jules Verne', 2019, 416, 1, 'Clasico,Ciencia ficcion,Aventura', NULL),
 (392, 'The Housemaid\'s Secret (The Housemaid, #2)', 'Freida McFadden', 2023, 311, 1, 'Thriller', NULL),
 (393, 'Hotel: since 2079', 'Boichi', 0, 42, 1, 'Manga,Ciencia ficcion', NULL),
 (394, 'You Are in the Blue Summer', 'Nagisa Furuya', 2018, 186, 1, 'Manga', NULL),
 (398, 'Wild Dark Shore', 'Charlotte McConaghy', 2025, 298, 1, 'Ficcion,Literaria,Thriller', NULL),
-(399, 'Blown Away (Storm Front, #1)', 'Sharon Sala', 2010, 361, 1, 'Romance', 'portada_6a62954b78cb18.31681953.jpg'),
 (400, 'Japanese Gothic', 'Kylie Lee Baker', 2026, 344, 1, 'Terror', 'portada_6a62954de24421.82700177.jpg'),
-(401, 'Atlantis: The Antediluvian World', 'Ignatius L. Donnelly', 2011, 490, 1, 'No ficcion, Especulativa', 'portada_6a62954fdbc649.28105052.jpg'),
 (402, 'Junie B., First Grader Boo... and I Mean It!', 'Barbara Park', 2005, 0, 1, 'Infantil', NULL),
 (403, 'The Doctor`s Challenge', 'Kerry Archer Mitchell', 1961, 0, 1, 'Romance', NULL),
 (404, 'The Cat Who Saved Books (The Cat Who..., #1)', 'Sōsuke Natsukawa', 2021, 199, 1, 'Ficcion,Literaria', 'portada_6a629552636289.71237171.jpg'),
@@ -367,7 +346,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (442, 'Cloud Atlas', 'David Mitchell', 2004, 509, 1, 'Ciencia ficcion,Ficcion,Literaria', 'portada_6a629580d66e65.56478129.jpg'),
 (443, 'Kaikeyi', 'Vaishnavi Patel', 2022, 478, 1, 'Fantasia,Mitologica', 'portada_6a629582dfabb7.77885983.jpg'),
 (444, 'Let Us Descend', 'Jesmyn Ward', 2023, 305, 1, 'Ficcion,Historico', 'portada_6a629585003f79.64203114.jpg'),
-(445, 'Antiracist Baby', 'Ibram X. Kendi', 2020, 24, 1, 'Infantil,No ficcion', 'portada_6a62958703e322.96583762.jpg'),
 (446, 'Those People Next Door', 'Kia Abdullah', 2024, 160, 1, 'Thriller', 'portada_6a629588ee7945.01832653.jpg'),
 (447, 'The Women', 'Kristin Hannah', 2024, 471, 1, 'Ficcion,Historico', 'portada_6a62958b1496f6.61252389.jpg'),
 (448, 'The Wild Robot (The Wild Robot, #1)', 'Peter Brown', 2016, 282, 1, 'Infantil,Ciencia ficcion', 'portada_6a62958c5eb433.82358565.jpg'),
@@ -382,7 +360,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (460, 'Horrorstör', 'Grady Hendrix', 2014, 248, 1, 'Terror, Comedia', NULL),
 (461, 'Neil Patrick Harris: Choose Your Own Autobiography', 'Neil Patrick Harris', 2014, 291, 1, 'Memoria', NULL),
 (462, 'Chesapeake Cavalier', 'Don Tracy', 1950, 0, 1, 'Novela,Historico', NULL),
-(463, 'Annie Bot', 'Sierra Greer', 2024, 240, 1, 'Ciencia ficcion', 'portada_6a6295a1a09736.94967073.jpg'),
 (464, 'It\'s the First Day of School...Forever!', 'R.L. Stine', 2011, 192, 1, 'Infantil,Terror', 'portada_6a6295a3c9dac0.79900927.jpg'),
 (465, 'Mi madre es rara (Spanish Edition)', 'Gilmore - Jones', 1991, 24, 1, 'Infantil', 'portada_6a6295a63b29b2.42665888.jpg'),
 (466, 'Project Hail Mary', 'Andy Weir', 2021, 476, 1, 'Ciencia ficcion', 'portada_6a6295a8692e08.41702972.jpg'),
@@ -432,12 +409,10 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (516, 'Go as a River', 'Shelley Read', 2023, 320, 1, 'Ficcion,Literaria', 'portada_6a6295f2b58682.64534455.jpg'),
 (517, 'The Resort', 'Sara Ochs', 2024, 384, 1, 'Thriller', 'portada_6a6295f4ddc217.95645356.jpg'),
 (518, 'Edenbrooke (Edenbrooke, #1)', 'Julianne Donaldson', 2012, 264, 1, 'Romance, Historico', 'portada_6a6295f63d9898.05331340.jpg'),
-(519, 'Biblia Aventura, NVI, Tapa Dura / Spanish Adventure Bible, NVI, Hardcover (Spanish Edition)', 'Anonymous', 2018, 1472, 1, 'Religion', 'portada_6a6295f8375054.76948445.jpg'),
 (520, 'Grandma Gatewood\'s Walk: The Inspiring Story of the Woman Who Saved the Appalachian Trail', 'Ben Montgomery', 2014, 277, 1, 'No ficcion,Biografia', 'portada_6a6295fa39e334.13670466.jpg'),
 (521, 'The Christmas Escape', 'Sarah Morgan', 2021, 352, 1, 'Romance', 'portada_6a6295fc39cea1.41812576.jpg'),
 (522, 'Gender Queer: A Memoir', 'Maia Kobabe', 2019, 240, 1, 'Memoria grafica', 'portada_6a6295fe54d2c0.06808771.jpg'),
 (523, 'Rufus Goes to School', 'Kim T. Griswell', 2014, 39, 1, 'Infantil', NULL),
-(524, 'A Girl Called Samson', 'Amy Harmon', 2023, 405, 1, 'Ficcion,Historico', NULL),
 (525, 'The Bee Sting', 'Paul Murray', 2023, 645, 1, 'Ficcion,Literaria', 'portada_6a62960433cfb6.16852612.jpg'),
 (526, 'Pachinko', 'Min Jin Lee', 2017, 496, 1, 'Ficcion,Historico', NULL),
 (527, 'La librera de Kentucky (Book Woman of Troublesome Creek, #1)', 'Kim Michele Richardson', 2023, 352, 1, 'Ficcion,Historico', 'portada_6a6296064973f4.51164669.jpg'),
@@ -450,13 +425,11 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (535, 'La quinta víctima (4MK Thriller, #2)', 'J.D. Barker', 2019, 608, 1, 'Thriller', NULL),
 (536, 'Don\'t Let the Pigeon Drive the Bus! (Pigeon, #1)', 'Mo Willems', 2004, 40, 1, 'Infantil', 'portada_6a629614955f57.51904087.jpg'),
 (537, 'La mamá de la mamá de mi mamá', 'Alejandra Schmidt Urzua', 2014, 44, 1, 'Infantil', 'portada_6a6296168d7945.66780119.jpg'),
-(538, 'Brown Bear, Brown Bear, What Do You See?', 'Bill Martin Jr.', 1996, 24, 1, 'Infantil', 'portada_6a629617f153d7.69112099.jpg'),
 (540, 'El corazón secuestrado', 'Gaston Leroux', 1950, 42, 1, 'Misterio clasico', NULL),
 (541, 'Ugly Love', 'Colleen Hoover', 2014, 322, 1, 'Romance', 'portada_6a62961c3f2bd3.08750230.jpg'),
 (542, 'North and South', 'Elizabeth Gaskell', 1994, 521, 1, 'Clasico', 'portada_6a62961e4a56d9.51411094.jpg'),
 (543, 'North Woods', 'Daniel Mason', 2023, 372, 1, 'Ficcion,Literaria', 'portada_6a62962093f7a9.34758762.jpg'),
 (544, 'Viven! La tragedia de los Andes', 'Piers Paul Read', 1974, 336, 1, 'No ficcion', NULL),
-(546, 'Bye Bye, Binary', 'Eric Geron', 2022, 24, 1, 'Infantil', 'portada_6a629623828ef5.25770726.jpg'),
 (547, 'Eyes that Kiss in the Corners', 'Joanna Ho', 2021, 34, 1, 'Infantil', 'portada_6a6296259306a4.30525133.jpg'),
 (548, 'Surely You Can\'t Be Serious: The True Story of Airplane!', 'David Zucker', 2023, 352, 1, 'Memoria,Humor', 'portada_6a629627c56ae3.94292129.jpg'),
 (557, 'The Israeli-Palestinian Conflict: What Everyone Needs to Know', 'Dov Waxman', 2019, 283, 1, 'No ficcion, Politica', 'portada_6a6296316f2762.31290974.jpg'),
@@ -468,15 +441,12 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (563, 'Mis whatsapp con Mamá', 'Alban Orsini', 2014, 384, 1, 'Humor', 'portada_6a62963938de77.19565470.jpg'),
 (564, 'Cinder (Las crónicas lunares, #1)', 'Marissa Meyer', 2012, 428, 1, 'Ciencia ficcion', 'portada_6a62963b4f3b58.08186940.jpg'),
 (565, 'This Is Not My Hat', 'Jon Klassen', 2012, 40, 1, 'Infantil', 'portada_6a62963d4dbd56.86239640.jpg'),
-(566, 'Black River Orchard', 'Chuck Wendig', 2023, 640, 1, 'Terror', 'portada_6a62963eaca838.51336786.jpg'),
 (567, 'Edenville', 'Sam Rebelein', 2023, 323, 1, 'Terror', 'portada_6a629640d7bf46.03633796.jpg'),
 (568, 'Dead Eleven', 'Jimmy Juliano', 2023, 439, 1, 'Terror', 'portada_6a62964247cc25.58450276.jpg'),
 (569, 'The Devil Takes You Home', 'Gabino Iglesias', 2022, 320, 1, 'Terror, Noir', 'portada_6a629644661d77.83231057.jpg'),
 (570, 'Vampires of El Norte', 'Isabel Cañas', 2023, 371, 1, 'Terror,Romance,Historico', 'portada_6a6296473bf174.80647270.jpg'),
 (571, 'Mexican Gothic', 'Silvia Moreno-Garcia', 2020, 320, 1, 'Terror, Gotico', 'portada_6a629648922867.73136547.jpg'),
-(572, 'Can You Forgive Her? (Palliser, #1)', 'Anthony Trollope', 1975, 847, 1, 'Clasico', 'portada_6a62964aa0e883.71734719.jpg'),
 (573, 'The Last Tale of the Flower Bride', 'Roshani Chokshi', 2023, 301, 1, 'Fantasia', NULL),
-(574, 'All the Forgivenesses', 'Elizabeth Hardinger', 2019, 371, 1, 'Ficcion,Historico', 'portada_6a62964c0ead93.16316443.jpg'),
 (575, 'You Made a Fool of Death with Your Beauty', 'Akwaeke Emezi', 2022, 288, 1, 'Romance, Ficcion, Literaria', 'portada_6a62964e3425b9.34626308.jpg'),
 (576, 'What Happened to Ruthy Ramirez', 'Claire Jiménez', 2023, 240, 1, 'Ficcion,Literaria', 'portada_6a6296504204e8.75954204.jpg'),
 (577, 'Wash Day Diaries', 'Jamila Rowser', 2022, 192, 1, 'Comic', 'portada_6a629651c50794.14776683.jpg'),
@@ -495,9 +465,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (592, 'Gone with the Wind', 'Margaret Mitchell', 1993, 1037, 1, 'Clasico', 'portada_6a62966924ced7.92683937.jpg'),
 (593, 'The Help', 'Kathryn Stockett', 2009, 451, 1, 'Ficcion,Historico', 'portada_6a62966b39e482.39666682.jpg'),
 (594, 'The Last Ballad', 'Wiley Cash', 2017, 416, 1, 'Ficcion,Historico', 'portada_6a62966d5ec339.66639598.jpg'),
-(595, 'After the Woods', 'Kim Savage', 2016, 304, 1, 'Thriller', 'portada_6a62966eb4ed33.36234723.jpg'),
-(596, 'If You Give a Mouse a Cookie (If You Give...)', 'Laura Joffe Numeroff', 1996, 40, 1, 'Infantil', NULL);
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`) VALUES
+(596, 'If You Give a Mouse a Cookie (If You Give...)', 'Laura Joffe Numeroff', 1996, 40, 1, 'Infantil', NULL),
 (597, 'A Hole is to Dig', 'Ruth Krauss', 1989, 48, 1, 'Infantil', 'portada_6a629670c1f187.94343996.jpg'),
 (598, 'Adivina cuánto te quiero', 'Sam McBratney', 1988, 40, 1, 'Infantil', 'portada_6a629672edef61.02390291.jpg'),
 (599, 'Las Aventuras de Juan El Zorro (Las Aventuras de Juan El Zorro, #1)', 'Renzo Vayra', 2005, 90, 1, 'Infantil', NULL),
@@ -526,7 +494,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (622, 'Sidewalk Flowers', 'JonArno Lawson', 2015, 26, 1, 'Infantil', 'portada_6a629697966dd8.06963479.jpg'),
 (623, 'House of Salt and Sorrows (Sisters of the Salt, #1)', 'Erin A. Craig', 2019, 403, 1, 'Fantasia', 'portada_6a6296990334d4.02338841.jpg'),
 (624, 'Mr. Wuffles!', 'David Wiesner', 2013, 32, 1, 'Infantil', 'portada_6a62969b17bfe7.05181904.jpg'),
-(625, 'Survivor Song', 'Paul Tremblay', 2020, 320, 1, 'Terror', 'portada_6a62969d28b5d7.17786808.jpg'),
+(625, 'Survivor Song', 'Paul Tremblay', 2020, 320, 1, 'Terror', 'portada_6a62969d28b5d7.17786808.jpg');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`) VALUES
 (626, 'Los dos amores de mi vida', 'Taylor Jenkins Reid', 2021, 320, 1, 'Romance', 'portada_6a62969e81b891.43657910.jpg'),
 (627, 'The Book of Eels: Our Enduring Fascination with the Most Mysterious Creature in the Natural World', 'Patrik Svensson', 2020, 256, 1, 'No ficcion,Naturaleza', 'portada_6a62969fe7def7.10782569.jpg'),
 (628, 'Who Ate the First Oyster?: The Extraordinary People Behind the Greatest Firsts in History', 'Cody Cassidy', 2020, 240, 1, 'No ficcion,Humor,Historico', 'portada_6a6296a2199cc3.68810792.jpg'),
@@ -539,8 +508,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (635, 'Phallacy: Life Lessons from the Animal Penis', 'Emily Willingham', 2020, 336, 1, 'No ficcion,Ciencia', 'portada_6a6296acb24447.79215081.jpg'),
 (636, 'A Fly Went By', 'Mike McClintock', 1958, 65, 1, 'Infantil', 'portada_6a6296ae1dcd14.48581821.jpg'),
 (637, 'Southern Spirits (Southern Ghost Hunter Mysteries, #1)', 'Angie Fox', 2025, 320, 1, 'Misterio cozy,Paranormal', 'portada_6a6296af77dc48.05108122.jpg'),
-(638, 'Aristotle and Dante Discover the Secrets of the Universe (Aristotle and Dante, #1)', 'Benjamin Alire Sáenz', 2012, 390, 1, 'YA,Romance', 'portada_6a6296b1aec0c4.35334165.jpg'),
-(639, 'Aristotle and Dante Dive into the Waters of the World (Aristotle and Dante, #2)', 'Benjamin Alire Sáenz', 2021, 516, 1, 'YA,Romance', 'portada_6a6296b3be4bf2.78427862.jpg'),
 (640, 'Cruzando el bosque', 'E.M. Carroll', 2015, 208, 1, 'Comic,Terror', 'portada_6a6296b5bbdc71.12276883.jpg'),
 (641, 'Fragments of Horror', 'Junji Ito', 2015, 224, 1, 'Manga,Terror', 'portada_6a6296b71c09f4.52613629.jpg'),
 (642, 'The Boy, the Mole, the Fox and the Horse', 'Charlie Mackesy', 2019, 128, 1, 'Infantil,Inspiracional', 'portada_6a6296b91c5100.16212898.jpg'),
@@ -548,7 +515,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (644, '¿Cuánta tierra necesita un hombre?', 'Leo Tolstoy', 2011, 66, 1, 'Clasico,Relato', 'portada_6a6296bd227c80.26475571.jpg'),
 (645, 'La sexta trampa (4MK Thriller, #3)', 'J.D. Barker', 2020, 550, 1, 'Thriller', NULL),
 (646, 'Maus I: A Survivor\'s Tale: My Father Bleeds History (Maus, #1)', 'Art Spiegelman', 1991, 159, 1, 'Comic,Historico', 'portada_6a6296c11862d3.16799145.jpg'),
-(647, 'Anya\'s Ghost', 'Vera Brosgol', 2011, 224, 1, 'Comic', 'portada_6a6296c318f9b5.70841583.jpg'),
 (648, 'Garlic and the Vampire (Garlic, #1)', 'Bree Paulsen', 2021, 160, 1, 'Infantil,Comic', 'portada_6a6296c54f90f0.09825656.jpg'),
 (649, 'Mafalda: femenino singular', 'Quino', 2018, 144, 1, 'Comic,Humor', 'portada_6a6296c77e4103.85863399.jpg'),
 (650, 'House of Hollow', 'Krystal Sutherland', 2021, 292, 1, 'Fantasia', 'portada_6a6296c90a9394.77961190.jpg'),
@@ -589,12 +555,10 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (688, 'A Little Princess', 'Frances Hodgson Burnett', 2002, 242, 1, 'Clasico,Infantil', 'portada_6a629710cfef29.97970522.jpg'),
 (689, 'El día que dejó de nevar en Alaska', 'Alice Kellen', 2017, 352, 1, 'Romance', 'portada_6a629712eaff10.06484245.jpg'),
 (690, 'The Trick is to Keep Breathing', 'Janice Galloway', 2015, 236, 1, 'Ficcion,Literaria', 'portada_6a629714843496.35503637.jpg'),
-(691, 'Blackberry Summer (Hope\'s Crossing, #1)', 'RaeAnne Thayne', 2011, 384, 1, 'Romance', 'portada_6a62971688e717.29911621.jpg'),
 (694, 'Zac y Mia', 'A.J. Betts', 2015, 288, 1, 'YA', 'portada_6a62971b884106.93557833.jpg'),
 (695, 'Shiver (The Wolves of Mercy Falls, #1)', 'Maggie Stiefvater', 2009, 392, 1, 'Fantasia,Romance', 'portada_6a62971d1c34d2.75133732.jpg'),
 (696, '¿Y si quedamos como amigos?', 'Elizabeth Eulberg', 2014, 312, 1, 'YA,Romance', NULL),
 (697, 'What Alice Forgot', 'Liane Moriarty', 2018, 487, 1, 'Ficcion,Literaria', 'portada_6a62971f5b44c8.14907113.jpg'),
-(698, 'Al final mueren los dos', 'Adam Silvera', 2018, 384, 1, 'YA', 'portada_6a62972173fab1.76924997.jpg'),
 (699, 'The Only Harmless Great Thing', 'Brooke Bolander', 2018, 93, 1, 'Ciencia ficcion,Fantasia', 'portada_6a6297238eb158.77370556.jpg'),
 (700, 'The Far Side Gallery', 'Gary Larson', 1984, 192, 1, 'Comic,Humor', 'portada_6a629724f2a552.62774481.jpg'),
 (701, 'Me casaré contigo', 'Corín Tellado', 1959, 0, 1, 'Romance', NULL),
@@ -624,7 +588,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (728, 'La tumba maldita (Los misterios de Setna, #1)', 'Christian Jacq', 2015, 272, 1, 'Ficcion,Historico', NULL),
 (729, 'El misterio de la isla de Tökland', 'Joan Manuel Gisbert', 1998, 236, 1, 'Juvenil,Misterio', 'portada_6a62974fd25fb6.97739196.jpg'),
 (730, 'Demon Slayer\'s Secret : Lore, Theories and Legend', 'The Spirit', 2026, 75, 1, 'Manga', 'portada_6a67c2a2a14c09.83821589.jpg'),
-(731, '1. Wigetta', 'Vegetta777 y Willyrex', 2016, 166, 1, 'Juvenil', 'portada_6a67c35feffdc8.67595858.jpg'),
 (732, 'Mi amigo Hipojico', 'Magdalena Heiguera', 2015, 45, 1, 'Infantil', NULL),
 (733, 'Vandalia', 'Helen Velando', 2010, 279, 1, 'Ficcion,Aventura', NULL),
 (734, 'It\'s Kind of a Funny Story', 'Ned Vizzini', 2006, 444, 1, 'Juvenil', 'portada_6a7a78b21107c9.05169741.jpg');
@@ -651,7 +614,8 @@ CREATE TABLE `prestamos` (
 --
 
 INSERT INTO `prestamos` (`id`, `libroId`, `socioId`, `fechaPrestamo`, `fecha_devolucion_estimada`, `libroTitulo`, `estado`, `creado_en`) VALUES
-(1, 253, 11, '2026-07-23', '2026-07-28', NULL, 'prestado', '2026-07-27 23:33:37');
+(1, 253, 11, '2026-07-23', '2026-07-28', NULL, 'prestado', '2026-07-27 23:33:37'),
+(8, 10, 14, '2026-09-15', '0000-00-00', NULL, 'reservado', '2026-09-15 20:45:43');
 
 -- --------------------------------------------------------
 
@@ -663,34 +627,32 @@ CREATE TABLE `socios` (
   `id` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `email` varchar(100) DEFAULT NULL,
-  `apellido` varchar(100) NOT NULL,
   `cedula` varchar(20) NOT NULL,
   `telefono` varchar(20) DEFAULT NULL,
   `fecha_registro` date DEFAULT curdate(),
-  `clase` varchar(50) DEFAULT NULL
+  `clase` varchar(50) DEFAULT NULL,
+  `foto` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `socios`
 --
 
-INSERT INTO `socios` (`id`, `nombre`, `email`, `apellido`, `cedula`, `telefono`, `fecha_registro`, `clase`) VALUES
-(1, 'Juan', 'juan.perez@email.com', 'Pérez', '51234567', '099123456', '2026-07-21', '2°JK'),
-(2, 'María', 'maria.gomez@email.com', 'Gómez', '48765432', '098765432', '2026-07-21', '1°LI'),
-(3, 'Carlos', 'carlos.rodriguez@email.com', 'Rodríguez', '45678901', '091234567', '2026-07-21', '3°OP'),
-(4, 'Lucía', 'lucia.fernandez@email.com', 'Fernández', '53456789', '097654321', '2026-07-21', '2°XD'),
-(5, 'Sofía', 'sofia.martinez@email.com', 'Martínez', '47890123', '094112233', '2026-07-21', '1°BT'),
-(6, 'Mateo', 'mateo.silva@email.com', 'Silva', '50123456', '095223344', '2026-07-21', '3°RD'),
-(7, 'Valentina', 'valentina.suarez@email.com', 'Suárez', '52345678', '092334455', '2026-07-21', '1°RT'),
-(8, 'Nicolás', 'nicolas.lopez@email.com', 'López', '48901234', '096445566', '2026-07-21', '2°SL'),
-(9, 'Camila', 'camila.torres@email.com', 'Torres', '54567890', '093556677', '2026-07-21', '2°LG'),
-(10, 'Martín', 'martin.acosta@email.com', 'Acosta', '46789012', '099667788', '2026-07-21', '1°BT'),
-(11, 'Anthony', 'antoniotoniosigma@gmail.com', 'Silva', '55118416', '094759451', '2026-07-21', '3°MH'),
-(12, 'Ezequiel', 'tonisigma@gmail.com', 'Mello', '55118417', '095437435', '2026-07-21', '3°MH'),
-(13, 'Jhon', 'porkjhon67@gmail.com', 'Pork', '67676776', '094759451', '2026-07-21', '3°MG'),
-(14, 'Camila', 'camilita@gmail.com', 'Muniz', '55444674', '096456782', '2026-07-27', '3°MH'),
-(15, 'Tonio', 'tonio@gmail.com', 'Sigma', '55118418', '095678345', '2026-07-28', '2°MG'),
-(16, 'Jhon', 'Jhonsito@hotmail.com', 'Cena', '55654367', '095436543', '2026-07-28', '1°FR');
+INSERT INTO `socios` (`id`, `nombre`, `email`, `cedula`, `telefono`, `fecha_registro`, `clase`, `foto`) VALUES
+(1, 'McLovin', 'juan.perez@email.com', '55555555', '099123456', '2026-07-21', '2°JK', 'foto_6aacdd3d8be471.32694895.jfif'),
+(2, 'María Rodriguez', 'maria.gomez@email.com', '48765432', '098765432', '2026-07-21', '1°LI', 'foto_6aacdfab883968.29224432.jfif'),
+(3, 'Froggers', 'carlos.rodriguez@email.com', '45678901', '091234567', '2026-07-21', '3°OP', 'foto_6aad88425c3f41.17576085.gif'),
+(4, 'Crazy Frog', 'lucia.fernandez@email.com', '53456789', '097654321', '2026-07-21', '2°XD', 'foto_6aad899048ebb2.75751059.gif'),
+(5, 'Tomas Guasa', 'sofia.martinez@email.com', '47890123', '094112233', '2026-07-21', '1°BT', 'foto_6aace051a89908.77133635.jfif'),
+(7, 'Shadow', 'valentina.suarez@email.com', '52345678', '092334455', '2026-07-21', '1°RT', 'foto_6aace082876d47.36190139.png'),
+(8, 'Viernes Donda', 'nicolas.lopez@email.com', '48901234', '096445566', '2026-07-21', '2°SL', 'foto_6aacdfd6c4c1f0.71396209.jpg'),
+(9, 'King Von', 'camila.torres@email.com', '64646464', '093556677', '2026-07-21', '2°OB', 'foto_6aad009585f7e5.01922847.gif'),
+(10, 'Martín Silva', 'martin.acosta@email.com', '46789012', '099667788', '2026-07-21', '1°BT', 'foto_6aacdfb50ebc29.78398148.jfif'),
+(11, 'Anthony Silva', 'antoniotoniosigma@gmail.com', '55118416', '094759451', '2026-07-21', '3°MH', 'foto_6aacda28313f43.91397167.gif'),
+(13, 'Jhon Pork', 'porkjhon67@gmail.com', '67676776', '094759451', '2026-07-21', '3°MG', 'foto_6aacdaf41e1df2.37384719.jpg'),
+(14, 'Camila Muniz', 'camilita@gmail.com', '55444674', '096456782', '2026-07-27', '3°MH', 'foto_6aacd9d3808328.01256081.jfif'),
+(16, 'Jhon Cena', 'Jhonsito@hotmail.com', '55654367', '095436543', '2026-07-28', '1°FR', 'foto_6aacf993c33a51.32441459.gif'),
+(17, 'Sigma', NULL, '12345678', '123456789', '2026-09-18', NULL, 'foto_6aacd74cd251f5.11216674.jpg');
 
 -- --------------------------------------------------------
 
@@ -701,16 +663,18 @@ INSERT INTO `socios` (`id`, `nombre`, `email`, `apellido`, `cedula`, `telefono`,
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `email` varchar(150) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `fecha_registro` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nombre`, `email`, `password`) VALUES
-(1, 'Administrador', 'admin@utu.com', '1234');
+INSERT INTO `usuarios` (`id`, `nombre`, `email`, `password`, `fecha_registro`) VALUES
+(1, 'Anthony Silva', 'shadowxrd45@gmail.com', '$2y$10$iSlmkP01pxqTHk6zj6csGOFDWTvhzSGJS/IklS8nhHRb7XQ29cCF6', '2026-09-16 07:29:36'),
+(2, 'Admin', 'admin@utu.edu.uy', '$2y$10$5MZBE/PoKtlh//QFm/MdHeoLVHgyxTjFMjFhY4Nx3m4aFqR2cp4Pu', '2026-09-18 02:00:36');
 
 --
 -- Índices para tablas volcadas
@@ -758,19 +722,19 @@ ALTER TABLE `libros`
 -- AUTO_INCREMENT de la tabla `prestamos`
 --
 ALTER TABLE `prestamos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `socios`
 --
 ALTER TABLE `socios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas
