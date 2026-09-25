@@ -12,25 +12,25 @@ class Prestamo {
 
     public function __construct(int $id, int $socioId, int $libroId, 
                                 string $fechaPrestamo, string $fechaDevolucion, string $socioNombre, string $libroTitulo, string $estado) {                           
-        $this->id            = $id;
-        $this->socioId       = $socioId;
-        $this->libroId       = $libroId;
-        $this->fechaPrestamo = $fechaPrestamo;
+        $this->id              = $id;
+        $this->socioId         = $socioId;
+        $this->libroId         = $libroId;
+        $this->fechaPrestamo   = $fechaPrestamo;
         $this->fechaDevolucion = $fechaDevolucion;
-        $this->socioNombre   = $socioNombre;
-        $this->libroTitulo   = $libroTitulo;
-        $this->estado        = $estado;
+        $this->socioNombre     = $socioNombre;
+        $this->libroTitulo     = $libroTitulo;
+        $this->estado          = $estado;
     }
 
-    public function getId():            int    { return $this->id; }
-    public function getSocioId():       int    { return $this->socioId; }
-    public function getLibroId():       int    { return $this->libroId; }
-    public function getFechaPrestamo(): string { return $this->fechaPrestamo; }
+    public function getId():              int    { return $this->id; }
+    public function getSocioId():         int    { return $this->socioId; }
+    public function getLibroId():         int    { return $this->libroId; }
+    public function getFechaPrestamo():   string { return $this->fechaPrestamo; }
     public function getFechaDevolucion(): string { return $this->fechaDevolucion; }
-    public function getSocioNombre():   string { return $this->socioNombre; }
-    public function getLibroTitulo():   string { return $this->libroTitulo; }
-    public function getEstado():        string { return $this->estado; }
-    public function getLibroPortada(): ?string {
+    public function getSocioNombre():     string { return $this->socioNombre; }
+    public function getLibroTitulo():     string { return $this->libroTitulo; }
+    public function getEstado():          string { return $this->estado; }
+    public function getLibroPortada():   ?string {
 
 
         global $pdo;
@@ -69,7 +69,8 @@ class Prestamo {
     }
 
     public static function crear(PDO $pdo, int $socioId, int $libroId, string $estado, string $fechaPrestamo, string $fechaDevolucion): bool {
-        $stmt = $pdo->prepare("INSERT INTO prestamos (socioId, libroId, fechaPrestamo, fechaDevolucion)
+        $stmt = $pdo->prepare("INSERT INTO prestamos 
+                               (socioId, libroId, fechaPrestamo, fechaDevolucion)
                                VALUES (?, ?, ?, ?)");
         return $stmt->execute([$socioId, $libroId, $fechaPrestamo, $fechaDevolucion]);
     }
