@@ -36,7 +36,10 @@
                             <p class="card-text">
                                 <b>Prestado:</b> <?= date('d/m/Y', strtotime($prestamo->getFechaPrestamo())) ?><br> 
                                 <b>Libro:</b> <?= htmlspecialchars($prestamo->getLibroTitulo()) ?><br> 
-                                <b>Usuario:</b> <?= htmlspecialchars($prestamo->getSocioNombre()) ?><br> 
+                                <b>Socio:</b> <?= htmlspecialchars($prestamo->getSocioNombre()) ?><br> 
+                                <b>Estado:</b> <?= htmlspecialchars($prestamo->getEstado()) ?><br>
+                                <b>Devolución Estimada:</b> <?= date('d/m/Y', strtotime($prestamo->getFechaDevolucion())) ?><br> 
+
                             </p>
 
                             <div class="mt-auto d-flex gap-2">

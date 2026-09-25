@@ -80,11 +80,14 @@ class Libro {
         return (int) $pdo->query("SELECT COUNT(*) FROM libros")->fetchColumn();
     }
 
-    public static function listarPaginado(PDO $pdo, int $paginaActual, int $porPagina): array {
+    public static function listarPaginado(PDO $pdo, 
+        int $paginaActual, int $porPagina): array {
         $inicio = ($paginaActual - 1) * $porPagina;
 
         $stmt = $pdo->prepare(
-            "SELECT * FROM libros ORDER BY titulo LIMIT :inicio, :cantidad"
+            "SELECT * FROM libros 
+             ORDER BY titulo 
+             LIMIT :inicio, :cantidad"
         );
         $stmt->bindValue(':inicio', $inicio, PDO::PARAM_INT);
         $stmt->bindValue(':cantidad', $porPagina, PDO::PARAM_INT);
@@ -105,6 +108,11 @@ class Libro {
         $f = $stmt->fetch(PDO::FETCH_ASSOC);
         return $f ? self::desdeFila($f) : null;
     }
+
+
+    // =========================
+    // CRUD
+    // =========================
 
     public static function crear(PDO $pdo, string $titulo, string $autor, int $anio,
                                   int $paginas, string $genero, ?string $portada): bool {

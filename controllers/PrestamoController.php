@@ -49,9 +49,11 @@ function crearPrestamo() {
 
     $socioId       = (int) ($_POST['socioId'] ?? 0);
     $libroId       = (int) ($_POST['libroId'] ?? 0);
+    $estado        = (string) ($_POST['estado'] ?? 0);
     $fechaPrestamo = trim($_POST['fechaPrestamo'] ?? '');
+    $fechaDevolucion = trim($_POST['fechaDevolucion'] ?? '');
 
-    if ($socioId === 0 || $libroId === 0 || $fechaPrestamo === '') {
+    if ($socioId === 0 || $libroId === 0 || $estado === 0 || $fechaPrestamo === '' || $fechaPrestamo === '') {
         $error = "Todos los campos son obligatorios.";
         $socios = Socio::listarPaginado($pdo, 1, 1000);
         $libros = Libro::listarPaginado($pdo, 1, 1000);
@@ -59,7 +61,7 @@ function crearPrestamo() {
         return;
     }
 
-    Prestamo::crear($pdo, $socioId, $libroId, $fechaPrestamo);
+    Prestamo::crear($pdo, $socioId, $libroId, $estado, $fechaPrestamo, $fechaDevolucion);
 
     header('Location: index.php?accion=listarPrestamos');
     exit;
@@ -68,12 +70,14 @@ function crearPrestamo() {
 function editarPrestamo() {
     global $pdo;
 
-    $id            = (int) ($_POST['id'] ?? 0);
-    $socioId       = (int) ($_POST['socioId'] ?? 0);
-    $libroId       = (int) ($_POST['libroId'] ?? 0);
-    $fechaPrestamo = trim($_POST['fechaPrestamo'] ?? '');
+    $id              = (int) ($_POST['id'] ?? 0);
+    $socioId         = (int) ($_POST['socioId'] ?? 0);
+    $libroId         = (int) ($_POST['libroId'] ?? 0);
+    $estado          = (string) ($_POST['estado'] ?? 0);
+    $fechaPrestamo   = trim($_POST['fechaPrestamo'] ?? '');
+    $fechaDevolucion = trim($_POST['fechaDevolucion'] ?? '');
 
-    if ($id === 0 || $socioId === 0 || $libroId === 0 || $fechaPrestamo === '') {
+    if ($id === 0 || $socioId === 0 || $libroId === 0 || $estado === 0 || $fechaPrestamo === '' || $fechaDevolucion === '') {
         $prestamo = Prestamo::buscarPorId($pdo, $id);
         $socios = Socio::listarPaginado($pdo, 1, 1000);
         $libros = Libro::listarPaginado($pdo, 1, 1000);
@@ -82,7 +86,7 @@ function editarPrestamo() {
         return;
     }
 
-    Prestamo::actualizar($pdo, $id, $socioId, $libroId, $fechaPrestamo);
+    Prestamo::actualizar($pdo, $id, $socioId, $libroId, $estado, $fechaPrestamo, $fechaDevolucion);
 
     header('Location: index.php?accion=listarPrestamos');
     exit;

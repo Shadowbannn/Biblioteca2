@@ -1,33 +1,9 @@
 <?php
 session_start();
 
-require __DIR__ . '/../../../config/conexion.php';
-require __DIR__ . '/../models/user.php';
-
-$mensaje = "";
-$tipo_alerta = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nombre = trim($_POST["nombre"] ?? "");
-    $email = trim($_POST["email"] ?? "");
-    $password = $_POST["password"] ?? "";
-    $confirmar_password = $_POST["confirmar_password"] ?? "";
-
-    if ($nombre === "" || $email === "" || $password === "") {
-        $mensaje = "Todos los campos son obligatorios.";
-        $tipo_alerta = "alert-danger";
-    } elseif ($password !== $confirmar_password) {
-        $mensaje = "Las contraseñas no coinciden.";
-        $tipo_alerta = "alert-danger";
-    } elseif (Usuario::emailExiste($pdo, $email)) {
-        $mensaje = "Ese correo ya está registrado.";
-        $tipo_alerta = "alert-danger";
-    } else {
-        Usuario::crear($pdo, $nombre, $email, $password);
-        $mensaje = "¡Cuenta creada exitosamente! Ya puedes iniciar sesión.";
-        $tipo_alerta = "alert-success";
-    }
-}
+// Usamos require_once para evitar choques si el controlador ya los llamó
+require_once __DIR__ . '/../../../config/conexion.php';
+require_once __DIR__ . '/../models/user.php';
 ?>
 
 <!DOCTYPE html>
@@ -51,22 +27,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <div class="login-card">
 
-        <!-- Mitad izquierda: Imagen/Ilustración -->
         <div class="reg-left">
             <img src="../../../img/reg.png" alt="Ilustración Registro">
         </div>
 
-        <!-- Mitad derecha: Formulario -->
         <div class="login-right">
             <h1>Crear Cuenta</h1>
 
-            <?php
-            if ($mensaje != "") {
-                echo "<div class='alert $tipo_alerta' style='border-radius: 15px; font-size: 14px;'>$mensaje</div>";
-            }
-            ?>
+            <!-- Muestra el mensaje de error si el controlador lo definió -->
+            <?php if (!empty($error)): ?>
+                <div class="alert alert-danger" style="margin-bottom: 15px;">
+                    <?= htmlspecialchars($error) ?>
+                </div>
+            <?php endif; ?>
 
-            <form method="POST">
+            <!-- El formulario ahora envía la petición al controlador con la acción 'crear' -->
+            <form method="POST" action="../controller/usercontroller.php?accion=crear">
 
                 <div class="input-container">
                     <i class="fa-solid fa-user"></i>

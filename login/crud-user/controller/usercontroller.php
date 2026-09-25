@@ -1,32 +1,29 @@
 <?php
 
-function listarUsuarios()
-{
-    global $pdo;
+require_once __DIR__ . '/../../../config/conexion.php';
+require_once __DIR__ . '/../models/user.php';
 
-    $usuarios = Usuario::listar($pdo);
-
-    require __DIR__ . '/../views/usuarios/listar.php';
+// Ruter :)
+if (isset($_GET['accion'])) {
+    switch ($_GET['accion']) {
+        case 'crear':
+            crearUsuario();
+            break;
+        case 'editar':
+            editarUsuario();
+            break;
+        case 'eliminar':
+            eliminarUsuario();
+            break;
+    }
 }
 
 function formCrearUsuario()
 {
-    require __DIR__ . '/../views/usuarios/form.php';
+    require __DIR__ . '/../views/registrarse.php';
 }
 
-function formEditarUsuario()
-{
-    global $pdo;
 
-    $id = (int) ($_GET['id'] ?? 0);
-    $usuario = Usuario::buscarPorId($pdo, $id);
-
-    if (!$usuario) {
-        die("El usuario no existe.");
-    }
-
-    require __DIR__ . '/../views/usuarios/form.php';
-}
 
 function crearUsuario()
 {
@@ -39,25 +36,26 @@ function crearUsuario()
 
     if ($nombre === '' || $email === '' || $password === '' || $confirmar === '') {
         $error = "Todos los campos son obligatorios.";
-        require __DIR__ . '/../views/usuarios/form.php';
+        require __DIR__ . '/../views/registrarse.php';
         return;
     }
 
     if ($password !== $confirmar) {
         $error = "Las contraseñas no coinciden.";
-        require __DIR__ . '/../views/usuarios/form.php';
+        require __DIR__ . '/../views/registrarse.php';
         return;
     }
 
     if (Usuario::emailExiste($pdo, $email)) {
         $error = "Ese correo ya está registrado.";
-        require __DIR__ . '/../views/usuarios/form.php';
+        require __DIR__ . '/../views/registrarse.php';
         return;
     }
 
     Usuario::crear($pdo, $nombre, $email, $password);
 
-    header('Location: index.php?accion=listarUsuarios');
+    // Redirección corregida hacia el login tras un registro exitoso
+    header('Location: ../views/login.php?registro=exito');
     exit;
 }
 
@@ -74,21 +72,21 @@ function editarUsuario()
     if ($nombre === '' || $email === '') {
         $usuario = Usuario::buscarPorId($pdo, $id);
         $error = "Nombre y correo son obligatorios.";
-        require __DIR__ . '/../views/usuarios/form.php';
+        require __DIR__ . '/../views/registrarse.php';
         return;
     }
 
     if ($password !== $confirmar) {
         $usuario = Usuario::buscarPorId($pdo, $id);
         $error = "Las contraseñas no coinciden.";
-        require __DIR__ . '/../views/usuarios/form.php';
+        require __DIR__ . '/../views/registrarse.php';
         return;
     }
 
     if (Usuario::emailExiste($pdo, $email, $id)) {
         $usuario = Usuario::buscarPorId($pdo, $id);
         $error = "Ese correo ya lo usa otra cuenta.";
-        require __DIR__ . '/../views/usuarios/form.php';
+        require __DIR__ . '/../views/registrarse.php';
         return;
     }
 

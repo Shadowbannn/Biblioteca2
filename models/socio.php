@@ -227,6 +227,7 @@ class Socio
  public static function eliminar(PDO $pdo, int $id): bool {
         $stmt = $pdo->prepare("DELETE FROM socios WHERE id = ?");
         return $stmt->execute([$id]);
+        
     }
 
 

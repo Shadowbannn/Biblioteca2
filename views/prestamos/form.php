@@ -62,11 +62,30 @@ $esEdicion = isset($prestamo) && is_object($prestamo);
                 </select>
             </div>
 
+             <!-- Selección de Estado -->
+            <div class="mb-3">
+                <label for="estado" class="form-label">Estado</label>
+                <select name="estado" id="estado" class="form-select" required>
+                    <option value="">Selecciona un Estado</option>
+                    <option value="Reservado">Reservado</option>
+                    <option value="Prestado">Prestado</option>
+                    <option value="Devuelto">Devuelto</option>       
+                    <option value="Cancelado">Cancelado</option>             
+                </select>
+            </div>
+
             <!-- Fecha de Prextamo -->
             <div class="mb-3">
-                <label for="fechaPrestamo" class="form-label">Fecha de Préstamo</label>
+                <label for="fechaPrestamo" class="form-label">Fecha de Préstamo Realizado</label>
                 <input type="date" name="fechaPrestamo" id="fechaPrestamo" class="form-control"
                        value="<?= $esEdicion ? htmlspecialchars($prestamo->getFechaPrestamo()) : date('Y-m-d') ?>" required>
+            </div>
+
+            <!-- Fecha de Devolución -->
+            <div class="mb-3">
+                <label for="fechaDevolucion" class="form-label">Fecha de Devolución Estimada</label>
+                <input type="date" name="fechaDevolucion" id="fechaDevolucion" class="form-control"
+                       value="<?= $esEdicion ? htmlspecialchars($prestamo->getFechaDevolucion()) : date('Y-m-d') ?>" required>
             </div>
 
             <button type="submit" class="btn btn-success w-100 mb-2">

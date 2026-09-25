@@ -54,10 +54,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <h1>Iniciar Sesión</h1>
 
             <?php
-            if ($mensaje != "") {
-                echo "<div class='alert alert-danger' style='border-radius: 15px;'>$mensaje</div>";
-            }
-            ?>
+            if (isset($_GET['registro']) && $_GET['registro'] === 'exito'): ?>
+                <div class="alert alert-success" 
+                        style="color: #155724; 
+                        background-color: #d4edda; 
+                        border-color: #c3e6cb; padding: 10px; 
+                        border-radius: 5px; margin-bottom: 15px;">
+                    Registro exitoso. Puedes iniciar sesión con tu nueva cuenta.
+                </div>
+            <?php endif; ?>
 
             <form method="POST">
 
