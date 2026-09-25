@@ -3,14 +3,20 @@
 // Acá se abre la conexión UNA vez y queda disponible en $pdo.
 
 try {
+    $host = getenv('DB_HOST');
+    $port = getenv('DB_PORT');
+    $db   = getenv('DB_NAME');
+    $user = getenv('DB_USER');
+    $pass = getenv('DB_PASS');
+
     $pdo = new PDO(
-        "mysql:host=localhost;dbname=biblioteca2;charset=utf8mb4",
-        "root",
-        ""
+        "pgsql:host=$host;port=$port;dbname=$db",
+        $user,
+        $pass
     );
-    // Si algo falla en una consulta, que PHP lance una excepción
-    // (¿te acordás de try/catch? Acá se usa en el mundo real)
+
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, true);
 
 } catch (PDOException $e) {
     die("Error de conexión: " . $e->getMessage());
