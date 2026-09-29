@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-09-2026 a las 21:50:21
+-- Tiempo de generación: 29-09-2026 a las 19:57:07
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -603,9 +603,9 @@ CREATE TABLE `prestamos` (
   `libroId` int(11) NOT NULL,
   `socioId` int(11) NOT NULL,
   `fechaPrestamo` text DEFAULT NULL,
-  `fecha_devolucion_estimada` date NOT NULL,
+  `fechaDevolucion` text DEFAULT NULL,
   `libroTitulo` text DEFAULT NULL,
-  `estado` enum('reservado','prestado','devuelto','cancelado') NOT NULL DEFAULT 'reservado',
+  `estado` enum('Reservado','Prestado','Devuelto','Cancelado') NOT NULL DEFAULT 'Reservado',
   `creado_en` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -613,9 +613,8 @@ CREATE TABLE `prestamos` (
 -- Volcado de datos para la tabla `prestamos`
 --
 
-INSERT INTO `prestamos` (`id`, `libroId`, `socioId`, `fechaPrestamo`, `fecha_devolucion_estimada`, `libroTitulo`, `estado`, `creado_en`) VALUES
-(1, 253, 11, '2026-07-23', '2026-07-28', NULL, 'prestado', '2026-07-27 23:33:37'),
-(8, 10, 14, '2026-09-15', '0000-00-00', NULL, 'reservado', '2026-09-15 20:45:43');
+INSERT INTO `prestamos` (`id`, `libroId`, `socioId`, `fechaPrestamo`, `fechaDevolucion`, `libroTitulo`, `estado`, `creado_en`) VALUES
+(8, 10, 14, '2026-09-15', '0000-00-00', NULL, 'Reservado', '2026-09-15 20:45:43');
 
 -- --------------------------------------------------------
 
@@ -674,7 +673,8 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `nombre`, `email`, `password`, `fecha_registro`) VALUES
 (1, 'Anthony Silva', 'shadowxrd45@gmail.com', '$2y$10$iSlmkP01pxqTHk6zj6csGOFDWTvhzSGJS/IklS8nhHRb7XQ29cCF6', '2026-09-16 07:29:36'),
-(2, 'Admin', 'admin@utu.edu.uy', '$2y$10$5MZBE/PoKtlh//QFm/MdHeoLVHgyxTjFMjFhY4Nx3m4aFqR2cp4Pu', '2026-09-18 02:00:36');
+(2, 'Admin', 'admin@utu.edu.uy', '$2y$10$5MZBE/PoKtlh//QFm/MdHeoLVHgyxTjFMjFhY4Nx3m4aFqR2cp4Pu', '2026-09-18 02:00:36'),
+(3, 'Thony', 'thony@gmail.com', '$2y$10$8JrQYi9cV/AltdaLj7fz3u1ZrUjy9B.pV507HMuGoTP.0h8.5l51K', '2026-09-29 17:52:39');
 
 --
 -- Índices para tablas volcadas
@@ -734,7 +734,7 @@ ALTER TABLE `socios`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas
