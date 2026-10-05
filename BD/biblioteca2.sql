@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-09-2026 a las 19:57:07
+-- Tiempo de generación: 05-10-2026 a las 08:11:17
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -288,7 +288,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (317, 'Juego de adultos', 'Manuel L. Alonso', 2002, 112, 1, 'Juvenil', 'portada_6a6294e7ed4f88.46816758.jpg'),
 (318, 'La Puerta', 'Miguel Ángel Alonso Pulido', 2018, 20, 1, 'Ficcion', NULL),
 (319, 'The Five People You Meet in Heaven', 'Mitch Albom', 2003, 196, 1, 'Ficcion,Literaria', 'portada_6a6294ea1c3e08.04667102.jpg'),
-(323, 'Chas Addams Happily Ever After: A Collection of Cartoons to Chill the Heart of Your Loved One', 'Charles Addams', 2006, 165, 1, 'Comic,Humor', 'portada_6a6294f039e914.44756538.jpg'),
 (324, 'Harry Potter and the Deathly Hallows (Harry Potter, #7)', 'J.K. Rowling', 2007, 759, 1, 'Fantasia', NULL),
 (325, 'Harry Potter and the Order of the Phoenix (Harry Potter, #5)', 'J.K. Rowling', 2004, 576, 1, 'Fantasia', NULL),
 (330, 'Historia de mi vida', 'George Sand', 1995, 439, 1, 'Memoria,Clasico', NULL),
@@ -415,7 +414,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (523, 'Rufus Goes to School', 'Kim T. Griswell', 2014, 39, 1, 'Infantil', NULL),
 (525, 'The Bee Sting', 'Paul Murray', 2023, 645, 1, 'Ficcion,Literaria', 'portada_6a62960433cfb6.16852612.jpg'),
 (526, 'Pachinko', 'Min Jin Lee', 2017, 496, 1, 'Ficcion,Historico', NULL),
-(527, 'La librera de Kentucky (Book Woman of Troublesome Creek, #1)', 'Kim Michele Richardson', 2023, 352, 1, 'Ficcion,Historico', 'portada_6a6296064973f4.51164669.jpg'),
 (528, 'A Day Like This', 'Kelley McNeil', 2021, 287, 1, 'Ficcion,Romance', 'portada_6a62960866ccc8.69963205.jpg'),
 (529, 'The Secret Lives of Church Ladies', 'Deesha Philyaw', 2020, 179, 1, 'Relatos, Ficcion, Literario', 'portada_6a62960a714cb9.91102256.jpg'),
 (531, 'Click, Clack, Moo: Cows That Type', 'Doreen Cronin', 2000, 32, 1, 'Infantil', 'portada_6a62960de7b2a6.73138119.jpg'),
@@ -494,10 +492,10 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (622, 'Sidewalk Flowers', 'JonArno Lawson', 2015, 26, 1, 'Infantil', 'portada_6a629697966dd8.06963479.jpg'),
 (623, 'House of Salt and Sorrows (Sisters of the Salt, #1)', 'Erin A. Craig', 2019, 403, 1, 'Fantasia', 'portada_6a6296990334d4.02338841.jpg'),
 (624, 'Mr. Wuffles!', 'David Wiesner', 2013, 32, 1, 'Infantil', 'portada_6a62969b17bfe7.05181904.jpg'),
-(625, 'Survivor Song', 'Paul Tremblay', 2020, 320, 1, 'Terror', 'portada_6a62969d28b5d7.17786808.jpg');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`) VALUES
+(625, 'Survivor Song', 'Paul Tremblay', 2020, 320, 1, 'Terror', 'portada_6a62969d28b5d7.17786808.jpg'),
 (626, 'Los dos amores de mi vida', 'Taylor Jenkins Reid', 2021, 320, 1, 'Romance', 'portada_6a62969e81b891.43657910.jpg'),
-(627, 'The Book of Eels: Our Enduring Fascination with the Most Mysterious Creature in the Natural World', 'Patrik Svensson', 2020, 256, 1, 'No ficcion,Naturaleza', 'portada_6a62969fe7def7.10782569.jpg'),
+(627, 'The Book of Eels: Our Enduring Fascination with the Most Mysterious Creature in the Natural World', 'Patrik Svensson', 2020, 256, 1, 'No ficcion,Naturaleza', 'portada_6a62969fe7def7.10782569.jpg');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`) VALUES
 (628, 'Who Ate the First Oyster?: The Extraordinary People Behind the Greatest Firsts in History', 'Cody Cassidy', 2020, 240, 1, 'No ficcion,Humor,Historico', 'portada_6a6296a2199cc3.68810792.jpg'),
 (629, 'One Flew Over the Cuckoo’s Nest', 'Ken Kesey', 1963, 325, 1, 'Clasico', NULL),
 (630, 'Sailing Alone around the World', 'Joshua Slocum', 1999, 273, 1, 'No ficcion,Aventura', 'portada_6a6296a53bd192.67784086.jpg'),
@@ -614,7 +612,11 @@ CREATE TABLE `prestamos` (
 --
 
 INSERT INTO `prestamos` (`id`, `libroId`, `socioId`, `fechaPrestamo`, `fechaDevolucion`, `libroTitulo`, `estado`, `creado_en`) VALUES
-(8, 10, 14, '2026-09-15', '0000-00-00', NULL, 'Reservado', '2026-09-15 20:45:43');
+(8, 10, 14, '2026-09-15', '2026-10-17', NULL, 'Prestado', '2026-09-15 20:45:43'),
+(10, 734, 11, '2026-10-02', '2026-10-16', NULL, 'Reservado', '2026-10-03 23:58:07'),
+(11, 2, 10, '2026-09-28', '2026-10-02', NULL, 'Devuelto', '2026-10-04 19:10:52'),
+(12, 11, 4, '2026-10-05', '2026-10-12', NULL, 'Cancelado', '2026-10-04 19:11:39'),
+(13, 9, 11, '2026-10-05', '2026-10-09', NULL, 'Reservado', '2026-10-04 19:25:31');
 
 -- --------------------------------------------------------
 
@@ -642,16 +644,14 @@ INSERT INTO `socios` (`id`, `nombre`, `email`, `cedula`, `telefono`, `fecha_regi
 (2, 'María Rodriguez', 'maria.gomez@email.com', '48765432', '098765432', '2026-07-21', '1°LI', 'foto_6aacdfab883968.29224432.jfif'),
 (3, 'Froggers', 'carlos.rodriguez@email.com', '45678901', '091234567', '2026-07-21', '3°OP', 'foto_6aad88425c3f41.17576085.gif'),
 (4, 'Crazy Frog', 'lucia.fernandez@email.com', '53456789', '097654321', '2026-07-21', '2°XD', 'foto_6aad899048ebb2.75751059.gif'),
-(5, 'Tomas Guasa', 'sofia.martinez@email.com', '47890123', '094112233', '2026-07-21', '1°BT', 'foto_6aace051a89908.77133635.jfif'),
 (7, 'Shadow', 'valentina.suarez@email.com', '52345678', '092334455', '2026-07-21', '1°RT', 'foto_6aace082876d47.36190139.png'),
 (8, 'Viernes Donda', 'nicolas.lopez@email.com', '48901234', '096445566', '2026-07-21', '2°SL', 'foto_6aacdfd6c4c1f0.71396209.jpg'),
 (9, 'King Von', 'camila.torres@email.com', '64646464', '093556677', '2026-07-21', '2°OB', 'foto_6aad009585f7e5.01922847.gif'),
-(10, 'Martín Silva', 'martin.acosta@email.com', '46789012', '099667788', '2026-07-21', '1°BT', 'foto_6aacdfb50ebc29.78398148.jfif'),
+(10, 'Bonzi Buddy', 'martin.acosta@email.com', '46789012', '099667788', '1999-07-06', '3°MH', 'foto_6aacdfb50ebc29.78398148.jfif'),
 (11, 'Anthony Silva', 'antoniotoniosigma@gmail.com', '55118416', '094759451', '2026-07-21', '3°MH', 'foto_6aacda28313f43.91397167.gif'),
-(13, 'Jhon Pork', 'porkjhon67@gmail.com', '67676776', '094759451', '2026-07-21', '3°MG', 'foto_6aacdaf41e1df2.37384719.jpg'),
 (14, 'Camila Muniz', 'camilita@gmail.com', '55444674', '096456782', '2026-07-27', '3°MH', 'foto_6aacd9d3808328.01256081.jfif'),
 (16, 'Jhon Cena', 'Jhonsito@hotmail.com', '55654367', '095436543', '2026-07-28', '1°FR', 'foto_6aacf993c33a51.32441459.gif'),
-(17, 'Sigma', NULL, '12345678', '123456789', '2026-09-18', NULL, 'foto_6aacd74cd251f5.11216674.jpg');
+(18, 'Snitch', NULL, '54436217', '091784452', '2026-10-04', '3°MH', 'foto_6ac2cbbc32b132.17099700.jpg');
 
 -- --------------------------------------------------------
 
@@ -722,13 +722,13 @@ ALTER TABLE `libros`
 -- AUTO_INCREMENT de la tabla `prestamos`
 --
 ALTER TABLE `prestamos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `socios`
 --
 ALTER TABLE `socios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
