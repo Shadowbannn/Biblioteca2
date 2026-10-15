@@ -1,17 +1,20 @@
 <?php require __DIR__ . '/../../includes/header.php'; ?>
 <?php require_once __DIR__ . '/../../models/Socio.php'; ?>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <h1 class="titulo mt-5"><b>Préstamos</b></h1>
 
-<div class="mb-3">
-    <a href="index.php?accion=formCrearPrestamo" class="btn btn-success">
-        ➕ Agregar préstamo
-    </a>
-</div>
+
 
 <div class="card">
     <div class="card-header bg-dark text-white">
         <h4 class="mb-0">Listado de Préstamos</h4>
+        
+    </div>
+    <br>
+    <div class="mb-3">
+        <a href="index.php?accion=formCrearPrestamo" class="btn btn-success">
+             ➕ Agregar préstamo
+         </a>
     </div>
 
     <div class="card-body">
@@ -29,6 +32,7 @@
                             <th scope="col">Estado</th>
                             <th scope="col">Devolución Estimada</th>
                             <th scope="col">Código</th>
+                            <th scope="col">Acciones</th>
                             <th scope="col">Acciones</th>
                         </tr>
                     </thead>
@@ -76,13 +80,17 @@
                                     <div class="d-flex gap-2">
                                         <a href="index.php?accion=formEditarPrestamo&id=<?= $prestamo->getId() ?>"
                                            class="btn btn-warning btn-sm">
-                                            Editar
+                                            <i class="fa-solid fa-user-pen"></i>
                                         </a>
+                                    </div>
+                                </td>
 
+                                <td>
+                                    <div class="d-flex gap-2 mt-1">
                                         <a href="index.php?accion=eliminarPrestamo&id=<?= $prestamo->getId() ?>"
                                            class="btn btn-danger btn-sm"
                                            onclick="return confirm('¿Deseas eliminar este préstamo?')">
-                                            Eliminar
+                                            <i class="fa-solid fa-trash"></i>
                                         </a>
                                     </div>
                                 </td>

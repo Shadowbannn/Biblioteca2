@@ -80,6 +80,7 @@ function crearUsuario() {
 
     $nombre    = trim($_POST['nombre'] ?? '');
     $email     = trim($_POST['email'] ?? '');
+    $roles     = trim($_POST['roles'] ?? '');
     $password  = $_POST['password'] ?? '';
     $confirmar = $_POST['confirmar_password'] ?? '';
 
@@ -101,7 +102,7 @@ function crearUsuario() {
         return;
     }
 
-    Usuario::crear($pdo, $nombre, $email, $password);
+    Usuario::crear($pdo, $nombre, $email, $roles, $password);
 
     // Si ya hay sesión, vuelve al listado; si no, al login
     if (!empty($_SESSION['usuario_id'])) {
@@ -118,6 +119,7 @@ function editarUsuario() {
     $id        = (int) ($_POST['id'] ?? 0);
     $nombre    = trim($_POST['nombre'] ?? '');
     $email     = trim($_POST['email'] ?? '');
+    $roles     = trim($_POST['roles'] ?? '');
     $password  = $_POST['password'] ?? '';
     $confirmar = $_POST['confirmar_password'] ?? '';
 
@@ -137,7 +139,7 @@ function editarUsuario() {
         return;
     }
 
-    Usuario::actualizar($pdo, $id, $nombre, $email, $password);
+    Usuario::actualizar($pdo, $id, $nombre, $email, $password, $roles);
 
     if ($id === (int) ($_SESSION['usuario_id'] ?? 0)) {
         $_SESSION['usuario'] = $nombre;

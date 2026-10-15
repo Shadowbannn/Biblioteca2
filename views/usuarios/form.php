@@ -52,6 +52,12 @@ $esEdicion = isset($usuario);
                 </div>
 
                 <div class="input-container">
+                    <i class="fa-solid fa-user-shield"></i>
+                    <input type="text" name="roles" placeholder="Roles (separados por comas)"
+                           value="<?= htmlspecialchars($_POST['roles'] ?? ($esEdicion ? $usuario->getRoles() : '')) ?>">
+                </div>
+
+                <div class="input-container">
                     <i class="fa-solid fa-lock"></i>
                     <input type="password" name="password"
                            placeholder="<?= $esEdicion ? 'Nueva contraseña (opcional)' : 'Contraseña' ?>"

@@ -7,7 +7,7 @@ require_once __DIR__ . '/config/conexion.php';
 require_once __DIR__ . '/models/Libro.php';
 require_once __DIR__ . '/models/Socio.php';
 require_once __DIR__ . '/models/Prestamo.php';
-require_once __DIR__ . '/models/usuarios.php';
+require_once __DIR__ . '/models/usuario.php';
 require_once __DIR__ . '/controllers/LibroController.php';
 require_once __DIR__ . '/controllers/SocioController.php';
 require_once __DIR__ . '/controllers/PrestamoController.php';
@@ -23,6 +23,7 @@ if (empty($_SESSION['usuario_id']) && !in_array($accion, $accionesPublicas, true
     exit;
 }
 
+// Acciones accesibles con sudo su
 switch ($accion) {
 
     // LOGIN //

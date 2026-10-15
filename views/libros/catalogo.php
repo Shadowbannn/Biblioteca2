@@ -1,12 +1,12 @@
 <?php require __DIR__ . '/../../includes/header2.php'; ?>
 
-<h1 class="titulo mt-5"><b>Libros</b></h1>
+<h1 class="titulo mt-5"><b>Catalogo</b></h1>
 
 
 <div class="card">
 
     <div class="card-header bg-dark text-white">
-        <h4 class="mb-0">Listado de Libros</h4>
+        <h4 class="mb-0">Listado</h4>
     </div>
 
     <div class="card-body">

@@ -1,5 +1,5 @@
 <?php require __DIR__ . '/../../includes/header.php'; ?>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <div class="cardsmall">
 <h1 class="titulo mt-5"><b>Socios</b></h1>
 
@@ -9,13 +9,13 @@
     </a>
 </div>
 </div>
-    <?php require __DIR__ . '/../../includes/paginadorSocio.php'; ?>
+   
 <div class="card">
 
     <div class="card-header bg-dark text-white">
         <h4 class="mb-0">Listado de Socios</h4>
     </div>
-
+ <?php require __DIR__ . '/../../includes/paginadorSocio.php'; ?>
     <div class="card-body">
     
 
@@ -33,6 +33,8 @@
                         <th scope="col">Registrado</th>
                         <th scope="col">Clase</th>
                         <th scope="col">Código</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Eliminar</th>
                         </tr>
                     </thead>
 
@@ -57,22 +59,31 @@
                         <td><?= date('d/m/Y', strtotime($socio->getFecharegistro())) ?></td>
                         <td><?= $socio->getClase() ?></td>
                         <td><?= $socio->getId() ?></td>
-                        </tr>
-                    </tbody>
-
-                 </table>
-                            <div class="mt-auto d-flex gap-2">
+                        <td><div class="mt-auto d-flex gap-2">
+                            
                                 <a href="index.php?accion=formEditarSocio&id=<?= $socio->getId() ?>"
                                    class="btn btn-warning btn-sm">
-                                    Editar
+                                    <i class="fa-solid fa-user-pen"></i>
                                 </a>
+                            </div>
+                        </td>
+                        <td><div class="mt-auto d-flex gap-2">
 
                                 <a href="index.php?accion=eliminarSocio&id=<?= $socio->getId() ?>"
                                    class="btn btn-danger btn-sm"
                                    onclick="return confirm('¿Deseas eliminar este socio?')">
-                                    Eliminar
+                                    <i class="fa-solid fa-trash"></i>
                                 </a>
-                            </div>
+                            </div></td>
+
+
+                        </tr>
+                    </tbody>
+
+                 </table>
+                            
+
+                            
                    
                    
 
