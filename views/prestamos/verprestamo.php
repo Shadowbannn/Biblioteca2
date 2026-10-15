@@ -1,0 +1,107 @@
+<?php require __DIR__ . '/../../includes/header.php'; ?>
+<?php require_once __DIR__ . '/../../models/Socio.php'; ?>
+
+<h1 class="titulo mt-5"><b>Préstamos</b></h1>
+
+<div class="mb-3">
+    <a href="index.php?accion=formCrearPrestamo" class="btn btn-success">
+        ➕ Agregar préstamo
+    </a>
+</div>
+
+<div class="card">
+    <div class="card-header bg-dark text-white">
+        <h4 class="mb-0">Listado de Préstamos</h4>
+    </div>
+
+    <div class="card-body">
+        <?php require __DIR__ . '/../../includes/paginadorPrestamo.php'; ?>
+
+        <?php if (!empty($prestamos)): ?>
+            <div class="table-responsive">
+                <table class="table table-striped table-dark align-middle">
+                    <thead>
+                        <tr>
+                            <th scope="col">Portada</th>
+                            <th scope="col">Foto socio</th>
+                            <th scope="col">Socio</th>
+                            <th scope="col">Libro</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Devolución Estimada</th>
+                            <th scope="col">Código</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($prestamos as $prestamo): ?>
+                            <tr>
+                                <!-- Portada del libro -->
+                                <td>
+                                    <?php if (!empty($prestamo->getLibroPortada())): ?>
+                                        <img src="/carpeta2/uploads/portadas/<?= htmlspecialchars($prestamo->getLibroPortada()) ?>"
+                                             alt="Portada de <?= htmlspecialchars($prestamo->getLibroTitulo()) ?>"
+                                             class="portada-prestamo"
+                                             style="max-height: 100px; max-width: 50px; object-fit: cover;">
+                                    <?php else: ?>
+                                        <img src="/carpeta2/assets/sin-portada.png"
+                                             alt="Sin portada"
+                                             class="portada-prestamo"
+                                             style="max-height: 100px; max-width: 50px; object-fit: cover;">
+                                    <?php endif; ?>
+                                </td>
+
+                                <!-- Foto del socio (Asegúrate de que el método exista en el modelo de préstamo) -->
+                                <td>
+                                    <?php if (method_exists($prestamo, 'getFoto') && $prestamo->getFoto()): ?>
+                                        <img src="/carpeta2/uploads/fotos/<?= htmlspecialchars($prestamo->getFoto()) ?>"
+                                             alt="Foto de <?= htmlspecialchars($prestamo->getNombre()) ?>"
+                                             class="rounded-circle"
+                                             style="max-height: 50px; max-width: 50px; width: 50px; height: 50px; object-fit: cover;">
+                                    <?php else: ?>
+                                        <img src="https://static.vecteezy.com/system/resources/previews/019/879/186/large_2x/user-icon-on-transparent-background-free-png.png"
+                                             alt="Imagen por defecto"
+                                             class="rounded-circle"
+                                             style="max-height: 50px; max-width: 50px; width: 50px; height: 50px; object-fit: cover;">
+                                    <?php endif; ?>
+                                </td>
+
+                                <td><?= htmlspecialchars($prestamo->getSocioNombre()) ?></td>
+                                <td><?= htmlspecialchars($prestamo->getLibroTitulo()) ?></td>
+                                <td><?= htmlspecialchars($prestamo->getEstado()) ?></td>
+                                <td><?= date('d/m/Y', strtotime($prestamo->getFechaDevolucion())) ?></td>
+                                <td><?= $prestamo->getId() ?></td>
+
+                                <!-- Acciones -->
+                                <td>
+                                    <div class="d-flex gap-2">
+                                        <a href="index.php?accion=formEditarPrestamo&id=<?= $prestamo->getId() ?>"
+                                           class="btn btn-warning btn-sm">
+                                            Editar
+                                        </a>
+
+                                        <a href="index.php?accion=eliminarPrestamo&id=<?= $prestamo->getId() ?>"
+                                           class="btn btn-danger btn-sm"
+                                           onclick="return confirm('¿Deseas eliminar este préstamo?')">
+                                            Eliminar
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        <?php else: ?>
+            <p class="text-muted">Todavía no hay préstamos cargados.</p>
+        <?php endif; ?>
+
+    </div>
+
+    <?php require __DIR__ . '/../../includes/paginador.php'; ?>
+</div>
+
+<div class="mt-3">
+    <a href="index.php" class="btn btn-secondary">← Volver al inicio</a>
+</div>
+
+<?php require __DIR__ . '/../../includes/footer.php'; ?>
