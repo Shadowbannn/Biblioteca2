@@ -33,7 +33,7 @@
                                      class="card-img-top mb-3"
                                      style="max-height: 400px; object-fit: cover;">
                             <?php else: ?>
-                                <img src="assets/sin-portada.png"
+                                <img src="assets/sin-portada.webp"
                                      alt="Portada por defecto"
                                      class="card-img-top mb-3"
                                      style="max-height: 400px; object-fit: cover;">

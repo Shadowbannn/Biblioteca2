@@ -1,7 +1,7 @@
 <?php require __DIR__ . '/../../includes/header2.php'; ?>
 
-<h1 class="titulo mt-5"><b>Catalogo</b></h1>
 
+<h1 class="titulo mt-5"><b>Catalogo</b></h1>
 
 <div class="card">
 

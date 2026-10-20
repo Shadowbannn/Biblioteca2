@@ -47,7 +47,7 @@
                                              class="portada-prestamo"
                                              style="max-height: 100px; max-width: 50px; object-fit: cover;">
                                     <?php else: ?>
-                                        <img src="/carpeta2/assets/sin-portada.png"
+                                        <img src="/carpeta2/assets/sin-portada.webp"
                                              alt="Sin portada"
                                              class="portada-prestamo"
                                              style="max-height: 100px; max-width: 50px; object-fit: cover;">

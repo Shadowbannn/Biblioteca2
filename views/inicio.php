@@ -75,8 +75,8 @@
 
     <div class="col-md-4 mb-4">
         <div class="card h-100">
-            <a href="index.php?accion=listarPrestamos">
-                <img class="card-img-top" src="/carpeta2/img/6.png" alt="Prestamos">
+            <a href="index.php?accion=listarJuegos">
+                <img class="card-img-top" src="/carpeta2/img/6.png" alt="Juegos">
             </a>
         </div>
     </div>

@@ -67,7 +67,7 @@ function editarSocio() {
 
     $id             = (int) ($_POST['id'] ?? 0);
     $nombre         = trim($_POST['nombre'] ?? '');
-    $clase       = trim($_POST['clase'] ?? '');
+    $clase          = trim($_POST['clase'] ?? '');
     $cedula         = trim($_POST['cedula'] ?? '');
     $telefono       = (string) trim($_POST['telefono'] ?? '');
     $fecha_registro = $_POST['fecha_registro'] ?? '';
