@@ -21,7 +21,7 @@
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
 
-            <?php foreach ($socios as $socio): ?>
+
 
                 <table class="table table-striped table-dark">
                     <thead>
@@ -40,6 +40,7 @@
 
 
                     <tbody>
+                        <?php foreach ($socios as $socio): ?>
                         <tr>
 
                         <td><?php if (method_exists($socio, 'getFoto') && $socio->getFoto()): ?>
@@ -78,16 +79,12 @@
 
 
                         </tr>
+                         <?php endforeach; ?>
+
                     </tbody>
 
                  </table>
-                            
 
-                            
-                   
-                   
-
-            <?php endforeach; ?>
 
             <?php if (empty($socio)): ?>
                 <p class="text-muted">Todavía no hay socios cargados.</p>

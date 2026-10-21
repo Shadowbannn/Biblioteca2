@@ -10,7 +10,7 @@ class Prestamo {
     private string $libroTitulo;
     private string $estado;
 
-    public function __construct(int $id, int $socioId, int $libroId, 
+    public function __construct(int $id, int $socioId, int $libroId,
                                 string $fechaPrestamo, string $fechaDevolucion, string $socioNombre, string $libroTitulo, string $estado) {                           
         $this->id            = $id;
         $this->socioId       = $socioId;
@@ -68,9 +68,9 @@ class Prestamo {
         return $f ? self::desdeFila($f) : null;
     }
 
-    public static function crear(PDO $pdo, int $socioId, int $libroId, string $estado, string $fechaPrestamo, string $fechaDevolucion): bool {
+    public static function crear(PDO $pdo, int $socioId, int $libroId, int $juegoId, string $estado, string $fechaPrestamo, string $fechaDevolucion): bool {
         $stmt = $pdo->prepare("INSERT INTO prestamos (socioId, libroId, fechaPrestamo, fechaDevolucion)
-                               VALUES (?, ?, ?, ?)");
+                               VALUES (?, ?, ?, ?, ?, ?)");
         return $stmt->execute([$socioId, $libroId, $fechaPrestamo, $fechaDevolucion]);
     }
 

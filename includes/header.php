@@ -19,10 +19,15 @@
              alt="Inicio" style="width: 270px; height: auto;">
     </a>
 
+
+
     <ul>
 
         <li>
-
+        <li><a href="index.php"><b>Inicio</b></a></li>
+        <li><a href="index.php?accion=listarLibros"><b>Libros</b></a></li>
+        <li><a href="index.php?accion=listarSocios"><b>Socios</b></a></li>
+        <li><a href="index.php?accion=listarPrestamos"><b>Prestamos</b></a></li>
 
             <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
                     <div class="btn-group" role="group">
@@ -33,13 +38,9 @@
                                                 aria-expanded="false">
                                                 Menú
                         </button>
-                        
                         <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                            <a class="dropdown-item" href="index.php?accion=listarLibros">Catalogo</a>
                             <a class="dropdown-item" href="index.php?accion=listarJuegos">Juegos</a>
-                            <a class="dropdown-item" href="index.php?accion=listarSocios">Socios</a>
                             <a class="dropdown-item" href="index.php?accion=listarUsuarios">Usuarios</a>
-                            <a class="dropdown-item" href="index.php?accion=listarPrestamos">Préstamos</a>
                             <a class="dropdown-item" href="index.php?accion=listarProyectosP">Proyectos</a>
                             <a class="dropdown-item" href="index.php?accion=logout">Cerrar Sesión</a>
 

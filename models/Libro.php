@@ -63,8 +63,8 @@ class Libro {
             (int) $f['anio_publicacion'],
             (int) $f['cantidad_paginas'],
             (int) $f['id'],
-            $f['genero'],
-            $f['portada']
+            (string) ($f['genero'] ?? ''),
+            $f['portada'] ?? null
         );
     }
 
@@ -84,7 +84,7 @@ class Libro {
 
         $stmt = $pdo->prepare(
             "SELECT * FROM libros 
-             ORDER BY titulo DESC 
+             ORDER BY titulo ASC 
              LIMIT :inicio, :cantidad"
         );
         $stmt->bindValue(':inicio', $inicio, PDO::PARAM_INT);
@@ -98,6 +98,56 @@ class Libro {
             $libros[] = self::desdeFila($f);
         }
         return $libros;
+    }
+
+
+    // Búsqueda filtrada con PDO; compatible con la paginación actual.
+    private static function filtrosBusqueda(string $buscar, string $campo, string $disponibilidad): array {
+        $where = [];
+        $params = [];
+        $columnas = ['titulo', 'autor', 'genero'];
+        if ($buscar !== '') {
+            if (in_array($campo, $columnas, true)) {
+                $where[] = "$campo LIKE :buscar";
+            } else {
+                $where[] = '(titulo LIKE :buscarTitulo OR autor LIKE :buscarAutor OR genero LIKE :buscarGenero)';
+                $params[':buscarTitulo'] = '%' . $buscar . '%';
+                $params[':buscarAutor'] = '%' . $buscar . '%';
+                $params[':buscarGenero'] = '%' . $buscar . '%';
+            }
+            if ($campo !== 'todos' && in_array($campo, $columnas, true)) {
+                $params[':buscar'] = '%' . $buscar . '%';
+            }
+        }
+        if ($disponibilidad === '1' || $disponibilidad === '0') {
+            $where[] = 'disponible = :disponible';
+            $params[':disponible'] = (int) $disponibilidad;
+        }
+        return [$where ? ' WHERE ' . implode(' AND ', $where) : '', $params];
+    }
+
+    public static function contarFiltrados(PDO $pdo, string $buscar = '', string $campo = 'todos', string $disponibilidad = ''): int {
+        [$where, $params] = self::filtrosBusqueda($buscar, $campo, $disponibilidad);
+        $stmt = $pdo->prepare('SELECT COUNT(*) FROM libros' . $where);
+        foreach ($params as $clave => $valor) {
+            $stmt->bindValue($clave, $valor, is_int($valor) ? PDO::PARAM_INT : PDO::PARAM_STR);
+        }
+        $stmt->execute();
+        return (int) $stmt->fetchColumn();
+    }
+
+    public static function buscarPaginado(PDO $pdo, int $pagina, int $porPagina, string $buscar = '', string $campo = 'todos', string $disponibilidad = ''): array {
+        [$where, $params] = self::filtrosBusqueda($buscar, $campo, $disponibilidad);
+        $inicio = (max(1, $pagina) - 1) * $porPagina;
+        $stmt = $pdo->prepare('SELECT * FROM libros' . $where . ' 
+                               ORDER BY titulo DESC, id ASC LIMIT :inicio, :cantidad');
+        foreach ($params as $clave => $valor) {
+            $stmt->bindValue($clave, $valor, is_int($valor) ? PDO::PARAM_INT : PDO::PARAM_STR);
+        }
+        $stmt->bindValue(':inicio', $inicio, PDO::PARAM_INT);
+        $stmt->bindValue(':cantidad', $porPagina, PDO::PARAM_INT);
+        $stmt->execute();
+        return array_map([self::class, 'desdeFila'], $stmt->fetchAll(PDO::FETCH_ASSOC));
     }
 
     public static function buscarPorId(PDO $pdo, int $id): ?Libro {

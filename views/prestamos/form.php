@@ -48,14 +48,28 @@ $esEdicion = isset($prestamo) && is_object($prestamo);
 
             <!-- Selección de Librovich -->
             <div class="mb-3">
-                <label for="libroId" class="form-label">Libro</label>
+                <label for="libroId" class="form-label">Libro, Juego o Proyecto</label>
                 <select name="libroId" id="libroId" class="form-select" required>
-                    <option value="">Selecciona un Libro</option>
-                    <?php if (isset($libros)): ?>
+                    <option value="">Selecciona libro</option>
+                    <option value="">Selecciona juego</option>
+                    <option value="">Selecciona proyecto</option>
+                    <?php if (isset($libros, $juegos, $proyectos)): ?>
                         <?php foreach ($libros as $libro): ?>
                             <option value="<?= $libro->getId() ?>" 
                                 <?= ($esEdicion && $prestamo->getLibroId() == $libro->getId()) ? 'selected' : '' ?>>
                                 <?= htmlspecialchars($libro->getTitulo()) ?> - <?= htmlspecialchars($libro->getAutor()) ?>
+                            </option>
+                        <?php endforeach; ?>
+                        <?php foreach ($juegos as $juego): ?>
+                            <option value="<?= $juego->getId() ?>" 
+                                <?= ($esEdicion && $prestamo->getLibroId() == $juego->getId()) ? 'selected' : '' ?>>
+                                <?= htmlspecialchars($juego->getNombre()) ?> - <?= htmlspecialchars($juego->getDesarrollador()) ?>
+                            </option>
+                        <?php endforeach; ?>
+                        <?php foreach ($proyectos as $proyecto): ?>
+                            <option value="<?= $proyecto->getId() ?>" 
+                                <?= ($esEdicion && $prestamo->getLibroId() == $proyecto->getId()) ? 'selected' : '' ?>>
+                                <?= htmlspecialchars($proyecto->getNombre()) ?> - <?= htmlspecialchars($proyecto->getDescripcion()) ?>
                             </option>
                         <?php endforeach; ?>
                     <?php endif; ?>
