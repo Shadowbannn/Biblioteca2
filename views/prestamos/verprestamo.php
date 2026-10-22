@@ -1,9 +1,5 @@
 <?php require __DIR__ . '/../../includes/header.php'; ?>
-<?php require_once __DIR__ . '/../../models/Socio.php'; ?>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <h1 class="titulo mt-5"><b>Préstamos</b></h1>
-
-
 
 <div class="card">
     <div class="card-header bg-dark text-white">
@@ -12,13 +8,16 @@
     </div>
     <br>
     <div class="mb-3">
-        <a href="index.php?accion=formCrearPrestamo" class="btn btn-success">
+        <a href="index.php?accion=formCrearPrestamo" class="btn btn-success"
+        style="margin-left: 14px;">
              ➕ Agregar préstamo
          </a>
     </div>
 
     <div class="card-body">
         <?php require __DIR__ . '/../../includes/paginadorPrestamo.php'; ?>
+        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+        <br>
 
         <?php if (!empty($prestamos)): ?>
             <div class="table-responsive">
@@ -26,17 +25,17 @@
                     <thead>
                         <tr>
                             <th scope="col">Portada</th>
-                            <th scope="col">Foto socio</th>
+                            <th scope="col">Foto</th>
                             <th scope="col">Socio</th>
                             <th scope="col">Libro</th>
                             <th scope="col">Estado</th>
-                            <th scope="col">Devolución Estimada</th>
+                            <th scope="col">Devolver</th>
                             <th scope="col">Código</th>
                             <th scope="col">Acciones</th>
                             <th scope="col">Acciones</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="myTable">
                         <?php foreach ($prestamos as $prestamo): ?>
                             <tr>
                                 <!-- Portada del libro -->
@@ -54,11 +53,11 @@
                                     <?php endif; ?>
                                 </td>
 
-                                <!-- Foto del socio (Asegúrate de que el método exista en el modelo de préstamo) -->
+                                <!-- Foto del socio -->
                                 <td>
-                                    <?php if (method_exists($prestamo, 'getFoto') && $prestamo->getFoto()): ?>
-                                        <img src="/carpeta2/uploads/fotos/<?= htmlspecialchars($prestamo->getFoto()) ?>"
-                                             alt="Foto de <?= htmlspecialchars($prestamo->getNombre()) ?>"
+                                    <?php if ($prestamo->getSocioFoto() !== ''): ?>
+                                        <img src="/carpeta2/uploads/fotos/<?= htmlspecialchars($prestamo->getSocioFoto()) ?>"
+                                             alt="Foto de <?= htmlspecialchars($prestamo->getSocioNombre()) ?>"
                                              class="rounded-circle"
                                              style="max-height: 50px; max-width: 50px; width: 50px; height: 50px; object-fit: cover;">
                                     <?php else: ?>
@@ -113,3 +112,14 @@
 </div>
 
 <?php require __DIR__ . '/../../includes/footer.php'; ?>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>

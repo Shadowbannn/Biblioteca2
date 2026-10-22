@@ -9,7 +9,9 @@ $esEdicion = isset($prestamo) && is_object($prestamo);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $esEdicion ? 'Editar Préstamo' : 'Agregar Préstamo' ?></title>
 
+    <link href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.bootstrap5.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>   
     <link rel="stylesheet" href="css/form.css">
 </head>
 
@@ -46,35 +48,29 @@ $esEdicion = isset($prestamo) && is_object($prestamo);
                 </select>
             </div>
 
+
             <!-- Selección de Librovich -->
             <div class="mb-3">
-                <label for="libroId" class="form-label">Libro, Juego o Proyecto</label>
+                <label for="libroId" class="form-label">Libro</label>
                 <select name="libroId" id="libroId" class="form-select" required>
-                    <option value="">Selecciona libro</option>
-                    <option value="">Selecciona juego</option>
-                    <option value="">Selecciona proyecto</option>
-                    <?php if (isset($libros, $juegos, $proyectos)): ?>
+                    <option value="">Selecciona un Libro</option>
+                    <?php if (isset($libros)): ?>
                         <?php foreach ($libros as $libro): ?>
-                            <option value="<?= $libro->getId() ?>" 
+                            <?php
+                                $textoCompleto = $libro->getTitulo() . ' - ' . $libro->getAutor();
+                                $textoCorto = mb_strlen($textoCompleto) > 50
+                                    ? mb_substr($textoCompleto, 0, 50) . '…'
+                                    : $textoCompleto;
+                            ?>
+                            <option value="<?= $libro->getId() ?>"
                                 <?= ($esEdicion && $prestamo->getLibroId() == $libro->getId()) ? 'selected' : '' ?>>
                                 <?= htmlspecialchars($libro->getTitulo()) ?> - <?= htmlspecialchars($libro->getAutor()) ?>
-                            </option>
-                        <?php endforeach; ?>
-                        <?php foreach ($juegos as $juego): ?>
-                            <option value="<?= $juego->getId() ?>" 
-                                <?= ($esEdicion && $prestamo->getLibroId() == $juego->getId()) ? 'selected' : '' ?>>
-                                <?= htmlspecialchars($juego->getNombre()) ?> - <?= htmlspecialchars($juego->getDesarrollador()) ?>
-                            </option>
-                        <?php endforeach; ?>
-                        <?php foreach ($proyectos as $proyecto): ?>
-                            <option value="<?= $proyecto->getId() ?>" 
-                                <?= ($esEdicion && $prestamo->getLibroId() == $proyecto->getId()) ? 'selected' : '' ?>>
-                                <?= htmlspecialchars($proyecto->getNombre()) ?> - <?= htmlspecialchars($proyecto->getDescripcion()) ?>
                             </option>
                         <?php endforeach; ?>
                     <?php endif; ?>
                 </select>
             </div>
+
 
              <!-- Selección de Estado -->
             <div class="mb-3">
@@ -116,3 +112,11 @@ $esEdicion = isset($prestamo) && is_object($prestamo);
 
 </body>
 </html>
+
+<script>
+    new TomSelect('#libroId', {
+        placeholder: '',
+        maxOptions: null,        // muestra todas las opciones, sin límite
+        allowEmptyOption: true
+    });
+</script>

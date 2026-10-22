@@ -24,7 +24,7 @@ function listarPrestamos() {
 function formCrearPrestamo() {
     global $pdo;
     $socios = Socio::listarPaginado($pdo, 1, 1000); 
-    $libros = Libro::listarPaginado($pdo, 1, 1000); 
+    $libros = Libro::listarPaginado($pdo, 1, 15000); 
     require __DIR__ . '/../views/prestamos/form.php';
 }
 
@@ -39,7 +39,7 @@ function formEditarPrestamo() {
     }
 
     $socios = Socio::listarPaginado($pdo, 1, 1000);
-    $libros = Libro::listarPaginado($pdo, 1, 1000);
+    $libros = Libro::listarPaginado($pdo, 1, 10000);
 
     require __DIR__ . '/../views/prestamos/form.php';
 }

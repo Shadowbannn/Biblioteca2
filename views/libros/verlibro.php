@@ -1,5 +1,4 @@
 <?php require __DIR__ . '/../../includes/header.php'; ?>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <h1 class="titulo mt-5"><b>Libros</b></h1>
 
 
@@ -13,33 +12,7 @@
         </div>
        
         
-<form method="GET" action="index.php" class="row g-2 align-items-end mb-4">
-    <input type="hidden" name="accion" value="listarLibros">
-    <div class="col-12 col-lg-5">
-        <label class="form-label" style="color: white; for="buscar">Buscar libros</label>
-        <input id="buscar" type="search" name="buscar" class="form-control"
-               placeholder="Título, autor o género..."
-               value="<?= htmlspecialchars($buscar ?? '', ENT_QUOTES, 'UTF-8') ?>">
-    </div>
-    <div class="col-6 col-lg-3">
-        <select id="campo" name="campo" class="form-select">
-            <?php foreach (['todos' => 'Todos los campos', 'titulo' => 'Título', 'autor' => 'Autor', 'genero' => 'Género'] as $clave => $texto): ?>
-                <option value="<?= $clave ?>" <?= ($campo ?? 'todos') === $clave ? 'selected' : '' ?>><?= $texto ?></option>
-            <?php endforeach; ?>
-        </select>
-    </div>
-    <div class="col-6 col-lg-2">
-        <select id="disponibilidad" name="disponibilidad" class="form-select">
-            <option value="" <?= ($disponibilidad ?? '') === '' ? 'selected' : '' ?>>Todas</option>
-            <option value="1" <?= ($disponibilidad ?? '') === '1' ? 'selected' : '' ?>>Disponibles</option>
-            <option value="0" <?= ($disponibilidad ?? '') === '0' ? 'selected' : '' ?>>No disponibles</option>
-        </select>
-    </div>
-    <div class="col-12 col-lg-2 d-flex gap-2">
-        <button class="btn btn-primary flex-fill" type="submit">Buscar</button>
-        <a class="btn btn-outline-secondary" href="index.php?accion=listarLibros" title="Limpiar filtros">Limpiar</a>
-    </div>
-</form>
+<?php require __DIR__ . '/../../includes/filtroLibros.php'; ?>
    <?php require __DIR__ . '/../../includes/paginador.php'; ?>
 
     <div class="card-body">
@@ -55,11 +28,11 @@
                  <table class="table table-striped table-dark">
                     <thead>
                         <tr>
+                            <th scope="col">Portada</th>
                             <th scope="col">Título</th>
                             <th scope="col">Autor</th>                            
                             <th scope="col">Género</th>
                             <th scope="col">Año</th>
-                            <th scope="col">Páginas</th>
                             <th scope="col">Código</th>
                             <th scope="col">Editar</th>
                             <th scope="col">Eliminar</th>                            

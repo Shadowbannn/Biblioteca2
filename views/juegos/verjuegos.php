@@ -21,51 +21,65 @@
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
 
+                 <table class="table table-striped table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">Foto</th>                            
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Editor</th>                            
+                            <th scope="col">Disponible</th>
+                            <th scope="col">Código</th>
+                            <th scope="col">Editar</th>
+                            <th scope="col">Eliminar</th>                            
+                        </tr>
+                    </thead>    
+                    <tbody>                    
             <?php foreach ($juegos as $juego): ?>
 
-                <div class="col">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body d-flex flex-column">
+                <tr>
 
-                            <?php if ($juego->getFoto()): ?>
+                        <td>
+                             <?php if ($juego->getFoto()): ?>
                                 <img src="uploads/juegos/<?= htmlspecialchars($juego->getFoto()) ?>"
                                      alt="Foto de <?= htmlspecialchars($juego->getNombre()) ?>"
                                      class="card-img-top mb-3"
-                                     style="max-height: 400px; object-fit: cover;">
+                                     style="height: 76px; withd: 54px;">
                             <?php else: ?>
                                 <img src="assets/sin-portada.png"
                                      alt="Foto por defecto"
                                      class="card-img-top mb-3"
-                                     style="max-height: 400px; object-fit: cover;">
+                                     style="height: 76px; withd: 54px;">
                             <?php endif; ?>
-
-                            <h5 class="card-title">
-                                <?= htmlspecialchars($juego->getNombre()) ?>
-                            </h5>
-
-                            <p class="card-text">
-                                <b>Editor:</b> <?= htmlspecialchars($juego->getEditor()) ?><br>
-                                <b>Disponible:</b> <?= $juego->getDisponible() ?><br>
-                            </p>
-
-                            <div class="mt-auto d-flex gap-2">
+                        </td>
+                        <td><?= htmlspecialchars($juego->getNombre()) ?></td>
+                        <td><?= $juego->getEditor() ?></td>
+                        <td><?= $juego->getDisponible() ?></td>
+                        <td><span class="juego-id">#<?= $juego->getId() ?></td>
+                        <td><div class="mt-auto d-flex gap-2">
+                            
                                 <a href="index.php?accion=formEditarJuego&id=<?= $juego->getId() ?>"
                                    class="btn btn-warning btn-sm">
-                                    Editar
+                                    <i class="fa-solid fa-user-pen"></i>
                                 </a>
+                            </div>
+                        </td>
+                        <td><div class="mt-auto d-flex gap-2">
 
                                 <a href="index.php?accion=eliminarJuego&id=<?= $juego->getId() ?>"
                                    class="btn btn-danger btn-sm"
                                    onclick="return confirm('¿Deseas eliminar este juego?')">
-                                    Eliminar
+                                    <i class="fa-solid fa-trash"></i>
                                 </a>
-                            </div>
+                            </div></td>
 
-                        </div>
-                    </div>
-                </div>
 
-            <?php endforeach; ?>
+                        </tr>
+                         <?php endforeach; ?>
+
+                    </tbody>
+
+                 </table>
+
 
             <?php if (empty($juegos)): ?>
                 <p class="text-muted">Todavía no hay libros cargados.</p>
