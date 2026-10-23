@@ -11,14 +11,15 @@
             </span>
         </div>
 
+
     <div class="card-body">
-        <?php require __DIR__ . '/../../includes/paginadorJuego.php'; ?>
         <div class="mb-3">
             <a href="index.php?accion=formCrearJuego" class="btn btn-success">
                 ➕ Agregar Juego
             </a>
         </div>
-
+        <input class="form-control" id="myInput" type="search" placeholder="Buscar juegos..." aria-label="Buscar en los juegos de esta página">
+        <br>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
 
                  <table class="table table-striped table-dark">
@@ -33,7 +34,7 @@
                             <th scope="col">Eliminar</th>                            
                         </tr>
                     </thead>    
-                    <tbody>                    
+                    <tbody id="myTable">                    
             <?php foreach ($juegos as $juego): ?>
 
                 <tr>
@@ -87,9 +88,11 @@
 
         </div>
     </div>
-
-    <?php require __DIR__ . '/../../includes/paginadorJuego.php'; ?>
+<?php require __DIR__ . '/../../includes/paginadorJuego.php'; ?>
+<br>
 </div>
+
+
 
 <div class="mt-3">
     <a href="index.php" class="btn btn-secondary">← Volver al inicio</a>
@@ -97,3 +100,14 @@
 
 
 <?php require __DIR__ . '/../../includes/footer.php'; ?>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>    

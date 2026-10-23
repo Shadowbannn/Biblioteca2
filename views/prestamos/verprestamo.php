@@ -15,7 +15,6 @@
     </div>
 
     <div class="card-body">
-        <?php require __DIR__ . '/../../includes/paginadorPrestamo.php'; ?>
         <input class="form-control" id="myInput" type="text" placeholder="Search..">
         <br>
 
@@ -70,9 +69,23 @@
 
                                 <td><?= htmlspecialchars($prestamo->getSocioNombre()) ?></td>
                                 <td><?= htmlspecialchars($prestamo->getLibroTitulo()) ?></td>
-                                <td><?= htmlspecialchars($prestamo->getEstado()) ?></td>
+                                <td>
+                                    <?php
+                                    $estado = $prestamo->getEstado();
+                                    $claseEstado = match ($estado) {
+                                        'Reservado' => 'text-bg-warning',
+                                        'Prestado' => 'text-bg-primary',
+                                        'Devuelto' => 'text-bg-success',
+                                        'Cancelado' => 'text-bg-danger',
+                                        default => 'text-bg-secondary',
+                                    };
+                                    ?>
+                                    <span class="badge rounded-pill <?= $claseEstado ?>">
+                                        <?= htmlspecialchars($estado, ENT_QUOTES, 'UTF-8') ?>
+                                    </span>
+                                </td>
                                 <td><?= date('d/m/Y', strtotime($prestamo->getFechaDevolucion())) ?></td>
-                                <td><?= $prestamo->getId() ?></td>
+                                <td><span class="prestamo-id">#<?= $prestamo->getId() ?></td>
 
                                 <!-- Acciones -->
                                 <td>
@@ -104,7 +117,6 @@
 
     </div>
 
-    <?php require __DIR__ . '/../../includes/paginador.php'; ?>
 </div>
 
 <div class="mt-3">

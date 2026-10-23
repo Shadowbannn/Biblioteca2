@@ -10,8 +10,8 @@
                 Total de libros: <?= number_format((int) ($totalRegistros ?? 0), 0, ',', '.') ?>
             </span>
         </div>
-       
-        
+
+
 <?php require __DIR__ . '/../../includes/filtroLibros.php'; ?>
    <?php require __DIR__ . '/../../includes/paginador.php'; ?>
 
@@ -23,22 +23,22 @@
         </div>
 
 
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="table-responsive">
 
                  <table class="table table-striped table-dark">
                     <thead>
                         <tr>
                             <th scope="col">Portada</th>
                             <th scope="col">Título</th>
-                            <th scope="col">Autor</th>                            
+                            <th scope="col">Autor</th>
                             <th scope="col">Género</th>
                             <th scope="col">Año</th>
                             <th scope="col">Código</th>
                             <th scope="col">Editar</th>
-                            <th scope="col">Eliminar</th>                            
+                            <th scope="col">Eliminar</th>
                         </tr>
-                    </thead>    
-                    <tbody>                    
+                    </thead>
+                    <tbody>
             <?php foreach ($libros as $libro): ?>
 
                 <tr>
@@ -48,21 +48,21 @@
                                 <img src="uploads/portadas/<?= htmlspecialchars($libro->getPortada()) ?>"
                                      alt="Portada de <?= htmlspecialchars($libro->getTitulo()) ?>"
                                      class="card-img-top mb-3"
-                                     style="height: 76px; withd: 54px;">
+                                     style="height: 76px; width: 54px;">
                             <?php else: ?>
                                 <img src="assets/sin-portada.webp"
                                      alt="Portada por defecto"
                                      class="card-img-top mb-3"
-                                     style="height: 76px; withd: 54px;">
+                                     style="height: 76px; width: 54px;">
                             <?php endif; ?>
                         </td>
                         <td><?= htmlspecialchars($libro->getTitulo()) ?></td>
                         <td><?= $libro->getAutor() ?></td>
                         <td><?= $libro->getGenero() ?></td>
                         <td><?= $libro->getAnioPublicacion() ?></td>
-                        <td><span class="libro-id">#<?= $libro->getId() ?></td>
+                        <td><span class="libro-id">#<?= $libro->getId() ?></span></td>
                         <td><div class="mt-auto d-flex gap-2">
-                            
+
                                 <a href="index.php?accion=formEditarLibro&id=<?= $libro->getId() ?>"
                                    class="btn btn-warning btn-sm">
                                     <i class="fa-solid fa-user-pen"></i>

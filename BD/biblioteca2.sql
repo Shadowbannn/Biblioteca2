@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-10-2026 a las 15:22:16
+-- Tiempo de generación: 23-10-2026 a las 04:07:57
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -522,7 +522,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (348, 'Derecho Público v.1 parte 3', 'Muñoz, Cassinelli', 0, 0, 1, 'Derecho', NULL, 349, NULL, NULL, '41124.46', NULL, 'Derecho'),
 (349, 'Robin Hood', 'Pairault, Suzanne', 0, 0, 1, 'Literat', NULL, 350, 'Kapelusz', NULL, 'Kapelusz', NULL, 'Literat'),
 (350, 'Seguridad social  Parte 2 Tomo III', 'Pérez Montero Gotusso, Silvia', 0, 0, 1, 'Derecho', NULL, 351, 'FOTOCOPIADO', NULL, 'FOTOCOPIADO', NULL, 'Derecho'),
-(351, 'Proyecto ARTCAFÉ RIVERA', 'Silveira; Casaravilla; Gonzalez', 0, 0, 1, 'Proyectos', NULL, 352, NULL, NULL, 'TURISMO 2015', NULL, 'Proyectos'),
 (352, 'Escalofrio: Antología de cuentos de Edgar A. Poe', 'Poe, Edgar Allan', 0, 0, 1, 'Literat', NULL, 353, 'La República (suplemento)', NULL, 'La República (suplemento)', NULL, 'Literat'),
 (353, 'Benito Cereno   e.1', 'Melville, Herman', 0, 0, 1, 'Literat', NULL, 354, 'La República (suplemento)', NULL, 'La República (suplemento)', NULL, 'Literat'),
 (354, 'La vuelta al mundo en 80 días (fotocopiado)', 'Verne, Julio', 0, 0, 1, 'Literat', NULL, 355, 'Ed. Atlántida', NULL, 'Ed. Atlántida', NULL, 'Literat'),
@@ -1167,7 +1166,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (994, 'Censo Nacional de Aprendizajes 1999 en los 3ros años del ciclo básico', 'ANEP', 0, 0, 1, 'Educación', NULL, 995, NULL, NULL, '41124.46', NULL, 'Educación'),
 (995, 'Censo Nacional de Aprendizajes 1999 en los 3ros años del ciclo básico análisis perfil de las familias de los estudiantes', 'ANEP', 0, 0, 1, 'Educación', NULL, 996, NULL, NULL, '41124.46', NULL, 'Educación'),
 (996, 'Manuales de Literatura  Nº  63  Juan José Morosoli', 'Pereyra, Miriam', 0, 0, 1, 'Sin género', NULL, 997, NULL, '2014-03-20', 'Editorial Técnica', 'Donación', NULL),
-(997, 'Monografía Final carrera Téc. Prevenc. en Seguridad e Higiene en el trabajo Rinde más', 'Techera Romero, Felipe', 0, 0, 1, 'Proyectos', NULL, 998, NULL, '2014-04-08', NULL, NULL, 'Proyectos'),
 (998, 'Manual de Defensa del Consumidor en Uruguay  e.3', 'Ministerio de Economía y Finanzas Direcc Gral de Comercio Área de Defensa del Consum..; CODICEN; ANEP; CETP; CES', 0, 0, 1, 'Derecho', NULL, 999, 'IMPO; BROU', '2010-06-15', 'IMPO; BROU', NULL, 'Derecho'),
 (999, 'Censo Nacional de Aprendizajes 1999 en los 3ros años del ciclo básico Estudio sobre la predisposición al abandono escolar', 'ANEP', 0, 0, 1, 'Educación', NULL, 1000, NULL, NULL, '41124.46', NULL, 'Educación'),
 (1000, 'Censo Nacional de Aprendizajes 1999 en los 3ros años del ciclo básico Resultados y desafíos', 'ANEP', 0, 0, 1, 'Educación', NULL, 1001, NULL, NULL, '41124.46', NULL, 'Educación'),
@@ -1194,7 +1192,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (1021, 'Manual de Defensa del Consumidor en Uruguay  e.7', 'Ministerio de Economía y Finanzas Direcc Gral de Comercio Área de Defensa del Consum..; CODICEN; ANEP; CETP; CES', 0, 0, 1, 'Derecho', NULL, 1022, 'IMPO; BROU', '2010-06-15', 'IMPO; BROU', NULL, 'Derecho'),
 (1022, 'Manual de Defensa del Consumidor en Uruguay  e.8', 'Ministerio de Economía y Finanzas Direcc Gral de Comercio Área de Defensa del Consum..; CODICEN; ANEP; CETP; CES', 0, 0, 1, 'Derecho', NULL, 1023, 'IMPO; BROU', '2010-06-15', 'IMPO; BROU', NULL, 'Derecho'),
 (1023, 'Manual de Defensa del Consumidor en Uruguay  e.9', 'Ministerio de Economía y Finanzas Direcc Gral de Comercio Área de Defensa del Consum..; CODICEN; ANEP; CETP; CES', 0, 0, 1, 'Derecho', NULL, 1024, 'IMPO; BROU', '2010-06-15', 'IMPO; BROU', NULL, 'Derecho'),
-(1024, 'Monografía Final carrera Téc. Prevenc. en Seguridad e Higiene en el trabajo Phanton Neumaticos', 'Olivera, Andrea', 0, 0, 1, 'Proyectos', NULL, 1025, NULL, '2014-04-08', NULL, NULL, 'Proyectos'),
 (1025, 'Cálculo Diferencial e Integral', 'Piskunov, N.', 0, 0, 1, 'Matemat', NULL, 1026, 'Montaner y Simón', '2014-04-09', 'Montaner y Simón', 'Donación', 'Matemat'),
 (1026, 'Manual de Defensa del Consumidor en Uruguay  e.10', 'Ministerio de Economía y Finanzas Direcc Gral de Comercio Área de Defensa del Consum..; CODICEN; ANEP; CETP; CES', 0, 0, 1, 'Derecho', NULL, 1027, 'IMPO; BROU', '2010-06-15', 'IMPO; BROU', NULL, 'Derecho'),
 (1027, 'Manual de Defensa del Consumidor en Uruguay  e.11', 'Ministerio de Economía y Finanzas Direcc Gral de Comercio Área de Defensa del Consum..; CODICEN; ANEP; CETP; CES', 0, 0, 1, 'Derecho', NULL, 1028, 'IMPO; BROU', '2010-06-15', 'IMPO; BROU', NULL, 'Derecho'),
@@ -1366,11 +1363,11 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (1194, 'Cauces Lecturas explicadas', 'Anglés y Bovet', 0, 0, 1, 'Idioma Esp', NULL, 1195, NULL, NULL, '41124.46', NULL, 'Idioma Esp'),
 (1195, 'Imitar, plagiar, crear', 'GRAO', 0, 0, 1, 'Idioma Esp', NULL, 1196, NULL, NULL, '41124.46', NULL, 'Idioma Esp'),
 (1196, 'Estudio sobre el problema idiomático fronterizo', 'Academia Nacional de Letras. Comisión para el Estudio en la Zona Fronteriza', 0, 0, 1, 'Idioma Esp', NULL, 1197, NULL, NULL, '41124.46', NULL, 'Idioma Esp'),
-(1197, 'Idioma Español', 'De Donner, Paloma B.', 0, 0, 1, 'Idioma Esp', NULL, 1198, NULL, NULL, '41124.46', NULL, 'Idioma Esp');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(1197, 'Idioma Español', 'De Donner, Paloma B.', 0, 0, 1, 'Idioma Esp', NULL, 1198, NULL, NULL, '41124.46', NULL, 'Idioma Esp'),
 (1198, 'Física Seis ideas fundamentales  tomo II 2° ed.', 'Moore, Thomas', 0, 0, 1, 'Fisica', NULL, 1199, 'Mc Graw Hill', NULL, 'Mc Graw Hill', NULL, 'Fisica'),
 (1199, 'El Encanto de la Lectura 5º', 'Educación Básica Primaria', 0, 0, 1, 'Idioma Esp', NULL, 1200, NULL, NULL, '41124.46', NULL, 'Idioma Esp'),
-(1200, 'Primero', 'ANEP', 0, 0, 1, 'Idioma Esp', NULL, 1201, NULL, NULL, '41124.46', NULL, 'Idioma Esp'),
+(1200, 'Primero', 'ANEP', 0, 0, 1, 'Idioma Esp', NULL, 1201, NULL, NULL, '41124.46', NULL, 'Idioma Esp');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (1201, 'Física   6°ed. e.1', 'Wilson, J.; Buffa, A.; Lou, B.', 0, 0, 1, 'Fisica', NULL, 1202, 'PEARSON EDUCACIÓN', NULL, 'PEARSON EDUCACIÓN', NULL, 'Fisica'),
 (1202, 'Física   6°ed. e.2', 'Wilson, J.; Buffa, A.; Lou, B.', 0, 0, 1, 'Fisica', NULL, 1203, 'PEARSON EDUCACIÓN', NULL, 'PEARSON EDUCACIÓN', NULL, 'Fisica'),
 (1203, 'Física preuniversitaria v.I  e.3', 'Tipler, Paul A.', 0, 0, 1, 'Fisica', NULL, 1204, 'REVERTE', NULL, 'REVERTE', NULL, 'Fisica'),
@@ -1678,11 +1675,11 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (1505, 'Encuentro internacional sobre normalización y gestión de la calidad e.2', 'Instituto Uruguayo de Normas Técnicas', 0, 0, 1, 'Administ', NULL, 1507, NULL, NULL, '41124.46', NULL, 'Administ'),
 (1506, 'Ogilvy & la pùblicidad', 'Ogilvy, David', 0, 0, 1, 'Mark- Pub-Cal', NULL, 1508, NULL, NULL, 'fotoc', NULL, 'Mark- Pub-Cal'),
 (1507, 'Casi todo lo que se de publicidad', 'Lorente, Joaquín', 0, 0, 1, 'Mark- Pub-Cal', NULL, 1509, NULL, NULL, 'fotoc', NULL, 'Mark- Pub-Cal'),
-(1508, 'La calidad y yo  e.1', 'Crosby, Philip', 0, 0, 1, 'Administ', NULL, 1510, NULL, NULL, '41124.46', NULL, 'Administ');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(1508, 'La calidad y yo  e.1', 'Crosby, Philip', 0, 0, 1, 'Administ', NULL, 1510, NULL, NULL, '41124.46', NULL, 'Administ'),
 (1509, 'La calidad y yo  e.2', 'Crosby, Philip', 0, 0, 1, 'Administ', NULL, 1511, NULL, NULL, '41124.46', NULL, 'Administ'),
 (1510, 'El mensaje informativo', 'Martinez Albertos, José Luis', 0, 0, 1, 'Idioma Esp', NULL, 1512, NULL, NULL, '41124.46', NULL, 'Idioma Esp'),
-(1511, 'La previsión y el programa de ventas', 'Casanovas, Francisco', 0, 0, 1, 'Mark- Pub-Cal', NULL, 1513, NULL, NULL, '41124.46', NULL, 'Mark- Pub-Cal'),
+(1511, 'La previsión y el programa de ventas', 'Casanovas, Francisco', 0, 0, 1, 'Mark- Pub-Cal', NULL, 1513, NULL, NULL, '41124.46', NULL, 'Mark- Pub-Cal');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (1512, 'Introducción a la investigación operativa', 'Closkey, J.; Trefethen, F.N', 0, 0, 1, 'Administ', NULL, 1514, NULL, NULL, '41124.46', NULL, 'Administ'),
 (1513, 'Muy Interesante mayo 2007 Nº 259 Año 22', 'Editorial García Ferre', 0, 0, 1, 'Sin género', NULL, 1515, NULL, NULL, '40709.0', NULL, NULL),
 (1514, 'Del estudio de la motición a la creación publicitaria y a la promoción de ventas', 'Joannis, H', 0, 0, 1, 'Mark- Pub-Cal', NULL, 1516, NULL, NULL, '41124.46', NULL, 'Mark- Pub-Cal'),
@@ -1993,8 +1990,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (1819, 'El señor magistrado  e.1', 'Dunham, Allison; Kurland, Philip B.', 0, 0, 1, 'Literat', NULL, 1822, NULL, NULL, '41124.46', NULL, 'Literat'),
 (1820, 'El señor magistrado  e.2', 'Dunham, Allison; Kurland, Philip B.', 0, 0, 1, 'Literat', NULL, 1823, NULL, NULL, '41124.46', NULL, 'Literat'),
 (1821, 'Mi visión del mundo e.2', 'Einstein, Albert', 0, 0, 1, 'Literat', NULL, 1824, NULL, NULL, '41124.46', NULL, 'Literat'),
-(1822, 'Proyecto Gestión Empresarial Infotec Rivera  BAJA', '3er año Informática', 0, 0, 1, 'Proyectos', NULL, 1825, NULL, '2013-03-20', NULL, NULL, 'Proyectos'),
-(1823, 'Proyecto Empresa  Pequeña Reserva Natural \" El Ombú\"', 'Pymes', 0, 0, 1, 'Proyectos', NULL, 1825, NULL, '2013-03-20', NULL, NULL, 'Proyectos'),
 (1824, 'Enseñanza Primaria y Ciclo Básico de Educación Media en el Uruguay', 'CODICEN; Comisión Económica para la América Latina y el Caribe', 0, 0, 1, 'Educación', NULL, 1827, NULL, NULL, '40722.0', NULL, 'Educación'),
 (1825, 'Mi visión del mundo e.1', 'Einstein, Albert', 0, 0, 1, 'Literat', NULL, 1828, NULL, NULL, '41124.46', NULL, 'Literat'),
 (1826, 'Leales amigos y temibles enemigos', 'Kennedy, Robert F.', 0, 0, 1, 'Literat', NULL, 1829, NULL, NULL, '41124.46', NULL, 'Literat'),
@@ -2009,14 +2004,14 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (1835, 'Un cadáver en la biblioteca', 'Christie, Agatha', 0, 0, 1, 'Literat', NULL, 1838, NULL, NULL, '41124.46', NULL, 'Literat'),
 (1836, 'Muerte en las nubes', 'Christie, Agatha', 0, 0, 1, 'Literat', NULL, 1839, NULL, NULL, '41124.46', NULL, 'Literat'),
 (1837, 'El misterio de las siete esferas', 'Christie, Agatha', 0, 0, 1, 'Literat', NULL, 1840, NULL, NULL, '41124.46', NULL, 'Literat'),
-(1838, 'Intriga en Bagdad', 'Christie, Agatha', 0, 0, 1, 'Literat', NULL, 1841, NULL, NULL, '41124.46', NULL, 'Literat');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(1838, 'Intriga en Bagdad', 'Christie, Agatha', 0, 0, 1, 'Literat', NULL, 1841, NULL, NULL, '41124.46', NULL, 'Literat'),
 (1839, 'Ocho casos de Poirot', 'Christie, Agatha', 0, 0, 1, 'Literat', NULL, 1842, NULL, NULL, '41124.46', NULL, 'Literat'),
 (1840, 'Matrimonio de sabuesos', 'Christie, Agatha', 0, 0, 1, 'Literat', NULL, 1843, NULL, NULL, '41124.46', NULL, 'Literat'),
 (1841, 'Muerte en el Nilo', 'Christie, Agatha', 0, 0, 1, 'Literat', NULL, 1844, NULL, NULL, '41124.46', NULL, 'Literat'),
 (1842, 'Navidades Trágicas', 'Christie, Agatha', 0, 0, 1, 'Literat', NULL, 1845, NULL, NULL, '41124.46', NULL, 'Literat'),
 (1843, 'Diez negritos', 'Christie, Agatha', 0, 0, 1, 'Literat', NULL, 1846, NULL, NULL, '41124.46', NULL, 'Literat'),
-(1844, 'El fantasma de Canterville  e.1', 'Wilde, Oscar', 0, 0, 1, 'Literat', NULL, 1847, NULL, NULL, '41124.46', NULL, 'Literat'),
+(1844, 'El fantasma de Canterville  e.1', 'Wilde, Oscar', 0, 0, 1, 'Literat', NULL, 1847, NULL, NULL, '41124.46', NULL, 'Literat');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (1845, 'El fantasma de Canterville  e.2', 'Wilde, Oscar', 0, 0, 1, 'Literat', NULL, 1848, NULL, NULL, '41124.46', NULL, 'Literat'),
 (1846, 'Las crónicas de Narnia : El león,  la bruja y el armario     e.1', 'Lewis, C.S.', 0, 0, 1, 'Literat', NULL, 1849, NULL, NULL, '41124.46', NULL, 'Literat'),
 (1847, 'Las crónicas de Narnia : El león,  la bruja y el armario     e.2', 'Lewis, C.S.', 0, 0, 1, 'Literat', NULL, 1850, NULL, NULL, '41124.46', NULL, 'Literat'),
@@ -2313,12 +2308,12 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (2144, 'Tecnologías de la información y la comunicación', 'Cortagerena, Alicia; Freijedo, Claudio', 0, 0, 1, 'Informat', NULL, 2147, NULL, NULL, '41124.46', NULL, 'Informat'),
 (2145, 'Guía del Primer Año CCNA 1 y 2 e.1', 'Academia de Networking de Cisco Systems', 0, 0, 1, 'Informat', NULL, 2148, NULL, NULL, '41124.46', NULL, 'Informat'),
 (2146, 'Guía del Primer Año CCNA 1 y 2 e.2', 'Academia de Networking de Cisco Systems', 0, 0, 1, 'Informat', NULL, 2149, NULL, NULL, '41124.46', NULL, 'Informat'),
-(2147, 'Prácticas de laboratorio CCNA 1 y 2: Programa de estudios autorizado por la Academia de Networking de Cisco Systems e. 1', 'Cisco Systems', 0, 0, 1, 'Informat', NULL, 2150, NULL, NULL, '41124.46', NULL, 'Informat');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(2147, 'Prácticas de laboratorio CCNA 1 y 2: Programa de estudios autorizado por la Academia de Networking de Cisco Systems e. 1', 'Cisco Systems', 0, 0, 1, 'Informat', NULL, 2150, NULL, NULL, '41124.46', NULL, 'Informat'),
 (2148, 'Prácticas de laboratorio CCNA 1 y 2: Programa de estudios autorizado por la Academia de Networking de Cisco Systems e. 2', 'Cisco Systems', 0, 0, 1, 'Informat', NULL, 2151, NULL, NULL, '41124.46', NULL, 'Informat'),
 (2149, 'Guía Práctica: Genexus Desarrollo Basado en el Conocimiento', 'Marquez Lisboa, Daniel', 0, 0, 1, 'Informat', NULL, 2152, NULL, NULL, '41124.46', NULL, 'Informat'),
 (2150, 'Matemática discreta y sus aplicaciones', 'Rosen, Kenneth H.', 0, 0, 1, 'Matemat', NULL, 2153, NULL, NULL, '41124.46', NULL, 'Matemat'),
-(2151, 'Matemática discreta y combinatoria: una introducción con aplicaciones 3ª Ed. e.1', 'Grimaldi, Ralph P.', 0, 0, 1, 'Matemat', NULL, 2154, NULL, NULL, '41124.46', NULL, 'Matemat'),
+(2151, 'Matemática discreta y combinatoria: una introducción con aplicaciones 3ª Ed. e.1', 'Grimaldi, Ralph P.', 0, 0, 1, 'Matemat', NULL, 2154, NULL, NULL, '41124.46', NULL, 'Matemat');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (2152, 'Física para la Ciencia y la Tecnología: Mecánica Volumen 1 A  e.1', 'Tipler, Paul A.; Mosca, Gene', 0, 0, 1, 'Fisica', NULL, 2155, NULL, NULL, '41124.46', NULL, 'Fisica'),
 (2153, 'Física para la Ciencia y la Tecnología: Oscilaciones y ondas Volumen 1 B e.1', 'Tipler, Paul A.; Mosca, Gene', 0, 0, 1, 'Fisica', NULL, 2156, NULL, NULL, '41124.46', NULL, 'Fisica'),
 (2154, 'Física para la Ciencia y la Tecnología: Termodinámica Volumen 1 C e.1', 'Tipler, Paul A.; Mosca, Gene', 0, 0, 1, 'Fisica', NULL, 2157, NULL, NULL, '41124.46', NULL, 'Fisica'),
@@ -2637,12 +2632,12 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (2467, 'Revista Disney Explora Año 2 Nº 9 Mayo 2000', 'El País', 0, 0, 1, 'Revistas', NULL, 2470, NULL, '2012-08-13', 'Donación', NULL, 'Revistas'),
 (2468, 'Revista Disney Explora Año 2 Nº 12 Mayo 2000', 'El País', 0, 0, 1, 'Revistas', NULL, 2471, NULL, '2012-08-13', 'Donación', NULL, 'Revistas'),
 (2469, 'Revista Disney Explora Año 2 Nº 13 Junio 2000', 'El País', 0, 0, 1, 'Revistas', NULL, 2472, NULL, '2012-08-13', 'Donación', NULL, 'Revistas'),
-(2470, 'Revista Disney Explora Año 2 Nº 14 Junio 2000', 'El País', 0, 0, 1, 'Revistas', NULL, 2473, NULL, '2012-08-13', 'Donación', NULL, 'Revistas');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(2470, 'Revista Disney Explora Año 2 Nº 14 Junio 2000', 'El País', 0, 0, 1, 'Revistas', NULL, 2473, NULL, '2012-08-13', 'Donación', NULL, 'Revistas'),
 (2471, 'Circuitos microelectrónicos análisis y diseño', 'Rashid, Muhammad H.', 0, 0, 1, 'Electronica', NULL, 2474, NULL, NULL, '41124.46', NULL, 'Electronica'),
 (2472, 'Electrónica: Teoría de circuitos y dispositivos electrónicos', 'Boylestad, Robert L.; Nashelsky, Louis', 0, 0, 1, 'Electronica', NULL, 2475, NULL, NULL, '41124.46', NULL, 'Electronica'),
 (2473, 'Automatas programables: fundamento, manejo, instalación y prácticas', 'Porras C., Alejandro;Montanero M., Antonio P.', 0, 0, 1, 'Electronica', NULL, 2476, NULL, NULL, '41124.46', NULL, 'Electronica'),
-(2474, 'Electrónica indust.: dispositivos, equip. y sist. para procesos y comunic. industriales', 'Humphries, James T.', 0, 0, 1, 'Electronica', NULL, 2477, NULL, NULL, '41124.46', NULL, 'Electronica'),
+(2474, 'Electrónica indust.: dispositivos, equip. y sist. para procesos y comunic. industriales', 'Humphries, James T.', 0, 0, 1, 'Electronica', NULL, 2477, NULL, NULL, '41124.46', NULL, 'Electronica');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (2475, 'Motores eléctricos: automatismos de control', 'Roldán Viloria, José', 0, 0, 1, 'Electronica', NULL, 2478, NULL, NULL, '41124.46', NULL, 'Electronica'),
 (2476, 'Motores eléctricos variación de velocidad', 'Roldán Viloria, José', 0, 0, 1, 'Electrotec', NULL, 2479, NULL, NULL, '41124.46', NULL, 'Electrotec'),
 (2477, 'Manual de mantenimiento de instalaciones  e.1', 'Roldán Viloria, José', 0, 0, 1, 'Electronica', NULL, 2480, NULL, NULL, '41124.46', NULL, 'Electronica'),
@@ -2947,13 +2942,13 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (2776, 'El hombre soviético: dos generaciones', 'Kosa, John', 0, 0, 1, 'Historia', NULL, 2779, NULL, NULL, '41124.46', NULL, 'Historia'),
 (2777, 'Nuevas características del Totalitarismo Soviético  e.1', 'Ulam, Adam B.', 0, 0, 1, 'Historia', NULL, 2780, NULL, NULL, '41124.46', NULL, 'Historia'),
 (2778, 'Revista Anteojito Nº 1647', 'Sin autor registrado', 0, 0, 1, 'Revistas', NULL, 2781, NULL, '2012-09-18', 'Donación', NULL, 'Revistas'),
-(2779, '¿Por qué cantan las ballenas?', 'The Walt Disney Company', 1992, 28, 1, 'Revistas, Infantíl', 'portada_6ad6dc20783232.61820386.jpg', 2782, NULL, '2012-09-18', 'Donación', NULL, 'Revistas');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(2779, '¿Por qué cantan las ballenas?', 'The Walt Disney Company', 1992, 28, 1, 'Revistas, Infantíl', 'portada_6ad6dc20783232.61820386.jpg', 2782, NULL, '2012-09-18', 'Donación', NULL, 'Revistas'),
 (2780, 'La cortina de hierro    e.1', 'Overstreet, Harry; Overstreet, Bonaro', 0, 0, 1, 'Historia', NULL, 2783, NULL, NULL, '41124.46', NULL, 'Historia'),
 (2781, 'La cortina de hierro    e.2', 'Overstreet, Harry; Overstreet, Bonaro', 0, 0, 1, 'Historia', NULL, 2784, NULL, NULL, '41124.46', NULL, 'Historia'),
 (2782, 'El traje del emperador', 'Busquets, Carlos', 0, 0, 1, 'Literat', NULL, 2785, NULL, '2012-09-18', 'Donación', NULL, 'Literat'),
 (2783, 'El Escolar  17 febrero de 1993 Nº 935', 'El País', 0, 0, 1, 'Revistas', NULL, 2786, NULL, '2012-09-18', 'Donación', NULL, 'Revistas'),
-(2784, 'El Escolar  3 de marzo de 1993 Nº 937', 'El País', 0, 0, 1, 'Revistas', NULL, 2787, NULL, '2012-09-18', 'Donación', NULL, 'Revistas'),
+(2784, 'El Escolar  3 de marzo de 1993 Nº 937', 'El País', 0, 0, 1, 'Revistas', NULL, 2787, NULL, '2012-09-18', 'Donación', NULL, 'Revistas');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (2785, 'El Escolar  24 de marzo de 1993 Nº 940', 'El País', 0, 0, 1, 'Revistas', NULL, 2788, NULL, '2012-09-18', 'Donación', NULL, 'Revistas'),
 (2786, 'El Escolar  31 de marzo de 1993 Nº 941', 'El País', 0, 0, 1, 'Revistas', NULL, 2789, NULL, '2012-09-18', 'Donación', NULL, 'Revistas'),
 (2787, 'El Escolar  7 de abril de 1993 Nº 942', 'El País', 0, 0, 1, 'Revistas', NULL, 2790, NULL, '2012-09-18', 'Donación', NULL, 'Revistas'),
@@ -3264,13 +3259,13 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (3092, 'Pacesetter Elementary  Workbook   e.31', 'Strange, Derek; Hall, Diane', 0, 0, 1, 'Ingles-Fr-Port', NULL, 3095, NULL, NULL, '41124.46', NULL, 'Ingles-Fr-Port'),
 (3093, 'Pacesetter Elementary  Workbook   e.32', 'Strange, Derek; Hall, Diane', 0, 0, 1, 'Ingles-Fr-Port', NULL, 3096, NULL, NULL, '41124.46', NULL, 'Ingles-Fr-Port'),
 (3094, 'Pacesetter Elementary  Workbook   e.33', 'Strange, Derek; Hall, Diane', 0, 0, 1, 'Ingles-Fr-Port', NULL, 3097, NULL, NULL, '41124.46', NULL, 'Ingles-Fr-Port'),
-(3095, 'Pacesetter Elementary  Workbook   e.34', 'Strange, Derek; Hall, Diane', 0, 0, 1, 'Ingles-Fr-Port', NULL, 3098, NULL, NULL, '41124.46', NULL, 'Ingles-Fr-Port');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(3095, 'Pacesetter Elementary  Workbook   e.34', 'Strange, Derek; Hall, Diane', 0, 0, 1, 'Ingles-Fr-Port', NULL, 3098, NULL, NULL, '41124.46', NULL, 'Ingles-Fr-Port'),
 (3096, 'Pacesetter Elementary  Workbook   e.35', 'Strange, Derek; Hall, Diane', 0, 0, 1, 'Ingles-Fr-Port', NULL, 3099, NULL, NULL, '41124.46', NULL, 'Ingles-Fr-Port'),
 (3097, 'Pacesetter Elementary  Workbook   e.36', 'Strange, Derek; Hall, Diane', 0, 0, 1, 'Ingles-Fr-Port', NULL, 3100, NULL, NULL, '41124.46', NULL, 'Ingles-Fr-Port'),
 (3098, 'Pacesetter Elementary  Workbook   e.37', 'Strange, Derek; Hall, Diane', 0, 0, 1, 'Ingles-Fr-Port', NULL, 3101, NULL, NULL, '41124.46', NULL, 'Ingles-Fr-Port'),
 (3099, 'Pacesetter Elementary  Workbook   e.38', 'Strange, Derek; Hall, Diane', 0, 0, 1, 'Ingles-Fr-Port', NULL, 3102, NULL, NULL, '41124.46', NULL, 'Ingles-Fr-Port'),
-(3100, 'Atlas 2 Learning- Centered Communication', 'Nunan, David', 0, 0, 1, 'Ingles-Fr-Port', NULL, 3103, NULL, NULL, '41124.46', NULL, 'Ingles-Fr-Port'),
+(3100, 'Atlas 2 Learning- Centered Communication', 'Nunan, David', 0, 0, 1, 'Ingles-Fr-Port', NULL, 3103, NULL, NULL, '41124.46', NULL, 'Ingles-Fr-Port');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (3101, 'Atlas 3 Learning- Centered Communication', 'Nunan, David', 0, 0, 1, 'Ingles-Fr-Port', NULL, 3104, NULL, NULL, '41124.46', NULL, 'Ingles-Fr-Port'),
 (3102, 'Atlas 4 Learning- Centered Communication  e.1', 'Nunan, David', 0, 0, 1, 'Ingles-Fr-Port', NULL, 3105, NULL, NULL, '41124.46', NULL, 'Ingles-Fr-Port'),
 (3103, 'Atlas 4 Learning- Centered Communication  e.2', 'Nunan, David', 0, 0, 1, 'Ingles-Fr-Port', NULL, 3106, NULL, NULL, '41124.46', NULL, 'Ingles-Fr-Port'),
@@ -3566,19 +3561,17 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (3393, 'TEMS Fundament y contextos para el proceso de transf de la EMS Nº 15 e.2', 'ANEP', 0, 0, 1, 'Educación', NULL, 3397, NULL, NULL, '41124.46', NULL, 'Educación'),
 (3394, 'TEMS Fundament y contextos para el proceso de transf de la EMS Nº 15 e.3', 'ANEP', 0, 0, 1, 'Educación', NULL, 3398, NULL, NULL, NULL, NULL, 'Educación'),
 (3395, 'TEMS Contenidos curriculares de la EMS: organiz, especif y selecc Nº 16 e.1', 'ANEP', 0, 0, 1, 'Educación', NULL, 3399, NULL, NULL, NULL, NULL, 'Educación'),
-(3396, 'Proyecto Mecánica Automotriz Buggy arenero', '3º Mecánica Automotriz', 0, 0, 1, 'Proyectos', NULL, 3400, NULL, '2024-02-29', NULL, NULL, 'Proyectos'),
 (3397, 'TEMS El cambio curricular: princip innnovac para procesar la transf Nº 17 e.1', 'ANEP', 0, 0, 1, 'Educación', NULL, 3401, NULL, NULL, NULL, NULL, 'Educación'),
 (3398, 'TEMS El cambio curricular: princip innnovac para procesar la transf Nº 17 e.2', 'ANEP', 0, 0, 1, 'Educación', NULL, 3402, NULL, NULL, NULL, NULL, 'Educación'),
-(3399, 'Proyecto Mecánica Automotriz Buggy arenero Chasis - estructura', '3º Mecánica Automotriz', 0, 0, 1, 'Proyectos', NULL, 3403, NULL, '2024-02-29', NULL, NULL, 'Proyectos'),
-(3400, 'Proyecto Mecánica Automotriz Buggy arenero - Frenos', '3º Mecánica Automotriz', 0, 0, 1, 'Educación', NULL, 3404, NULL, '2024-02-29', NULL, NULL, 'Educación');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(3400, 'Proyecto Mecánica Automotriz Buggy arenero - Frenos', '3º Mecánica Automotriz', 0, 0, 1, 'Educación', NULL, 3404, NULL, '2024-02-29', NULL, NULL, 'Educación'),
 (3401, 'Esta bueno conversar . . . Educación Sexual para familias e.19', 'ANEP; Dirección Sectorial de Planificación Educación; Programa de Educación Sexual', 0, 0, 1, 'Biología', NULL, 3405, NULL, '2014-10-08', NULL, NULL, 'Biología'),
 (3402, 'TEMS Demandas sociales hacia la EMS Nº 18 e. 7', 'ANEP', 0, 0, 1, 'Educación', NULL, 3406, NULL, NULL, NULL, NULL, 'Educación'),
 (3403, 'TEMS Trayectoria educ de los jóvenes: el problema de la deserción Nº 22 e.2', 'ANEP', 0, 0, 1, 'Educación', NULL, 3407, NULL, NULL, NULL, NULL, 'Educación'),
 (3404, 'Historia II: La época moderna en Europa y América  e.1', 'Geymonat, Roger; Vidal, Beatriz; González, Silvia', 0, 0, 1, 'Historia', NULL, 3408, 'Santillana', NULL, 'Santillana', NULL, 'Historia'),
 (3405, 'Historia II: La época moderna en Europa y América  e.2', 'Geymonat, Roger; Vidal, Beatriz; González, Silvia', 0, 0, 1, 'Historia', NULL, 3409, 'Santillana', NULL, 'Santillana', NULL, 'Historia'),
 (3406, 'Historia II: La época moderna en Europa y América  e.3', 'Geymonat, Roger; Vidal, Beatriz; González, Silvia', 0, 0, 1, 'Historia', NULL, 3410, 'Santillana', NULL, 'Santillana', NULL, 'Historia'),
-(3407, 'TEMS Trayectoria educ de los jóvenes: el problema de la deserción Nº 22 e.6', 'ANEP', 0, 0, 1, 'Educación', NULL, 3411, NULL, NULL, NULL, NULL, 'Educación'),
+(3407, 'TEMS Trayectoria educ de los jóvenes: el problema de la deserción Nº 22 e.6', 'ANEP', 0, 0, 1, 'Educación', NULL, 3411, NULL, NULL, NULL, NULL, 'Educación');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (3408, 'Esta bueno conversar . . . Educación Sexual para familias e.20', 'ANEP; Dirección Sectorial de Planificación Educación; Programa de Educación Sexual', 0, 0, 1, 'Educación', NULL, 3412, NULL, '2014-10-08', NULL, NULL, 'Educación'),
 (3409, 'Esta bueno conversar . . . Educación Sexual para familias e.21', 'ANEP; Dirección Sectorial de Planificación Educación; Programa de Educación Sexual', 0, 0, 1, 'Biología', NULL, 3413, NULL, '2014-10-08', NULL, NULL, 'Biología'),
 (3410, 'MIRADAS sobre la educación Nº 1', 'ANEP', 0, 0, 1, 'Educación', NULL, 3414, NULL, NULL, NULL, NULL, 'Educación'),
@@ -3752,7 +3745,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (3578, 'Teoría de los mecanismos y máquinas', 'Zinoviev, V.', 0, 0, 1, 'Mecánica', NULL, 3582, NULL, NULL, '41124.46', NULL, 'Mecánica'),
 (3579, 'Recursos técnicos para pequeñas empresas: Anuario Nº 1', 'Centro Regional de Ayuda Técnica', 0, 0, 1, 'Mecánica', NULL, 3583, NULL, NULL, '41124.46', NULL, 'Mecánica'),
 (3580, 'Taladrado, penetrado y escariado', 'Dinnebier, J.; Stoewer, H. J.', 0, 0, 1, 'Mecánica', NULL, 3584, NULL, NULL, '41124.46', NULL, 'Mecánica'),
-(3581, 'Proyecto de Empresa Funny Jumping', '2º Administración', 0, 0, 1, 'Proyectos', NULL, 3585, NULL, NULL, '42404.0', NULL, 'Proyectos'),
 (3582, 'Reparación y ajustes de magnetos', 'Brailovsky, Samuel', 0, 0, 1, 'Mecánica', NULL, 3586, NULL, NULL, '41124.46', NULL, 'Mecánica'),
 (3583, 'El electricista de acumuladores', 'Semionov, L', 0, 0, 1, 'Mecánica', NULL, 3587, NULL, NULL, '41124.46', NULL, 'Mecánica'),
 (3584, 'Curso breve de mecánica teórica', 'Targ, S. M., traductor Petrov, F.', 0, 0, 1, 'Mecánica', NULL, 3588, NULL, NULL, '41124.46', NULL, 'Mecánica'),
@@ -3806,8 +3798,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (3632, 'Tecnología Mecánica 1 Guía del profesor', 'Centro Regional de Ayuda Técnica', 0, 0, 1, 'Mecánica', NULL, 3636, NULL, NULL, '41124.46', NULL, 'Mecánica'),
 (3633, 'Soldadura con arco sumergido e.1', 'Vladimiro Pireda, Massimo', 0, 0, 1, 'Mecánica', NULL, 3637, NULL, NULL, '41124.46', NULL, 'Mecánica'),
 (3634, 'Soldadura con arco sumergido e.2', 'Vladimiro Pireda, Massimo', 0, 0, 1, 'Mecánica', NULL, 3638, NULL, NULL, '41124.46', NULL, 'Mecánica'),
-(3635, 'Monografía Final carrera Téc. Prevenc. en Seguridad e Higiene en el trabajo Sistema de gestión en seguridad y salud ocupacional industria gráfica', 'Berger, Claudia', 0, 0, 1, 'Proyectos', NULL, 3639, NULL, NULL, '42278.0', NULL, 'Proyectos'),
-(3636, 'Monografía Final carrera Téc. Prevenc. en Seguridad e Higiene en el trabajo  Metal S.A', 'Coitiño, Christian', 0, 0, 1, 'Proyectos', NULL, 3640, NULL, NULL, '42278.0', NULL, 'Proyectos'),
 (3637, 'Tecnología Mecánica 2 Guía del profesor', 'Centro Regional de Ayuda Técnica', 0, 0, 1, 'Mecánica', NULL, 3641, NULL, NULL, '41124.46', NULL, 'Mecánica'),
 (3638, 'Tecnología Mecánica 2', 'Centro Regional de Ayuda Técnica', 0, 0, 1, 'Mecánica', NULL, 3642, NULL, NULL, '41124.46', NULL, 'Mecánica'),
 (3639, 'La soldadura y sus aplicaciones', 'Rossi, Boniface E.', 0, 0, 1, 'Mecánica', NULL, 3643, NULL, NULL, '41124.46', NULL, 'Mecánica'),
@@ -3859,7 +3849,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (3685, 'Sembrando experiencias. Cosechando saberes. Uso de las Tic en el aula e.2', 'ANEP', 0, 0, 1, 'Sin género', NULL, 3689, NULL, '2015-08-10', NULL, NULL, NULL),
 (3686, 'Sembrando experiencias. Cosechando saberes. Uso de las Tic en el aula e.3', 'ANEP', 0, 0, 1, 'Sin género', NULL, 3690, NULL, '2015-08-10', NULL, NULL, NULL),
 (3687, 'Sembrando experiencias. Cosechando saberes. Uso de las Tic en el aula e.4', 'ANEP', 0, 0, 1, 'Mecánica', NULL, 3691, NULL, '2015-08-10', NULL, NULL, 'Mecánica'),
-(3688, 'Monografía Final carrera Téc. Prevenc. en Seguridad e Higiene en el trabajo Colina Agronegocios', 'Bustelo, Sebastián', 0, 0, 1, 'Proyectos', NULL, 3692, NULL, '2015-10-01', NULL, NULL, 'Proyectos'),
 (3689, 'Rivera-Livramento \"Recuerdos de la Frontera de la Paz\" e.2', 'Boero, Antonio Mª; Boero Ruiz, Ramiro', 0, 0, 1, 'Historia', NULL, 3693, NULL, '2015-10-02', NULL, 'Donación', 'Historia'),
 (3690, 'Rivera-Livramento II \"Recuerdos de la Frontera de la Paz\"', 'Boero, Antonio Mª; Boero Ruiz, Ramiro', 0, 0, 1, 'Historia', NULL, 3694, NULL, '2015-10-02', NULL, 'Donación', 'Historia'),
 (3691, 'Trabajos de taller: Taladrado y escariado', 'Dinnebier, J.', 0, 0, 1, 'Mecánica', NULL, 3695, NULL, NULL, '41124.46', NULL, 'Mecánica'),
@@ -3883,11 +3872,9 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (3709, 'Máquinas elevadoras: La máquina de vapor', 'Heepke, W.', 0, 0, 1, 'Mecánica', NULL, 3713, NULL, NULL, '41124.46', NULL, 'Mecánica'),
 (3710, 'El transporte no camina. Caro, irracional, contaminante y elitista', 'Barreiro, Jorge', 0, 0, 1, 'Geograf', NULL, 3714, 'Ediciones de Brecha', '2015-10-02', 'Ediciones de Brecha', 'Donación', 'Geograf'),
 (3711, 'Estereometría, dibujo lineal y proyec. Fís. Cál diferencial e integral e.2', 'Killmann, Paul', 0, 0, 1, 'Mecánica', NULL, 3715, NULL, NULL, '41124.46', NULL, 'Mecánica'),
-(3712, 'Reparación de máquinas herramienta  e.1', 'Guellberg, B.; Pekelis, G.', 0, 0, 1, 'Mecánica', NULL, 3716, NULL, NULL, '41124.46', NULL, 'Mecánica');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(3712, 'Reparación de máquinas herramienta  e.1', 'Guellberg, B.; Pekelis, G.', 0, 0, 1, 'Mecánica', NULL, 3716, NULL, NULL, '41124.46', NULL, 'Mecánica'),
 (3713, 'Reparación de máquinas herramienta  e.2', 'Guellberg, B.; Pekelis, G.', 0, 0, 1, 'Mecánica', NULL, 3717, NULL, NULL, '41124.46', NULL, 'Mecánica'),
 (3714, 'Manual moderno del Tornero Mecánico', 'Berck, C.E.', 0, 0, 1, 'Mecánica', NULL, 3718, NULL, NULL, '41124.46', NULL, 'Mecánica'),
-(3715, 'Chacra turística \"Vichar\"', 'Proyecto Turismo', 0, 0, 1, 'Proyectos', NULL, 3719, NULL, '2015-10-13', NULL, NULL, 'Proyectos'),
 (3716, 'Aritmética, algebra, planimetria, trigonometria', 'Vieweger, Hugo; Holtz, Alfred; Killman, Paul', 0, 0, 1, 'Mecánica', NULL, 3720, NULL, NULL, '41124.46', NULL, 'Mecánica'),
 (3717, 'Técnica de la medición y trazado  e.2', 'Kurrein, Max; Frangenheim, Hans', 0, 0, 1, 'Mecánica', NULL, 3721, NULL, NULL, '41124.46', NULL, 'Mecánica'),
 (3718, 'Mecánica: Guía didáctica de experimentos', 'BIM', 0, 0, 1, 'Mecánica', NULL, 3722, NULL, NULL, '41124.46', NULL, 'Mecánica'),
@@ -3898,7 +3885,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (3723, 'Uruguay lo mejor de lo nuestro Tomo 3', 'El País', 0, 0, 1, 'Geograf', NULL, 3727, NULL, '2015-12-10', 'Donación', NULL, 'Geograf'),
 (3724, 'Tecnología Industrial: Instrumentos de medida, verificación y trazado  v.1', 'Lopez Navarro, Vicente', 0, 0, 1, 'Mecánica', NULL, 3728, NULL, NULL, '41124.46', NULL, 'Mecánica'),
 (3725, 'Tecnología Industrial: Máquinas, herramientas y montaje v.3', 'Lopez Navarro, Vicente', 0, 0, 1, 'Mecánica', NULL, 3729, NULL, NULL, '41124.46', NULL, 'Mecánica'),
-(3726, 'Tecnología Industrial: Trabajo d metales, ensayo, protección y soldadura v.5', 'Garcia Pelayo Alonso, Ricardo', 0, 0, 1, 'Mecánica', NULL, 3730, NULL, NULL, '41124.46', NULL, 'Mecánica'),
+(3726, 'Tecnología Industrial: Trabajo d metales, ensayo, protección y soldadura v.5', 'Garcia Pelayo Alonso, Ricardo', 0, 0, 1, 'Mecánica', NULL, 3730, NULL, NULL, '41124.46', NULL, 'Mecánica');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (3727, 'Tecnología Industrial:Normalización, tolerancias y ajustes Uniones  v.6', 'Lopez Navarro, Vicente', 0, 0, 1, 'Mecánica', NULL, 3731, NULL, NULL, '41124.46', NULL, 'Mecánica'),
 (3728, 'Tecnología Industrial: Organos de Transmisión Protección contra accidentes v.7', 'Garcia Pelayo Alonso, Ricardo', 0, 0, 1, 'Mecánica', NULL, 3732, NULL, NULL, '41124.46', NULL, 'Mecánica'),
 (3729, 'Hidráulica', 'Nekrasov, B.', 0, 0, 1, 'Fisica', NULL, 3733, NULL, NULL, '41124.46', NULL, 'Fisica'),
@@ -3912,8 +3900,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (3737, 'Drogas: Más información menos riesgos e. 4', 'Junta Nacional de Drogas', 0, 0, 1, 'Biología', NULL, 3741, NULL, NULL, '41124.46', NULL, 'Biología'),
 (3738, 'Drogas: Más información menos riesgos e. 5', 'Junta Nacional de Drogas', 0, 0, 1, 'Biología', NULL, 3742, NULL, NULL, NULL, NULL, 'Biología'),
 (3739, 'Introduction to local area networks e. 6', 'Thomas, Robert M.', 0, 0, 1, 'Informat', NULL, 3743, NULL, NULL, '41124.46', NULL, 'Informat'),
-(3740, 'Proyecto Cocinarte sin gluten', '2º GASTRONOMÍA', 0, 0, 1, 'Proyectos', NULL, 3744, NULL, NULL, '2017.0', NULL, 'Proyectos'),
-(3741, 'Proyecto Restaurant diabetes', '2º GASTRONOMÍA', 0, 0, 1, 'Proyectos', NULL, 3745, NULL, NULL, '2017.0', NULL, 'Proyectos'),
 (3742, 'Programa  de modernización de la Educación Media y la Formación Docente Informe Anual de Actividades y Resultados  Año 2003', 'ANEP; Programa MENFOD', 0, 0, 1, 'Educación', NULL, 3746, 'UNESCO', NULL, '41124.46', NULL, 'Educación'),
 (3743, 'FYMNSA y la fauna nativa e. 4', 'FYMNSA', 0, 0, 1, 'Biología', NULL, 3747, NULL, NULL, '41124.46', NULL, 'Biología'),
 (3744, 'Intoxicación por plantas venenosas del Uruguay en niños  e.6', 'Sin autor registrado', 0, 0, 1, 'Biología', NULL, 3748, NULL, NULL, '2017.0', NULL, 'Biología'),
@@ -4136,15 +4122,10 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (3961, 'Matemática Primer Año del Ciclo Básico Guía para el docente e.7', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 3965, NULL, NULL, NULL, NULL, 'Matemat'),
 (3962, 'Matemática Primer Año del Ciclo Básico Guía para el docente e.8', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 3966, NULL, NULL, NULL, NULL, 'Matemat'),
 (3963, 'Reglamento de baja tensión', 'UTE', 0, 0, 1, 'Electrotec', NULL, 3967, NULL, NULL, 'Donación', NULL, 'Electrotec'),
-(3964, 'Circuito turístico cultural \"ladrilleros oeste\"', 'Proyecto Turismo', 0, 0, 1, 'Proyectos', NULL, 3968, NULL, NULL, NULL, NULL, 'Proyectos'),
-(3965, 'Verso y prosa', 'Ibarbourou, Juana de', 0, 0, 1, 'Proyectos', NULL, 3969, NULL, NULL, 'Donación', NULL, 'Proyectos'),
 (3966, 'Matemática Primer Año del Ciclo Básico Guía para el docente e.12', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 3970, NULL, NULL, NULL, NULL, 'Matemat'),
 (3967, 'Condorito  Año 60 Nº 723', 'PEPPO', 0, 0, 1, 'Sin género', NULL, 3971, NULL, NULL, 'Donación', NULL, NULL),
 (3968, 'Condorito  Año 61 Nº 01', 'PEPPO', 0, 0, 1, 'Sin género', NULL, 3972, NULL, NULL, 'Donación', NULL, NULL),
 (3969, 'Matemática Primer Año del Ciclo Básico Guía para el docente e.15', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Sin género', NULL, 3973, NULL, NULL, NULL, NULL, NULL),
-(3970, 'Proyecto  Turismo \"Valle del gran descanso\"', '3º Turismo', 0, 0, 1, 'Proyectos', NULL, 3974, NULL, NULL, '2016.0', NULL, 'Proyectos'),
-(3971, 'Proyecto  Turismo Galería Punto de encuentro', '3º Turismo', 0, 0, 1, 'Proyectos', NULL, 3975, NULL, NULL, '2016.0', NULL, 'Proyectos'),
-(3972, 'Proyecto Gastronomía El paisano', '2º Gastronomía', 0, 0, 1, 'Proyectos', NULL, 3976, NULL, NULL, '2016.0', NULL, 'Proyectos'),
 (3973, 'Proyecto sabores de casa \"un deleite saludable\"', '2º Administración', 0, 0, 1, 'Sin género', NULL, 3977, NULL, NULL, '2017.0', NULL, NULL),
 (3974, 'Proyecto  Turismo Rincón tradicional', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Sin género', NULL, 3978, NULL, NULL, '38994.57', NULL, NULL),
 (3975, 'Condorito  Año 60 Nº 762', 'PEPPO', 0, 0, 1, 'Sin género', NULL, 3979, NULL, NULL, 'Donación', NULL, NULL),
@@ -4172,12 +4153,10 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (3997, 'Manual do constructor  Volumén 3 Elementos de construçao e composiçao', 'Baptista Pianca, Joao', 0, 0, 1, 'Sin género', NULL, 4002, NULL, NULL, 'Editora Globo', NULL, NULL),
 (3998, 'Manual do constructor  Volumén 4 Elementos para o cálculo', 'Baptista Pianca, Joao', 0, 0, 1, 'Sin género', NULL, 4003, NULL, NULL, 'Editora Globo', NULL, NULL),
 (3999, 'Manual do constructor  Volumén 5 Exemplos numéricos', 'Baptista Pianca, Joao', 0, 0, 1, 'Sin género', NULL, 4004, NULL, NULL, 'Editora Globo', NULL, NULL),
-(4000, 'Proyecto  Gastronomía Productos de Tolerancia Alimenticia', '2º Gastronomía', 0, 0, 1, 'Proyectos', NULL, 4005, NULL, NULL, NULL, NULL, 'Proyectos'),
 (4001, 'Patrimonio Nº 5 2017', 'Comisión del Patrimonio Cultural de la Nación', 0, 0, 1, 'Sin género', NULL, 4006, NULL, NULL, 'MEC; Patrimonio Uruguay', NULL, NULL),
 (4002, 'Señales de tránsito. Experiencias de tránsito educativo', 'MIDES; Infamilia', 0, 0, 1, 'Sin género', NULL, 4007, NULL, '2017-08-02', NULL, NULL, NULL),
 (4003, 'Diccionario enciclopédico universal', 'Océano', 0, 0, 1, 'Sin género', NULL, 4008, NULL, '2017-08-02', NULL, NULL, NULL),
 (4004, 'Matemática Segundo Año del Ciclo Básico  e.34', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4009, NULL, NULL, NULL, NULL, 'Matemat'),
-(4005, 'Proyecto 3 Administración Level up !', '3º Administración', 0, 0, 1, 'Proyectos', NULL, 4010, NULL, '2026-02-20', NULL, NULL, 'Proyectos'),
 (4006, 'Informe sobre el estado de la educación en Uruguay 2015 - 2016', 'Instituto Nacional de Evaluación Educativa', 0, 0, 1, 'Sin género', NULL, 4011, NULL, '2017-08-02', NULL, NULL, NULL),
 (4007, 'Matemática Segundo Año del Ciclo Básico  e.37', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4012, NULL, NULL, NULL, NULL, 'Matemat'),
 (4008, 'Tecnología 1 (fotocopiado)', 'Gómez Olalla, L.A; Silva Rodríguez, F; Jiménez Álvarez, J; Almaraz Martín, Á', 0, 0, 1, 'Sin género', NULL, 4013, NULL, '2017-08-02', 'Mc Graw Hill', NULL, NULL),
@@ -4187,9 +4166,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (4012, 'Matemática Segundo Año del Ciclo Básico  e.42', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4017, NULL, NULL, NULL, NULL, 'Matemat'),
 (4013, 'Interacciones. Campos y ondas. Fisica 1º B.D.', 'Egaña, Ernesto; Berruti, Marcelo; González, Alejandro', 0, 0, 1, 'Sin género', NULL, 4018, NULL, '2017-08-02', 'Editorial Contexto', NULL, NULL),
 (4014, 'Proyecto Duchas House', '3º Administración', 0, 0, 1, 'Sin género', NULL, 4019, NULL, NULL, NULL, NULL, NULL),
-(4015, 'Proyecto 3 Administración Visual print', '2º Administración', 0, 0, 1, 'Proyectos', NULL, 4020, NULL, '2026-02-20', NULL, NULL, 'Proyectos'),
-(4016, 'Mi mundial (fotocopiado)', 'Baldi, Daniel', 0, 0, 1, 'Sin género', NULL, 4021, NULL, NULL, 'Alfaguara', NULL, NULL);
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(4016, 'Mi mundial (fotocopiado)', 'Baldi, Daniel', 0, 0, 1, 'Sin género', NULL, 4021, NULL, NULL, 'Alfaguara', NULL, NULL),
 (4017, 'Conocimientos básicos de Prehistoria', 'Boero, Antonio Mª; Boero Ruiz, Ramiro', 0, 0, 1, 'Sin género', NULL, 4022, NULL, NULL, NULL, NULL, NULL),
 (4018, 'Biografias 100 uruguayos', 'Moñita azul', 0, 0, 1, 'Sin género', NULL, 4023, NULL, NULL, NULL, NULL, NULL),
 (4019, 'Colmos. Humor exagerado', 'Silveyra, Carlos', 0, 0, 1, 'Sin género', NULL, 4024, NULL, NULL, 'Altea', NULL, NULL),
@@ -4197,12 +4174,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (4021, 'Andanzas de Patoruzú. \"su mejor alumno\"', 'Sin autor registrado', 0, 0, 1, 'Sin género', NULL, 4026, NULL, NULL, NULL, NULL, NULL),
 (4022, 'Isidoro', 'Quintero, Dante', 0, 0, 1, 'Sin género', NULL, 4027, NULL, NULL, 'Clarín', NULL, NULL),
 (4023, 'Matemática Segundo Año del Ciclo Básico  e.53', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Sin género', NULL, 4028, NULL, NULL, NULL, NULL, NULL),
-(4024, 'Proyecto 3º Bachillerato Figari La creación y los 4 elementos  \"el principio\"', '3º Bachillerato Figari', 0, 0, 1, 'Proyectos', NULL, 4029, NULL, NULL, '2016.0', NULL, 'Proyectos'),
-(4025, 'Proyecto 3º Bachillerato Figari  Museo abierto Iberoamericano', '3º Bachillerato Figari', 0, 0, 1, 'Proyectos', NULL, 4030, NULL, NULL, '2016.0', NULL, 'Proyectos'),
-(4026, 'Proyecto 3º Bachillerato Figari Mural la creación', '3º Bachillerato Figari', 0, 0, 1, 'Proyectos', NULL, 4031, NULL, NULL, '2016.0', NULL, 'Proyectos'),
 (4027, 'Matemática Segundo Año del Ciclo Básico  e.57', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4032, NULL, NULL, NULL, NULL, 'Matemat'),
 (4028, 'Matemática Segundo Año del Ciclo Básico  e.58', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4033, NULL, NULL, NULL, NULL, 'Matemat'),
-(4029, 'Proyecto Web Assistant S.R.L', '2º Administración', 0, 0, 1, 'Proyectos', NULL, 4034, NULL, NULL, '2017.0', NULL, 'Proyectos'),
 (4030, 'Matemática Segundo Año del Ciclo Básico  e.60', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4035, NULL, NULL, NULL, NULL, 'Matemat'),
 (4031, 'Informe sobre el estado de la educación en Uruguay 2015 - 2016 sintesis y desafìos', 'Instituto Nacional de Evaluación Educativa', 0, 0, 1, 'Educación', NULL, 4036, NULL, '2017-08-02', NULL, NULL, 'Educación'),
 (4032, 'Condorito Enero 2015  Año 60 Nº 01', 'PEPPO', 0, 0, 1, 'Sin género', NULL, 4037, NULL, NULL, 'Donación', NULL, NULL),
@@ -4214,21 +4187,14 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (4038, 'Matemática Segundo Año del Ciclo Básico Guía para el docente e.4', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4043, NULL, NULL, NULL, NULL, 'Matemat'),
 (4039, 'Matemática Segundo Año del Ciclo Básico Guía para el docente e.5', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4044, NULL, NULL, NULL, NULL, 'Matemat'),
 (4040, 'Matemática Segundo Año del Ciclo Básico Guía para el docente e.6', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4045, NULL, NULL, NULL, NULL, 'Matemat'),
-(4041, 'Matemática Segundo Año del Ciclo Básico Guía para el docente e.7', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4046, NULL, NULL, NULL, NULL, 'Matemat'),
+(4041, 'Matemática Segundo Año del Ciclo Básico Guía para el docente e.7', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4046, NULL, NULL, NULL, NULL, 'Matemat');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (4042, 'Matemática Segundo Año del Ciclo Básico Guía para el docente e.8', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4047, NULL, NULL, NULL, NULL, 'Matemat'),
-(4043, 'Proyecto final Anexo de UTU', '3º Construcción 2016', 0, 0, 1, 'Proyectos', NULL, 4048, NULL, NULL, NULL, NULL, 'Proyectos'),
-(4044, 'Biblioteca básica electrónica 3 Microprocesadores o chips', 'Sin autor registrado', 0, 0, 1, 'Proyectos', NULL, 4049, NULL, NULL, 'Nueva lente', NULL, 'Proyectos'),
-(4045, 'Ingenieria electrónica', 'Alley, Charles; Atwood, Kenneth', 0, 0, 1, 'Proyectos', NULL, 4050, NULL, NULL, 'Editorial Limusa  - Wiley', NULL, 'Proyectos'),
-(4046, 'Electrónica en acción  Ano 3 Nª 6 Microprocesadores y microcontroladores', 'Vallejo, Horacio', 0, 0, 1, 'Proyectos', NULL, 4051, NULL, NULL, NULL, NULL, 'Proyectos'),
-(4047, 'Proyecto final Anexo de UTU  C/ CD', '3º Construcción 2016', 0, 0, 1, 'Proyectos', NULL, 4052, NULL, NULL, NULL, NULL, 'Proyectos'),
-(4048, 'Micro controladores Funcionamiento, programación y usos prácticos', 'Benchimol, Daniel', 0, 0, 1, 'Proyectos', NULL, 4053, NULL, NULL, 'Fox Andina', NULL, 'Proyectos'),
-(4049, 'Proyectos con circuitos integrados', 'Equipo técnico Glem', 0, 0, 1, 'Proyectos', NULL, 4054, NULL, NULL, 'Editorial Glem', NULL, 'Proyectos'),
 (4050, 'Matemática Segundo Año del Ciclo Básico GAUSS 2 e. 1', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4055, NULL, NULL, NULL, NULL, 'Matemat'),
 (4051, 'Matemática Segundo Año del Ciclo Básico GAUSS 2 e. 2', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4056, NULL, NULL, NULL, NULL, 'Matemat'),
 (4052, 'Mozart una biografìa musical I (1791 - 1991)', 'Hocquard, Jean-Victor', 0, 0, 1, 'Arte', NULL, 4057, 'Espasa - Calpe', NULL, 'Espasa - Calpe', NULL, 'Arte'),
 (4053, 'Mozart una biografìa musical II (1791 - 1991)', 'Hocquard, Jean-Victor', 0, 0, 1, 'Arte', NULL, 4058, 'Espasa - Calpe', NULL, 'Espasa - Calpe', NULL, 'Arte'),
 (4054, 'Proceso histórico del Uruguay', 'Zum Felde, Alberto', 0, 0, 1, 'Matemat', NULL, 4059, NULL, NULL, 'Arca', NULL, 'Matemat'),
-(4055, 'Proyecto RiMercApp', '2º Administración', 0, 0, 1, 'Proyectos', NULL, 4060, NULL, NULL, NULL, NULL, 'Proyectos'),
 (4056, 'Historia de los orientales', 'Machado, Carlos', 0, 0, 1, 'Sin género', NULL, 4061, NULL, NULL, 'Ediciones de la Banda Oriental', NULL, NULL),
 (4057, 'Matemática Segundo Año del Ciclo Básico GAUSS 2 e. 8', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Sin género', NULL, 4062, NULL, NULL, NULL, NULL, NULL),
 (4058, 'Nociones bàsicas de economía', 'Astori, Danilo', 0, 0, 1, 'Matemat', NULL, 4063, NULL, NULL, 'Fundación de Cultura Universitaria', NULL, 'Matemat'),
@@ -4238,15 +4204,12 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (4062, 'Matemática Segundo Año del Ciclo Básico GAUSS 2 e. 13', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4067, NULL, NULL, NULL, NULL, 'Matemat'),
 (4063, 'Matemática Segundo Año del Ciclo Básico GAUSS 2 e. 14', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Sin género', NULL, 4068, NULL, NULL, NULL, NULL, NULL),
 (4064, 'Tiempo 3 segunda parte', 'Traversoni, Alfredo; Mazzara, Susana', 0, 0, 1, 'Sin género', NULL, 4069, NULL, NULL, 'Kapelusz', NULL, NULL),
-(4065, 'Proyecto final Anexo de UTU  C/ CD', '3º Construcción 2016', 0, 0, 1, 'Proyectos', NULL, 4070, NULL, NULL, NULL, NULL, 'Proyectos'),
 (4066, 'Matemática Segundo Año del Ciclo Básico GAUSS 2 e. 17', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4071, NULL, NULL, NULL, NULL, 'Matemat'),
 (4067, 'Matemática Segundo Año del Ciclo Básico GAUSS 2 e. 18', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4072, NULL, NULL, NULL, NULL, 'Matemat'),
 (4068, 'Matemática Segundo Año del Ciclo Básico GAUSS 2 e. 19', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4073, NULL, NULL, NULL, NULL, 'Matemat'),
 (4069, 'Dossier Año 1 Número 0 Noviembre 2006', 'Sin autor registrado', 0, 0, 1, 'Matemat', NULL, 4074, NULL, NULL, NULL, NULL, 'Matemat'),
 (4070, 'Matemática Segundo Año del Ciclo Básico GAUSS 2 e. 21', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4075, NULL, NULL, NULL, NULL, 'Matemat'),
 (4071, 'Matemática Segundo Año del Ciclo Básico GAUSS 2 e. 22', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4076, NULL, NULL, NULL, NULL, 'Matemat'),
-(4072, 'Proyecto final Anexo de UTU  C/ CD', '3º Construcción 2016', 0, 0, 1, 'Proyectos', NULL, 4077, NULL, NULL, NULL, NULL, 'Proyectos'),
-(4073, 'Proyecto 3 Administración La calandria', '3º Administración', 0, 0, 1, 'Proyectos', NULL, 4078, NULL, NULL, '2025.0', NULL, 'Proyectos'),
 (4074, 'Matemática Segundo Año del Ciclo Básico GAUSS 2 e. 25', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4079, NULL, NULL, NULL, NULL, 'Matemat'),
 (4075, 'Matemática Segundo Año del Ciclo Básico GAUSS 2 e. 26', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4080, NULL, NULL, NULL, NULL, 'Matemat'),
 (4076, 'Matemática Segundo Año del Ciclo Básico GAUSS 2 e. 27', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4081, NULL, NULL, NULL, NULL, 'Matemat'),
@@ -4323,8 +4286,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (4147, 'Objetivos de desarrollo sostenible', 'ODS Uruguay', 0, 0, 1, 'Educación', NULL, 4152, NULL, '2021-03-04', NULL, NULL, 'Educación'),
 (4148, 'Matemática Segundo Año del Ciclo Básico GAUSS 2 e. 99', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4153, NULL, NULL, NULL, NULL, 'Matemat'),
 (4149, 'Dossier Año 12  Número 75  Julio - Agosto 2019', 'Sin autor registrado', 0, 0, 1, 'Sin género', NULL, 4154, NULL, NULL, NULL, NULL, NULL),
-(4150, 'Proyecto Logística Binacional Administración de inventarios', 'Logistíca 2016', 0, 0, 1, 'Proyectos', NULL, 4155, NULL, NULL, NULL, NULL, 'Proyectos'),
-(4151, 'Proyecto Logística Binacional Depósito y almacenamiento', 'Logistíca 2016', 0, 0, 1, 'Proyectos', NULL, 4156, NULL, NULL, NULL, NULL, 'Proyectos'),
 (4152, 'Artigas Ñemoñarè Tomo 1', 'Caula, Nelson', 0, 0, 1, 'Sin género', NULL, 4157, NULL, NULL, 'Ediciones B', NULL, NULL),
 (4153, 'Artigas Ñemoñarè Tomo 2', 'Caula, Nelson', 0, 0, 1, 'Sin género', NULL, 4158, NULL, NULL, 'Ediciones B', NULL, NULL),
 (4154, 'Artigas Ñemoñarè Tomo 3', 'Caula, Nelson', 0, 0, 1, 'Sin género', NULL, 4159, NULL, NULL, 'Ediciones B', NULL, NULL),
@@ -4339,8 +4300,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (4163, 'Proyecto CTT Administración Agenda e informes B.P.S Rivera', 'C.T.T. Administración 2017', 0, 0, 1, 'Matemat', NULL, 4168, NULL, NULL, '2017.0', NULL, 'Matemat'),
 (4164, 'Proyecto CTT Administración Sistemas de mejora en procesos y comunicación de Horizonte Automóviles', 'C.T.T. Administración 2017', 0, 0, 1, 'Matemat', NULL, 4169, NULL, NULL, '2017.0', NULL, 'Matemat'),
 (4165, 'Proyecto CTT Administración Apostando al futuro en UTU Rivera', 'C.T.T. Administración 2017', 0, 0, 1, 'Matemat', NULL, 4170, NULL, NULL, NULL, NULL, 'Matemat'),
-(4166, 'Transformando nuestra cultura', 'C.T.T. Administración 2018', 0, 0, 1, 'Proyectos', NULL, 4171, NULL, NULL, '43424.0', NULL, 'Proyectos'),
-(4167, 'Cambiemos las reglas de juego', 'C.T.T. Administración 2018', 0, 0, 1, 'Proyectos', NULL, 4172, NULL, NULL, '43424.0', NULL, 'Proyectos'),
 (4168, 'Osmar Santos Maestro sin fronteras', 'Cuadra Cantera, Ramón; Palermo, Eduardo', 0, 0, 1, 'Arte', NULL, 4173, NULL, NULL, '45527.0', 'Donación', 'Arte'),
 (4169, 'Matemática Tercer Año del Ciclo Básico GAUSS 3 e. 2', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4174, NULL, NULL, NULL, NULL, 'Matemat'),
 (4170, 'Matemática Tercer Año del Ciclo Básico GAUSS 3 e. 3', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 1, 'Matemat', NULL, 4175, NULL, NULL, NULL, NULL, 'Matemat'),
@@ -4479,8 +4438,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (4303, 'Vida de Don Quijote y Sancho', 'Unamuno, Miguel de', 0, 0, 1, 'Idioma Esp', NULL, 4308, 'Ed. Rosgal', '2024-02-26', 'Espasa - Calpe', 'Donación', 'Idioma Esp'),
 (4304, 'Idioma Español Segundo Año de Ciclo Básico \"Lengua Materna\"  e.12', 'Eglé Etchart, María; Nández Britos, Jorge', 0, 0, 1, 'Idioma Esp', NULL, 4309, 'Ed. Rosgal', NULL, 'Ed. Rosgal', NULL, 'Idioma Esp'),
 (4305, 'Idioma Español Segundo Año de Ciclo Básico \"Lengua Materna\"  e.13', 'Eglé Etchart, María; Nández Britos, Jorge', 0, 0, 1, 'Idioma Esp', NULL, 4310, 'Ed. Rosgal', NULL, 'Ed. Rosgal', NULL, 'Idioma Esp'),
-(4306, 'Idioma Español Segundo Año de Ciclo Básico \"Lengua Materna\"  e.14', 'Eglé Etchart, María; Nández Britos, Jorge', 0, 0, 1, 'Idioma Esp', NULL, 4311, 'Ed. Rosgal', NULL, 'Ed. Rosgal', NULL, 'Idioma Esp');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(4306, 'Idioma Español Segundo Año de Ciclo Básico \"Lengua Materna\"  e.14', 'Eglé Etchart, María; Nández Britos, Jorge', 0, 0, 1, 'Idioma Esp', NULL, 4311, 'Ed. Rosgal', NULL, 'Ed. Rosgal', NULL, 'Idioma Esp'),
 (4307, 'Idioma Español Segundo Año de Ciclo Básico \"Lengua Materna\"  e.15', 'Eglé Etchart, María; Nández Britos, Jorge', 0, 0, 1, 'Idioma Esp', NULL, 4312, 'Ed. Rosgal', NULL, 'Ed. Rosgal', NULL, 'Idioma Esp'),
 (4308, 'Idioma Español Segundo Año de Ciclo Básico \"Lengua Materna\"  e.16', 'Eglé Etchart, María; Nández Britos, Jorge', 0, 0, 1, 'Idioma Esp', NULL, 4313, 'Ed. Rosgal', NULL, 'Ed. Rosgal', NULL, 'Idioma Esp'),
 (4309, 'Idioma Español Segundo Año de Ciclo Básico \"Lengua Materna\"  e.17', 'Eglé Etchart, María; Nández Britos, Jorge', 0, 0, 1, 'Idioma Esp', NULL, 4314, 'Ed. Rosgal', NULL, 'Ed. Rosgal', NULL, 'Idioma Esp'),
@@ -4512,7 +4470,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (4335, 'Idioma Español Segundo Año de Ciclo Básico \"Lengua Materna\"  e.43', 'Eglé Etchart, María; Nández Britos, Jorge', 0, 0, 1, 'Idioma Esp', NULL, 4340, 'Ed. Rosgal', NULL, 'Ed. Rosgal', NULL, 'Idioma Esp'),
 (4336, 'Idioma Español Segundo Año de Ciclo Básico \"Lengua Materna\"  e.44', 'Eglé Etchart, María; Nández Britos, Jorge', 0, 0, 1, 'Idioma Esp', NULL, 4341, 'Ed. Rosgal', NULL, 'Ed. Rosgal', NULL, 'Idioma Esp'),
 (4337, 'Dossier Año 13  Número 82  Setiembre -  Octubre  2020', 'Sin autor registrado', 0, 0, 1, 'Idioma Esp', NULL, 4342, 'Ed. Rosgal', NULL, NULL, NULL, 'Idioma Esp'),
-(4338, 'Idioma Español Segundo Año de Ciclo Básico \"Lengua Materna\"  e.46', 'Eglé Etchart, María; Nández Britos, Jorge', 0, 0, 1, 'Idioma Esp', NULL, 4343, 'Ed. Rosgal', NULL, 'Ed. Rosgal', NULL, 'Idioma Esp'),
+(4338, 'Idioma Español Segundo Año de Ciclo Básico \"Lengua Materna\"  e.46', 'Eglé Etchart, María; Nández Britos, Jorge', 0, 0, 1, 'Idioma Esp', NULL, 4343, 'Ed. Rosgal', NULL, 'Ed. Rosgal', NULL, 'Idioma Esp');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (4339, 'Ruben Dario y su obra poética', 'Alvarado de Ricord, Elsie', 0, 0, 1, 'Idioma Esp', NULL, 4344, 'Ed. Rosgal', '2024-02-26', 'Biblioteca Nacional', 'Donación', 'Idioma Esp'),
 (4340, 'Idioma Español Segundo Año de Ciclo Básico \"Lengua Materna\"  e.48', 'Eglé Etchart, María; Nández Britos, Jorge', 0, 0, 1, 'Idioma Esp', NULL, 4345, 'Ed. Rosgal', NULL, 'Ed. Rosgal', NULL, 'Idioma Esp'),
 (4341, 'Idioma Español Segundo Año de Ciclo Básico \"Lengua Materna\"  e.49', 'Eglé Etchart, María; Nández Britos, Jorge', 0, 0, 1, 'Idioma Esp', NULL, 4346, 'Ed. Rosgal', NULL, 'Ed. Rosgal', NULL, 'Idioma Esp'),
@@ -4734,8 +4693,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (4558, 'Idioma Español Primer Año de Ciclo Básico   e.81', 'Kandratavicius, Marta; Machado, Eloy; Ureta,Marta', 0, 0, 1, 'Idioma Esp', NULL, 4563, 'Ediciones de la Plaza', NULL, 'Ediciones de la Plaza', NULL, 'Idioma Esp'),
 (4559, 'Idioma Español Primer Año de Ciclo Básico   e.82', 'Kandratavicius, Marta; Machado, Eloy; Ureta,Marta', 0, 0, 1, 'Idioma Esp', NULL, 4564, 'Ediciones de la Plaza', NULL, 'Ediciones de la Plaza', NULL, 'Idioma Esp'),
 (4560, 'Idioma Español Primer Año de Ciclo Básico   e.83', 'Kandratavicius, Marta; Machado, Eloy; Ureta,Marta', 0, 0, 1, 'Idioma Esp', NULL, 4565, 'Ediciones de la Plaza', NULL, 'Ediciones de la Plaza', NULL, 'Idioma Esp'),
-(4561, 'Capítulo oriental 18 la historia de la literatura uruguaya', 'Centro editor de América Latina', 0, 0, 1, 'Idioma Esp', NULL, 4566, 'Ediciones de la Plaza', '2023-05-10', 'Donación', NULL, 'Idioma Esp');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(4561, 'Capítulo oriental 18 la historia de la literatura uruguaya', 'Centro editor de América Latina', 0, 0, 1, 'Idioma Esp', NULL, 4566, 'Ediciones de la Plaza', '2023-05-10', 'Donación', NULL, 'Idioma Esp'),
 (4562, 'Idioma Español Primer Año de Ciclo Básico   e.85', 'Kandratavicius, Marta; Machado, Eloy; Ureta,Marta', 0, 0, 1, 'Idioma Esp', NULL, 4567, 'Ediciones de la Plaza', NULL, 'Ediciones de la Plaza', NULL, 'Idioma Esp'),
 (4563, 'Idioma Español Primer Año de Ciclo Básico   e.86', 'Kandratavicius, Marta; Machado, Eloy; Ureta,Marta', 0, 0, 1, 'Idioma Esp', NULL, 4568, 'Ediciones de la Plaza', NULL, 'Ediciones de la Plaza', NULL, 'Idioma Esp'),
 (4564, 'Capítulo oriental 19 la historia de la literatura uruguaya', 'Centro editor de América Latina', 0, 0, 1, 'Idioma Esp', NULL, 4569, 'Ediciones de la Plaza', '2023-05-10', 'Donación', NULL, 'Idioma Esp'),
@@ -4764,7 +4722,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (4587, 'Un ángel vestido de escarlata', 'Maggi, Paulina', 0, 0, 1, 'Idioma Esp', NULL, 4592, 'Ediciones de la Plaza', '2023-06-05', 'Titania', 'Donación', 'Idioma Esp'),
 (4588, 'Proyecto 2º Administración OLIMPO', 'Kandratavicius, Marta; Machado, Eloy; Ureta,Marta', 0, 0, 1, 'Idioma Esp', NULL, 4593, 'Ediciones de la Plaza', NULL, 'Ediciones de la Plaza', NULL, 'Idioma Esp'),
 (4589, 'Crónica de un pueblo libre 1813 - Congreso de Abril - 2013', 'Martínez, Ignacio', 0, 0, 1, 'Idioma Esp', NULL, 4594, 'Ediciones de la Plaza', '2023-06-05', 'Fin de siglo', 'Donación', 'Idioma Esp'),
-(4590, 'Proyecto 2º Administración Restaurante Facility company', '2º Administración', 0, 0, 1, 'Idioma Esp', NULL, 4595, 'Ediciones de la Plaza', NULL, '44992.0', NULL, 'Idioma Esp'),
+(4590, 'Proyecto 2º Administración Restaurante Facility company', '2º Administración', 0, 0, 1, 'Idioma Esp', NULL, 4595, 'Ediciones de la Plaza', NULL, '44992.0', NULL, 'Idioma Esp');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (4591, 'Proyecto 3º Administración ARMOS Cafetería', '3º Administración 2025', 0, 0, 1, 'Idioma Esp', NULL, 4596, 'Ediciones de la Plaza', NULL, '46073.0', NULL, 'Idioma Esp'),
 (4592, 'Proyecto 3º Informática SisMedia', '3º INFORMÁTICA', 0, 0, 1, 'Idioma Esp', NULL, 4597, 'Ediciones de la Plaza', NULL, '44992.0', NULL, 'Idioma Esp'),
 (4593, 'Español Lengua Materna 1er curso e.1', 'Eglé Etchart, María; Nández Britos, Jorge', 0, 0, 1, 'Idioma Esp', NULL, 4598, 'Ediciones Rosgal', NULL, 'Ediciones Rosgal', NULL, 'Idioma Esp'),
@@ -5055,8 +5014,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (4878, 'Matemática Primer Año del Ciclo Básico e.179', 'Belcredi, Luis; Zambra, Mónica La Flor de Itapebí', 0, 0, 1, 'Matemat', NULL, 4883, NULL, NULL, '43090.57', NULL, 'Matemat'),
 (4879, 'Proyecto 3º Informática INFOWITE MGB', '3º INFORMÁTICA', 0, 0, 1, 'Matemat', NULL, 4884, NULL, NULL, '44992.0', NULL, 'Matemat'),
 (4880, 'Proyecto 3º Informática Gestión de viandas', '3º INFORMÁTICA', 0, 0, 1, 'Matemat', NULL, 4885, NULL, NULL, '45755.0', NULL, 'Matemat'),
-(4881, 'Proyecto Informática Hefestos', '3º Informàtica', 0, 0, 1, 'Matemat', NULL, 4886, 'Proyecto 2025', '2026-02-20', 'Proyecto 2025', NULL, 'Matemat');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(4881, 'Proyecto Informática Hefestos', '3º Informàtica', 0, 0, 1, 'Matemat', NULL, 4886, 'Proyecto 2025', '2026-02-20', 'Proyecto 2025', NULL, 'Matemat'),
 (4882, 'Matemática Primer Año del Ciclo Básico e.183', 'Belcredi, Luis; Zambra, Mónica La Flor de Itapebí', 0, 0, 1, 'Matemat', NULL, 4887, NULL, NULL, '43090.57', NULL, 'Matemat'),
 (4883, 'Matemática Primer Año del Ciclo Básico e.184', 'Belcredi, Luis; Zambra, Mónica La Flor de Itapebí', 0, 0, 1, 'Matemat', NULL, 4888, NULL, NULL, '43090.57', NULL, 'Matemat'),
 (4884, 'Proyecto Informática Trinity Repair', '3º Informàtica', 0, 0, 1, 'Matemat', NULL, 4889, 'Proyecto 2025', '2026-02-20', 'Proyecto 2025', NULL, 'Matemat'),
@@ -5097,7 +5055,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (4919, 'Técnicas del Automóvil  Chasis  e.2', 'Alonso, J.M.', 0, 0, 1, 'Mecánica', NULL, 4924, NULL, NULL, '41124.46', NULL, 'Mecánica'),
 (4920, 'Circuitos de Fluidos, Suspensión y Dirección    e.2', 'Alonso, J.M.', 0, 0, 1, 'Mecánica', NULL, 4925, NULL, NULL, '41124.46', NULL, 'Mecánica'),
 (4921, 'La electónica en el Automóvil  e.2', 'Gil, Hermógenes', 0, 0, 1, 'Mecánica', NULL, 4926, NULL, NULL, '41124.46', NULL, 'Mecánica'),
-(4922, 'Puesta a punto y rendimiento del motor   e.2', 'Crouse, William H; Anglin, Donald L.', 0, 0, 1, 'Mecánica', NULL, 4927, NULL, NULL, '41124.46', NULL, 'Mecánica'),
+(4922, 'Puesta a punto y rendimiento del motor   e.2', 'Crouse, William H; Anglin, Donald L.', 0, 0, 1, 'Mecánica', NULL, 4927, NULL, NULL, '41124.46', NULL, 'Mecánica');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (4923, 'Instrumentación Industrial   e.4', 'Creus Sole, Antonio', 0, 0, 1, 'Electronica', NULL, 4928, NULL, NULL, '41124.46', NULL, 'Electronica'),
 (4924, 'Sistemas Electrónicos de Comunicaciones e.1', 'Frenzel, Luis E.', 0, 0, 1, 'Electronica', NULL, 4929, NULL, NULL, '41124.46', NULL, 'Electronica'),
 (4925, 'Principios de Electrónica', 'Malvino, Albert; Bates, David', 0, 0, 1, 'Electronica', NULL, 4930, NULL, NULL, '41124.46', NULL, 'Electronica'),
@@ -5318,8 +5277,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (5144, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.31', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Sin género', NULL, 5150, NULL, NULL, 'Longman', NULL, NULL),
 (5145, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.32', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Sin género', NULL, 5151, NULL, NULL, 'Longman', NULL, NULL),
 (5146, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.33', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Sin género', NULL, 5152, NULL, NULL, 'Longman', NULL, NULL),
-(5147, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.34', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Sin género', NULL, 5153, NULL, NULL, 'Longman', NULL, NULL);
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(5147, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.34', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Sin género', NULL, 5153, NULL, NULL, 'Longman', NULL, NULL),
 (5148, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.35', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Sin género', NULL, 5154, NULL, NULL, 'Longman', NULL, NULL),
 (5149, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.36', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Sin género', NULL, 5155, NULL, NULL, 'Longman', NULL, NULL),
 (5150, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.37', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Sin género', NULL, 5156, NULL, NULL, 'Longman', NULL, NULL),
@@ -5350,7 +5308,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (5175, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.62', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5181, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (5176, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.63', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5182, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (5177, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.64', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5183, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
-(5178, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.65', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5184, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
+(5178, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.65', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5184, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (5179, 'Cartas cruzadas', 'Zusak, MarKus', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5185, 'Longman', '2025-05-20', 'Lumen', NULL, 'Ingles-Fr-Port'),
 (5180, '75 consejos para sobrevivir en el colegio', 'Frisa, Maria', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5186, 'Longman', '2025-05-20', 'Alfaguara', NULL, 'Ingles-Fr-Port'),
 (5181, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.68', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5187, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
@@ -5566,8 +5525,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (5391, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.117', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5397, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (5392, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.118', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5398, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (5393, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.119', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5399, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
-(5394, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.120', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5400, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(5394, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.120', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5400, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (5395, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.121', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5401, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (5396, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.122', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5402, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (5397, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.123', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5403, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
@@ -5597,7 +5555,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (5421, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.147', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5427, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (5422, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.148', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5428, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (5423, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.149', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5429, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
-(5424, 'Sabores del mundo 19 Cocina Alemana a a paso a paso Austeridad suculenta', 'El observador', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5430, 'Longman', NULL, 'Editorial Sol 90', NULL, 'Ingles-Fr-Port'),
+(5424, 'Sabores del mundo 19 Cocina Alemana a a paso a paso Austeridad suculenta', 'El observador', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5430, 'Longman', NULL, 'Editorial Sol 90', NULL, 'Ingles-Fr-Port');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (5425, 'Sabores del mundo 20 Cocina Alemana a a paso a paso La cerveza', 'El observador', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5431, 'Longman', NULL, 'Editorial Sol 90', NULL, 'Ingles-Fr-Port'),
 (5426, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.152', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5432, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (5427, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.153', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5433, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
@@ -5814,8 +5773,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (5638, 'Curso de Diseño Gráfico Fascículo 64 v.5', 'Sin autor registrado', 0, 0, 1, 'Mark- Pub-Cal', NULL, 5644, 'Educar Cultural Recreativa', NULL, 'Educar Cultural Recreativa', NULL, 'Mark- Pub-Cal'),
 (5639, 'Curso de Diseño Gráfico Fascículo 66 v.5', 'Sin autor registrado', 0, 0, 1, 'Mark- Pub-Cal', NULL, 5645, 'Educar Cultural Recreativa', NULL, 'Educar Cultural Recreativa', NULL, 'Mark- Pub-Cal'),
 (5640, 'Curso de Diseño Gráfico Fascículo 67 v.5', 'Sin autor registrado', 0, 0, 1, 'Mark- Pub-Cal', NULL, 5646, 'Educar Cultural Recreativa', NULL, 'Educar Cultural Recreativa', NULL, 'Mark- Pub-Cal'),
-(5641, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.367', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5647, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(5641, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.367', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5647, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (5642, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.368', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5648, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (5643, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.369', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5649, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (5644, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.370', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5650, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
@@ -5846,7 +5804,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (5669, 'Uruguay in focus. Inglés. 1º Ciclo Básico Libro de actividades para el alumno  e.395', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5675, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (5670, 'Curso de Diseño Gráfico Fascículo 87 v.6', 'Sin autor registrado', 0, 0, 1, 'Mark- Pub-Cal', NULL, 5676, 'Educar Cultural Recreativa', NULL, 'Educar Cultural Recreativa', NULL, 'Mark- Pub-Cal'),
 (5671, 'Curso de Diseño Gráfico Fascículo 88 v.6', 'Sin autor registrado', 0, 0, 1, 'Mark- Pub-Cal', NULL, 5677, 'Educar Cultural Recreativa', NULL, 'Educar Cultural Recreativa', NULL, 'Mark- Pub-Cal'),
-(5672, 'Curso de Diseño Gráfico Fascículo 89 v.6', 'Sin autor registrado', 0, 0, 1, 'Mark- Pub-Cal', NULL, 5678, 'Educar Cultural Recreativa', NULL, 'Educar Cultural Recreativa', NULL, 'Mark- Pub-Cal'),
+(5672, 'Curso de Diseño Gráfico Fascículo 89 v.6', 'Sin autor registrado', 0, 0, 1, 'Mark- Pub-Cal', NULL, 5678, 'Educar Cultural Recreativa', NULL, 'Educar Cultural Recreativa', NULL, 'Mark- Pub-Cal');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (5673, 'Curso de Diseño Gráfico Fascículo 90 v.6', 'Sin autor registrado', 0, 0, 1, 'Mark- Pub-Cal', NULL, 5679, 'Educar Cultural Recreativa', NULL, 'Educar Cultural Recreativa', NULL, 'Mark- Pub-Cal'),
 (5674, 'Curso de Diseño Gráfico Fascículo 91 v.7', 'Sin autor registrado', 0, 0, 1, 'Mark- Pub-Cal', NULL, 5680, 'Educar Cultural Recreativa', NULL, 'Educar Cultural Recreativa', NULL, 'Mark- Pub-Cal'),
 (5675, 'Curso de Diseño Gráfico Fascículo 92 v.7', 'Sin autor registrado', 0, 0, 1, 'Mark- Pub-Cal', NULL, 5681, 'Educar Cultural Recreativa', NULL, 'Educar Cultural Recreativa', NULL, 'Mark- Pub-Cal'),
@@ -6070,8 +6029,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (5893, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.8', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5901, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (5894, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.9', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5902, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (5895, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.10', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5903, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
-(5896, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.11', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5904, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(5896, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.11', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5904, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (5897, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.12', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5905, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (5898, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.13', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5906, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (5899, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.14', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5907, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
@@ -6100,7 +6058,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (5922, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.37', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5930, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (5923, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.38', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5931, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (5924, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.39', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5932, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
-(5925, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.40', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5933, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
+(5925, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.40', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5933, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (5926, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.41', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 5934, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (5927, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.42', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Sin género', NULL, 5935, NULL, NULL, 'Longman', NULL, NULL),
 (5928, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.43', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Sin género', NULL, 5936, NULL, NULL, 'Longman', NULL, NULL),
@@ -6181,9 +6140,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (6003, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.118', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6011, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (6004, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.119', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6012, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (6005, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.120', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6013, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
-(6006, 'Proyecto Deporte  Campeonato mixto de Handball', 'Sin autor registrado', 0, 0, 1, 'Proyectos', NULL, 6014, '3º Deporte', '2024-02-29', '3º Deporte', NULL, 'Proyectos'),
 (6007, 'Proyecto Deporte  Campeonato mixto de Atletismo', '3º Deporte', 0, 0, 1, 'Sin género', NULL, 6015, NULL, '2024-02-29', NULL, NULL, NULL),
-(6008, 'Proyecto Deporte  Centro integral de rehabilitación deportiva', '3º Deporte', 0, 0, 1, 'Proyectos', NULL, 6016, '3º Deporte', NULL, NULL, NULL, 'Proyectos'),
 (6009, 'Proyecto deporte Escuelita de basquetbol', '3º Deporte', 0, 0, 1, 'Sin género', NULL, 6017, NULL, NULL, NULL, NULL, NULL),
 (6010, 'Instalaciones eléctricas', 'Castelfranchi, Giuseppe', 0, 0, 1, 'Electrotec', NULL, 6018, 'Editorial Gustavo Gili', NULL, 'Editorial Gustavo Gili', NULL, 'Electrotec'),
 (6011, 'Día x Día: Dichos y hechos de vida', 'Que hacer educativo', 0, 0, 1, 'dicc- atlas', NULL, 6019, 'Fondo Editorial Queduca', NULL, 'Fondo Editorial Queduca', NULL, 'dicc- atlas'),
@@ -6254,7 +6211,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (6076, 'Matemáticas para Escuelas Técnicas e.2', 'Slade, Samuel; Margolis, Louis', 0, 0, 1, 'Matemat', NULL, 6084, 'Hispanoamericana', NULL, 'Hispanoamericana', NULL, 'Matemat'),
 (6077, 'Turismo en el Uruguay', 'Nuestra Tierra', 0, 0, 1, 'Turismo', NULL, 6085, 'Nuestra Tierra', NULL, NULL, NULL, 'Turismo'),
 (6078, 'Introducción al Derecho  (fotocopia)', 'Vescovi, Enrique', 0, 0, 1, 'Derecho', NULL, 6086, 'Idea', NULL, 'Idea', NULL, 'Derecho'),
-(6079, 'Proyecto Electromecánica The Evil Crusher', '3º Electromecánica', 0, 0, 1, 'Proyectos', NULL, 6087, NULL, NULL, '44992.0', NULL, 'Proyectos'),
 (6080, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.195', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Sin género', NULL, 6088, NULL, NULL, 'Longman', NULL, NULL),
 (6081, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.196', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6089, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (6082, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.197', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6090, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
@@ -6262,7 +6218,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (6084, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.199', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6092, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (6085, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.200', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6093, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (6086, 'Proyecto Logística Binacional Propuesta de un sistema de gestión de transporte para la empresa Transportes Pinga', 'Logística 2022', 0, 0, 1, 'Sin género', NULL, 6094, NULL, NULL, 'CS', NULL, NULL),
-(6087, 'Proyecto Logística Binacional Gestión de stock de combustible', 'Logística 2022', 0, 0, 1, 'Proyectos', NULL, 6095, NULL, NULL, 'CS', NULL, 'Proyectos'),
 (6088, 'Panorama de la Educación en el Uruguay: una década de transformaciones 1992 - 2004', 'ANEP; Gerencia Gral de Planeamiento y Gestión Educativa; Gerencia de Investig y Evaluación; Programa de Evaluac de la Gestión Educativa', 0, 0, 1, 'Sin género', NULL, 6096, NULL, NULL, NULL, NULL, NULL),
 (6089, 'Curso de Derecho Financiero y Finanzas  Tomo I Volúmen II  (FOTOCOP)', 'Mazz, Addy', 0, 0, 1, 'Derecho', NULL, 6097, 'FCU', NULL, 'FCU', NULL, 'Derecho'),
 (6090, 'Curso de Derecho Financiero y Finanzas  Tomo  II  (FOTOCOP)', 'Mazz, Addy', 0, 0, 1, 'Derecho', NULL, 6098, 'FCU', NULL, 'FCU', NULL, 'Derecho'),
@@ -6307,8 +6262,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (6129, 'Antología Poética. Selección de textos. Resúmenes. Análisis. Biografía v.23', 'Machado, Antonio', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6137, 'Longman', NULL, 'El País Colección  de Oro del Estudiante', NULL, 'Ingles-Fr-Port'),
 (6130, 'Bola de Sebo. Selección de textos. Resúmenes. Análisis. Biografía v.41', 'Maupassant, Guy de', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6138, 'Longman', NULL, 'El País Colección  de Oro del Estudiante', NULL, 'Ingles-Fr-Port'),
 (6131, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.246', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6139, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
-(6132, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.247', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6140, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(6132, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.247', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6140, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (6133, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.248', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6141, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (6134, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.249', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6142, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (6135, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.250', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6143, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
@@ -6344,20 +6298,15 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (6165, 'Manual de Historia del Uruguay 1830 - 1903', 'Nahum, Benjamin', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6173, 'Longman', NULL, 'EBO', NULL, 'Ingles-Fr-Port'),
 (6166, 'Derecho del Trabajo  tomo I  vol 2  e.2', 'Barbagelata, Héctor Hugo', 0, 0, 1, 'Derecho', NULL, 6174, 'FCU', NULL, 'FCU', NULL, 'Derecho'),
 (6167, 'Derecho del Trabajo  tomo II    e.2', 'Barbagelata, Héctor Hugo', 0, 0, 1, 'Derecho', NULL, 6175, 'FCU', NULL, 'FCU', NULL, 'Derecho'),
-(6168, 'El mundo en el tiempo', 'GLOBERAMA', 0, 0, 1, 'dicc- atlas', NULL, 6176, 'CODEX', NULL, 'CODEX', NULL, 'dicc- atlas'),
+(6168, 'El mundo en el tiempo', 'GLOBERAMA', 0, 0, 1, 'dicc- atlas', NULL, 6176, 'CODEX', NULL, 'CODEX', NULL, 'dicc- atlas');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (6169, 'Gran Enciclopedia del Uruguay  Tomo I', 'El Observador', 0, 0, 1, 'dicc- atlas', NULL, 6177, NULL, NULL, NULL, NULL, 'dicc- atlas'),
 (6170, 'Tiempo 3', 'Fernández; Llorens; Ortega,; Roig', 0, 0, 1, 'Sin género', NULL, 6178, NULL, NULL, 'Vicens Vives', NULL, NULL),
-(6171, 'Los Soles  S.A Reparación y mantenimiento de maquinaria agrícola y camioneta Monografía Final carrera Téc. Prevenc.  en Seguridad e Higiene en el trabajo', 'Perez, Victor', 0, 0, 1, 'Proyectos', NULL, 6179, NULL, NULL, NULL, NULL, 'Proyectos'),
-(6172, 'Prevención de riesgos en Empresa Industrializadora de Cebada Monografía Final carrera Téc. Prevencionista en Seguridad e Higiene en el trabajo', 'Latour, Gekko', 0, 0, 1, 'Proyectos', NULL, 6180, NULL, NULL, NULL, NULL, 'Proyectos'),
-(6173, 'Metales del Este Monografía Final carrera Téc. Prevencionista en Seguridad e Higiene en el trabajo', 'González Taroco, Silvana', 0, 0, 1, 'Proyectos', NULL, 6181, NULL, NULL, NULL, NULL, 'Proyectos'),
-(6174, 'Herrería (Ganadería, Construcción)   Monografía Final carrera Téc. Prevencionista en Seguridad e Higiene en el trabajo', 'Taroco, Fabián', 0, 0, 1, 'Proyectos', NULL, 6182, NULL, NULL, NULL, NULL, 'Proyectos'),
-(6175, 'Programa de SYSO para la Empresa Andamios del Norte Monografía Final carrera Téc. Prevencionista en Seguridad e Higiene en el trabajo', 'Castro, Neris', 0, 0, 1, 'Proyectos', NULL, 6183, NULL, NULL, NULL, NULL, 'Proyectos'),
 (6176, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.291', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6184, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (6177, 'Windows 98', 'Fialho, Mozart', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6185, 'Longman', NULL, 'Terra', NULL, 'Ingles-Fr-Port'),
 (6178, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.293', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6186, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (6179, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.294', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6187, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (6180, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.295', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6188, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
-(6181, 'Plan de Prevención Aserradero Rivera  Monografía Final carrera Téc. Prevencionista en Seguridad e Higiene en el trabajo', 'Rodriguez Ferreira, Adriana', 0, 0, 1, 'Proyectos', NULL, 6189, NULL, NULL, NULL, NULL, 'Proyectos'),
 (6182, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.297', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6190, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (6183, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.298', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6191, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (6184, 'Uruguay in focus. Inglés. 3º Ciclo Básico Libro de actividades para el alumno  e.299', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6192, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
@@ -6499,7 +6448,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (6320, 'Monografía Final Carrera Técnico Prevencionista en Seguridad e Higiene en el Trabajo', 'Araúja Córdoba, Diego Ricardo', 0, 0, 1, 'Fisica', NULL, 6328, NULL, NULL, NULL, NULL, 'Fisica'),
 (6321, 'Metalurgica Río Grande  Monografía Final Carrera Técnico Prevencionista en Seguridad e Higiene en el Trabajo', 'Trindade de los Santos, Priscila', 0, 0, 1, 'Fisica', NULL, 6329, NULL, NULL, NULL, NULL, 'Fisica'),
 (6322, 'Plank S.A.  Monografía Final Carrera Técnico Prevencionista en Seguridad e Higiene en el Trabajo', 'Castillo, Keila', 0, 0, 1, 'Fisica', NULL, 6330, NULL, NULL, NULL, NULL, 'Fisica'),
-(6323, 'Minería Subterránea  Oro Sur Mining  Monografía Final Carrera Técnico Prevencionista en Seguridad e Higiene en el Trabajo', 'Silveira, María Eliane', 0, 0, 1, 'Proyectos', NULL, 6331, NULL, NULL, NULL, NULL, 'Proyectos'),
 (6324, 'Curso de Fisica Elemental 3er Año Segunda Parte e.1', 'Díaz, Jorge', 0, 0, 1, 'Fisica', NULL, 6332, NULL, NULL, NULL, NULL, 'Fisica'),
 (6325, 'Curso de Fisica Elemental 3er Año Segunda Parte e.2', 'Díaz, Jorge', 0, 0, 1, 'Fisica', NULL, 6333, NULL, NULL, NULL, NULL, 'Fisica'),
 (6326, 'Descortezado de Trozas  Monografía Final Carrera Técnico Prevencionista en Seguridad e Higiene en el Trabajo', 'Duarte Belles, Lía', 0, 0, 1, 'Fisica', NULL, 6334, NULL, NULL, NULL, NULL, 'Fisica'),
@@ -6562,8 +6510,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (6383, 'Ciencias Físicas 1 e. 1', 'Segurola, Bernarda; Saravia, Graciela; Szwarcfiter, Marcelo; Uzal, Claudia', 0, 0, 1, 'Fisica', NULL, 6391, 'Ediciones de la Plaza', NULL, 'Editorial Contexto', NULL, 'Fisica'),
 (6384, 'Ciencias Fisico Quimicas 3er Año Ciclo Básico e.47', 'Vila De Labadie, M; Romano, H;Espinosa, A; Cabot, A.', 0, 0, 1, 'Fisica', NULL, 6392, 'Ediciones de la Plaza', NULL, 'Ediciones de la Plaza', NULL, 'Fisica'),
 (6385, 'Ciencias Fisico Quimicas 3er Año Ciclo Básico e.48', 'Vila De Labadie, M; Romano, H;Espinosa, A; Cabot, A.', 0, 0, 1, 'Fisica', NULL, 6393, 'Ediciones de la Plaza', NULL, 'Ediciones de la Plaza', NULL, 'Fisica'),
-(6386, 'Ciencias Fisico Quimicas 3er Año Ciclo Básico e.49', 'Vila De Labadie, M; Romano, H;Espinosa, A; Cabot, A.', 0, 0, 1, 'Fisica', NULL, 6394, 'Ediciones de la Plaza', NULL, 'Ediciones de la Plaza', NULL, 'Fisica');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(6386, 'Ciencias Fisico Quimicas 3er Año Ciclo Básico e.49', 'Vila De Labadie, M; Romano, H;Espinosa, A; Cabot, A.', 0, 0, 1, 'Fisica', NULL, 6394, 'Ediciones de la Plaza', NULL, 'Ediciones de la Plaza', NULL, 'Fisica'),
 (6387, 'Ciencias Fisico Quimicas 3er Año Ciclo Básico e.50', 'Vila De Labadie, M; Romano, H;Espinosa, A; Cabot, A.', 0, 0, 1, 'Fisica', NULL, 6395, 'Ediciones de la Plaza', NULL, 'Ediciones de la Plaza', NULL, 'Fisica'),
 (6388, 'Ciencias Fisico Quimicas 3er Año Ciclo Básico e.51', 'Vila De Labadie, M; Romano, H;Espinosa, A; Cabot, A.', 0, 0, 1, 'Fisica', NULL, 6396, 'Ediciones de la Plaza', NULL, 'Ediciones de la Plaza', NULL, 'Fisica'),
 (6389, 'Ciencias Fisico Quimicas 3er Año Ciclo Básico e.52', 'Vila De Labadie, M; Romano, H;Espinosa, A; Cabot, A.', 0, 0, 1, 'Fisica', NULL, 6397, 'Ediciones de la Plaza', NULL, 'Ediciones de la Plaza', NULL, 'Fisica'),
@@ -6611,7 +6558,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (6431, 'CCCompany', '3º Informàtica', 0, 0, 1, 'Fisica', NULL, 6439, 'Ediciones de la Plaza', NULL, 'Proyecto 2021', NULL, 'Fisica'),
 (6432, 'Proyecto 3º Informática Blue Koi System', '3º Informàtica', 0, 0, 1, 'Fisica', NULL, 6440, 'Ediciones de la Plaza', NULL, '45755.0', NULL, 'Fisica'),
 (6433, 'Cinta transportadora de materiales reciclables', '3º Electromecánica', 0, 0, 1, 'Fisica', NULL, 6441, 'Ediciones de la Plaza', NULL, 'Proyecto 2021', NULL, 'Fisica'),
-(6434, 'Envasadora automàtica de lìquidos', '3º Electromecánica', 0, 0, 1, 'Fisica', NULL, 6442, 'Ediciones de la Plaza', NULL, 'Proyecto 2021', NULL, 'Fisica'),
+(6434, 'Envasadora automàtica de lìquidos', '3º Electromecánica', 0, 0, 1, 'Fisica', NULL, 6442, 'Ediciones de la Plaza', NULL, 'Proyecto 2021', NULL, 'Fisica');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (6435, 'Envasadora de arroz', '3º Electromecánica', 0, 0, 1, 'Fisica', NULL, 6443, 'Ediciones de la Plaza', NULL, 'Proyecto 2021', NULL, 'Fisica'),
 (6436, 'El viejo y el mar y otros relatos', 'Hemingway, Ernest', 0, 0, 1, 'Literat', NULL, 6444, 'Banda Oriental', NULL, 'Banda Oriental', NULL, 'Literat'),
 (6437, 'Tres muescas en mi carabina', 'Domínguez, Carlos María', 0, 0, 1, 'Literat', NULL, 6445, 'Banda Oriental', NULL, 'Banda Oriental', NULL, 'Literat'),
@@ -6621,14 +6569,11 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (6441, 'Espejos. Uy e.2', 'Helguera, Magdalena', 0, 0, 1, 'Literat', NULL, 6449, 'Ed Trilce', NULL, 'Ed Trilce', NULL, 'Literat'),
 (6442, 'Revista Upss!! Año 4 Número 7 Mayo 2012', 'El País', 0, 0, 1, 'Revistas', NULL, 6450, NULL, NULL, NULL, NULL, 'Revistas'),
 (6443, 'The Beatles: Su historia en imágenes Vol III', 'El País', 0, 0, 1, 'Revistas', NULL, 6451, NULL, NULL, NULL, NULL, 'Revistas'),
-(6444, 'Sistema de  Seguridad y  Salud Ocupacional  Monografía Final carrera Téc. Prevenc. en Seguridad e Higiene en el trabajo', 'Bichinque, Leonardo', 0, 0, 1, 'Proyectos', NULL, 6452, NULL, NULL, NULL, NULL, 'Proyectos'),
 (6445, 'Decreto Nº 143/012 26 de abril de 2012', 'Ministerio de Trabajo y de la Seguridad Social', 0, 0, 1, 'Sin género', NULL, 6453, NULL, '2014-07-31', 'IMPO', NULL, NULL),
 (6446, 'Ley Nº 17.940 2 de enero de 2006 Incluye Decreto Reglamentario Nº 66/006', 'Ministerio de Trabajo y de la Seguridad Social', 0, 0, 1, 'Sin género', NULL, 6454, NULL, '2014-07-31', 'IMPO', NULL, NULL),
 (6447, 'Decreto Nº 125/014 7 de mayo de 2014 e. 1', 'Ministerio de Trabajo y de la Seguridad Social', 0, 0, 1, 'Sin género', NULL, 6455, NULL, '2014-07-31', 'IMPO', NULL, NULL),
-(6448, 'Maderpay- Midwest S.A. Monografía Final carrera Téc. Prevenc.  en Seguridad e Higiene en el trabajo', 'Olivera Marquez, Heber', 0, 0, 1, 'Proyectos', NULL, 6456, NULL, NULL, NULL, NULL, 'Proyectos'),
 (6449, 'Quimica 1º Cuaderno de trabajo   e.14', 'Domínguez, A; Hinojosa, D; Domínguez, A Jr; Hinojosa,P', 0, 0, 1, 'Sin género', NULL, 6457, NULL, NULL, 'Ed. LIMUSA', NULL, NULL),
 (6450, 'Decreto Nº 125/014 7 de mayo de 2014 e. 2', 'Ministerio de Trabajo y de la Seguridad Social', 0, 0, 1, 'Sin género', NULL, 6458, NULL, '2014-07-31', 'IMPO', NULL, NULL),
-(6451, 'Planta Extractora de Miel \"Apicolas del Norte\" Monografía Final Carrera Técnico Prevencionista en Seguridad e Higiene en el Trabajo', 'Corujo Ribeiro, Yonara', 0, 0, 1, 'Proyectos', NULL, 6459, NULL, NULL, NULL, NULL, 'Proyectos'),
 (6452, 'Decreto Nº 108/007 22 de marzo de 2007', 'Ministerio de Trabajo y de la Seguridad Social', 0, 0, 1, 'Sin género', NULL, 6460, NULL, '2014-07-31', 'IMPO', NULL, NULL),
 (6453, 'Decreto Nº 372/999 26 de noviembre de 1999', 'Ministerio de Trabajo y de la Seguridad Social', 0, 0, 1, 'Sin género', NULL, 6461, NULL, '2014-07-31', 'IMPO', NULL, NULL),
 (6454, 'Quimica 1º Libro para el alumno   e.2', 'Domínguez, A; Hinojosa, D; Domínguez, A Jr; Hinojosa,P', 0, 0, 1, 'Quimica', NULL, 6462, 'Ed. LIMUSA', NULL, 'Ed. LIMUSA', NULL, 'Quimica'),
@@ -6641,49 +6586,26 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (6461, 'Bienvenido a Uruguay e.2', 'Uruguay natural', 0, 0, 1, 'Turismo', NULL, 6469, NULL, NULL, NULL, NULL, 'Turismo'),
 (6462, 'Bienvenido a Uruguay e.3', 'Uruguay natural', 0, 0, 1, 'Turismo', NULL, 6470, NULL, NULL, NULL, NULL, 'Turismo'),
 (6463, 'El diario del mundial Francia 98', 'Olé Diario Deportivo', 0, 0, 1, 'Sin género', NULL, 6471, NULL, '2014-11-07', NULL, NULL, NULL),
-(6464, 'Bicicletería Brasil', 'CTT Administración', 0, 0, 1, 'Proyectos', NULL, 6472, NULL, NULL, NULL, NULL, 'Proyectos'),
 (6465, 'Culpa tuya', 'Ron, Mercedes', 0, 0, 1, 'Literat', NULL, 6473, 'Penguin Random House', '2023-04-11', 'Penguin Random House', NULL, 'Literat'),
 (6466, 'Culpa nuestra', 'Ron, Mercedes', 0, 0, 1, 'Literat', NULL, 6474, 'Penguin Random House', '2023-04-11', 'Penguin Random House', NULL, 'Literat'),
 (6467, 'Proyecto Empresarial El pollo loco', '2º Administración', 0, 0, 1, 'Sin género', NULL, 6475, NULL, NULL, NULL, NULL, NULL),
 (6468, 'Plan de Marketing Pandora', 'Analista en Marketing', 0, 0, 1, 'Sin género', NULL, 6476, NULL, NULL, NULL, NULL, NULL),
 (6469, 'Plan de Marketing Rivera Free Shop', 'Analista en Marketing', 0, 0, 1, 'Sin género', NULL, 6477, NULL, NULL, NULL, NULL, NULL),
 (6470, 'Plan de Marketing Da Silva Ferrao', 'Analista en Marketing', 0, 0, 1, 'Sin género', NULL, 6478, NULL, NULL, NULL, NULL, NULL),
-(6471, 'Limpiando estructuras Lavandería Rey de reyes', 'CTT Administración', 0, 0, 1, 'Proyectos', NULL, 6479, NULL, NULL, NULL, NULL, 'Proyectos'),
-(6472, 'Proyecto EmpleArte', 'Administración de Personal', 0, 0, 1, 'Proyectos', NULL, 6480, NULL, NULL, NULL, NULL, 'Proyectos'),
-(6473, 'Proyecto LMR LTDA Gestión de Recursos Humanos', 'Administración de Personal', 0, 0, 1, 'Proyectos', NULL, 6481, NULL, NULL, NULL, NULL, 'Proyectos'),
-(6474, 'Proyecto Junta Departamental de Rivera', 'Administración de Personal', 0, 0, 1, 'Proyectos', NULL, 6482, NULL, NULL, NULL, NULL, 'Proyectos'),
-(6475, 'Comunicación VIP', 'CTT Administración', 0, 0, 1, 'Proyectos', NULL, 6483, NULL, NULL, NULL, NULL, 'Proyectos'),
 (6476, 'Fisica 3º Cuaderno de Trabajo  e.2', 'Domínguez, A; Hinojosa, D; Domínguez, A Jr; Hinojosa,P', 0, 0, 1, 'Fisica', NULL, 6484, 'Ed. LIMUSA', NULL, 'Ed. LIMUSA', NULL, 'Fisica'),
-(6477, 'Proyecto Training', 'Administración de Personal', 0, 0, 1, 'Proyectos', NULL, 6485, NULL, NULL, NULL, NULL, 'Proyectos'),
 (6478, 'Proyecto Empresarial Riverr Paintball !!!', '3º Administración', 0, 0, 1, 'Sin género', NULL, 6486, NULL, NULL, NULL, NULL, NULL),
-(6479, 'G4 Servicio técnico y papelería', '3º Administración', 0, 0, 1, 'Proyectos', NULL, 6487, NULL, NULL, NULL, NULL, 'Proyectos'),
-(6480, 'Control punto clave para el éxito Punto 19', 'CTT Administración', 0, 0, 1, 'Proyectos', NULL, 6488, NULL, NULL, NULL, NULL, 'Proyectos'),
 (6481, 'Proyecto Empresarial Issadora Pub S.R.L.', '3º Administración', 0, 0, 1, 'Sin género', NULL, 6489, NULL, NULL, NULL, NULL, NULL),
 (6482, 'Proyecto Empresarial Estudio Fotográfico \"Las estrellas\"', '3º Administración', 0, 0, 1, 'Sin género', NULL, 6490, NULL, NULL, NULL, NULL, NULL),
-(6483, 'Proyecto Tecnólogo en Gestión en deporte y recreación \"Reestructuración de la identidad del Club Deportivo Telégrafo', 'Tecnólogo en Deportes y Recreación 2023', 0, 0, 1, 'Proyectos', NULL, 6491, NULL, '2024-03-01', NULL, NULL, 'Proyectos'),
 (6484, 'Fisica 3º  Libro de Texto  e.1', 'Domínguez, A; Hinojosa, D; Domínguez, A Jr; Hinojosa,P', 0, 0, 1, 'Fisica', NULL, 6492, 'Ed. LIMUSA', NULL, 'Ed. LIMUSA', NULL, 'Fisica'),
 (6485, 'Fisica 3º  Libro de Texto  e.2', 'Domínguez, A; Hinojosa, D; Domínguez, A Jr; Hinojosa,P', 0, 0, 1, 'Fisica', NULL, 6493, 'Ed. LIMUSA', NULL, 'Ed. LIMUSA', NULL, 'Fisica'),
 (6486, 'Proyecto Empresarial \"Black Night\"', '3º Administración', 0, 0, 1, 'Sin género', NULL, 6494, NULL, NULL, NULL, NULL, NULL),
 (6487, 'Proyecto Empresarial Gorrosfest', '3º Administración', 0, 0, 1, 'Sin género', NULL, 6495, NULL, NULL, NULL, NULL, NULL),
-(6488, 'Empresa LIZZA jeans S.A Monografía Final Carrera Técnico Prevencionista en Seguridad e Higiene en el Trabajo', 'Alonso, Ingrid Raquel', 0, 0, 1, 'Proyectos', NULL, 6496, NULL, NULL, NULL, NULL, 'Proyectos'),
 (6489, 'Fisica 3º  Libro de Texto  e.6', 'Domínguez, A; Hinojosa, D; Domínguez, A Jr; Hinojosa,P', 0, 0, 1, 'Sin género', NULL, 6497, NULL, NULL, 'Ed. LIMUSA', NULL, NULL),
 (6490, 'Fisica 3º  Libro de Texto  e.7', 'Domínguez, A; Hinojosa, D; Domínguez, A Jr; Hinojosa,P', 0, 0, 1, 'Sin género', NULL, 6498, NULL, NULL, 'Ed. LIMUSA', NULL, NULL),
-(6491, 'Prevención de Riesgos Laborales  Monografía Final Carrera Técnico Prevencionista en Seguridad e Higiene en el Trabajo', 'Araújo Roman, Davinson Santiago', 0, 0, 1, 'Proyectos', NULL, 6499, NULL, NULL, NULL, NULL, 'Proyectos'),
-(6492, 'Proyecto Tecnólogo en Gestión en deporte y recreación \" App sports square\"', 'Tecnólogo en Deportes y Recreación 2023', 0, 0, 1, 'Proyectos', NULL, 6500, NULL, '2024-03-01', NULL, NULL, 'Proyectos'),
 (6493, 'Fisica 3º  Libro de Texto  e.10', 'Domínguez, A; Hinojosa, D; Domínguez, A Jr; Hinojosa,P', 0, 0, 1, 'Sin género', NULL, 6501, NULL, NULL, 'Ed. LIMUSA', NULL, NULL),
-(6494, 'Proyecto Tecnólogo en Gestión en deporte y recreación \"Campamentos educativos\"', 'Tecnólogo en Deportes y Recreación 2023', 0, 0, 1, 'Proyectos', NULL, 6502, NULL, '2024-03-01', NULL, NULL, 'Proyectos'),
 (6495, 'Tablas de la Técnica del Automóvil  e.2', 'Hamm, G; Burk, G', 0, 0, 1, 'Mecánica', NULL, 6503, 'Ed. REVERTÉ', NULL, 'Ed. REVERTÉ', NULL, 'Mecánica'),
-(6496, 'Proyecto de Empresa  Oficina de la pizza C/ CD', 'PYMES', 0, 0, 1, 'Proyectos', NULL, 6504, NULL, NULL, NULL, NULL, 'Proyectos'),
-(6497, 'Mesa de luz rústica', 'Proyecto 2º Carpintería', 0, 0, 1, 'Proyectos', NULL, 6505, NULL, NULL, NULL, NULL, 'Proyectos'),
-(6498, 'Escritorio EVA', 'Proyecto 2º Carpintería', 0, 0, 1, 'Proyectos', NULL, 6506, NULL, NULL, NULL, NULL, 'Proyectos'),
-(6499, 'Mesa arcoiris', 'Proyecto 2º Carpintería', 0, 0, 1, 'Proyectos', NULL, 6507, NULL, NULL, NULL, NULL, 'Proyectos'),
 (6500, 'Tecnología del Automóvil   Tomo 1  e.1', 'Gerschler; Stuttgart', 0, 0, 1, 'Mecánica', NULL, 6508, 'Ed. REVERTÉ', NULL, 'Ed. REVERTÉ', NULL, 'Mecánica'),
-(6501, 'Proyecto Aojamiento Travel agency Impulso 360', 'Proyecto 3º Alojamiento', 0, 0, 1, 'Proyectos', NULL, 6509, NULL, NULL, NULL, NULL, 'Proyectos'),
-(6502, 'Proyecto Aojamiento Agencia receptiva  Nómade', 'Proyecto 3º Alojamiento', 0, 0, 1, 'Proyectos', NULL, 6510, NULL, NULL, NULL, NULL, 'Proyectos'),
 (6503, 'Tecnología del Automóvil   Tomo 2  e.2', 'Gerschler; Stuttgart', 0, 0, 1, 'Mecánica', NULL, 6511, 'Ed. REVERTÉ', NULL, 'Ed. REVERTÉ', NULL, 'Mecánica'),
-(6504, 'Cavana bolsas', 'Proyecto 2º Administración', 0, 0, 1, 'Proyectos', NULL, 6512, NULL, NULL, NULL, NULL, 'Proyectos'),
-(6505, 'JVM Futbol', 'Proyecto 2º Administración', 0, 0, 1, 'Proyectos', NULL, 6513, NULL, NULL, NULL, NULL, 'Proyectos'),
-(6506, 'Rivera Express', 'Proyecto 2º Administración', 0, 0, 1, 'Proyectos', NULL, 6514, NULL, NULL, NULL, NULL, 'Proyectos'),
 (6507, 'Dibujo Técnico para la industria automovilística 3: El Chasis  e.2', 'Lütjen, D; Ross, J.', 0, 0, 1, 'Mecánica', NULL, 6515, NULL, NULL, NULL, NULL, 'Mecánica'),
 (6508, 'Proyecto de Empresa \"Mi angel\"', '3º Administración', 0, 0, 1, 'Sin género', NULL, 6516, NULL, NULL, NULL, NULL, NULL),
 (6509, 'Dibujo Técnico para la industria automovilística 2: El  Motor  e.1', 'Lütjen, D; Ross, J.', 0, 0, 1, 'Mecánica', NULL, 6517, NULL, NULL, NULL, NULL, 'Mecánica'),
@@ -6694,7 +6616,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (6514, 'Revista Actitud Año 3 Nº 18 2009  e. 2', 'Lütjen, D; Ross, J.', 0, 0, 1, 'Sin género', NULL, 6522, NULL, '2013-02-08', NULL, NULL, NULL),
 (6515, 'Revista Actitud Año 3 Nº 18 2009  e. 3', 'Lütjen, D; Ross, J.', 0, 0, 1, 'Sin género', NULL, 6523, NULL, '2013-02-08', NULL, NULL, NULL),
 (6516, 'Eco planet', 'Proyecto 3º Administración', 0, 0, 1, 'Sin género', NULL, 6524, NULL, NULL, NULL, NULL, NULL),
-(6517, 'Proyecto River Tour', '3º Turismo', 0, 0, 1, 'Proyectos', NULL, 6525, NULL, NULL, NULL, NULL, 'Proyectos'),
 (6518, 'Tecnología: del arado a la Batería Solar  Primer Curso', 'Vila De Labadie, M; Romano, H;Ramirez, A; Grolmus, D.', 0, 0, 1, 'Tecnolog', NULL, 6526, NULL, NULL, NULL, NULL, 'Tecnolog'),
 (6519, 'Tecnología: del arado a la Batería Solar  Segundo Curso', 'Vila De Labadie, M; Romano, H;Ramirez, A; Grolmus, D.', 0, 0, 1, 'Tecnolog', NULL, 6527, NULL, NULL, NULL, NULL, 'Tecnolog'),
 (6520, 'Manual Universal de la Técnica Mecánica  Tomo 1', 'Oberg, Erik; Jones, F.D.', 0, 0, 1, 'Mecánica', NULL, 6528, NULL, NULL, NULL, NULL, 'Mecánica'),
@@ -6709,9 +6630,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (6529, 'Uruguay en PISA 2015 Primer Informe de resultados  e.2', 'ANEP', 0, 0, 1, 'Sin género', NULL, 6537, NULL, '2018-04-25', 'SIN REMITO', NULL, NULL),
 (6530, 'Biología 2do grado Cuaderno de Trabajo  e.6', 'Domínguez, X; Cano, Gerónimo; Cantú, Roberto', 0, 0, 1, 'Biología', NULL, 6538, NULL, NULL, NULL, NULL, 'Biología'),
 (6531, 'Biología 2do grado Cuaderno de Trabajo  e.7', 'Domínguez, X; Cano, Gerónimo; Cantú, Roberto', 0, 0, 1, 'Biología', NULL, 6539, NULL, NULL, NULL, NULL, 'Biología'),
-(6532, 'Marco teórico de lectura PISA 2018', 'ANEP', 0, 0, 1, 'Proyectos', NULL, 6540, NULL, NULL, 'SIN REMITO', NULL, 'Proyectos'),
 (6533, 'Ground coffee', 'Proyecto 3º Administración', 0, 0, 1, 'Sin género', NULL, 6541, NULL, NULL, NULL, NULL, NULL),
-(6534, 'Proyecto de Empresa  Posada El Caudillo', 'PYMES', 0, 0, 1, 'Proyectos', NULL, 6542, NULL, NULL, NULL, NULL, 'Proyectos'),
 (6535, 'Biología 2do grado Libro de Texto e.1', 'Domínguez, X; Cano, Gerónimo; Cantú, Roberto', 0, 0, 1, 'Biología', NULL, 6543, NULL, NULL, NULL, NULL, 'Biología'),
 (6536, 'Construyendo y asociando operadores tecnológicos', 'Agudo Filgueras, Gervasio; García Linares, Juan Manuel', 0, 0, 1, 'Tecnolog', NULL, 6544, 'Octaedro', NULL, 'Octaedro', NULL, 'Tecnolog'),
 (6537, 'La tecnología a través del objeto', 'Agudo Filgueras, Gervasio; García Linares, Juan Manuel', 0, 0, 1, 'Tecnolog', NULL, 6545, 'Octaedro', NULL, 'Octaedro', NULL, 'Tecnolog'),
@@ -6848,8 +6767,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (6668, 'Educación Para la Vida', 'Alberti, Sofia; Barcia, Mª; Capurro, Mónica', 0, 0, 1, 'Biología', NULL, 6676, 'SANTILLANA', NULL, 'SANTILLANA', NULL, 'Biología'),
 (6669, 'Educación Para la Salud', 'Cuniglio, Francisco; Barcia, Mª; Capurro, Mónica', 0, 0, 1, 'Biología', NULL, 6677, 'SANTILLANA', NULL, 'SANTILLANA', NULL, 'Biología'),
 (6670, 'Biología y Ciencias de la Tierra e.1', 'Cuniglio, Francisco; Barderi, Mª; Granieri, Patricia', 0, 0, 1, 'Geograf', NULL, 6678, 'SANTILLANA', NULL, 'SANTILLANA', NULL, 'Geograf'),
-(6671, 'Biología y Ciencias de la Tierra e.2', 'Cuniglio, Francisco; Barderi, Mª; Granieri, Patricia', 0, 0, 1, 'Geograf', NULL, 6679, 'SANTILLANA', NULL, 'SANTILLANA', NULL, 'Geograf');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(6671, 'Biología y Ciencias de la Tierra e.2', 'Cuniglio, Francisco; Barderi, Mª; Granieri, Patricia', 0, 0, 1, 'Geograf', NULL, 6679, 'SANTILLANA', NULL, 'SANTILLANA', NULL, 'Geograf'),
 (6672, 'Diccionario de la Lengua Española  v.1  e.2', 'Real Academia Española', 0, 0, 1, 'dicc- atlas', NULL, 6680, NULL, NULL, NULL, NULL, 'dicc- atlas'),
 (6673, 'Diccionario de la Lengua Española  v.2  e.2', 'Real Academia Española', 0, 0, 1, 'dicc- atlas', NULL, 6681, NULL, NULL, NULL, NULL, 'dicc- atlas'),
 (6674, 'Diccionario de la Lengua Española  v.3  e.2', 'Real Academia Española', 0, 0, 1, 'dicc- atlas', NULL, 6682, NULL, NULL, NULL, NULL, 'dicc- atlas'),
@@ -6931,7 +6849,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (6750, 'El señor de los añillos. La Comunidad del Anillo I   e.3', 'Tolkien, J.R.R', 0, 0, 1, 'Literat', NULL, 6758, 'Planeta  Minotauro', NULL, 'Planeta  Minotauro', NULL, 'Literat'),
 (6751, 'El señor de los añillos. Las deos Torres II   e.1', 'Tolkien, J.R.R', 0, 0, 1, 'Literat', NULL, 6759, 'Planeta  Minotauro', NULL, 'Planeta  Minotauro', NULL, 'Literat'),
 (6752, 'El señor de los añillos. Las dos Torres II   e.2', 'Tolkien, J.R.R', 0, 0, 1, 'Literat', NULL, 6760, 'Planeta  Minotauro', NULL, 'Planeta  Minotauro', NULL, 'Literat'),
-(6753, 'El señor de los añillos. Las dos Torres II   e.3', 'Tolkien, J.R.R', 0, 0, 1, 'Literat', NULL, 6761, 'Planeta  Minotauro', NULL, 'Planeta  Minotauro', NULL, 'Literat'),
+(6753, 'El señor de los añillos. Las dos Torres II   e.3', 'Tolkien, J.R.R', 0, 0, 1, 'Literat', NULL, 6761, 'Planeta  Minotauro', NULL, 'Planeta  Minotauro', NULL, 'Literat');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (6754, 'El señor de los añillos. El retorno del Rey III   e.1', 'Tolkien, J.R.R', 0, 0, 1, 'Literat', NULL, 6762, 'Planeta  Minotauro', NULL, 'Planeta  Minotauro', NULL, 'Literat'),
 (6755, 'El señor de los añillos. El retorno del Rey III   e.2', 'Tolkien, J.R.R', 0, 0, 1, 'Literat', NULL, 6763, 'Planeta  Minotauro', NULL, 'Planeta  Minotauro', NULL, 'Literat'),
 (6756, 'El señor de los añillos. El retorno del Rey III   e.3', 'Tolkien, J.R.R', 0, 0, 1, 'Literat', NULL, 6764, 'Planeta  Minotauro', NULL, 'Planeta  Minotauro', NULL, 'Literat'),
@@ -7002,9 +6921,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (6821, 'Julio Herrera y Reissig Vida y Obra  e.1', 'Seluja, Antonio', 0, 0, 1, 'Literat', NULL, 6829, 'MEC', NULL, 'MEC', NULL, 'Literat'),
 (6822, 'Diario de Greg 1', 'Kinney, Jeff', 0, 0, 1, 'Literat', NULL, 6830, 'MEC', '2022-02-22', 'RBA', 'Donación', 'Literat'),
 (6823, 'Diario de Greg 7', 'Kinney, Jeff', 0, 0, 1, 'Literat', NULL, 6831, 'MEC', '2022-02-22', 'RBA', 'Donación', 'Literat'),
-(6824, 'Proyecto Invernadero 5º Ingeniero Tecnológico', 'Camargo, Lemos', 0, 0, 1, 'Proyectos', NULL, 6832, '2015', NULL, '2015', NULL, 'Proyectos'),
-(6825, 'Proyecto Clasificador de materiales  5º Ingeniero Tecnológico REVISAR SI YA FUE SUSTITUIDO ????', 'Ferraz, Caloca; Mendez', 0, 0, 1, 'Proyectos', NULL, 6833, '2015', NULL, '2015', NULL, 'Proyectos'),
-(6826, 'Proyecto Puerta inteligente  5º Ingeniero Tecnológico', 'Cuadro; Moraes', 0, 0, 1, 'Proyectos', NULL, 6834, '2015', NULL, '2015', NULL, 'Proyectos'),
 (6827, 'Cuentos completos', 'Benedetti, Mario', 0, 0, 1, 'Literat', NULL, 6835, 'Seix Barral', NULL, 'Seix Barral', NULL, 'Literat'),
 (6828, 'Emboscada de piedra', 'Meretta, Jorge', 0, 0, 1, 'Literat', NULL, 6836, 'La luna que', NULL, 'La luna que', NULL, 'Literat'),
 (6829, 'Mario Benedetti Obras Fundamentales Primavera con una esquina rota 1ra parte', 'La República', 0, 0, 1, 'Literat', NULL, 6837, NULL, NULL, NULL, NULL, 'Literat'),
@@ -7076,14 +6992,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (6896, 'Último coche a Fraile Muerto y otros cuentos', 'Silva Vila, María Inés', 0, 0, 1, 'Literat', NULL, 6904, 'Banda Oriental', NULL, 'Banda Oriental', NULL, 'Literat'),
 (6897, 'Crónica de la Reja e.1', 'Zavala Muniz, Justino', 0, 0, 1, 'Literat', NULL, 6905, 'IMPRESORA URUGUAYA', NULL, 'IMPRESORA URUGUAYA', NULL, 'Literat'),
 (6898, 'Entendiendo el marketing', 'Harvard Business Press', 0, 0, 1, 'Literat', NULL, 6906, 'IMPRESORA URUGUAYA', '2022-02-17', 'Serie Pocket Mentor', 'Donación', 'Literat'),
-(6899, 'Laminorte  Monografía final Técnico Prevencionista en Seguridad e Higiene en el Trabajo', 'Enríquez, Álvaro', 0, 0, 1, 'Proyectos', NULL, 6907, NULL, NULL, NULL, NULL, 'Proyectos'),
-(6900, 'Frigorifico Tacuarembó  Monografía final Técnico Prevencionista en Seguridad e Higiene en el Trabajo', 'Barreto, Andrea', 0, 0, 1, 'Proyectos', NULL, 6908, NULL, NULL, NULL, NULL, 'Proyectos'),
-(6901, 'Planta impregnadora de madera Monografía final. Carrera Técnico Prevencionista en Seguridad e Higiene Laboral', 'Ferreira, Mariana', 0, 0, 1, 'Proyectos', NULL, 6909, NULL, NULL, NULL, NULL, 'Proyectos'),
-(6902, '\"AMMRI\" Asistencial Médica Móvil y Ambulatoria de Rivera    Monografía final. Carrera Técnico Prevencionista en Seguridad e Higiene Laboral', 'Avila Melogno, Cecilia de', 0, 0, 1, 'Proyectos', NULL, 6910, NULL, NULL, NULL, NULL, 'Proyectos'),
 (6903, 'Fomentar la creatividad', 'Harvard Business Press', 0, 0, 1, 'Literat', NULL, 6911, NULL, '2022-02-17', 'Serie Pocket Mentor', 'Donación', 'Literat'),
 (6904, 'Liderar equipos', 'Harvard Business Press', 0, 0, 1, 'Literat', NULL, 6912, NULL, '2022-02-17', 'Serie Pocket Mentor', 'Donación', 'Literat'),
-(6905, 'Tambo Don Aparicio   Monografía final. Carrera Técnico Prevencionista en Seguridad e Higiene Laboral', 'Bichingue, Vanesa', 0, 0, 1, 'Proyectos', NULL, 6913, NULL, NULL, NULL, NULL, 'Proyectos'),
-(6906, 'Cosecha mecanizada - Industria forestal  Monografía final. Carrera Técnico Prevencionista en Seguridad e Higiene Laboral', 'Sarachega, Kelin', 0, 0, 1, 'Proyectos', NULL, 6914, NULL, NULL, NULL, NULL, 'Proyectos'),
 (6907, 'El hombre sitiado por los tigres y otras historias', 'Quiroga, Horacio', 0, 0, 1, 'Literat', NULL, 6915, 'Banda Oriental', NULL, 'Banda Oriental', NULL, 'Literat'),
 (6908, 'Revista Upss! Julio 2015 Año 7  Número 9', 'El Pais', 0, 0, 1, 'Sin género', NULL, 6916, NULL, NULL, NULL, NULL, NULL),
 (6909, 'Mis cuentos favoritos 1', 'Sin autor registrado', 0, 0, 1, 'Literat', NULL, 6917, 'CULTURAL', NULL, 'CULTURAL', NULL, 'Literat'),
@@ -7164,8 +7074,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (6985, 'English Jackpot. Workbook 2 e. 7', 'Vince, Michael; Robertson, Ross', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6993, 'Heinemann', NULL, 'Heinemann', NULL, 'Ingles-Fr-Port'),
 (6986, 'English Jackpot. Workbook 2 e. 8', 'Vince, Michael; Robertson, Ross', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6994, 'Heinemann', NULL, 'Heinemann', NULL, 'Ingles-Fr-Port'),
 (6987, 'English Jackpot. Workbook 2 e. 9', 'Vince, Michael; Robertson, Ross', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6995, 'Heinemann', NULL, 'Heinemann', NULL, 'Ingles-Fr-Port'),
-(6988, 'English Jackpot. Workbook 2 e. 10', 'Vince, Michael; Robertson, Ross', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6996, 'Heinemann', NULL, 'Heinemann', NULL, 'Ingles-Fr-Port');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(6988, 'English Jackpot. Workbook 2 e. 10', 'Vince, Michael; Robertson, Ross', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6996, 'Heinemann', NULL, 'Heinemann', NULL, 'Ingles-Fr-Port'),
 (6989, 'English Jackpot. Workbook 2 e. 11', 'Vince, Michael; Robertson, Ross', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6997, 'Heinemann', NULL, 'Heinemann', NULL, 'Ingles-Fr-Port'),
 (6990, 'English Jackpot. Workbook 2 e. 12', 'Vince, Michael; Robertson, Ross', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6998, 'Heinemann', NULL, 'Heinemann', NULL, 'Ingles-Fr-Port'),
 (6991, 'English Jackpot. Workbook 2 e. 13', 'Vince, Michael; Robertson, Ross', 0, 0, 1, 'Ingles-Fr-Port', NULL, 6999, 'Heinemann', NULL, 'Heinemann', NULL, 'Ingles-Fr-Port'),
@@ -7256,7 +7165,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (7076, 'El abuelo más loco del mundo', 'Berocay, Roy', 0, 0, 1, 'Ingles-Fr-Port', NULL, 7084, 'Heinemann', NULL, 'Trilce', 'Donaciòn', 'Ingles-Fr-Port'),
 (7077, 'English Jackpot Workbook e. 22', 'Vince, Michael; Robertson, Ross', 0, 0, 1, 'Ingles-Fr-Port', NULL, 7085, 'Heinemann', NULL, 'Heinemann', NULL, 'Ingles-Fr-Port'),
 (7078, 'Una vez en Los Andes', 'Martìnez, Ignacio', 0, 0, 1, 'Ingles-Fr-Port', NULL, 7086, 'Heinemann', NULL, 'Planeta', 'Donaciòn', 'Ingles-Fr-Port'),
-(7079, 'English Jackpot Workbook e. 24', 'Vince, Michael; Robertson, Ross', 0, 0, 1, 'Ingles-Fr-Port', NULL, 7087, 'Heinemann', NULL, 'Heinemann', NULL, 'Ingles-Fr-Port'),
+(7079, 'English Jackpot Workbook e. 24', 'Vince, Michael; Robertson, Ross', 0, 0, 1, 'Ingles-Fr-Port', NULL, 7087, 'Heinemann', NULL, 'Heinemann', NULL, 'Ingles-Fr-Port');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (7080, 'English Jackpot Workbook e. 25', 'Vince, Michael; Robertson, Ross', 0, 0, 1, 'Ingles-Fr-Port', NULL, 7088, 'Heinemann', NULL, 'Heinemann', NULL, 'Ingles-Fr-Port'),
 (7081, 'English Jackpot Student`s Book e. 1', 'Vince, Michael', 0, 0, 1, 'Ingles-Fr-Port', NULL, 7089, 'Heinemann', NULL, 'Heinemann', NULL, 'Ingles-Fr-Port'),
 (7082, 'English Jackpot Student`s Book e. 2', 'Vince, Michael', 0, 0, 1, 'Ingles-Fr-Port', NULL, 7090, 'Heinemann', NULL, 'Heinemann', NULL, 'Ingles-Fr-Port'),
@@ -7467,8 +7377,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (7287, 'Uruguay in focus. Inglés. 1º Ciclo Básico e. 221', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 7295, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
 (7288, 'Geo Uruguay Revista Uruguaya de Geografía Número 5 Año 2001', 'Sin autor registrado', 0, 0, 1, 'Ingles-Fr-Port', NULL, 7296, 'Longman', NULL, 'Fin de Siglo', NULL, 'Ingles-Fr-Port'),
 (7289, 'Uruguay in focus. Inglés. 1º Ciclo Básico e. 223', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 7297, 'Longman', NULL, 'Longman', NULL, 'Ingles-Fr-Port'),
-(7290, 'Fidel Castro y la religión: Conversaciones con Frei Betto', 'Frei Betto', 0, 0, 1, 'Ingles-Fr-Port', NULL, 7298, 'Longman', NULL, 'Editorial Legasa', NULL, 'Ingles-Fr-Port');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(7290, 'Fidel Castro y la religión: Conversaciones con Frei Betto', 'Frei Betto', 0, 0, 1, 'Ingles-Fr-Port', NULL, 7298, 'Longman', NULL, 'Editorial Legasa', NULL, 'Ingles-Fr-Port'),
 (7291, 'Un encuentro con Fidel: Entrevista realizada por Gianni Mina', 'Mina, Gianni', 0, 0, 1, 'Ingles-Fr-Port', NULL, 7299, 'Longman', NULL, 'Ediciones Problemas', NULL, 'Ingles-Fr-Port'),
 (7292, 'Aos 100 anos da Revolucao Bolchevique A luta de classes no século XXI', 'Red, Nicco', 0, 0, 1, 'Ingles-Fr-Port', NULL, 7300, 'Longman', NULL, NULL, NULL, 'Ingles-Fr-Port'),
 (7293, 'La producción del patrimonio cultural, las máscaras de la identidad colectiva: una aproximación socio-antropológica al rico patrimonio de los corralenses', 'Acevedo, Fernando', 0, 0, 1, 'Ingles-Fr-Port', NULL, 7301, 'Longman', NULL, 'MEC', NULL, 'Ingles-Fr-Port'),
@@ -7547,7 +7456,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (7366, 'Ciencias Sociales 1º Ciclo Básico: Comprender el Mundo Actual e. 31', 'Harriett, Silvana; Marquisio D., B.; Martí, J.Pablo', 0, 0, 1, 'Historia', NULL, 7374, 'MONTEVERDE', NULL, 'MONTEVERDE', NULL, 'Historia'),
 (7367, 'Ciencias Sociales 1º Ciclo Básico: Comprender el Mundo Actual e. 32', 'Harriett, Silvana; Marquisio D., B.; Martí, J.Pablo', 0, 0, 1, 'Historia', NULL, 7375, 'MONTEVERDE', NULL, 'MONTEVERDE', NULL, 'Historia'),
 (7368, 'Ciencias Sociales 1º Ciclo Básico: Comprender el Mundo Actual e. 33', 'Harriett, Silvana; Marquisio D., B.; Martí, J.Pablo', 0, 0, 1, 'Historia', NULL, 7376, 'MONTEVERDE', NULL, 'MONTEVERDE', NULL, 'Historia'),
-(7369, 'Ciencias Sociales 1º Ciclo Básico: Comprender el Mundo Actual e. 34', 'Harriett, Silvana; Marquisio D., B.; Martí, J.Pablo', 0, 0, 1, 'Historia', NULL, 7377, 'MONTEVERDE', NULL, 'MONTEVERDE', NULL, 'Historia'),
+(7369, 'Ciencias Sociales 1º Ciclo Básico: Comprender el Mundo Actual e. 34', 'Harriett, Silvana; Marquisio D., B.; Martí, J.Pablo', 0, 0, 1, 'Historia', NULL, 7377, 'MONTEVERDE', NULL, 'MONTEVERDE', NULL, 'Historia');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (7370, 'Ciencias Sociales 1º Ciclo Básico: Comprender el Mundo Actual e. 35', 'Harriett, Silvana; Marquisio D., B.; Martí, J.Pablo', 0, 0, 1, 'Historia', NULL, 7378, 'MONTEVERDE', NULL, 'MONTEVERDE', NULL, 'Historia'),
 (7371, 'Comprender América. Ciencias Sociales 2º Ciclo Básico e. 24', 'Giudice, G.; Moya, A.; Roland, M.', 0, 0, 1, 'Historia', NULL, 7379, 'MONTEVERDE', NULL, 'MONTEVERDE', NULL, 'Historia'),
 (7372, 'Comprender América. Ciencias Sociales 2º Ciclo Básico e. 25', 'Giudice, G.; Moya, A.; Roland, M.', 0, 0, 1, 'Historia', NULL, 7380, 'MONTEVERDE', NULL, 'MONTEVERDE', NULL, 'Historia'),
@@ -7724,8 +7634,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (7547, 'Lengua y Literatura 3er año de ciclo básico  e.3', 'Tani, Rubén; Gracia, María; Ibarra, Mirta', 0, 0, 1, 'Idioma Esp', NULL, 7555, 'Impresora Polo', NULL, 'Impresora Polo', NULL, 'Idioma Esp'),
 (7548, 'Lengua y Literatura 3er año de ciclo básico  e.4', 'Tani, Rubén; Gracia, María; Ibarra, Mirta', 0, 0, 1, 'Idioma Esp', NULL, 7556, 'Impresora Polo', NULL, 'Impresora Polo', NULL, 'Idioma Esp'),
 (7549, 'Lengua y Literatura 3er año de ciclo básico  e.5', 'Tani, Rubén; Gracia, María; Ibarra, Mirta', 0, 0, 1, 'Idioma Esp', NULL, 7557, 'Impresora Polo', NULL, 'Impresora Polo', NULL, 'Idioma Esp'),
-(7550, 'Lengua y Literatura 3er año de ciclo básico  e.6', 'Tani, Rubén; Gracia, María; Ibarra, Mirta', 0, 0, 1, 'Sin género', NULL, 7558, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(7550, 'Lengua y Literatura 3er año de ciclo básico  e.6', 'Tani, Rubén; Gracia, María; Ibarra, Mirta', 0, 0, 1, 'Sin género', NULL, 7558, NULL, NULL, NULL, NULL, NULL),
 (7551, 'Logro y nivel educativo alcanzado por la población 2012', 'MEC', 0, 0, 1, 'Educación', NULL, 7559, NULL, NULL, NULL, NULL, 'Educación'),
 (7552, 'Logro y nivel educativo alcanzado por la población 2013', 'MEC', 0, 0, 1, 'Educación', NULL, 7560, NULL, NULL, NULL, NULL, 'Educación'),
 (7553, 'Diseño metodológico para la construcción de perfiles ocupacionales y acciones formativas', 'Min. de Trabajo y Seguridad Social; Dir. Nac. De Empleo; Área Formación Profesional', 0, 0, 1, 'Educación', NULL, 7561, NULL, NULL, NULL, NULL, 'Educación'),
@@ -7742,8 +7651,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (7564, 'Plan de Acción de Juventudes 2015 - 2025 Diálogos', 'MIDES; INJU', 0, 0, 1, 'Sin género', NULL, 7572, NULL, '2014-07-31', NULL, NULL, NULL),
 (7565, 'Plan de Acción de Juventudes 2015 - 2025 Estudios', 'MIDES; INJU', 0, 0, 1, 'Sin género', NULL, 7573, NULL, '2014-07-31', NULL, NULL, NULL),
 (7566, 'Plan de Acción de Juventudes 2015 - 2025 Propuestas', 'MIDES; INJU', 0, 0, 1, 'Sin género', NULL, 7574, NULL, '2014-07-31', NULL, NULL, NULL),
-(7567, 'YESAB Revestimiento de Yeso Monografía Final carrera Técnico Prevencionista  en Seguridad e Higiene en el trabajo', 'González Tarocco, Silvia', 0, 0, 1, 'Proyectos', NULL, 7575, NULL, NULL, NULL, NULL, 'Proyectos'),
-(7568, 'Molienda industrial y Fábrica de baldosas Monografía Final carrera Técnico Prevencionista  en Seguridad e Higiene en el trabajo', 'da Roza, Mónica', 0, 0, 1, 'Proyectos', NULL, 7576, NULL, NULL, NULL, NULL, 'Proyectos'),
 (7569, 'Temas & dilemas en saúde e sustentabilidade ambiental e.1', 'Comissao de Saúde e meio ambiente Asambleia Legislativa Rio Grande del Sur', 0, 0, 1, 'Sin género', NULL, 7577, NULL, '2013-07-17', NULL, NULL, NULL),
 (7570, 'EligiendoNOS Guía en sexualidad y género para adolescentes e.17', 'INMUJERES', 0, 0, 1, 'Ingles-Fr-Port', NULL, 7578, 'Longman', NULL, NULL, NULL, 'Ingles-Fr-Port'),
 (7571, 'Temas & dilemas en saúde e sustentabilidade ambiental e.2', 'Comissao de Saúde e meio ambiente Asambleia Legislativa Rio Grande del Sur', 0, 0, 1, 'Sin género', NULL, 7579, NULL, '2013-07-19', NULL, NULL, NULL),
@@ -7779,10 +7686,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (7601, 'FPB Tomo 1 e.2', 'ANEP;CETP', 0, 0, 1, 'Educación', NULL, 7609, NULL, '2019-06-17', NULL, NULL, 'Educación'),
 (7602, 'Hadas de los bosques', 'Ramirez Zarzuela, Alejandra', 0, 0, 1, 'Literat', NULL, 7610, 'Libsa', '2019-08-06', 'Libsa', NULL, 'Literat'),
 (7603, 'Pensar la historia 1, 2 y 3', 'Artagagaveytia, Lucila; Zavala, Ana; Demasi', 0, 0, 1, 'Historia', NULL, 7611, NULL, NULL, '41015.0', NULL, 'Historia'),
-(7604, 'Proyecto Emergencia', 'Proyecto Administración Pública 2010', 0, 0, 1, 'Proyectos', NULL, 7612, NULL, NULL, '41123.0', NULL, 'Proyectos'),
-(7605, 'Proyecto ASSE \"Policlínicas\"', 'Proyecto Administración Pública 2010', 0, 0, 1, 'Proyectos', NULL, 7613, NULL, NULL, '41123.0', NULL, 'Proyectos'),
-(7606, 'Priyecto OSE + ANEXO', 'Proyecto Administración Pública 2010', 0, 0, 1, 'Proyectos', NULL, 7614, NULL, NULL, '41123.0', NULL, 'Proyectos'),
-(7607, 'Optimización de la atención al público en la Sucursal Rivera del BPS + ANEXO', 'Proyecto Administración Pública 2010', 0, 0, 1, 'Proyectos', NULL, 7615, NULL, NULL, '41123.0', NULL, 'Proyectos'),
 (7608, 'Revista Upss! Setiembre 2012  Año 4 Número 11', 'El País', 0, 0, 1, 'Revistas', NULL, 7616, NULL, NULL, '41163.0', NULL, 'Revistas'),
 (7609, 'Español Lengua Materna 2º curso', 'Etchart, María Eglé; Nández Britos, Jorge', 0, 0, 1, 'Idioma Esp', NULL, 7617, 'Rosgal', NULL, 'Rosgal', NULL, 'Idioma Esp'),
 (7610, 'Revista Moñita azul Año IX Nº 157 Mayo 1992', 'Sin autor registrado', 0, 0, 1, 'Sin género', NULL, 7618, NULL, NULL, '41163.0', NULL, NULL),
@@ -7816,7 +7719,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (7638, 'Segundo informe nacional 2002 Convención de las Naciones Unidas de Lucha contra la Desertificación y la Sequía', 'ONU; MVOTMA; MGAP; Udelar', 0, 0, 1, 'Sin género', NULL, 7646, NULL, NULL, '41478.0', NULL, NULL),
 (7639, 'Proyecto Central Promoción de Convivencia Saludable e.1', 'ANEP; CODICEN', 0, 0, 1, 'Sin género', NULL, 7647, NULL, NULL, '41478.0', NULL, NULL),
 (7640, 'Proyecto Central Promoción de Convivencia Saludable e.2', 'ANEP; CODICEN', 0, 0, 1, 'Sin género', NULL, 7648, NULL, NULL, '41478.0', NULL, NULL),
-(7641, 'Proyecto Central Promoción de Convivencia Saludable e.3', 'ANEP; CODICEN', 0, 0, 1, 'Sin género', NULL, 7649, NULL, NULL, '41478.0', NULL, NULL),
+(7641, 'Proyecto Central Promoción de Convivencia Saludable e.3', 'ANEP; CODICEN', 0, 0, 1, 'Sin género', NULL, 7649, NULL, NULL, '41478.0', NULL, NULL);
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (7642, 'Guía de apoyo a la búsqueda de empleo e.1', 'MTSS; IMPO', 0, 0, 1, 'Adm Pers', NULL, 7650, NULL, NULL, '41478.0', NULL, 'Adm Pers'),
 (7643, 'Guía de apoyo a la búsqueda de empleo e.2', 'MTSS; IMPO', 0, 0, 1, 'Adm Pers', NULL, 7651, NULL, NULL, '41478.0', NULL, 'Adm Pers'),
 (7644, 'Guía de apoyo a la búsqueda de empleo e.3', 'MTSS; IMPO', 0, 0, 1, 'Adm Pers', NULL, 7652, NULL, NULL, '41478.0', NULL, 'Adm Pers'),
@@ -7833,17 +7737,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (7655, 'Reseña Histórica 85 años Escuela Técnica Superior de Rivera  28 de agosto 1924-2009 e.3', 'Benavides, Nury', 0, 0, 1, 'Sin género', NULL, 7663, NULL, NULL, '41478.0', NULL, NULL),
 (7656, 'Reseña Histórica 85 años Escuela Técnica Superior de Rivera  28 de agosto 1924-2009 e.4', 'Benavides, Nury', 0, 0, 1, 'Sin género', NULL, 7664, NULL, NULL, '41478.0', NULL, NULL),
 (7657, 'Proyecto Electromecánica Fibra PET', '3º Electromecánica', 0, 0, 1, 'Sin género', NULL, 7665, NULL, NULL, '45351.0', NULL, NULL),
-(7658, 'Proyecto Electromecánica Incubadora de huevos de gallina', '3º Electromecánica', 0, 0, 1, 'Proyectos', NULL, 7666, NULL, NULL, '45351.0', NULL, 'Proyectos'),
-(7659, 'Proyecto Electromecánica Dekar Cortadora de tubos automática', '3º Electromecánica', 0, 0, 1, 'Proyectos', NULL, 7667, NULL, NULL, '45351.0', NULL, 'Proyectos'),
-(7660, 'Proyecto Electromecánica Enchapadora de cantos', '3º Electromecánica', 0, 0, 1, 'Proyectos', NULL, 7668, NULL, NULL, '45351.0', NULL, 'Proyectos'),
-(7661, 'Proyecto de Empresa 3º  JAZZU Fiestas y eventos', 'Administración 3º Año 2022', 0, 0, 1, 'Proyectos', NULL, 7669, NULL, NULL, '44994.0', NULL, 'Proyectos'),
 (7662, 'Proyecto de Empresa  3º Águila ice skating rink', 'Administración 3º Año 2022', 0, 0, 1, 'Sin género', NULL, 7670, NULL, NULL, '44994.0', NULL, NULL),
-(7663, 'Proyecto de Empresa  3º CCM Mantenimiento', 'Administración 3º Año 2022', 0, 0, 1, 'Proyectos', NULL, 7671, NULL, NULL, '44994.0', NULL, 'Proyectos'),
 (7664, 'Proyecto de Empresa 3º  JAZZU Fiestas y eventos', 'Administración 2º Año 2012', 0, 0, 1, 'Sin género', NULL, 7672, NULL, NULL, '44994.0', NULL, NULL),
-(7665, 'Proyecto de Administración de Personal   Semeco Aerovida  C / CD', 'Administración de Personal  2012', 0, 0, 1, 'Proyectos', NULL, 7673, NULL, NULL, '41486.0', NULL, 'Proyectos'),
-(7666, 'Proyecto de Administración de Personal   Centro Universitario de Rivera  C / CD', 'Administración de Personal  2012', 0, 0, 1, 'Proyectos', NULL, 7674, NULL, NULL, '41486.0', NULL, 'Proyectos'),
-(7667, 'Proyecto de Administración de Personal  Taxifilms Uruguay  C / CD', 'Administración de Personal  2012', 0, 0, 1, 'Proyectos', NULL, 7675, NULL, NULL, '41486.0', NULL, 'Proyectos'),
-(7668, 'Proyecto de Administración de Personal  Empresa Boreal  C / CD', 'Administración de Personal  2012', 0, 0, 1, 'Proyectos', NULL, 7676, NULL, NULL, '41486.0', NULL, 'Proyectos'),
 (7669, 'Uruguay in focus. Inglés 2º Ciclo Básico e. 111', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Sin género', NULL, 7677, NULL, NULL, '41492.0', NULL, NULL),
 (7670, 'Uruguay in focus. Inglés 2º Ciclo Básico e. 112', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Sin género', NULL, 7678, NULL, NULL, '41492.0', NULL, NULL),
 (7671, 'Hola, soy Germán Garmendia', 'Garmendia, Germán', 0, 0, 1, 'Sin género', NULL, 7679, NULL, NULL, 'ALFAGUARA', NULL, NULL),
@@ -7882,22 +7777,13 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (7704, 'Geografía de la República Oriental del Uruguay', 'Chebataroff, Jorge', 0, 0, 1, 'Geograf', NULL, 7712, 'Barreiro y Ramos S.A.', NULL, 'Barreiro y Ramos S.A.', NULL, 'Geograf'),
 (7705, 'Revista Upss!  Setiembre  2013  Año 5 Número 11', 'El Pais', 0, 0, 1, 'Revistas', NULL, 7713, NULL, NULL, NULL, NULL, 'Revistas'),
 (7706, 'Revista Upss!  Octubre  2013  Año 5 Número 12', 'El Pais', 0, 0, 1, 'Revistas', NULL, 7714, NULL, NULL, NULL, NULL, 'Revistas'),
-(7707, 'Proyecto : Calidad del agua potable en la ciudad de Rivera e.1', 'Control Ambiental 2013', 0, 0, 1, 'Proyectos', NULL, 7715, NULL, NULL, NULL, NULL, 'Proyectos'),
 (7708, 'Plan de Marketing Bodega Don Noel', 'Marketing  2008', 0, 0, 1, 'Sin género', NULL, 7716, NULL, '2012-08-04', NULL, NULL, NULL),
 (7709, 'Plan de Marketing INMESA', 'Marketing  2008', 0, 0, 1, 'Sin género', NULL, 7717, NULL, '2012-08-04', NULL, NULL, NULL),
 (7710, 'Plan de Marketing Pablo Distribuidora', 'Marketing  2008', 0, 0, 1, 'Sin género', NULL, 7718, NULL, '2012-08-04', NULL, NULL, NULL),
 (7711, 'Ciencias Naturales 1º   e.2', 'Cáceres, Silvia; Orezzoli, Mercedes', 0, 0, 1, 'Biología', NULL, 7719, 'Monteverde', '2018-08-14', 'Monteverde', NULL, 'Biología'),
 (7712, 'Colonia apícola CAY', 'Marketing  2010', 0, 0, 1, 'Sin género', NULL, 7720, NULL, '2012-08-04', NULL, NULL, NULL),
-(7713, 'Proyecto Masoller', '3º Turismo 2010', 0, 0, 1, 'Proyectos', NULL, 7721, NULL, '2012-08-04', NULL, NULL, 'Proyectos'),
-(7714, 'Propuesta de turismo sostenible: \"Tres  Cerros\"', '3º Turismo 2010', 0, 0, 1, 'Proyectos', NULL, 7722, NULL, '2012-08-04', NULL, NULL, 'Proyectos'),
-(7715, 'Lolomach \"Rivera producto turístico tentador\"', '3º Turismo 2010', 0, 0, 1, 'Proyectos', NULL, 7723, NULL, '2012-08-04', NULL, NULL, 'Proyectos'),
 (7716, 'Prácticas 1 Matemática', 'Da Costa, Sergio Da; Scorza, Verónica', 0, 0, 1, 'Matemat', NULL, 7724, 'Santillana', '2018-08-14', 'Santillana', NULL, 'Matemat'),
 (7717, 'Curso de introducción a las ciencias físicas e.2', 'Aguilar, Peris', 0, 0, 1, 'Fisica', NULL, 7725, NULL, NULL, NULL, NULL, 'Fisica'),
-(7718, 'Planta industrial: Manufacturación de Madera WOODMAKER', '2010', 0, 0, 1, 'Proyectos', NULL, 7726, NULL, '2012-07-09', '7º Electrotecnia', NULL, 'Proyectos'),
-(7719, 'Instalaciones Industraiales, Redes y Luminotecnia', '2006', 0, 0, 1, 'Proyectos', NULL, 7727, NULL, '2012-07-09', '4º Electrotecnia', NULL, 'Proyectos'),
-(7720, 'Proyecto Nutri- vida Salud y Equilibrio', '2008', 0, 0, 1, 'Proyectos', NULL, 7728, '2008', '2012-07-09', NULL, NULL, 'Proyectos'),
-(7721, 'Proyecto de acondicionamiento del espacio turístico: Parque Gran Bretaña', '2006', 0, 0, 1, 'Proyectos', NULL, 7729, NULL, '2012-07-03', '3º Turismo', NULL, 'Proyectos'),
-(7722, 'Proyecto Valle del Lunarejo Turismo del siglo XXI', '2006', 0, 0, 1, 'Proyectos', NULL, 7730, NULL, '2012-07-03', '3º Turismo', NULL, 'Proyectos'),
 (7723, 'Vos podés Plan de fortalecimiento de capacidades en tema drogas para comunidades educativas e.1', 'Junta Nacional de Drogas; ANEP; OMS', 0, 0, 1, 'Educación', NULL, 7731, NULL, '2021-03-04', NULL, NULL, 'Educación'),
 (7724, 'Plan de marketing Radio Activa 89.9', '2008', 0, 0, 1, 'Sin género', NULL, 7732, NULL, '2012-07-03', 'Marketing', NULL, NULL),
 (7725, 'Plan de marketing Canal 6 CTV', '2009', 0, 0, 1, 'Sin género', NULL, 7733, NULL, '2012-07-03', 'Marketing', NULL, NULL),
@@ -7905,7 +7791,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (7727, 'Plan de marketing Kombibus', '2009', 0, 0, 1, 'Sin género', NULL, 7735, NULL, '2012-07-03', 'Marketing', NULL, NULL),
 (7728, 'Investigación de mercados  Ciber café', '2008', 0, 0, 1, 'Ingles-Fr-Port', NULL, 7736, 'CLE international (1987)', '2012-07-03', 'Marketing', NULL, 'Ingles-Fr-Port'),
 (7729, 'Vos podés Plan de fortalecimiento de capacidades en tema drogas para comunidades educativas e.2', 'Junta Nacional de Drogas; ANEP; OMS', 0, 0, 1, 'Educación', NULL, 7737, 'CLE international (1987)', '2021-03-04', NULL, NULL, 'Educación'),
-(7730, 'Proyecto de empresa  Organización de eventos ARIS', '2008', 0, 0, 1, 'Proyectos', NULL, 7738, '2008', '2012-07-03', 'Gastronomía', NULL, 'Proyectos'),
 (7731, 'Vos podés Plan de fortalecimiento de capacidades en tema drogas para comunidades educativas e.3', 'Junta Nacional de Drogas; ANEP; OMS', 0, 0, 1, 'Educación', NULL, 7739, NULL, '2021-03-04', NULL, NULL, 'Educación'),
 (7732, 'Plan de marketing Tutti Pizza', '2007', 0, 0, 1, 'Sin género', NULL, 7740, NULL, '2012-07-03', 'Marketing', NULL, NULL),
 (7733, 'Proyecto de empresa  Natural  y Saludable', '2008', 0, 0, 1, 'Sin género', NULL, 7741, NULL, '2012-07-03', 'Marketing', NULL, NULL),
@@ -7920,21 +7805,12 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (7742, 'Frankenstein', 'Shelley, Mary', 0, 0, 1, 'Literat', NULL, 7750, 'Saldaña', '2020-08-19', 'Saldaña', NULL, 'Literat'),
 (7743, 'Plan de marketing  Panadería Americana', '2008', 0, 0, 1, 'Sin género', NULL, 7751, NULL, '2012-07-03', 'Marketing', NULL, NULL),
 (7744, 'Geografía I Espacios y sociedades hoy', 'Olivera Mazzoleni, Leonardo; Pérez Díaz, Inés; De Los Santos Cardozo, Miralba', 0, 0, 1, 'Geograf', NULL, 7752, 'Textos del Sur', '2018-08-14', 'Textos del Sur', NULL, 'Geograf'),
-(7745, 'Proyecto  CTT Tecnólogo en Gestión de Deportes y Recreación El mundo es curvo Teqball', '2º CTT Tecnólogo en Gestión de Deportes y Recreación', 0, 0, 1, 'Proyectos', NULL, 7753, NULL, NULL, NULL, NULL, 'Proyectos'),
-(7746, 'Proyecto  CTT Tecnólogo en Gestión de Deportes y Recreación Equilibrio: gestión deportiva y bienestar integral', '2º CTT Tecnólogo en Gestión de Deportes y Recreación', 0, 0, 1, 'Proyectos', NULL, 7754, NULL, NULL, NULL, NULL, 'Proyectos'),
 (7747, 'Proyecto de Empresa La Guanta Namera', 'Sin autor registrado', 0, 0, 1, 'Sin género', NULL, 7755, NULL, '2024-02-15', '2º Administración', NULL, NULL),
-(7748, 'Proyecto de Empresa 3º Bohanes viajes', '3º Administración 2022', 0, 0, 1, 'Proyectos', NULL, 7756, '2013', '2023-03-09', NULL, NULL, 'Proyectos'),
-(7749, 'Proyecto Electromecánica Huerta orgánica automática', '3º Electromecánica', 0, 0, 1, 'Proyectos', NULL, 7757, '2013', '2024-02-29', NULL, NULL, 'Proyectos'),
 (7750, 'Ruperto y los extraterrestres', 'Berocay, Roy', 0, 0, 1, 'Sin género', NULL, 7758, NULL, '2025-12-09', 'ALFAGUARA', 'Donación', NULL),
 (7751, 'Procesos Constructivos I', 'Recopilación Prof. Arq. Ma. Del Carmen López Fajardo', 0, 0, 1, 'Sin género', NULL, 7759, NULL, NULL, NULL, NULL, NULL),
-(7752, 'Análisis de calidad del agua para uso recreacional en la microcuenca del Arroyo Cuñapirú (Rivera - Uruguay)', 'Control Ambiental 2013', 0, 0, 1, 'Proyectos', NULL, 7760, NULL, '2013-12-30', NULL, NULL, 'Proyectos'),
-(7753, 'Contribución para el Plan de Gestión del Parque Gran Bretaña', 'Control Ambiental 2013', 0, 0, 1, 'Proyectos', NULL, 7761, NULL, '2013-12-30', NULL, NULL, 'Proyectos'),
 (7754, 'Dialéctica del silencio (serie Edición homenaje vol. 44)', 'Curbelo, Jesus David', 0, 0, 1, 'Literat', NULL, 7762, 'CETP; Ministerio de Relac. Exteriores; COPAG', '2020-03-11', 'CETP; Ministerio de Relac. Exteriores; COPAG', NULL, 'Literat'),
 (7755, 'Educación y arte (serie Edición homenaje vol. 12)', 'Figari, Pedro', 0, 0, 1, 'Educación', NULL, 7763, 'CETP; Ministerio de Relac. Exteriores; COPAG', '2020-03-11', 'CETP; Ministerio de Relac. Exteriores; COPAG', NULL, 'Educación'),
 (7756, 'Pedro Figari: Arte e industria en el novecientos (serie Edición homenaje vol. 6) e.2', 'Peluffo Linari, Gabriel', 0, 0, 1, 'Educación', NULL, 7764, 'CETP; Ministerio de Relac. Exteriores; COPAG', '2020-03-11', 'CETP; Ministerio de Relac. Exteriores; COPAG', NULL, 'Educación'),
-(7757, 'Proyecto de Instalación de vivienda residencial e industria (carpintería)', '2º Electrotecnia 2013', 0, 0, 1, 'Proyectos', NULL, 7765, NULL, '2013-12-30', NULL, NULL, 'Proyectos'),
-(7758, 'Mejorar mi auto carburado para bajar consumo de combustible y disminuir la contaminación ambiental', '2º Mecánica Automotriz', 0, 0, 1, 'Proyectos', NULL, 7766, NULL, '2013-12-30', NULL, NULL, 'Proyectos'),
-(7759, 'Necesidad de cambiar la bomba de aceite en un motor', '2º Mecánica Automotriz', 0, 0, 1, 'Proyectos', NULL, 7767, NULL, '2013-12-30', NULL, NULL, 'Proyectos'),
 (7760, 'Guía para estudiantes del norte del país', 'UDELAR; MIDES; INJU', 0, 0, 1, 'Educación', NULL, 7768, NULL, NULL, '38994.51', NULL, 'Educación'),
 (7761, 'Revista Upss!  Marzo  2014  Año 6 Número 5', 'El Pais', 0, 0, 1, 'Revistas', NULL, 7769, NULL, NULL, NULL, NULL, 'Revistas'),
 (7762, 'Guía de apoyo a la búsqueda de empleo e.7', 'MTSS; IMPO', 0, 0, 1, 'Adm Pers', NULL, 7770, NULL, NULL, '41718.0', NULL, 'Adm Pers'),
@@ -7945,34 +7821,22 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (7767, 'EligiendoNOS Guía en sexualidad y género para adolescentes e.21', 'INMUJERES', 0, 0, 1, 'Biología', NULL, 7775, NULL, NULL, NULL, NULL, 'Biología'),
 (7768, 'EligiendoNOS Guía en sexualidad y género para adolescentes e.22', 'INMUJERES', 0, 0, 1, 'Biología', NULL, 7776, NULL, NULL, NULL, NULL, 'Biología'),
 (7769, 'Proyecto Tu ranchito S.R.L', '3.532075289638524e-306', 0, 0, 1, 'Sin género', NULL, 7777, NULL, NULL, NULL, NULL, NULL),
-(7770, 'Proyecto Circuito Turístico en la ciudad de Rivera \"A passagem\"', '3ro Turismo 2011', 0, 0, 1, 'Proyectos', NULL, 7778, NULL, '2012-06-26', NULL, NULL, 'Proyectos'),
 (7771, 'Proyecto  El mundo de los niños', '2do Administración 2011', 0, 0, 1, 'Sin género', NULL, 7779, NULL, '2012-06-26', NULL, NULL, NULL),
 (7772, 'Manual de fórmulas', 'Giovannini, Eduardo', 0, 0, 1, 'Matemat', NULL, 7780, NULL, NULL, '38994.51', NULL, 'Matemat'),
-(7773, 'Proyecto Fútbol para personas con síndrome de Down', '3º Deporte', 0, 0, 1, 'Proyectos', NULL, 7781, NULL, '2017-12-26', NULL, NULL, 'Proyectos'),
 (7774, 'Proyecto Hándbol para todos', '3º Deporte', 0, 0, 1, 'Sin género', NULL, 7782, NULL, '2017-12-26', NULL, NULL, NULL),
-(7775, 'Proyecto CTT Administración Silveira saladitos', 'CTT Administración', 0, 0, 1, 'Proyectos', NULL, 7783, NULL, NULL, NULL, NULL, 'Proyectos'),
-(7776, 'Proyecto CTT Administración DBR Limpiezas', 'CTT Administración', 0, 0, 1, 'Proyectos', NULL, 7784, NULL, NULL, NULL, NULL, 'Proyectos'),
 (7777, 'La isla del doctor Moreau', 'Wells, H.G.', 0, 0, 1, 'NOV. GRÁFICAS', NULL, 7785, 'LATINBOOKS', '2018-06-11', 'LATINBOOKS', 'Compra', 'NOV. GRÁFICAS'),
 (7778, 'Sí - No', 'Barrios , Pablo', 0, 0, 1, 'Literat', NULL, 7786, 'Trópico Sur Editor', '2015-11-10', 'Trópico Sur Editor', 'Donación', 'Literat'),
 (7779, 'El corazón de las tinieblas', 'Conrad, Joseph', 0, 0, 1, 'NOV. GRÁFICAS', NULL, 7787, 'LATINBOOKS', '2018-06-11', 'LATINBOOKS', 'Compra', 'NOV. GRÁFICAS'),
-(7780, 'Proyecto Plan de gestión de residuos sanitarios e.1', 'Control ambiental', 0, 0, 1, 'Proyectos', NULL, 7788, NULL, '2015-02-26', NULL, NULL, 'Proyectos'),
-(7781, 'Proyecto Plan de gestión de residuos sanitarios e.2', 'Control ambiental', 0, 0, 1, 'Proyectos', NULL, 7789, NULL, '2015-02-26', NULL, NULL, 'Proyectos'),
 (7782, 'El mundo perdido', 'Conan Doyle, Arthur', 0, 0, 1, 'NOV. GRÁFICAS', NULL, 7790, 'LATINBOOKS', '2018-06-11', 'LATINBOOKS', 'Compra', 'NOV. GRÁFICAS'),
 (7783, 'Lenin, la revolución y América Latina', 'Arismendi, Rodney', 0, 0, 1, 'Historia', NULL, 7791, 'Grijalbo', '2015-10-30', 'Grijalbo', NULL, 'Historia'),
-(7784, 'Proyecto de Empresa Consentidos', '2º Administración 2015', 0, 0, 1, 'Proyectos', NULL, 7792, NULL, '2016-02-04', NULL, NULL, 'Proyectos'),
 (7785, 'Moby Dick', 'Melville, Herman', 0, 0, 1, 'NOV. GRÁFICAS', NULL, 7793, 'LATINBOOKS', '2018-06-11', 'LATINBOOKS', 'Compra', 'NOV. GRÁFICAS'),
 (7786, 'Proyecto Electromecánica incubadora automática', '3º Electromecánica', 0, 0, 1, 'Sin género', NULL, 7794, NULL, '2024-02-29', NULL, NULL, NULL),
-(7787, 'Nueve horas', 'González, Fernando', 0, 0, 1, 'Proyectos', NULL, 7795, NULL, '2025-12-09', 'ALFAGUARA', 'Donación', 'Proyectos'),
-(7788, 'Proyecto Empresarial  Taxco Pub', 'PYMES 2010', 0, 0, 1, 'Proyectos', NULL, 7796, NULL, '2012-06-25', NULL, NULL, 'Proyectos'),
 (7789, 'Proyecto  CTT Tecnólogo en Gestión de Deportes y Recreación Equilibrio: gestión deportiva y bienestar integral', '2º CTT Tecnólogo en Gestión de Deportes y Recreación', 0, 0, 1, 'Sin género', NULL, 7797, NULL, NULL, NULL, NULL, NULL),
 (7790, 'Vos podés Plan de fortalecimiento de capacidades en tema drogas para comunidades educativas e.4', 'Junta Nacional de Drogas; ANEP; OMS', 0, 0, 1, 'Educación', NULL, 7798, NULL, '2021-03-04', NULL, NULL, 'Educación'),
 (7791, 'Robinson Crusoe', 'Defoe, Daniel', 0, 0, 1, 'NOV. GRÁFICAS', NULL, 7799, 'LATINBOOKS', '2018-06-11', 'LATINBOOKS', 'Compra', 'NOV. GRÁFICAS'),
-(7792, 'Proyecto de Empresa Restaurant y Parrillada DELICIOSO e.1', 'Gestión de PYMES 2010', 0, 0, 1, 'Proyectos', NULL, 7800, NULL, '2012-06-25', NULL, NULL, 'Proyectos'),
 (7793, 'Aportes para la construcción de un sistema de educación terciaria pública e.1', 'Sistema Nacional de Educación Terciaria Pública', 0, 0, 1, 'Educación', NULL, 7801, NULL, '2014-02-19', NULL, NULL, 'Educación'),
 (7794, 'Proyecto de Empresa Restaurant y Parrillada DELICIOSO e.3', 'Gestión de PYMES 2010', 0, 0, 1, 'Sin género', NULL, 7802, NULL, '2012-06-25', NULL, NULL, NULL),
 (7795, 'Atlas geográfico del Uruguay y universal', 'OCEANO', 0, 0, 1, 'Geograf', NULL, 7803, NULL, '2018-08-14', NULL, NULL, 'Geograf'),
-(7796, 'Proyecto de Empresa 3º Emvesa', '3ro Administración 2023', 0, 0, 1, 'Proyectos', NULL, 7804, NULL, '2023-03-09', NULL, NULL, 'Proyectos'),
-(7797, 'Proyecto de Empresa 3º Wees Compost', '3ro Administración 2023', 0, 0, 1, 'Proyectos', NULL, 7805, NULL, '2023-03-09', NULL, NULL, 'Proyectos'),
 (7798, 'La Soledad y la creación literaria   t.5', 'Morosoli, Juan José', 0, 0, 1, 'Literat', NULL, 7806, 'EBO', NULL, 'EBO', NULL, 'Literat'),
 (7799, 'Hombres y mujeres vivientes. Cuentos inéditos   t.2', 'Morosoli, Juan José', 0, 0, 1, 'Literat', NULL, 7807, 'EBO', NULL, 'EBO', NULL, 'Literat'),
 (7800, 'El rugido de la leona', 'Puerto, Carlos', 0, 0, 1, 'Literat', NULL, 7808, 'SM', NULL, 'SM', NULL, 'Literat'),
@@ -8022,8 +7886,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (7844, 'Inglés Mode 3 Workbook e. 11', 'Radley, Paul; Millerchip, Chris', 0, 0, 1, 'Ingles-Fr-Port', NULL, 7852, 'Nelson', NULL, 'Nelson', NULL, 'Ingles-Fr-Port'),
 (7845, 'Felices por siempre jamás', 'Perkins, Stephanie', 0, 0, 1, 'Biología', NULL, 7853, 'MONTEVERDE', '2019-06-13', 'Neo', NULL, 'Biología'),
 (7846, 'Ciencias Sociales 1er Año Ciclo Básico Comprender el mundo actual e. 36', 'Harriett, Silvana; Marquisio D., B.; Martí, J.Pablo', 0, 0, 1, 'Historia', NULL, 7854, 'MONTEVERDE', NULL, 'MONTEVERDE', NULL, 'Historia'),
-(7847, 'Las aventuras de Inodoro Pereyra 1 ¡ El renegau! e. 2', 'Fontanarrosa', 0, 0, 1, 'Comics', NULL, 7855, NULL, NULL, NULL, NULL, 'Comics');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(7847, 'Las aventuras de Inodoro Pereyra 1 ¡ El renegau! e. 2', 'Fontanarrosa', 0, 0, 1, 'Comics', NULL, 7855, NULL, NULL, NULL, NULL, 'Comics'),
 (7848, 'Las aventuras de Inodoro Pereyra 2 ¡ El renegau! e. 2', 'Fontanarrosa', 0, 0, 1, 'Comics', NULL, 7856, NULL, NULL, NULL, NULL, 'Comics'),
 (7849, 'Las aventuras de Inodoro Pereyra 3 ¡ El renegau! e. 2', 'Fontanarrosa', 0, 0, 1, 'Comics', NULL, 7857, NULL, NULL, NULL, NULL, 'Comics'),
 (7850, 'Las aventuras de Inodoro Pereyra 4 ¡ El renegau! e. 2', 'Fontanarrosa', 0, 0, 1, 'Comics', NULL, 7858, NULL, NULL, NULL, NULL, 'Comics'),
@@ -8143,7 +8006,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (7964, 'Geografía II Sociedades y Espacios Geográficos', 'Aguinsky, Laura; Turk, Mª Teresa', 0, 0, 1, 'Geograf', NULL, 7972, 'Santillana', NULL, 'Santillana', NULL, 'Geograf'),
 (7965, 'Ciencias Biológicas 3er Año de Ciclo Básico Libro para el alumno e.13', 'Camarotte, Rossana; Barattini', 0, 0, 1, 'Biología', NULL, 7973, 'ANEP- MES y FOD', NULL, 'ANEP- MES y FOD', NULL, 'Biología'),
 (7966, 'Ciencias Biológicas 3er Año de Ciclo Básico Libro para el alumno e.14', 'Camarotte, Rossana; Barattini', 0, 0, 1, 'Biología', NULL, 7974, 'ANEP- MES y FOD', NULL, 'ANEP- MES y FOD', NULL, 'Biología'),
-(7967, 'Roma y Edad Media Historia 1er año t 2', 'Abadie, Sara; Galiana, Mª; Nunez, Olga', 0, 0, 1, 'Historia', NULL, 7975, 'MONTEVERDE', NULL, 'MONTEVERDE', NULL, 'Historia'),
+(7967, 'Roma y Edad Media Historia 1er año t 2', 'Abadie, Sara; Galiana, Mª; Nunez, Olga', 0, 0, 1, 'Historia', NULL, 7975, 'MONTEVERDE', NULL, 'MONTEVERDE', NULL, 'Historia');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (7968, 'Historia III La construcción del Mundo Contemporáneo  e.2', 'Corral, Pilar; Amestoy, Beatriz; Decia, Alfredo', 0, 0, 1, 'Historia', NULL, 7976, 'Santillana', NULL, 'Santillana', NULL, 'Historia'),
 (7969, 'Historia II El Mundo entre los siglos XV  y XIX', 'Vidal, Beatriz; Bagnoli, Omar; Paz, Gustavo', 0, 0, 1, 'Historia', NULL, 7977, 'Santillana', NULL, 'Santillana', NULL, 'Historia'),
 (7970, 'Historia 2do año tomo 1 El Mundo Moderno: Europa, América, y la Banda Oriental en los siglos XVI al XVIII', 'Abadie, Sara; Galiana, Mª; Nunez, Olga', 0, 0, 1, 'Historia', NULL, 7978, 'MONTEVERDE', NULL, 'MONTEVERDE', NULL, 'Historia'),
@@ -8196,14 +8060,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (8017, 'Las Aventuras de TINTIN: Tintin en el Tibet    e.2', 'Hergé', 0, 0, 1, 'Comics', NULL, 8025, 'JUVENTUD', NULL, 'JUVENTUD', NULL, 'Comics'),
 (8018, 'Proyecto Logìstica Rediseño del Layout del depósito de la empresa UES', 'Sin autor registrado', 0, 0, 1, 'Ingles-Fr-Port', NULL, 8026, 'Longman', '2024-02-29', 'Proyecto Logíastica 2023', NULL, 'Ingles-Fr-Port'),
 (8019, 'Revista Upss! Junio 2012  Año 4 Número 8', 'Abbs, Brian; Freebairn, Ingrid; Barker, Chris', 0, 0, 1, 'Sin género', NULL, 8027, NULL, '2012-06-12', 'El País', NULL, NULL),
-(8020, 'Proyecto Minas de Corrales', '3ro de Turismo 2011', 0, 0, 1, 'Proyectos', NULL, 8028, NULL, '2012-06-25', NULL, NULL, 'Proyectos'),
-(8021, 'Proyecto Viñastours Circuito Turístico Bodega 636', '3ro de Turismo 2011', 0, 0, 1, 'Proyectos', NULL, 8029, NULL, '2012-06-25', NULL, NULL, 'Proyectos'),
-(8022, 'Chubasco', 'Latini, Cielo', 0, 0, 1, 'Proyectos', NULL, 8030, NULL, '2018-10-16', 'Planeta', NULL, 'Proyectos'),
-(8023, 'Proyecto Acuabetaña', '3to de Turismo 2012', 0, 0, 1, 'Proyectos', NULL, 8031, NULL, '2012-06-25', NULL, NULL, 'Proyectos'),
-(8024, 'Proyecto de empresa SOES Organizaciòn de espacios', '3º Administración 2023', 0, 0, 1, 'Proyectos', NULL, 8032, NULL, '2024-02-14', NULL, NULL, 'Proyectos'),
-(8025, 'Proyecto Turismo Sana Tentación Cafetería rural', '3º Turismo', 0, 0, 1, 'Proyectos', NULL, 8033, NULL, NULL, NULL, NULL, 'Proyectos'),
 (8026, 'Vos podés Plan de fortalecimiento de capacidades en tema drogas para comunidades educativas e.5', 'Junta Nacional de Drogas; ANEP; OMS', 0, 0, 1, 'Educación', NULL, 8034, NULL, '2021-03-04', NULL, NULL, 'Educación'),
-(8027, 'Proyecto de empresa CRAM Centro de Recreación del Adulto Mayor', '3º Administración 2023', 0, 0, 1, 'Proyectos', NULL, 8035, NULL, '2024-02-14', NULL, NULL, 'Proyectos'),
 (8028, 'Proyecto de empresa Punto perfecto', '3º Administración 2023', 0, 0, 1, 'Ingles-Fr-Port', NULL, 8036, 'Longman', '2024-02-14', NULL, NULL, 'Ingles-Fr-Port'),
 (8029, 'Proyecto de Empresa Maria Magdalenas', 'Proyecto 2º Administración', 0, 0, 1, 'Ingles-Fr-Port', NULL, 8037, 'Longman', '2017-03-17', NULL, NULL, 'Ingles-Fr-Port'),
 (8030, 'Proyecto 3º Bachillerato Gastronomía Llama viva', 'Proyecto 3º Gastronomía', 0, 0, 1, 'Ingles-Fr-Port', NULL, 8038, 'Longman', NULL, NULL, NULL, 'Ingles-Fr-Port'),
@@ -8239,7 +8096,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (8061, 'Guía logística y de comercio exterior 2018', 'Mercosoft consultores', 0, 0, 1, 'Logística', NULL, 8069, NULL, '2018-10-01', NULL, 'DONACIÓN', 'Logística'),
 (8062, 'Proyecto RICCO Cocinamos para ti...', '2ro administración  2012', 0, 0, 1, 'Sin género', NULL, 8070, NULL, '2012-06-25', NULL, NULL, NULL),
 (8063, 'A la manera de Agustina', 'Curbelo, Cecilia', 0, 0, 1, 'Sin género', NULL, 8071, NULL, '2018-05-14', 'Montena', 'Compra Rifa', NULL),
-(8064, 'Proyecto de Empresa Ganja campo vivo', '3º Administración 2023', 0, 0, 1, 'Proyectos', NULL, 8072, NULL, '2024-02-14', NULL, NULL, 'Proyectos'),
 (8065, 'Casados 1', 'Arbiza, Conrado', 0, 0, 1, 'Comics', NULL, 8073, 'MonteSexto', NULL, 'MonteSexto', NULL, 'Comics'),
 (8066, 'Símbolos Nacionales. Decreto del Poder Ejecutivo de 18 de febrero de 1952 e. 1', 'Ministerio del Interior', 0, 0, 1, 'Historia', NULL, 8074, NULL, NULL, NULL, NULL, 'Historia'),
 (8067, 'Símbolos Nacionales. Decreto del Poder Ejecutivo de 18 de febrero de 1952 e. 2', 'Ministerio del Interior', 0, 0, 1, 'Historia', NULL, 8075, NULL, NULL, NULL, NULL, 'Historia'),
@@ -8261,14 +8117,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (8083, 'Almanaque 2003', 'Banco de Seguros de Estado', 0, 0, 1, 'dicc- atlas', NULL, 8091, NULL, NULL, NULL, NULL, 'dicc- atlas'),
 (8084, 'Almanaque 2004', 'Banco de Seguros de Estado', 0, 0, 1, 'dicc- atlas', NULL, 8092, NULL, NULL, NULL, NULL, 'dicc- atlas'),
 (8085, 'Almanaque 2005', 'Banco de Seguros de Estado', 0, 0, 1, 'dicc- atlas', NULL, 8093, NULL, NULL, NULL, NULL, 'dicc- atlas'),
-(8086, 'Proyecto de Empresa Gorilla', '3º Administración 2023', 0, 0, 1, 'Proyectos', NULL, 8094, '2015', '2024-02-14', NULL, NULL, 'Proyectos'),
 (8087, 'Proyecto de empresa de 2º Administración Productora y distribuidora de hongos Shittake', 'Sin autor registrado', 0, 0, 1, 'Sin género', NULL, 8095, NULL, NULL, NULL, NULL, NULL),
 (8088, 'Proyecto de empresa de 2º Administración WuaWash Veterinaria', 'Sin autor registrado', 0, 0, 1, 'Sin género', NULL, 8096, NULL, NULL, NULL, NULL, NULL),
-(8089, 'Proyecto Instalaciones eléctricas Industria maderera', '2º Instalaciones eléctricas', 0, 0, 1, 'Proyectos', NULL, 8097, '2015', NULL, NULL, NULL, 'Proyectos'),
-(8090, 'Proyecto Instalaciones', '2º Instalaciones eléctricas', 0, 0, 1, 'Proyectos', NULL, 8098, '2015', NULL, NULL, NULL, 'Proyectos'),
-(8091, 'Proyecto Logìstica La importancia  de una gestión de distribuciòn implementada por un técnico logístico', 'Sin autor registrado', 0, 0, 1, 'Proyectos', NULL, 8099, NULL, '2024-02-29', 'Proyecto Logística 2023', NULL, 'Proyectos'),
-(8092, 'Proyecto CTT Administración  Infraestructura del taller de pintura Horizonte automóviles', 'Sin autor registrado', 0, 0, 1, 'Proyectos', NULL, 8100, '2015', '2024-02-29', 'Proyecto CTT Administración 2023', NULL, 'Proyectos'),
-(8093, 'Proyecto CTT Administración Renovando y organizando Cooperativa Renacer del Norte', 'Sin autor registrado', 0, 0, 1, 'Proyectos', NULL, 8101, '2015', '2024-02-29', 'Proyecto CTT Administración 2023', NULL, 'Proyectos'),
 (8094, 'Educación Sexual: su incorporación al Sistema Educativo  e.2', 'ANEP - CODICEN Programa de Educ. Sexual', 0, 0, 1, 'Educación', NULL, 8102, NULL, NULL, NULL, NULL, 'Educación'),
 (8095, 'Educación Sexual: su incorporación al Sistema Educativo  e.3', 'ANEP - CODICEN Programa de Educ. Sexual', 0, 0, 1, 'Educación', NULL, 8103, NULL, NULL, NULL, NULL, 'Educación'),
 (8096, 'Educación Sexual: su incorporación al Sistema Educativo  e.4', 'ANEP - CODICEN Programa de Educ. Sexual', 0, 0, 1, 'Educación', NULL, 8104, NULL, NULL, NULL, NULL, 'Educación'),
@@ -8304,8 +8154,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (8126, 'Educación Ciudadana: Unidad III - Unidad IV e.5', 'Escoto, Laura; Gonçálvez, Sara; Suárez, Rosario', 0, 0, 1, 'Derecho', NULL, 8134, 'Ediciones de la Plaza', NULL, 'Ediciones de la Plaza', NULL, 'Derecho'),
 (8127, 'Derecho al Derecho: Temas de Introducción al Derecho', 'Sosa, Ademar; Mazza, Gastón', 0, 0, 1, 'Derecho', NULL, 8135, 'Asociación Prof.Ed.Social y Derecho', '2009-06-29', 'Asociación Prof.Ed.Social y Derecho', NULL, 'Derecho'),
 (8128, 'Top Notch: English for Today´s World. Fundamentals A with workbook CD-ROM e.1', 'Saslow, Joan; Ascher, Allen', 0, 0, 1, 'Ingles-Fr-Port', NULL, 8136, 'PEARSON Longman', '2009-06-29', 'PEARSON Longman', NULL, 'Ingles-Fr-Port'),
-(8129, 'Top Notch: English for Today´s World. Fundamentals A with workbook CD-ROM e.2', 'Saslow, Joan; Ascher, Allen', 0, 0, 1, 'Ingles-Fr-Port', NULL, 8137, 'PEARSON Longman', NULL, 'PEARSON Longman', NULL, 'Ingles-Fr-Port');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(8129, 'Top Notch: English for Today´s World. Fundamentals A with workbook CD-ROM e.2', 'Saslow, Joan; Ascher, Allen', 0, 0, 1, 'Ingles-Fr-Port', NULL, 8137, 'PEARSON Longman', NULL, 'PEARSON Longman', NULL, 'Ingles-Fr-Port'),
 (8130, 'Top Notch: English for Today´s World. 1A  with workbook CD-ROM e.1', 'Saslow, Joan; Ascher, Allen', 0, 0, 1, 'Ingles-Fr-Port', NULL, 8138, 'PEARSON Longman', NULL, 'PEARSON Longman', NULL, 'Ingles-Fr-Port'),
 (8131, 'Top Notch: English for Today´s World. 1A  with workbook CD-ROM e.2', 'Saslow, Joan; Ascher, Allen', 0, 0, 1, 'Ingles-Fr-Port', NULL, 8139, 'PEARSON Longman', '2009-06-29', 'PEARSON Longman', NULL, 'Ingles-Fr-Port'),
 (8132, 'Top Notch: English for Today´s World. Fundamentals B with workbook CD-ROM e.1', 'Saslow, Joan; Ascher, Allen', 0, 0, 1, 'Ingles-Fr-Port', NULL, 8140, 'PEARSON Longman', NULL, 'PEARSON Longman', NULL, 'Ingles-Fr-Port'),
@@ -8428,7 +8277,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (8249, 'El malestar en la Globalización  e.2', 'Stiglitz, Joseph E.', 0, 0, 1, 'Sin género', NULL, 8258, NULL, '2009-09-07', 'taurus', NULL, NULL),
 (8250, 'El malestar en la Globalización  e.3', 'Stiglitz, Joseph E.', 0, 0, 1, 'Historia', NULL, 8259, 'taurus', '2009-09-07', 'taurus', NULL, 'Historia'),
 (8251, 'Fundamentación para una metafísica de las costumbres   e.1', 'Kant, Immanuel', 0, 0, 1, 'Filosofia', NULL, 8260, 'Alianza Editorial', '2009-09-07', 'Alianza Editorial', NULL, 'Filosofia'),
-(8252, 'Fundamentación para una metafísica de las costumbres   e.2', 'Kant, Immanuel', 0, 0, 1, 'Filosofia', NULL, 8261, 'Alianza Editorial', '2009-09-07', 'Alianza Editorial', NULL, 'Filosofia'),
+(8252, 'Fundamentación para una metafísica de las costumbres   e.2', 'Kant, Immanuel', 0, 0, 1, 'Filosofia', NULL, 8261, 'Alianza Editorial', '2009-09-07', 'Alianza Editorial', NULL, 'Filosofia');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (8253, 'Introducción a la Ética  e.1', 'Guisán, Esperanza', 0, 0, 1, 'Filosofia', NULL, 8262, 'Catedra', '2009-09-07', 'Catedra', NULL, 'Filosofia'),
 (8254, 'Introducción a la Ética  e.2', 'Guisán, Esperanza', 0, 0, 1, 'Filosofia', NULL, 8263, 'Catedra', '2009-09-07', 'Catedra', NULL, 'Filosofia'),
 (8255, 'Inteligencias múltiples La teoría en la práctica  e.2', 'Gardner, Howard', 0, 0, 1, 'Educación', NULL, 8264, 'ANEP; CETP; UTU', '2009-09-07', 'Paidos', NULL, 'Educación'),
@@ -8567,8 +8417,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (8388, 'Lo que no encontré en los tratados de construcción', 'Rodón, Enrique', 0, 0, 1, 'Construcc', NULL, 8397, 'REVERTÉ', '2009-11-26', 'REVERTÉ', 'DONACIÓN Familia Rodríguez Gil', 'Construcc'),
 (8389, 'Cambio Número 14  e.7', 'ANEP - UTU', 0, 0, 1, 'Sin género', NULL, 8398, NULL, '2010-02-25', NULL, NULL, NULL),
 (8390, 'La evaluación de la \"Cultura Matemática\" en PISA 2003   e.2', 'ANEP', 0, 0, 1, 'Sin género', NULL, 8399, NULL, '2010-02-25', 'ANEP', NULL, NULL),
-(8391, 'Escaleras: trazado, cálculo y construcción', 'Igoa, José Maria', 0, 0, 1, 'Construcc', NULL, 8400, 'Ceac', '2009-11-26', 'Ceac', 'DONACIÓN Familia Rodríguez Gil', 'Construcc');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(8391, 'Escaleras: trazado, cálculo y construcción', 'Igoa, José Maria', 0, 0, 1, 'Construcc', NULL, 8400, 'Ceac', '2009-11-26', 'Ceac', 'DONACIÓN Familia Rodríguez Gil', 'Construcc'),
 (8392, 'La evaluación Internacional PISA Material de divulgación para Uruguay  e.3', 'ANEP', 0, 0, 1, 'Sin género', NULL, 8401, NULL, '2010-02-25', 'ANEP', NULL, NULL),
 (8393, 'La composición en el dibujo y la pintura', 'Antonino, José', 0, 0, 1, 'Dibujo', NULL, 8402, 'Ceac', '2009-11-26', 'Ceac', 'DONACIÓN Familia Rodríguez Gil', 'Dibujo'),
 (8394, 'La evaluación Internacional PISA Material de divulgación para Uruguay  e.4', 'ANEP', 0, 0, 1, 'Sin género', NULL, 8403, NULL, '2010-02-25', 'ANEP', NULL, NULL),
@@ -8707,7 +8556,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (8533, 'Técnicas y Procesos en las Instalaciones Eléctricas de Media y Baja Tensión : Instalaciones Electrotécnicas', 'Sanz Serrano, José Luis; Toledano Gasca, José Carlos', 0, 0, 1, 'Sin género', NULL, 8542, NULL, '2009-12-11', 'Thomson', 'COMPRA', NULL),
 (8534, 'Construcción, mantenimiento y reparación del PC', 'McFedries, Paul', 0, 0, 1, 'Informat', NULL, 8543, 'Anaya Multimedia', '2009-12-11', 'Anaya Multimedia', 'COMPRA', 'Informat'),
 (8535, 'Seguridad en el Mantenimiento de Vehículos', 'Lucas, Bernardo Hernando', 0, 0, 1, 'Sin género', NULL, 8544, NULL, '2009-12-11', 'Thomson', 'COMPRA', NULL),
-(8536, 'Nadie encendía las lámparas', 'Hernández, Felisberto', 0, 0, 1, 'Literat', NULL, 8545, 'RM', '2009-12-11', 'RM', 'COMPRA', 'Literat'),
+(8536, 'Nadie encendía las lámparas', 'Hernández, Felisberto', 0, 0, 1, 'Literat', NULL, 8545, 'RM', '2009-12-11', 'RM', 'COMPRA', 'Literat');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (8537, 'Administración de sistemas LINUX', 'Adelstein, Tom; Lubanovic, Bill', 0, 0, 1, 'Informat', NULL, 8546, 'Anaya Multimedia', '2009-12-11', 'Anaya Multimedia', 'COMPRA', 'Informat'),
 (8538, 'Comportamiento Organizacional, 13ª edición', 'Robbins, Stephen P; Judge, Timothy A', 0, 0, 1, 'Adm Pers', NULL, 8547, 'Pearson Educación', '2009-12-11', 'Pearson Educación', 'COMPRA  Incluye CD-ROM', 'Adm Pers'),
 (8539, 'Manual práctico de propiedad horizontal 6ª edición', 'Ramos Olivera, Julio C.', 0, 0, 1, 'Derecho', NULL, 8548, 'Fundación de Cultura Universitaria', '2009-12-11', 'Fundación de Cultura Universitaria', 'COMPRA', 'Derecho'),
@@ -8814,7 +8664,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (8641, 'El jabón no muerde', 'Helguera, Magdalena', 0, 0, 1, 'Literat', NULL, 8650, 'Trilce', '2010-11-03', 'Trilce', 'COMPRA', 'Literat'),
 (8642, 'Cuentos asquerosos', 'Helguera, Magdalena', 0, 0, 1, 'Literat', NULL, 8651, 'Alfaguara', '2010-11-03', 'Alfaguara', 'COMPRA', 'Literat'),
 (8643, 'Hoy llegan los primos', 'Helguera, Magdalena', 0, 0, 1, 'Literat', NULL, 8652, 'Alfaguara', '2010-11-03', 'Alfaguara', 'COMPRA', 'Literat'),
-(8644, '¡Cuidado con el culantrillo!', 'Helguera, Magdalena', 0, 0, 1, 'Literat', NULL, 8653, 'Trilce', '2010-11-03', 'Trilce', 'COMPRA', 'Literat'),
+(8644, '¡Cuidado con el culantrillo!', 'Helguera, Magdalena', 2032, 24, 1, 'Literat', NULL, 8653, 'Trilce', '2010-11-03', 'Trilce', 'COMPRA', 'Literat'),
 (8645, 'Caraclasa', 'Helguera, Magdalena', 0, 0, 1, 'Literat', NULL, 8654, 'Sudamericana uruguaya', '2010-11-03', 'Sudamericana uruguaya', 'COMPRA', 'Literat'),
 (8646, 'No se puede andar con monos y otros cuentos peligrosos', 'Helguera, Magdalena', 0, 0, 1, 'Literat', NULL, 8655, 'Alfaguara', '2010-11-03', 'Alfaguara', 'COMPRA', 'Literat'),
 (8647, 'Árboles blancos', 'Helguera, Magdalena', 0, 0, 1, 'Literat', NULL, 8656, 'Alfaguara', '2010-11-03', 'Alfaguara', 'COMPRA', 'Literat'),
@@ -8826,8 +8676,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (8653, 'Memorias de una gripe', 'Velando, Helen', 0, 0, 1, 'Literat', NULL, 8662, 'Alfaguara', '2010-11-03', 'Alfaguara', 'COMPRA', 'Literat'),
 (8654, 'Pancho Investigador : Amatistas en el Catalán', 'Velando, Helen', 0, 0, 1, 'Literat', NULL, 8663, 'Alfaguara', '2010-11-03', 'Alfaguara', 'COMPRA', 'Literat'),
 (8655, 'Pancho Investigador : Luces en La Aurora', 'Velando, Helen', 0, 0, 1, 'Literat', NULL, 8664, 'Alfaguara', '2010-11-03', 'Alfaguara', 'COMPRA', 'Literat'),
-(8656, 'Los Cazaventura y el tesoro de las Guayanas', 'Velando, Helen', 0, 0, 1, 'Literat', NULL, 8665, 'Alfaguara', '2010-11-03', 'Alfaguara', 'COMPRA', 'Literat');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(8656, 'Los Cazaventura y el tesoro de las Guayanas', 'Velando, Helen', 0, 0, 1, 'Literat', NULL, 8665, 'Alfaguara', '2010-11-03', 'Alfaguara', 'COMPRA', 'Literat'),
 (8657, 'Los Cazaventura y las momias de Atacama', 'Velando, Helen', 0, 0, 1, 'Literat', NULL, 8666, 'Alfaguara', '2010-11-03', 'Alfaguara', 'COMPRA', 'Literat'),
 (8658, 'Los Cazaventura y el río escondido de la Amazonia', 'Velando, Helen', 0, 0, 1, 'Literat', NULL, 8667, 'Alfaguara', '2010-11-03', 'Alfaguara', 'COMPRA', 'Literat'),
 (8659, 'Los Cazaventura y el camino perdido de los Andes', 'Velando, Helen', 0, 0, 1, 'Literat', NULL, 8668, 'Alfaguara', '2010-11-03', 'Alfaguara', 'COMPRA', 'Literat'),
@@ -8959,7 +8808,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (8785, 'Plata Caribe : Poesía Dominicana y Uruguaya del Siglo XXI v.14', 'Belliard, Basilio; Courtoisie, Rafael', 0, 0, 1, 'Literat', NULL, 8794, 'CETP', '2012-09-24', 'CETP', NULL, 'Literat'),
 (8786, 'Cuentos v.13', 'Morosoli, Juan José', 0, 0, 1, 'Literat', NULL, 8795, 'CETP', '2012-09-24', 'CETP', NULL, 'Literat'),
 (8787, 'Más Allá v.11', 'Quiroga, Horacio', 0, 0, 1, 'Literat', NULL, 8796, 'CETP', '2012-09-24', 'CETP', NULL, 'Literat'),
-(8788, 'Cura del pueblo v.9', 'Seluja Cecín, Antonio', 0, 0, 1, 'Literat', NULL, 8797, 'CETP', '2012-09-24', 'CETP', NULL, 'Literat'),
+(8788, 'Cura del pueblo v.9', 'Seluja Cecín, Antonio', 0, 0, 1, 'Literat', NULL, 8797, 'CETP', '2012-09-24', 'CETP', NULL, 'Literat');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (8789, 'Pedro Figari: Arte e industria en el novecientos v.6', 'Peluffo Linari, Gabriel', 0, 0, 1, 'Literat', NULL, 8798, 'CETP', '2012-09-24', 'CETP', NULL, 'Literat'),
 (8790, 'Historia de una amor turbio v.10', 'Quiroga, Horacio', 0, 0, 1, 'Literat', NULL, 8799, 'CETP', '2012-09-24', 'CETP', NULL, 'Literat'),
 (8791, 'Todos los gatos son negros v.45', 'Riquenes Gargía, Yunier', 0, 0, 1, 'Literat', NULL, 8800, 'CETP', '2012-09-24', 'CETP', NULL, 'Literat'),
@@ -9099,8 +8949,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (8926, 'San José', 'Carbajal, Miguel', 0, 0, 1, 'Geograf', NULL, 8935, 'El País', '2013-08-15', 'El País', 'COMPRA', 'Geograf'),
 (8927, 'Soriano', 'Carbajal, Miguel', 0, 0, 1, 'Geograf', NULL, 8936, 'El País', '2013-08-15', 'El País', 'COMPRA', 'Geograf'),
 (8928, 'Tacuarembó', 'Carbajal, Miguel', 0, 0, 1, 'Geograf', NULL, 8937, 'El País', '2013-08-15', 'El País', 'COMPRA', 'Geograf'),
-(8929, 'Gramática del español para maestros y profesores del Uruguay', 'Di Tullio, Ángela; Malcuori, Marisa', 0, 0, 1, 'Idioma Esp', NULL, 8938, 'ANEP; CODICEN; PROlee', '2013-10-22', 'ANEP; CODICEN; PROlee', NULL, 'Idioma Esp');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(8929, 'Gramática del español para maestros y profesores del Uruguay', 'Di Tullio, Ángela; Malcuori, Marisa', 0, 0, 1, 'Idioma Esp', NULL, 8938, 'ANEP; CODICEN; PROlee', '2013-10-22', 'ANEP; CODICEN; PROlee', NULL, 'Idioma Esp'),
 (8930, 'La campaña contra la pena de muerte', 'Figari, Pedro', 0, 0, 1, 'Derecho', NULL, 8939, 'CETP; Ministerio de Relac. Exteriores', '2013-10-23', 'CETP; Ministerio de Relac. Exteriores', NULL, 'Derecho'),
 (8931, 'Prosas', 'Ibarbourou, Juana de', 0, 0, 1, 'Literat', NULL, 8940, 'CETP; Ministerio de Relac. Exteriores', '2013-10-23', 'CETP; Ministerio de Relac. Exteriores', NULL, 'Literat'),
 (8932, 'La (una) Facultad de Educación', 'Bralich, Jorge', 0, 0, 1, 'Educación', NULL, 8941, 'UDELAR', '2013-10-23', 'ANEP; CETP; UDELAR; Facultad d Humanidades', NULL, 'Educación'),
@@ -9121,7 +8970,6 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (8947, 'Almacenaje de productos', 'Escudero Serrano, María José', 0, 0, 1, 'Logística', NULL, 8956, 'Paraninfo', NULL, 'Paraninfo', NULL, 'Logística'),
 (8948, 'Operaciones de almacenaje', 'López Fernández, Rodrigo', 0, 0, 1, 'Logística', NULL, 8957, 'Thomson - Paraninfo', NULL, 'Thomson - Paraninfo', NULL, 'Logística'),
 (8949, 'Voces anónimas: Historias y leyendas del universo mágico Siniestro  e.2', 'Lockhart, Guillermo', 0, 0, 1, 'Literat', NULL, 8958, NULL, NULL, NULL, NULL, 'Literat'),
-(8950, 'Proyecto Final: Aula Laboratorio de Construcción', 'Silva, Melissa; Vidal, Diego', 0, 0, 1, 'Proyectos', NULL, 8959, NULL, '2012-08-03', '3º EMT CONSTRUCCIÓN 2013', NULL, 'Proyectos'),
 (8951, 'Manual de gastronomía molecular : El encuentro entre la ciencia y la cocina', 'Koppmann, Mariana', 0, 0, 1, 'Gastronomía', NULL, 8960, 'siglo veintiuno editores', NULL, 'siglo veintiuno editores', NULL, 'Gastronomía'),
 (8952, 'Nuevo Manual de gastronomía molecular : El encuentro entre la ciencia y la cocina', 'Koppmann, Mariana', 0, 0, 1, 'Gastronomía', NULL, 8961, 'siglo veintiuno editores', NULL, 'siglo veintiuno editores', NULL, 'Gastronomía'),
 (8953, 'El cuaderno de Maya  e.2', 'Allende, Isabel', 0, 0, 1, 'Literat', NULL, 8962, 'Debolsillo', NULL, 'Debolsillo', NULL, 'Literat'),
@@ -9260,7 +9108,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (9086, 'EligiendoNOS Guía en sexualidad y género para adolescentes e.29', 'INMUJERES', 0, 0, 1, 'Biología', NULL, 9096, NULL, NULL, NULL, NULL, 'Biología'),
 (9087, 'EligiendoNOS Guía en sexualidad y género para adolescentes e.30', 'INMUJERES', 0, 0, 1, 'Biología', NULL, 9097, NULL, NULL, NULL, NULL, 'Biología'),
 (9088, 'EligiendoNOS Guía en sexualidad y género para adolescentes e.31', 'INMUJERES', 0, 0, 1, 'Biología', NULL, 9098, NULL, NULL, NULL, NULL, 'Biología'),
-(9089, 'EligiendoNOS Guía en sexualidad y género para adolescentes e.32', 'INMUJERES', 0, 0, 1, 'Biología', NULL, 9099, NULL, NULL, NULL, NULL, 'Biología'),
+(9089, 'EligiendoNOS Guía en sexualidad y género para adolescentes e.32', 'INMUJERES', 0, 0, 1, 'Biología', NULL, 9099, NULL, NULL, NULL, NULL, 'Biología');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (9090, 'EligiendoNOS Guía en sexualidad y género para adolescentes e.33', 'INMUJERES', 0, 0, 1, 'Biología', NULL, 9100, NULL, NULL, NULL, NULL, 'Biología'),
 (9091, 'EligiendoNOS Guía en sexualidad y género para adolescentes e.34', 'INMUJERES', 0, 0, 1, 'Biología', NULL, 9101, NULL, NULL, NULL, NULL, 'Biología'),
 (9092, 'EligiendoNOS Guía en sexualidad y género para adolescentes e.35', 'INMUJERES', 0, 0, 1, 'Biología', NULL, 9102, NULL, NULL, NULL, NULL, 'Biología'),
@@ -9305,22 +9154,12 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (9131, 'Transformar ideas en empresas 8 emprendedores uruguayos cuentan su historia e.2', 'C- emprendedor; MIEMDINAPYME', 0, 0, 1, 'Administ', NULL, 9141, NULL, '2014-11-11', NULL, 'Donación', 'Administ'),
 (9132, 'Cuaderno de herramientas de gestión para las micro, pequeñas y medianas empresas e.1  c / CD', 'MIEMDINAPYME', 0, 0, 1, 'Administ', NULL, 9142, NULL, '2014-11-11', NULL, 'Donación', 'Administ'),
 (9133, 'Cuaderno de herramientas de gestión para las micro, pequeñas y medianas empresas e.2  c / CD', 'MIEMDINAPYME', 0, 0, 1, 'Administ', NULL, 9143, NULL, '2014-11-11', NULL, 'Donación', 'Administ'),
-(9134, 'Proyecto Final Secretariado bilingüe  Planificación del evento', '2º Secretariado Bilingüe', 0, 0, 1, 'Proyectos', NULL, 9144, NULL, NULL, NULL, NULL, 'Proyectos'),
-(9135, 'Proyecto Final Secretariado bilingüe  Experiencia do participante', '2º Secretariado Bilingüe', 0, 0, 1, 'Proyectos', NULL, 9145, NULL, NULL, NULL, NULL, 'Proyectos'),
 (9136, 'Las lenguas de diamante (serie Edición homenaje vol. 74)', 'Ibarbourou, Juana de', 0, 0, 1, 'Literat', NULL, 9146, 'CETP; Ministerio de Relac. Exteriores; COPAG', '2020-03-11', 'CETP; Ministerio de Relac. Exteriores; COPAG', NULL, 'Literat'),
-(9137, 'Proyecto Final Secretariado bilingüe evento: logística y espacios', '2º Secretariado Bilingüe', 0, 0, 1, 'Proyectos', NULL, 9147, NULL, NULL, NULL, NULL, 'Proyectos'),
 (9138, 'Teatro y poesìa (serie Edición homenaje vol. 63)', 'Echevarría, Andrés', 0, 0, 1, 'Literat', NULL, 9148, 'CETP; Ministerio de Relac. Exteriores; COPAG', '2020-03-11', 'CETP; Ministerio de Relac. Exteriores; COPAG', NULL, 'Literat'),
-(9139, 'Proyecto Final Secretariado bilingüe evento: registros, avaliacao e monitoramento', '2º Secretariado Bilingüe', 0, 0, 1, 'Proyectos', NULL, 9149, NULL, NULL, NULL, NULL, 'Proyectos'),
 (9140, 'Dímelo bajito', 'Ron, Mercedes', 0, 0, 1, 'Sin género', NULL, 9150, NULL, '2026-03-13', 'Montena', 'Donación', NULL),
 (9141, 'Patrimonio Uruguay Nº 3 Año 2013  e. 1', 'Comisión del Patrimonio Cultural de la Nación', 0, 0, 1, 'Turismo', NULL, 9151, 'MEC', '2014-11-24', 'MEC', 'Donación', 'Turismo'),
 (9142, 'Patrimonio Uruguay Nº 3 Año 2013  e. 2', 'Comisión del Patrimonio Cultural de la Nación', 0, 0, 1, 'Turismo', NULL, 9152, 'MEC', '2014-11-24', 'MEC', 'Donación', 'Turismo'),
-(9143, 'Proyecto de empresa de 2do Administración Second Hand', '2º Año Administración', 0, 0, 1, 'Proyectos', NULL, 9153, 'Generación 2023', '2024-02-08', 'Generación 2023', NULL, 'Proyectos'),
-(9144, 'Proyecto 3º Bachillerato Gastronomía Binacional Food truck 3 lokos', 'Proyecto  Gastronomía Binacional', 0, 0, 1, 'Proyectos', NULL, 9154, 'Generación 2023', NULL, NULL, NULL, 'Proyectos'),
-(9145, 'Proyecto de empresa 2DO Gastronomía Perla NEGRA', '2º Gastronomía', 0, 0, 1, 'Proyectos', NULL, 9155, 'Generación 2023', '2024-02-08', 'Generación 2023', NULL, 'Proyectos'),
 (9146, 'Todo lo que somos juntos', 'Kellen, Alice', 0, 0, 1, 'Literat', NULL, 9156, 'Planeta', '2026-03-05', 'Planeta', 'Donación', 'Literat'),
-(9147, 'Proyecto CTT Administración  Dulce solución', 'Sin autor registrado', 0, 0, 1, 'Proyectos', NULL, 9157, NULL, '2024-02-29', 'Proyecto CTT Administración 2023', NULL, 'Proyectos'),
-(9148, 'Proyecto CTT Administración La Calabria', '41779.84', 0, 0, 1, 'Proyectos', NULL, 9158, NULL, NULL, NULL, NULL, 'Proyectos'),
-(9149, 'A historia do mundo para quem tem pressa', 'Marriott, Emma', 0, 0, 1, 'Proyectos', NULL, 9159, NULL, '2023-06-28', 'Valentina', 'Donación', 'Proyectos'),
 (9150, 'A historia do Brasil para quem tem pressa', 'Costa, Marcos', 0, 0, 1, 'Sin género', NULL, 9160, NULL, '2023-06-28', 'Valentina', 'Donación', NULL),
 (9151, 'A historia da mitologia  para quem tem pressa', 'Daniels, Mark', 0, 0, 1, 'Sin género', NULL, 9161, NULL, '2023-06-28', 'Valentina', 'Donación', NULL),
 (9152, 'Proyecto de empresa de 3º Administración  Robamodas', '3º Año Administración', 0, 0, 1, 'Sin género', NULL, 9162, NULL, '2014-12-16', NULL, NULL, NULL),
@@ -9386,8 +9225,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (9212, 'Corazón en llamas', 'Milano, Mauricio', 0, 0, 1, 'Sin género', NULL, 9222, NULL, '2015-06-09', 'Alfaguara', 'COMPRA PAEMFE', NULL),
 (9213, 'Limbo. Voces anonimas e.2', 'Lockhart, Guillermo', 0, 0, 1, 'Sin género', NULL, 9223, NULL, '2015-06-09', NULL, 'COMPRA PAEMFE', NULL),
 (9214, 'Diario de Greg 3 ¡ Esto es el colmo!', 'Kinney, Jeff', 0, 0, 1, 'Sin género', NULL, 9224, NULL, '2015-06-09', 'RBA', 'COMPRA PAEMFE', NULL),
-(9215, 'Diario de Greg 5 La horrible realidad', 'Kinney, Jeff', 0, 0, 1, 'Sin género', NULL, 9225, NULL, '2015-06-09', 'Del nuevo extremo', 'COMPRA PAEMFE', NULL);
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(9215, 'Diario de Greg 5 La horrible realidad', 'Kinney, Jeff', 0, 0, 1, 'Sin género', NULL, 9225, NULL, '2015-06-09', 'Del nuevo extremo', 'COMPRA PAEMFE', NULL),
 (9216, 'Voces anónimas 1 e.2', 'Lockhart, Guillermo; Moraes, Diego', 0, 0, 1, 'Sin género', NULL, 9226, NULL, '2015-06-09', NULL, 'COMPRA PAEMFE', NULL),
 (9217, 'Voces anónimas 2 e.2', 'Lockhart, Guillermo; Moraes, Diego', 0, 0, 1, 'Sin género', NULL, 9227, NULL, '2015-06-09', NULL, 'COMPRA PAEMFE', NULL),
 (9218, 'Bloc 0 de lectura y escritura para adolescentes y jóvenes. Guía para educadores, maestros y profesores', 'ANEP- ProLee', 0, 0, 1, 'Idioma Esp', NULL, 9228, 'ANEP- ProLee', '2015-08-17', 'ANEP- ProLee', 'Donación PROLEE', 'Idioma Esp'),
@@ -9553,7 +9391,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (9379, 'Nuestro tiempo: Ciencia y tecnología Nº 10 e. 3', 'Sutz, Judith', 0, 0, 1, 'dicc- atlas', NULL, 9389, 'IMPO', '2015-10-08', 'IMPO', NULL, 'dicc- atlas'),
 (9380, 'Nuestro tiempo: Ciencia y tecnología Nº 10 e. 4', 'Sutz, Judith', 0, 0, 1, 'dicc- atlas', NULL, 9390, 'IMPO', '2015-10-08', 'IMPO', NULL, 'dicc- atlas'),
 (9381, 'Nuestro tiempo: Ciencia y tecnología Nº 10 e. 5', 'Sutz, Judith', 0, 0, 1, 'dicc- atlas', NULL, 9391, 'IMPO', '2015-10-08', 'IMPO', NULL, 'dicc- atlas'),
-(9382, 'Nuestro tiempo: Ciencia y tecnología Nº 10 e. 6', 'Sutz, Judith', 0, 0, 1, 'dicc- atlas', NULL, 9392, 'IMPO', '2015-10-08', 'IMPO', NULL, 'dicc- atlas'),
+(9382, 'Nuestro tiempo: Ciencia y tecnología Nº 10 e. 6', 'Sutz, Judith', 0, 0, 1, 'dicc- atlas', NULL, 9392, 'IMPO', '2015-10-08', 'IMPO', NULL, 'dicc- atlas');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (9383, 'Nuestro tiempo: Ciencia y tecnología Nº 10 e. 7', 'Sutz, Judith', 0, 0, 1, 'dicc- atlas', NULL, 9393, 'IMPO', '2015-10-08', 'IMPO', NULL, 'dicc- atlas'),
 (9384, 'Nuestro tiempo: Ciencia y tecnología Nº 10 e. 8', 'Sutz, Judith', 0, 0, 1, 'dicc- atlas', NULL, 9394, 'IMPO', '2015-10-08', 'IMPO', NULL, 'dicc- atlas'),
 (9385, 'Nuestro tiempo: Ciencia y tecnología Nº 10 e. 9', 'Sutz, Judith', 0, 0, 1, 'dicc- atlas', NULL, 9395, 'IMPO', '2015-10-08', 'IMPO', NULL, 'dicc- atlas'),
@@ -9689,8 +9528,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (9515, 'Nuestro tiempo: El Uruguay religioso e. 1', 'Porzecanski, Teresa', 0, 0, 1, 'dicc- atlas', NULL, 9525, 'IMPO', '2015-10-08', 'IMPO', NULL, 'dicc- atlas'),
 (9516, 'Nuestro tiempo: El Uruguay religioso e. 2', 'Porzecanski, Teresa', 0, 0, 1, 'dicc- atlas', NULL, 9526, 'IMPO', '2015-10-08', 'IMPO', NULL, 'dicc- atlas'),
 (9517, 'Nuestro tiempo: El Uruguay religioso e. 3', 'Porzecanski, Teresa', 0, 0, 1, 'dicc- atlas', NULL, 9527, 'IMPO', '2015-10-08', 'IMPO', NULL, 'dicc- atlas'),
-(9518, 'Nuestro tiempo: El Uruguay religioso e. 4', 'Porzecanski, Teresa', 0, 0, 1, 'dicc- atlas', NULL, 9528, 'IMPO', '2015-10-08', 'IMPO', NULL, 'dicc- atlas');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(9518, 'Nuestro tiempo: El Uruguay religioso e. 4', 'Porzecanski, Teresa', 0, 0, 1, 'dicc- atlas', NULL, 9528, 'IMPO', '2015-10-08', 'IMPO', NULL, 'dicc- atlas'),
 (9519, 'Nuestro tiempo: El Uruguay religioso e. 5', 'Porzecanski, Teresa', 0, 0, 1, 'dicc- atlas', NULL, 9529, 'IMPO', '2015-10-08', 'IMPO', NULL, 'dicc- atlas'),
 (9520, 'Nuestro tiempo: El Uruguay religioso e. 6', 'Porzecanski, Teresa', 0, 0, 1, 'dicc- atlas', NULL, 9530, 'IMPO', '2015-10-08', 'IMPO', NULL, 'dicc- atlas'),
 (9521, 'Nuestro tiempo: El Uruguay religioso e. 7', 'Porzecanski, Teresa', 0, 0, 1, 'dicc- atlas', NULL, 9531, 'IMPO', '2015-10-08', 'IMPO', NULL, 'dicc- atlas'),
@@ -9840,7 +9678,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (9665, 'Capitán América', 'Marvel', 0, 0, 1, 'NOV. GRÁFICAS', NULL, 9676, NULL, '2016-09-30', NULL, 'Donación', 'NOV. GRÁFICAS'),
 (9666, 'Thor', 'Marvel', 0, 0, 1, 'NOV. GRÁFICAS', NULL, 9677, NULL, '2016-10-17', NULL, 'Donación', 'NOV. GRÁFICAS'),
 (9667, 'Pautas de referencia sobre tipos lectores y escritos en español como primera lengua', 'ANEP, Políticas linguisticas, PROLEE', 0, 0, 1, 'Idioma Esp', NULL, 9678, NULL, '2016-10-21', NULL, 'Donación', 'Idioma Esp'),
-(9668, 'Wolverine', 'Marvel', 0, 0, 1, 'NOV. GRÁFICAS', NULL, 9679, NULL, '2016-10-28', NULL, 'Donación', 'NOV. GRÁFICAS'),
+(9668, 'Wolverine', 'Marvel', 0, 0, 1, 'NOV. GRÁFICAS', NULL, 9679, NULL, '2016-10-28', NULL, 'Donación', 'NOV. GRÁFICAS');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (9669, 'Cómo hacer reir una vieja sin que pierda la dentadura', 'Pedrozo, Sebastián', 0, 0, 1, 'Literat', NULL, 9680, 'Santillana loqueleo', '2016-11-14', 'Santillana loqueleo', 'COMPRA RIFA', 'Literat'),
 (9670, 'Tranquilos, no hay viejas en la costa', 'Pedrozo, Sebastián', 0, 0, 1, 'Literat', NULL, 9681, 'Santillana loqueleo', '2016-11-14', 'Santillana loqueleo', 'COMPRA RIFA', 'Literat'),
 (9671, 'La novia del incendiario e.1', 'Pedrozo, Sebastián', 0, 0, 1, 'Literat', NULL, 9682, 'Alfaguara', '2016-11-14', 'Alfaguara', 'COMPRA RIFA', 'Literat'),
@@ -9972,8 +9811,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (9797, 'Un lugar llamado aquí', 'Ahern, Cecelia', 0, 0, 1, 'Sin género', NULL, 9808, NULL, '2017-07-25', 'Zeta', 'Donación / CANJE', NULL),
 (9798, 'Lo mejor de mi', 'Sparks, Nicholas', 0, 0, 1, 'Sin género', NULL, 9809, NULL, '2017-07-25', 'Rocabolsillo', 'Donación / CANJE', NULL),
 (9799, 'After   1', 'Todd, Anna', 0, 0, 1, 'Literat', NULL, 9811, 'Planeta', '2017-07-25', 'Planeta', 'Donación / CANJE', 'Literat'),
-(9800, 'Transtornos del aprendizaje y sus incidencias en el desempeño en matemática  e.1', 'RodríguezUreta, Ana Laura; Delgue Carbone, Laura', 0, 0, 1, 'Sin género', NULL, 9812, NULL, '2017-07-25', 'ANEP; CODICEN', NULL, NULL);
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(9800, 'Transtornos del aprendizaje y sus incidencias en el desempeño en matemática  e.1', 'RodríguezUreta, Ana Laura; Delgue Carbone, Laura', 0, 0, 1, 'Sin género', NULL, 9812, NULL, '2017-07-25', 'ANEP; CODICEN', NULL, NULL),
 (9801, 'Transtornos del aprendizaje y sus incidencias en el desempeño en matemática  e.2', 'RodríguezUreta, Ana Laura; Delgue Carbone, Laura', 0, 0, 1, 'Sin género', NULL, 9813, NULL, '2017-07-25', 'ANEP; CODICEN', NULL, NULL),
 (9802, 'Perico', 'Morosoli, Juan José; Torena, Denisse (Ilustrador)', 0, 0, 1, 'Sin género', NULL, 9814, NULL, '2017-07-27', 'Banda Oriental', NULL, NULL),
 (9803, 'Frederick', 'Lionni, Leo', 0, 0, 1, 'Sin género', NULL, 9815, NULL, '2017-07-27', 'Kalandraka', NULL, NULL),
@@ -10140,7 +9978,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (9964, 'Almanaque 2021', 'Banco de Seguros de Estado', 0, 0, 1, 'dicc- atlas', NULL, 9976, NULL, '2021-03-09', NULL, NULL, 'dicc- atlas'),
 (9965, 'Nunca digas tu nombre', 'Ivanier, Federico', 0, 0, 1, 'Literat', NULL, 9977, 'Criatura', '2021-06-21', 'Criatura', 'Donaciòn Concurso', 'Literat'),
 (9966, 'Cuerpos de carbón', 'Vázquez, Marcos', 0, 0, 1, 'Literat', NULL, 9978, 'Santillana', '2021-06-21', 'Santillana', 'Donaciòn Concurso', 'Literat'),
-(9967, 'A través de mi ventana', 'Godoy, Ariana', 0, 0, 1, 'Literat', NULL, 9979, 'Alfaguara', '2021-06-21', 'Alfaguara', 'Donaciòn Concurso', 'Literat'),
+(9967, 'A través de mi ventana', 'Godoy, Ariana', 2019, 416, 1, 'Romance, Juvenil', 'portada_6ad964f9377e14.26588151.jpg', 9979, 'Alfaguara', '2021-06-21', 'Alfaguara', 'Donaciòn Concurso', 'Literat');
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (9968, 'Pensar fuera de la caja: Experiencias educativas innovadoras  Volùmen 4 Diciembre 2019', 'Red Global de Aprendizajes', 0, 0, 1, 'Educación', NULL, 9980, 'ANEP; Plan Ceibal', '2021-06-29', 'ANEP; Plan Ceibal', NULL, 'Educación'),
 (9969, 'Cuadernillo de trabajo 2020', 'Red Global de Aprendizajes', 0, 0, 1, 'Educación', NULL, 9981, 'ANEP; Plan Ceibal', '2021-06-29', 'ANEP; Plan Ceibal', NULL, 'Educación'),
 (9970, 'Plan de trabajo', 'Red Global de Aprendizajes', 0, 0, 1, 'Educación', NULL, 9982, 'ANEP; Plan Ceibal', '2021-06-29', 'ANEP; Plan Ceibal', NULL, 'Educación'),
@@ -10270,8 +10109,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (10094, 'Tortas decoradas', 'Cerquera de Costa, Zulema', 0, 0, 1, 'Gastronomía', NULL, 10107, 'Omeba', '2023-08-08', 'Omeba', 'Donación', 'Gastronomía'),
 (10095, 'Mantenimiento de máquinas eléctricas e. 2', 'Manzano Orrego, Juan José', 0, 0, 1, 'Electrotec', NULL, 10108, 'Thomson - Paraninfo', '2023-08-08', 'Thomson - Paraninfo', NULL, 'Electrotec'),
 (10096, 'Living Uruguay 1 St grade english book e. 1', 'ANEP; CODICEN; CES; CETP', 0, 0, 1, 'Sin género', NULL, 10109, NULL, '2023-09-14', NULL, NULL, NULL),
-(10097, 'Living Uruguay 1 St grade english book e. 2', 'ANEP; CODICEN; CES; CETP', 0, 0, 1, 'Sin género', NULL, 10110, NULL, '2023-09-14', NULL, NULL, NULL);
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(10097, 'Living Uruguay 1 St grade english book e. 2', 'ANEP; CODICEN; CES; CETP', 0, 0, 1, 'Sin género', NULL, 10110, NULL, '2023-09-14', NULL, NULL, NULL),
 (10098, 'Living Uruguay 1 St grade english book e. 3', 'ANEP; CODICEN; CES; CETP', 0, 0, 1, 'Sin género', NULL, 10111, NULL, '2023-09-14', NULL, NULL, NULL),
 (10099, 'Living Uruguay 1 St grade english book e. 4', 'ANEP; CODICEN; CES; CETP', 0, 0, 1, 'Sin género', NULL, 10112, NULL, '2023-09-14', NULL, NULL, NULL),
 (10100, 'Living Uruguay 1 St grade english book e. 5', 'ANEP; CODICEN; CES; CETP', 0, 0, 1, 'Sin género', NULL, 10113, NULL, '2023-09-14', NULL, NULL, NULL),
@@ -10436,7 +10274,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (10259, 'Casa durmiente', 'Ivanier, Federico', 0, 0, 1, 'Sin género', NULL, 10272, NULL, '2024-09-27', 'Alfaguara', NULL, NULL),
 (10260, 'Misteriosa Banda Oriental', 'Pedrozo, Sebastián', 0, 0, 1, 'Sin género', NULL, 10273, NULL, '2024-09-27', 'Santillana', NULL, NULL),
 (10261, 'Buscadores de reliquías y la gema sagrada 1', 'Velando, Helen', 0, 0, 1, 'Sin género', NULL, 10274, NULL, '2024-09-27', 'Alfaguara', NULL, NULL),
-(10262, 'Buscadores de reliquías y la receta robada 2', 'Velando, Helen', 0, 0, 1, 'Sin género', NULL, 10275, NULL, '2024-09-27', 'Alfaguara', NULL, NULL),
+(10262, 'Buscadores de reliquías y la receta robada 2', 'Velando, Helen', 0, 0, 1, 'Sin género', NULL, 10275, NULL, '2024-09-27', 'Alfaguara', NULL, NULL);
+INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
 (10263, 'Buscadores de reliquías tras la pista de la medalla 3', 'Velando, Helen', 0, 0, 1, 'Sin género', NULL, 10276, NULL, '2024-09-27', 'Alfaguara', NULL, NULL),
 (10264, 'El chico que dibujaba constelaciones', 'Kellen, Alice', 0, 0, 1, 'Sin género', NULL, 10277, NULL, '2024-09-27', 'Planeta', NULL, NULL),
 (10265, 'Tres meses', 'Marcús, Joana', 0, 0, 1, 'Sin género', NULL, 10278, NULL, '2024-09-27', 'Penguin Random House', NULL, NULL),
@@ -10568,8 +10407,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (10391, 'Ciencias físicas 2 Materia, energía y sus transformaciones', 'Franco, Ricardo', 0, 0, 1, 'Fisica', NULL, 10404, 'Santillana', '2026-03-27', 'Santillana', NULL, 'Fisica'),
 (10392, 'Historia de la educación técnica en el Uruguay. Universidad del trabajo del Uruguay 1878 - 2000 e.1', 'Marfetán Benítez, Raúl', 0, 0, 1, 'Educación', NULL, 10405, 'ANEP; DGETP', '2026-03-27', 'ANEP; DGETP', NULL, 'Educación'),
 (10393, 'Viaje al sabor', 'Courtois, Patricia', 0, 0, 1, 'Gastronomía', NULL, 10406, 'Planeta', '2026-03-27', 'Planeta', NULL, 'Gastronomía'),
-(10394, 'Simple Pasteleria para hacer en casa', 'Fuente, Lucas', 0, 0, 1, 'Gastronomía', NULL, 10407, 'Planeta', '2026-03-27', 'Planeta', NULL, 'Gastronomía');
-INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_paginas`, `disponible`, `genero`, `portada`, `numero_inventario`, `editorial`, `fecha_ingreso`, `observaciones`, `procedencia`, `categoria_inventario`) VALUES
+(10394, 'Simple Pasteleria para hacer en casa', 'Fuente, Lucas', 0, 0, 1, 'Gastronomía', NULL, 10407, 'Planeta', '2026-03-27', 'Planeta', NULL, 'Gastronomía'),
 (10395, 'Conservas: fermentados, escabeches, salsas, confituras, licores y más', 'Garage gourmet', 0, 0, 1, 'Gastronomía', NULL, 10408, 'Grijalbo', '2026-03-27', 'Grijalbo', NULL, 'Gastronomía'),
 (10396, 'Tentaciones', 'Instituto Crandon', 0, 0, 1, 'Gastronomía', NULL, 10409, 'Penguin Random House', '2026-03-27', 'Penguin Random House', NULL, 'Gastronomía'),
 (10397, 'Diccionario de hostelería: hotelería y turismo, restaurante y gastronomía, cafetería y bar', 'Gallego, Luis Felipe; Peyrolón Melendo, Ramón', 0, 0, 1, 'Gastronomía', NULL, 10410, 'Thomson - Paraninfo', '2026-03-27', 'Thomson - Paraninfo', NULL, 'Gastronomía'),
@@ -10676,7 +10514,202 @@ CREATE TABLE `prestamos` (
 --
 
 INSERT INTO `prestamos` (`id`, `libroId`, `socioId`, `fechaPrestamo`, `fechaDevolucion`, `libroTitulo`, `estado`, `creado_en`) VALUES
-(14, 9967, 11, '2026-10-16', '2026-10-23', NULL, 'Reservado', '2026-10-16 23:15:56');
+(14, 9967, 11, '2026-10-16', '2026-10-23', NULL, 'Reservado', '2026-10-16 23:15:56'),
+(15, 8522, 11, '2026-10-21', '2026-10-28', NULL, 'Reservado', '2026-10-20 21:50:01'),
+(16, 9785, 22, '2026-10-22', '2026-10-29', NULL, 'Prestado', '2026-10-21 22:17:02'),
+(17, 9883, 26, '2026-10-22', '2026-10-29', NULL, 'Reservado', '2026-10-21 22:17:22'),
+(18, 9809, 25, '2026-10-22', '2026-10-29', NULL, 'Prestado', '2026-10-21 22:19:01'),
+(19, 1145, 24, '2026-10-22', '2026-10-29', NULL, 'Cancelado', '2026-10-21 23:12:37'),
+(20, 2779, 26, '2026-10-22', '2026-10-29', NULL, 'Devuelto', '2026-10-21 23:12:56');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `proyectos`
+--
+
+CREATE TABLE `proyectos` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(500) NOT NULL,
+  `integrantes` varchar(255) DEFAULT NULL,
+  `anio` int(11) NOT NULL DEFAULT 0,
+  `cantidad_paginas` int(11) NOT NULL DEFAULT 0,
+  `disponible` tinyint(1) NOT NULL DEFAULT 1,
+  `portada` varchar(500) DEFAULT NULL,
+  `numero_inventario` int(11) DEFAULT NULL,
+  `fecha_ingreso` date DEFAULT NULL,
+  `observaciones` text DEFAULT NULL,
+  `categoria_inventario` varchar(100) DEFAULT NULL,
+  `curso` varchar(50) DEFAULT NULL,
+  `clase` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `proyectos`
+--
+
+INSERT INTO `proyectos` (`id`, `nombre`, `integrantes`, `anio`, `cantidad_paginas`, `disponible`, `portada`, `numero_inventario`, `fecha_ingreso`, `observaciones`, `categoria_inventario`, `curso`, `clase`) VALUES
+(351, 'Proyecto ARTCAFÉ RIVERA', 'Silveira; Casaravilla; Gonzalez', 0, 0, 1, NULL, 352, NULL, 'TURISMO 2015', 'Proyectos', '', ''),
+(997, 'Monografía Final carrera Téc. Prevenc. en Segurida...', 'Techera Romero, Felipe', 0, 0, 1, NULL, 998, '2014-04-08', NULL, 'Proyectos', '', ''),
+(1024, 'Monografía Final carrera Téc. Prevenc. en Segurida...', 'Olivera, Andrea', 0, 0, 1, NULL, 1025, '2014-04-08', NULL, 'Proyectos', '', ''),
+(1822, 'Proyecto Gestión Empresarial Infotec Rivera  BAJA', '3er año Informática', 0, 0, 1, NULL, 1825, '2013-03-20', NULL, 'Proyectos', '', ''),
+(1823, 'Proyecto Empresa  Pequeña Reserva Natural \" El Omb...', 'Pymes', 0, 0, 1, NULL, 1825, '2013-03-20', NULL, 'Proyectos', '', ''),
+(3396, 'Proyecto Mecánica Automotriz Buggy arenero', '3º Mecánica Automotriz', 0, 0, 1, NULL, 3400, '2024-02-29', NULL, 'Proyectos', '', ''),
+(3399, 'Proyecto Mecánica Automotriz Buggy arenero Chasis ...', '3º Mecánica Automotriz', 0, 0, 1, NULL, 3403, '2024-02-29', NULL, 'Proyectos', '', ''),
+(3581, 'Proyecto de Empresa Funny Jumping', '2º Administración', 0, 0, 1, NULL, 3585, NULL, '42404.0', 'Proyectos', '', ''),
+(3635, 'Monografía Final carrera Téc. Prevenc. en Segurida...', 'Berger, Claudia', 0, 0, 1, NULL, 3639, NULL, '42278.0', 'Proyectos', '', ''),
+(3636, 'Monografía Final carrera Téc. Prevenc. en Segurida...', 'Coitiño, Christian', 0, 0, 1, NULL, 3640, NULL, '42278.0', 'Proyectos', '', ''),
+(3688, 'Monografía Final carrera Téc. Prevenc. en Segurida...', 'Bustelo, Sebastián', 0, 0, 1, NULL, 3692, '2015-10-01', NULL, 'Proyectos', '', ''),
+(3715, 'Chacra turística \"Vichar\"', 'Proyecto Turismo', 0, 0, 1, NULL, 3719, '2015-10-13', NULL, 'Proyectos', '', ''),
+(3740, 'Proyecto Cocinarte sin gluten', '2º GASTRONOMÍA', 0, 0, 1, NULL, 3744, NULL, '2017.0', 'Proyectos', '', ''),
+(3741, 'Proyecto Restaurant diabetes', '2º GASTRONOMÍA', 0, 0, 1, NULL, 3745, NULL, '2017.0', 'Proyectos', '', ''),
+(3964, 'Circuito turístico cultural \"ladrilleros oeste\"', 'Proyecto Turismo', 0, 0, 1, NULL, 3968, NULL, NULL, 'Proyectos', '', ''),
+(3965, 'Verso y prosa', 'Ibarbourou, Juana de', 0, 0, 1, NULL, 3969, NULL, 'Donación', 'Proyectos', '', ''),
+(3970, 'Proyecto  Turismo \"Valle del gran descanso\"', '3º Turismo', 0, 0, 1, NULL, 3974, NULL, '2016.0', 'Proyectos', '', ''),
+(3971, 'Proyecto  Turismo Galería Punto de encuentro', '3º Turismo', 0, 0, 1, NULL, 3975, NULL, '2016.0', 'Proyectos', '', ''),
+(3972, 'Proyecto Gastronomía El paisano', '2º Gastronomía', 0, 0, 1, NULL, 3976, NULL, '2016.0', 'Proyectos', '', ''),
+(4000, 'Proyecto  Gastronomía Productos de Tolerancia Alim...', '2º Gastronomía', 0, 0, 1, NULL, 4005, NULL, NULL, 'Proyectos', '', ''),
+(4005, 'Proyecto 3 Administración Level up !', '3º Administración', 0, 0, 1, NULL, 4010, '2026-02-20', NULL, 'Proyectos', '', ''),
+(4015, 'Proyecto 3 Administración Visual print', '2º Administración', 0, 0, 1, NULL, 4020, '2026-02-20', NULL, 'Proyectos', '', ''),
+(4024, 'Proyecto 3º Bachillerato Figari La creación y los ...', '3º Bachillerato Figari', 0, 0, 1, NULL, 4029, NULL, '2016.0', 'Proyectos', '', ''),
+(4025, 'Proyecto 3º Bachillerato Figari  Museo abierto Ibe...', '3º Bachillerato Figari', 0, 0, 1, NULL, 4030, NULL, '2016.0', 'Proyectos', '', ''),
+(4026, 'Proyecto 3º Bachillerato Figari Mural la creación', '3º Bachillerato Figari', 0, 0, 1, NULL, 4031, NULL, '2016.0', 'Proyectos', '', ''),
+(4029, 'Proyecto Web Assistant S.R.L', '2º Administración', 0, 0, 1, NULL, 4034, NULL, '2017.0', 'Proyectos', '', ''),
+(4043, 'Proyecto final Anexo de UTU', '3º Construcción 2016', 0, 0, 1, NULL, 4048, NULL, NULL, 'Proyectos', '', ''),
+(4044, 'Biblioteca básica electrónica 3 Microprocesadores ...', 'Sin autor registrado', 0, 0, 1, NULL, 4049, NULL, 'Nueva lente', 'Proyectos', '', ''),
+(4045, 'Ingenieria electrónica', 'Alley, Charles; Atwood, Kenneth', 0, 0, 1, NULL, 4050, NULL, 'Editorial Limusa  - Wiley', 'Proyectos', '', ''),
+(4046, 'Electrónica en acción  Ano 3 Nª 6 Microprocesadore...', 'Vallejo, Horacio', 0, 0, 1, NULL, 4051, NULL, NULL, 'Proyectos', '', ''),
+(4047, 'Proyecto final Anexo de UTU  C/ CD', '3º Construcción 2016', 0, 0, 1, NULL, 4052, NULL, NULL, 'Proyectos', '', ''),
+(4048, 'Micro controladores Funcionamiento, programación y...', 'Benchimol, Daniel', 0, 0, 1, NULL, 4053, NULL, 'Fox Andina', 'Proyectos', '', ''),
+(4049, 'Proyectos con circuitos integrados', 'Equipo técnico Glem', 0, 0, 1, NULL, 4054, NULL, 'Editorial Glem', 'Proyectos', '', ''),
+(4055, 'Proyecto RiMercApp', '2º Administración', 0, 0, 1, NULL, 4060, NULL, NULL, 'Proyectos', '', ''),
+(4065, 'Proyecto final Anexo de UTU  C/ CD', '3º Construcción 2016', 0, 0, 1, NULL, 4070, NULL, NULL, 'Proyectos', '', ''),
+(4072, 'Proyecto final Anexo de UTU  C/ CD', '3º Construcción 2016', 0, 0, 1, NULL, 4077, NULL, NULL, 'Proyectos', '', ''),
+(4073, 'Proyecto 3 Administración La calandria', '3º Administración', 0, 0, 1, NULL, 4078, NULL, '2025.0', 'Proyectos', '', ''),
+(4150, 'Proyecto Logística Binacional Administración de in...', 'Logistíca 2016', 0, 0, 1, NULL, 4155, NULL, NULL, 'Proyectos', '', ''),
+(4151, 'Proyecto Logística Binacional Depósito y almacenam...', 'Logistíca 2016', 0, 0, 1, NULL, 4156, NULL, NULL, 'Proyectos', '', ''),
+(4166, 'Transformando nuestra cultura', 'C.T.T. Administración 2018', 0, 0, 1, NULL, 4171, NULL, '43424.0', 'Proyectos', '', ''),
+(4167, 'Cambiemos las reglas de juego', 'C.T.T. Administración 2018', 0, 0, 1, NULL, 4172, NULL, '43424.0', 'Proyectos', '', ''),
+(6006, 'Proyecto Deporte  Campeonato mixto de Handball', 'Sin autor registrado', 0, 0, 1, NULL, 6014, '2024-02-29', '3º Deporte', 'Proyectos', '', ''),
+(6008, 'Proyecto Deporte  Centro integral de rehabilitació...', '3º Deporte', 0, 0, 1, NULL, 6016, NULL, NULL, 'Proyectos', '', ''),
+(6079, 'Proyecto Electromecánica The Evil Crusher', '3º Electromecánica', 0, 0, 1, NULL, 6087, NULL, '44992.0', 'Proyectos', '', ''),
+(6087, 'Proyecto Logística Binacional Gestión de stock de ...', 'Logística 2022', 0, 0, 1, NULL, 6095, NULL, 'CS', 'Proyectos', '', ''),
+(6171, 'Los Soles  S.A Reparación y mantenimiento de maqui...', 'Perez, Victor', 0, 0, 1, NULL, 6179, NULL, NULL, 'Proyectos', '', ''),
+(6172, 'Prevención de riesgos en Empresa Industrializadora...', 'Latour, Gekko', 0, 0, 1, NULL, 6180, NULL, NULL, 'Proyectos', '', ''),
+(6173, 'Metales del Este Monografía Final carrera Téc. Pre...', 'González Taroco, Silvana', 0, 0, 1, NULL, 6181, NULL, NULL, 'Proyectos', '', ''),
+(6174, 'Herrería (Ganadería, Construcción)   Monografía Fi...', 'Taroco, Fabián', 0, 0, 1, NULL, 6182, NULL, NULL, 'Proyectos', '', ''),
+(6175, 'Programa de SYSO para la Empresa Andamios del Nort...', 'Castro, Neris', 0, 0, 1, NULL, 6183, NULL, NULL, 'Proyectos', '', ''),
+(6181, 'Plan de Prevención Aserradero Rivera  Monografía F...', 'Rodriguez Ferreira, Adriana', 0, 0, 1, NULL, 6189, NULL, NULL, 'Proyectos', '', ''),
+(6323, 'Minería Subterránea  Oro Sur Mining  Monografía Fi...', 'Silveira, María Eliane', 0, 0, 1, NULL, 6331, NULL, NULL, 'Proyectos', '', ''),
+(6444, 'Sistema de  Seguridad y  Salud Ocupacional  Monogr...', 'Bichinque, Leonardo', 0, 0, 1, NULL, 6452, NULL, NULL, 'Proyectos', '', ''),
+(6448, 'Maderpay- Midwest S.A. Monografía Final carrera Té...', 'Olivera Marquez, Heber', 0, 0, 1, NULL, 6456, NULL, NULL, 'Proyectos', '', ''),
+(6451, 'Planta Extractora de Miel \"Apicolas del Norte\" Mon...', 'Corujo Ribeiro, Yonara', 0, 0, 1, NULL, 6459, NULL, NULL, 'Proyectos', '', ''),
+(6464, 'Bicicletería Brasil', 'CTT Administración', 0, 0, 1, NULL, 6472, NULL, NULL, 'Proyectos', '', ''),
+(6471, 'Limpiando estructuras Lavandería Rey de reyes', 'CTT Administración', 0, 0, 1, NULL, 6479, NULL, NULL, 'Proyectos', '', ''),
+(6472, 'Proyecto EmpleArte', 'Administración de Personal', 0, 0, 1, NULL, 6480, NULL, NULL, 'Proyectos', '', ''),
+(6473, 'Proyecto LMR LTDA Gestión de Recursos Humanos', 'Administración de Personal', 0, 0, 1, NULL, 6481, NULL, NULL, 'Proyectos', '', ''),
+(6474, 'Proyecto Junta Departamental de Rivera', 'Administración de Personal', 0, 0, 1, NULL, 6482, NULL, NULL, 'Proyectos', '', ''),
+(6475, 'Comunicación VIP', 'CTT Administración', 0, 0, 1, NULL, 6483, NULL, NULL, 'Proyectos', '', ''),
+(6477, 'Proyecto Training', 'Administración de Personal', 0, 0, 1, NULL, 6485, NULL, NULL, 'Proyectos', '', ''),
+(6479, 'G4 Servicio técnico y papelería', '3º Administración', 0, 0, 1, NULL, 6487, NULL, NULL, 'Proyectos', '', ''),
+(6480, 'Control punto clave para el éxito Punto 19', 'CTT Administración', 0, 0, 1, NULL, 6488, NULL, NULL, 'Proyectos', '', ''),
+(6483, 'Proyecto Tecnólogo en Gestión en deporte y recreac...', 'Tecnólogo en Deportes y Recreación 2023', 0, 0, 1, NULL, 6491, '2024-03-01', NULL, 'Proyectos', '', ''),
+(6488, 'Empresa LIZZA jeans S.A Monografía Final Carrera T...', 'Alonso, Ingrid Raquel', 0, 0, 1, NULL, 6496, NULL, NULL, 'Proyectos', '', ''),
+(6491, 'Prevención de Riesgos Laborales  Monografía Final ...', 'Araújo Roman, Davinson Santiago', 0, 0, 1, NULL, 6499, NULL, NULL, 'Proyectos', '', ''),
+(6492, 'Proyecto Tecnólogo en Gestión en deporte y recreac...', 'Tecnólogo en Deportes y Recreación 2023', 0, 0, 1, NULL, 6500, '2024-03-01', NULL, 'Proyectos', '', ''),
+(6494, 'Proyecto Tecnólogo en Gestión en deporte y recreac...', 'Tecnólogo en Deportes y Recreación 2023', 0, 0, 1, NULL, 6502, '2024-03-01', NULL, 'Proyectos', '', ''),
+(6496, 'Proyecto de Empresa  Oficina de la pizza C/ CD', 'PYMES', 0, 0, 1, NULL, 6504, NULL, NULL, 'Proyectos', '', ''),
+(6497, 'Mesa de luz rústica', 'Proyecto 2º Carpintería', 0, 0, 1, NULL, 6505, NULL, NULL, 'Proyectos', '', ''),
+(6498, 'Escritorio EVA', 'Proyecto 2º Carpintería', 0, 0, 1, NULL, 6506, NULL, NULL, 'Proyectos', '', ''),
+(6499, 'Mesa arcoiris', 'Proyecto 2º Carpintería', 0, 0, 1, NULL, 6507, NULL, NULL, 'Proyectos', '', ''),
+(6501, 'Proyecto Aojamiento Travel agency Impulso 360', 'Proyecto 3º Alojamiento', 0, 0, 1, NULL, 6509, NULL, NULL, 'Proyectos', '', ''),
+(6502, 'Proyecto Aojamiento Agencia receptiva  Nómade', 'Proyecto 3º Alojamiento', 0, 0, 1, NULL, 6510, NULL, NULL, 'Proyectos', '', ''),
+(6504, 'Cavana bolsas', 'Proyecto 2º Administración', 0, 0, 1, NULL, 6512, NULL, NULL, 'Proyectos', '', ''),
+(6505, 'JVM Futbol', 'Proyecto 2º Administración', 0, 0, 1, NULL, 6513, NULL, NULL, 'Proyectos', '', ''),
+(6506, 'Rivera Express', 'Proyecto 2º Administración', 0, 0, 1, NULL, 6514, NULL, NULL, 'Proyectos', '', ''),
+(6517, 'Proyecto River Tour', '3º Turismo', 0, 0, 1, NULL, 6525, NULL, NULL, 'Proyectos', '', ''),
+(6532, 'Marco teórico de lectura PISA 2018', 'ANEP', 0, 0, 1, NULL, 6540, NULL, 'SIN REMITO', 'Proyectos', '', ''),
+(6534, 'Proyecto de Empresa  Posada El Caudillo', 'PYMES', 0, 0, 1, NULL, 6542, NULL, NULL, 'Proyectos', '', ''),
+(6824, 'Proyecto Invernadero 5º Ingeniero Tecnológico', 'Camargo, Lemos', 0, 0, 1, NULL, 6832, NULL, '2015', 'Proyectos', '', ''),
+(6825, 'Proyecto Clasificador de materiales  5º Ingeniero ...', 'Ferraz, Caloca; Mendez', 0, 0, 1, NULL, 6833, NULL, '2015', 'Proyectos', '', ''),
+(6826, 'Proyecto Puerta inteligente  5º Ingeniero Tecnológ...', 'Cuadro; Moraes', 0, 0, 1, NULL, 6834, NULL, '2015', 'Proyectos', '', ''),
+(6899, 'Laminorte  Monografía final Técnico Prevencionista...', 'Enríquez, Álvaro', 0, 0, 1, NULL, 6907, NULL, NULL, 'Proyectos', '', ''),
+(6900, 'Frigorifico Tacuarembó  Monografía final Técnico P...', 'Barreto, Andrea', 0, 0, 1, NULL, 6908, NULL, NULL, 'Proyectos', '', ''),
+(6901, 'Planta impregnadora de madera Monografía final. Ca...', 'Ferreira, Mariana', 0, 0, 1, NULL, 6909, NULL, NULL, 'Proyectos', '', ''),
+(6902, '\"AMMRI\" Asistencial Médica Móvil y Ambulatoria de ...', 'Avila Melogno, Cecilia de', 2932, 0, 1, NULL, 6910, NULL, NULL, 'Proyectos', '32', '23'),
+(6905, 'Tambo Don Aparicio   Monografía final. Carrera Téc...', 'Bichingue, Vanesa', 0, 0, 1, NULL, 6913, NULL, NULL, 'Proyectos', '', ''),
+(6906, 'Cosecha mecanizada - Industria forestal  Monografí...', 'Sarachega, Kelin', 0, 0, 1, NULL, 6914, NULL, NULL, 'Proyectos', '', ''),
+(7567, 'YESAB Revestimiento de Yeso Monografía Final carre...', 'González Tarocco, Silvia', 0, 0, 1, NULL, 7575, NULL, NULL, 'Proyectos', '', ''),
+(7568, 'Molienda industrial y Fábrica de baldosas Monograf...', 'da Roza, Mónica', 0, 0, 1, NULL, 7576, NULL, NULL, 'Proyectos', '', ''),
+(7604, 'Proyecto Emergencia', 'Proyecto Administración Pública 2010', 0, 0, 1, NULL, 7612, NULL, '41123.0', 'Proyectos', '', ''),
+(7605, 'Proyecto ASSE \"Policlínicas\"', 'Proyecto Administración Pública 2010', 0, 0, 1, NULL, 7613, NULL, '41123.0', 'Proyectos', '', ''),
+(7606, 'Priyecto OSE + ANEXO', 'Proyecto Administración Pública 2010', 0, 0, 1, NULL, 7614, NULL, '41123.0', 'Proyectos', '', ''),
+(7607, 'Optimización de la atención al público en la Sucur...', 'Proyecto Administración Pública 2010', 0, 0, 1, NULL, 7615, NULL, '41123.0', 'Proyectos', '', ''),
+(7658, 'Proyecto Electromecánica Incubadora de huevos de g...', '3º Electromecánica', 0, 0, 1, NULL, 7666, NULL, '45351.0', 'Proyectos', '', ''),
+(7659, 'Proyecto Electromecánica Dekar Cortadora de tubos ...', '3º Electromecánica', 0, 0, 1, NULL, 7667, NULL, '45351.0', 'Proyectos', '', ''),
+(7660, 'Proyecto Electromecánica Enchapadora de cantos', '3º Electromecánica', 0, 0, 1, NULL, 7668, NULL, '45351.0', 'Proyectos', '', ''),
+(7661, 'Proyecto de Empresa 3º  JAZZU Fiestas y eventos', 'Administración 3º Año 2022', 0, 0, 1, NULL, 7669, NULL, '44994.0', 'Proyectos', '', ''),
+(7663, 'Proyecto de Empresa  3º CCM Mantenimiento', 'Administración 3º Año 2022', 0, 0, 1, NULL, 7671, NULL, '44994.0', 'Proyectos', '', ''),
+(7665, 'Proyecto de Administración de Personal   Semeco Ae...', 'Administración de Personal  2012', 0, 0, 1, NULL, 7673, NULL, '41486.0', 'Proyectos', '', ''),
+(7666, 'Proyecto de Administración de Personal   Centro Un...', 'Administración de Personal  2012', 0, 0, 1, NULL, 7674, NULL, '41486.0', 'Proyectos', '', ''),
+(7667, 'Proyecto de Administración de Personal  Taxifilms ...', 'Administración de Personal  2012', 0, 0, 1, NULL, 7675, NULL, '41486.0', 'Proyectos', '', ''),
+(7668, 'Proyecto de Administración de Personal  Empresa Bo...', 'Administración de Personal  2012', 0, 0, 1, NULL, 7676, NULL, '41486.0', 'Proyectos', '', ''),
+(7707, 'Proyecto : Calidad del agua potable en la ciudad d...', 'Control Ambiental 2013', 0, 0, 1, NULL, 7715, NULL, NULL, 'Proyectos', '', ''),
+(7713, 'Proyecto Masoller', '3º Turismo 2010', 0, 0, 1, NULL, 7721, '2012-08-04', NULL, 'Proyectos', '', ''),
+(7714, 'Propuesta de turismo sostenible: \"Tres  Cerros\"', '3º Turismo 2010', 0, 0, 1, NULL, 7722, '2012-08-04', NULL, 'Proyectos', '', ''),
+(7715, 'Lolomach \"Rivera producto turístico tentador\"', '3º Turismo 2010', 0, 0, 1, NULL, 7723, '2012-08-04', NULL, 'Proyectos', '', ''),
+(7718, 'Planta industrial: Manufacturación de Madera WOODM...', '2010', 0, 0, 1, NULL, 7726, '2012-07-09', '7º Electrotecnia', 'Proyectos', '', ''),
+(7719, 'Instalaciones Industraiales, Redes y Luminotecnia', '2006', 0, 0, 1, NULL, 7727, '2012-07-09', '4º Electrotecnia', 'Proyectos', '', ''),
+(7720, 'Proyecto Nutri- vida Salud y Equilibrio', '2008', 0, 0, 1, NULL, 7728, '2012-07-09', NULL, 'Proyectos', '', ''),
+(7721, 'Proyecto de acondicionamiento del espacio turístic...', '2006', 0, 0, 1, NULL, 7729, '2012-07-03', '3º Turismo', 'Proyectos', '', ''),
+(7722, 'Proyecto Valle del Lunarejo Turismo del siglo XXI', '2006', 0, 0, 1, NULL, 7730, '2012-07-03', '3º Turismo', 'Proyectos', '', ''),
+(7730, 'Proyecto de empresa  Organización de eventos ARIS', '2008', 0, 0, 1, NULL, 7738, '2012-07-03', 'Gastronomía', 'Proyectos', '', ''),
+(7745, 'Proyecto  CTT Tecnólogo en Gestión de Deportes y R...', '2º CTT Tecnólogo en Gestión de Deportes y Recreaci...', 0, 0, 1, NULL, 7753, NULL, NULL, 'Proyectos', '', ''),
+(7746, 'Proyecto  CTT Tecnólogo en Gestión de Deportes y R...', '2º CTT Tecnólogo en Gestión de Deportes y Recreaci...', 0, 0, 1, NULL, 7754, NULL, NULL, 'Proyectos', '', ''),
+(7748, 'Proyecto de Empresa 3º Bohanes viajes', '3º Administración 2022', 0, 0, 1, NULL, 7756, '2023-03-09', NULL, 'Proyectos', '', ''),
+(7749, 'Proyecto Electromecánica Huerta orgánica automátic...', '3º Electromecánica', 0, 0, 1, NULL, 7757, '2024-02-29', NULL, 'Proyectos', '', ''),
+(7752, 'Análisis de calidad del agua para uso recreacional...', 'Control Ambiental 2013', 0, 0, 1, NULL, 7760, '2013-12-30', NULL, 'Proyectos', '', ''),
+(7753, 'Contribución para el Plan de Gestión del Parque Gr...', 'Control Ambiental 2013', 0, 0, 1, NULL, 7761, '2013-12-30', NULL, 'Proyectos', '', ''),
+(7757, 'Proyecto de Instalación de vivienda residencial e ...', '2º Electrotecnia 2013', 0, 0, 1, NULL, 7765, '2013-12-30', NULL, 'Proyectos', '', ''),
+(7758, 'Mejorar mi auto carburado para bajar consumo de co...', '2º Mecánica Automotriz', 0, 0, 1, NULL, 7766, '2013-12-30', NULL, 'Proyectos', '', ''),
+(7759, 'Necesidad de cambiar la bomba de aceite en un moto...', '2º Mecánica Automotriz', 0, 0, 1, NULL, 7767, '2013-12-30', NULL, 'Proyectos', '', ''),
+(7770, 'Proyecto Circuito Turístico en la ciudad de Rivera...', '3ro Turismo 2011', 0, 0, 1, NULL, 7778, '2012-06-26', NULL, 'Proyectos', '', ''),
+(7773, 'Proyecto Fútbol para personas con síndrome de Down', '3º Deporte', 0, 0, 1, NULL, 7781, '2017-12-26', NULL, 'Proyectos', '', ''),
+(7775, 'Proyecto CTT Administración Silveira saladitos', 'CTT Administración', 0, 0, 1, NULL, 7783, NULL, NULL, 'Proyectos', '', ''),
+(7776, 'Proyecto CTT Administración DBR Limpiezas', 'CTT Administración', 0, 0, 1, NULL, 7784, NULL, NULL, 'Proyectos', '', ''),
+(7780, 'Proyecto Plan de gestión de residuos sanitarios e....', 'Control ambiental', 0, 0, 1, NULL, 7788, '2015-02-26', NULL, 'Proyectos', '', ''),
+(7781, 'Proyecto Plan de gestión de residuos sanitarios e....', 'Control ambiental', 0, 0, 1, NULL, 7789, '2015-02-26', NULL, 'Proyectos', '', ''),
+(7784, 'Proyecto de Empresa Consentidos', '2º Administración 2015', 0, 0, 1, NULL, 7792, '2016-02-04', NULL, 'Proyectos', '', ''),
+(7787, 'Nueve horas', 'González, Fernando', 0, 0, 1, NULL, 7795, '2025-12-09', 'ALFAGUARA', 'Proyectos', '', ''),
+(7788, 'Proyecto Empresarial  Taxco Pub', 'PYMES 2010', 0, 0, 1, NULL, 7796, '2012-06-25', NULL, 'Proyectos', '', ''),
+(7792, 'Proyecto de Empresa Restaurant y Parrillada DELICI...', 'Gestión de PYMES 2010', 0, 0, 1, NULL, 7800, '2012-06-25', NULL, 'Proyectos', '', ''),
+(7796, 'Proyecto de Empresa 3º Emvesa', '3ro Administración 2023', 0, 0, 1, NULL, 7804, '2023-03-09', NULL, 'Proyectos', '', ''),
+(7797, 'Proyecto de Empresa 3º Wees Compost', '3ro Administración 2023', 0, 0, 1, NULL, 7805, '2023-03-09', NULL, 'Proyectos', '', ''),
+(8020, 'Proyecto Minas de Corrales', '3ro de Turismo 2011', 0, 0, 1, NULL, 8028, '2012-06-25', NULL, 'Proyectos', '', ''),
+(8021, 'Proyecto Viñastours Circuito Turístico Bodega 636', '3ro de Turismo 2011', 0, 0, 1, NULL, 8029, '2012-06-25', NULL, 'Proyectos', '', ''),
+(8022, 'Chubasco', 'Latini, Cielo', 0, 0, 1, NULL, 8030, '2018-10-16', 'Planeta', 'Proyectos', '', ''),
+(8023, 'Proyecto Acuabetaña', '3to de Turismo 2012', 0, 0, 1, NULL, 8031, '2012-06-25', NULL, 'Proyectos', '', ''),
+(8024, 'Proyecto de empresa SOES Organizaciòn de espacios', '3º Administración 2023', 0, 0, 1, NULL, 8032, '2024-02-14', NULL, 'Proyectos', '', ''),
+(8025, 'Proyecto Turismo Sana Tentación Cafetería rural', '3º Turismo', 0, 0, 1, NULL, 8033, NULL, NULL, 'Proyectos', '', ''),
+(8027, 'Proyecto de empresa CRAM Centro de Recreación del ...', '3º Administración 2023', 0, 0, 1, NULL, 8035, '2024-02-14', NULL, 'Proyectos', '', ''),
+(8064, 'Proyecto de Empresa Ganja campo vivo', '3º Administración 2023', 0, 0, 1, NULL, 8072, '2024-02-14', NULL, 'Proyectos', '', ''),
+(8086, 'Proyecto de Empresa Gorilla', '3º Administración 2023', 0, 0, 1, NULL, 8094, '2024-02-14', NULL, 'Proyectos', '', ''),
+(8089, 'Proyecto Instalaciones eléctricas Industria madere...', '2º Instalaciones eléctricas', 0, 0, 1, NULL, 8097, NULL, NULL, 'Proyectos', '', ''),
+(8090, 'Proyecto Instalaciones', '2º Instalaciones eléctricas', 0, 0, 1, NULL, 8098, NULL, NULL, 'Proyectos', '', ''),
+(8091, 'Proyecto Logìstica La importancia  de una gestión ...', 'Sin autor registrado', 0, 0, 1, NULL, 8099, '2024-02-29', 'Proyecto Logística 2023', 'Proyectos', '', ''),
+(8092, 'Proyecto CTT Administración  Infraestructura del t...', 'Sin autor registrado', 0, 0, 1, NULL, 8100, '2024-02-29', 'Proyecto CTT Administración 2023', 'Proyectos', '', ''),
+(8093, 'Proyecto CTT Administración Renovando y organizand...', 'Sin autor registrado', 0, 0, 1, NULL, 8101, '2024-02-29', 'Proyecto CTT Administración 2023', 'Proyectos', '', ''),
+(8950, 'Proyecto Final: Aula Laboratorio de Construcción', 'Silva, Melissa; Vidal, Diego', 0, 0, 1, NULL, 8959, '2012-08-03', '3º EMT CONSTRUCCIÓN 2013', 'Proyectos', '', ''),
+(9134, 'Proyecto Final Secretariado bilingüe  Planificació...', '2º Secretariado Bilingüe', 0, 0, 1, NULL, 9144, NULL, NULL, 'Proyectos', '', ''),
+(9135, 'Proyecto Final Secretariado bilingüe  Experiencia ...', '2º Secretariado Bilingüe', 0, 0, 1, NULL, 9145, NULL, NULL, 'Proyectos', '', ''),
+(9137, 'Proyecto Final Secretariado bilingüe evento: logís...', '2º Secretariado Bilingüe', 0, 0, 1, NULL, 9147, NULL, NULL, 'Proyectos', '', ''),
+(9139, 'Proyecto Final Secretariado bilingüe evento: regis...', '2º Secretariado Bilingüe', 0, 0, 1, NULL, 9149, NULL, NULL, 'Proyectos', '', ''),
+(9143, 'Proyecto de empresa de 2do Administración Second H...', '2º Año Administración', 0, 0, 1, NULL, 9153, '2024-02-08', 'Generación 2023', 'Proyectos', '', ''),
+(9144, 'Proyecto 3º Bachillerato Gastronomía Binacional Fo...', 'Proyecto  Gastronomía Binacional', 0, 0, 1, NULL, 9154, NULL, NULL, 'Proyectos', '', ''),
+(9145, 'Proyecto de empresa 2DO Gastronomía Perla NEGRA', '2º Gastronomía', 0, 0, 1, NULL, 9155, '2024-02-08', 'Generación 2023', 'Proyectos', '', ''),
+(9147, 'Proyecto CTT Administración  Dulce solución', 'Sin autor registrado', 0, 0, 1, NULL, 9157, '2024-02-29', 'Proyecto CTT Administración 2023', 'Proyectos', '', ''),
+(9148, 'Proyecto CTT Administración La Calabria', '41779.84', 0, 0, 1, NULL, 9158, NULL, NULL, 'Proyectos', '', ''),
+(9149, 'A historia do mundo para quem tem pressa', 'Marriott, Emma', 0, 0, 1, NULL, 9159, '2023-06-28', 'Valentina', 'Proyectos', '', '');
 
 -- --------------------------------------------------------
 
@@ -10701,7 +10734,10 @@ CREATE TABLE `socios` (
 
 INSERT INTO `socios` (`id`, `nombre`, `email`, `cedula`, `telefono`, `fecha_registro`, `clase`, `foto`) VALUES
 (11, 'Anthony Silva', 'antoniotoniosigma@gmail.com', '55118416', '094759451', '2026-07-21', '3°MH', 'foto_6acf84391d87c8.39292612.png'),
-(22, 'Ezequiel Mello', NULL, '55118417', '12345678', '2026-10-14', '3°MH', 'foto_6acf8f3cd8bac8.38340409.png');
+(22, 'Ezequiel Mello', NULL, '55118417', '12345678', '2026-10-14', '3°MH', 'foto_6acf8f3cd8bac8.38340409.png'),
+(24, 'Walter Montejo', NULL, '57654367', '12345678', '2026-10-21', '3°MH', NULL),
+(25, 'Jose Palermo', NULL, '56754367', '093678345', '2026-10-21', '3°MH', NULL),
+(26, 'Camila Muniz', NULL, '54436217', '094677352', '2026-10-21', '3°MH', 'foto_6ad98b6f7a56a1.15017745.png');
 
 -- --------------------------------------------------------
 
@@ -10725,7 +10761,9 @@ CREATE TABLE `usuarios` (
 INSERT INTO `usuarios` (`id`, `nombre`, `email`, `password`, `fecha_registro`, `roles`) VALUES
 (1, 'Anthony', 'shadow@gmail.com', '$2y$10$2Jr5pJyEbJftffxQOHFp0eGHDkrR.ls5Ff2MPUWZ/JrEPtEiJDwX.', '2026-09-16 07:29:36', 'GENIO'),
 (2, 'Admin', 'admin@utu.edu.uy', '$2y$10$5MZBE/PoKtlh//QFm/MdHeoLVHgyxTjFMjFhY4Nx3m4aFqR2cp4Pu', '2026-09-18 02:00:36', 'Admin'),
-(3, 'Thony', 'thony@gmail.com', '$2y$10$8JrQYi9cV/AltdaLj7fz3u1ZrUjy9B.pV507HMuGoTP.0h8.5l51K', '2026-09-29 17:52:39', 'Genio');
+(4, 'Nacho', 'nacho@gmail.com', '$2y$10$fiMkwlFJJhV.vadYWXr7aOySKtgCntKmnXBJiT5BqRt3g8TwNJ/o2', '2026-10-23 02:00:18', 'GENIO'),
+(5, 'Walter', 'walter@gmail.com', '$2y$10$UxF5FcpkywT.PTShHgx9YOy2cKJ98taI.LNXfPcPxBwsA07PC1b2u', '2026-10-23 02:01:16', '123'),
+(6, 'Tonio', 'tonio@gmail.com', '$2y$10$72HLUHiUF5jl/NUlFOREheH.UKA7Jit/Bq4Lx00yolkKuPCfEY0L6', '2026-10-23 02:02:03', 'estaesmicontraseña');
 
 --
 -- Índices para tablas volcadas
@@ -10754,6 +10792,12 @@ ALTER TABLE `prestamos`
   ADD PRIMARY KEY (`id`),
   ADD KEY `libro_id` (`libroId`),
   ADD KEY `socio_id` (`socioId`);
+
+--
+-- Indices de la tabla `proyectos`
+--
+ALTER TABLE `proyectos`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `socios`
@@ -10789,19 +10833,19 @@ ALTER TABLE `libros`
 -- AUTO_INCREMENT de la tabla `prestamos`
 --
 ALTER TABLE `prestamos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de la tabla `socios`
 --
 ALTER TABLE `socios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restricciones para tablas volcadas

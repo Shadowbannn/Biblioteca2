@@ -9,12 +9,14 @@ require_once __DIR__ . '/models/socio.php';
 require_once __DIR__ . '/models/Prestamo.php';
 require_once __DIR__ . '/models/Usuario.php';
 require_once __DIR__ . '/models/Juego.php';
+require_once __DIR__ . '/models/proyecto.php';
 
 require_once __DIR__ . '/controllers/LibroController.php';
 require_once __DIR__ . '/controllers/SocioController.php';
 require_once __DIR__ . '/controllers/PrestamoController.php';
 require_once __DIR__ . '/controllers/UsuarioController.php';
 require_once __DIR__ . '/controllers/JuegoController.php';
+require_once __DIR__ . '/controllers/ProyectoController.php';
 
 
 $accion = $_REQUEST['accion'] ?? 'inicio';
@@ -152,6 +154,30 @@ switch ($accion) {
         break;
     case 'eliminarJuego':
         eliminarJuego();
+        break;
+
+        // PROYECTOS //
+        
+    case 'listarCatalogo':
+        listarCatalogo();
+        break;
+    case 'listarProyectos':
+        listarProyectos();
+        break;
+    case 'formCrearProyecto':
+        formCrearProyecto();
+        break;
+    case 'crearProyecto':
+        crearProyecto();
+        break;
+    case 'formEditarProyecto':
+        formEditarProyecto(); 
+        break;
+    case 'editarProyecto':
+        editarProyecto();     
+        break;
+    case 'eliminarProyecto':
+        eliminarProyecto();
         break;
 
 

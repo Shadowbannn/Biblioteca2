@@ -15,7 +15,6 @@
     </div>
 
     <div class="card-body">
-        <?php require __DIR__ . '/../../includes/paginadorSocio.php'; ?>
         <input class="form-control" id="myInput" type="search" placeholder="Buscar socios..." aria-label="Buscar en los socios de esta página">
         <br>
         <?php if (!empty($socios)): ?>
@@ -55,7 +54,7 @@
                         <td><?= $socio->getTelefono() ?></td>
                         <td><?= date('d/m/Y', strtotime($socio->getFecharegistro())) ?></td>
                         <td><?= $socio->getClase() ?></td>
-                        <td><?= $socio->getId() ?></td>
+                        <td><span class="socio-id">#<?= $socio->getId() ?></td>
 
                         <!-- Acciones -->
                         <td>
@@ -87,7 +86,6 @@
 
     </div>
 
-    <?php require __DIR__ . '/../../includes/paginadorSocio.php'; ?>
 </div>
 <div class="mt-3">
     <a href="index.php" class="btn btn-secondary">← Volver al inicio</a>
