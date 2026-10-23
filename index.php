@@ -22,7 +22,7 @@ require_once __DIR__ . '/controllers/ProyectoController.php';
 $accion = $_REQUEST['accion'] ?? 'inicio';
 
 // Acciones accesibles sin iniciar sesión
-$accionesPublicas = ['formLogin', 'login', 'formCrearUsuario', 'crearUsuario', 'listarCatalogo'];
+$accionesPublicas = ['formLogin', 'login', 'formCrearUsuario', 'crearUsuario', 'listarCatalogo', 'listarJuegosP', 'listarProyectosP'];
 
 if (empty($_SESSION['usuario_id']) && !in_array($accion, $accionesPublicas, true)) {
     header('Location: index.php?accion=listarCatalogo');
@@ -136,7 +136,9 @@ switch ($accion) {
         break;
 
     // JUEGOS //
-
+    case 'listarJuegosP':
+        listarJuegosP();
+        break;
     case 'listarJuegos':
         listarJuegos();
         break;
@@ -158,8 +160,8 @@ switch ($accion) {
 
         // PROYECTOS //
         
-    case 'listarCatalogo':
-        listarCatalogo();
+    case 'listarProyectosP':
+        listarProyectosP();
         break;
     case 'listarProyectos':
         listarProyectos();

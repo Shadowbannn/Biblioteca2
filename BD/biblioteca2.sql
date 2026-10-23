@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-10-2026 a las 04:07:57
+-- Tiempo de generación: 23-10-2026 a las 07:00:44
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -2383,7 +2383,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (2218, 'El tesoro de cañada seca', 'Murguía, Julían', 0, 0, 1, 'Literat', NULL, 2221, NULL, NULL, '41124.46', NULL, 'Literat'),
 (2219, 'Andrade: el rey negro de París', 'Morales, Franklin', 0, 0, 1, 'Literat', NULL, 2222, NULL, NULL, '41124.46', NULL, 'Literat'),
 (2220, 'La hechicera de Vaupés', 'Martínez, Ignacio', 0, 0, 1, 'Literat', NULL, 2223, NULL, NULL, '41124.46', NULL, 'Literat'),
-(2221, '¡Bernabé, Bernabé!', 'Mattos, Tomás de', 0, 0, 1, 'Literat', NULL, 2224, NULL, NULL, '41124.46', NULL, 'Literat'),
+(2221, '¡Bernabé, Bernabé!', 'Mattos, Tomás de', 2000, 239, 1, 'Histórico', 'portada_6adae831857db5.38542663.jpg', 2224, NULL, NULL, '41124.46', NULL, 'Literat'),
 (2222, 'Los fantasmas de la escuela ¡pasaron de clase!   e.1', 'Martínez, Ignacio', 0, 0, 1, 'Literat', NULL, 2225, NULL, NULL, '41124.46', NULL, 'Literat'),
 (2223, 'Los fantasmas de la escuela ¡pasaron de clase!   e.2', 'Martínez, Ignacio', 0, 0, 1, 'Literat', NULL, 2226, NULL, NULL, '41124.46', NULL, 'Literat'),
 (2224, 'Lo que cuentan los Incas', 'Marcuse, Aída', 0, 0, 1, 'Literat', NULL, 2227, NULL, NULL, '41124.46', NULL, 'Literat'),
@@ -2473,7 +2473,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (2308, 'La Odisea e. 8', 'Homero', 0, 0, 1, 'Literat', NULL, 2311, NULL, NULL, '41124.46', NULL, 'Literat'),
 (2309, 'Las Aves', 'Aristofanes', 0, 0, 1, 'Literat', NULL, 2312, NULL, NULL, '41124.46', NULL, 'Literat'),
 (2310, 'Manos maravillosas v. III', 'Sin autor registrado', 0, 0, 1, 'Arte', NULL, 2313, 'Abril', '2011-11-04', 'Abril', 'Donación', 'Arte'),
-(2311, '¡Aleluya! Rivera!', 'Zas Recarey, Hipolito', 0, 0, 1, 'Literat', NULL, 2314, NULL, NULL, '41124.46', NULL, 'Literat'),
+(2311, '¡Aleluya! Rivera!', 'Zas Recarey, Hipolito', 2008, 129, 1, 'Literatura', NULL, 2314, NULL, NULL, '41124.46', NULL, 'Literat'),
 (2312, 'Vidas Paralelas', 'Plutarco', 0, 0, 1, 'Literat', NULL, 2315, NULL, NULL, '41124.46', NULL, 'Literat'),
 (2313, 'Ariel e. 1', 'Rodó, José Enrique', 0, 0, 1, 'Literat', NULL, 2316, NULL, NULL, '41124.46', NULL, 'Literat'),
 (2314, 'Ariel e. 2', 'Rodó, José Enrique', 0, 0, 1, 'Literat', NULL, 2317, NULL, NULL, '41124.46', NULL, 'Literat'),
@@ -8664,7 +8664,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (8641, 'El jabón no muerde', 'Helguera, Magdalena', 0, 0, 1, 'Literat', NULL, 8650, 'Trilce', '2010-11-03', 'Trilce', 'COMPRA', 'Literat'),
 (8642, 'Cuentos asquerosos', 'Helguera, Magdalena', 0, 0, 1, 'Literat', NULL, 8651, 'Alfaguara', '2010-11-03', 'Alfaguara', 'COMPRA', 'Literat'),
 (8643, 'Hoy llegan los primos', 'Helguera, Magdalena', 0, 0, 1, 'Literat', NULL, 8652, 'Alfaguara', '2010-11-03', 'Alfaguara', 'COMPRA', 'Literat'),
-(8644, '¡Cuidado con el culantrillo!', 'Helguera, Magdalena', 2032, 24, 1, 'Literat', NULL, 8653, 'Trilce', '2010-11-03', 'Trilce', 'COMPRA', 'Literat'),
+(8644, '¡Cuidado con el culantrillo!', 'Helguera, Magdalena', 2008, 132, 1, 'Juvenil', 'portada_6adae7b7d7c125.18420099.webp', 8653, 'Trilce', '2010-11-03', 'Trilce', 'COMPRA', 'Literat'),
 (8645, 'Caraclasa', 'Helguera, Magdalena', 0, 0, 1, 'Literat', NULL, 8654, 'Sudamericana uruguaya', '2010-11-03', 'Sudamericana uruguaya', 'COMPRA', 'Literat'),
 (8646, 'No se puede andar con monos y otros cuentos peligrosos', 'Helguera, Magdalena', 0, 0, 1, 'Literat', NULL, 8655, 'Alfaguara', '2010-11-03', 'Alfaguara', 'COMPRA', 'Literat'),
 (8647, 'Árboles blancos', 'Helguera, Magdalena', 0, 0, 1, 'Literat', NULL, 8656, 'Alfaguara', '2010-11-03', 'Alfaguara', 'COMPRA', 'Literat'),
@@ -9233,7 +9233,7 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `anio_publicacion`, `cantidad_pag
 (9220, 'Bloc 2 de lectura y escritura para adolescentes y jóvenes', 'ANEP- ProLee', 0, 0, 1, 'Idioma Esp', NULL, 9230, 'ANEP- ProLee', '2015-08-17', 'ANEP- ProLee', 'Donación PROLEE', 'Idioma Esp'),
 (9221, 'Aquel verano', 'Domínguez Luis, Cecilia', 0, 0, 1, 'Sin género', NULL, 9231, NULL, '2015-08-17', 'Viceversa juvenil', 'Donación', NULL),
 (9222, 'Misterio en el Cabo Polonio e.2', 'Velando, Helen', 0, 0, 1, 'Sin género', NULL, 9232, NULL, '2015-08-17', 'Alfaguara', 'Donación', NULL),
-(9223, '¡ Socorro! (12 cuentos para caerse de miedo)', 'Bornemann, Elsa', 0, 0, 1, 'Sin género', NULL, 9233, NULL, '2015-08-17', 'Alfaguara', 'Donación', NULL),
+(9223, '¡Socorro! (12 cuentos para caerse de miedo)', 'Bornemann, Elsa', 1995, 168, 1, 'Horror, Ficción', 'portada_6adae8c6cc2708.11370349.jpg', 9233, NULL, '2015-08-17', 'Alfaguara', 'Donación', NULL),
 (9224, 'Los viajes de Gulliver  (Novela gráfica)', 'Swift, Jonathan', 0, 0, 1, 'Sin género', NULL, 9234, NULL, '2015-08-17', 'LATINBOOKS', 'Donación', NULL),
 (9225, 'Jason y los argonautas  (Novela gráfica)', 'Yomtov, Nel', 0, 0, 1, 'Sin género', NULL, 9235, NULL, '2015-08-17', 'LATINBOOKS', 'Donación', NULL),
 (9226, 'Adulterio', 'Coelho, Paulo', 0, 0, 1, 'Literat', NULL, 9236, NULL, '2015-08-20', NULL, 'Donación', 'Literat'),

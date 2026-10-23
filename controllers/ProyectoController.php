@@ -21,7 +21,26 @@ function listarProyectos() {
     require __DIR__ . '/../views/proyectos/verproyecto.php';
 }
 
+function listarProyectosP() {
+    global $pdo;
 
+    $paginaActual = isset($_GET['pagina']) ? (int) $_GET['pagina'] : 1;
+    if ($paginaActual < 1) {
+        $paginaActual = 1;
+    }
+
+    $porPagina = 20;
+    $totalRegistros = Proyecto::contarTotal($pdo);
+    $totalPaginas = (int) ceil($totalRegistros / $porPagina);
+
+    if ($paginaActual > $totalPaginas && $totalPaginas > 0) {
+        $paginaActual = $totalPaginas;
+    }
+
+    $proyectos = Proyecto::listarPaginado($pdo, $paginaActual, $porPagina);
+
+    require __DIR__ . '/../views/proyectos/catalogoproyecto.php';
+}
 
 function formCrearProyecto() {
     require __DIR__ . '/../views/proyectos/form.php';

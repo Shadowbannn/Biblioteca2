@@ -22,25 +22,14 @@
     <ul>
 
         <li>
+        <li><a href="index.php"><b>Inicio</b></a></li>
+        <li><a href="index.php?accion=listarCatalogo"><b>Catalogo</b></a></li>
+        <li><a href="index.php?accion=listarJuegosP"><b>Juegos</b></a></li>
+        <li><a href="index.php?accion=listarProyectosP"><b>Proyectos</b></a></li>
+
 
 
             <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                    <div class="btn-group" role="group">
-                        <button id="btnGroupDrop1" type="button" 
-                                                class="btn btn-dark dropdown-toggle" 
-                                                data-bs-toggle="dropdown" aria-haspopup="true" 
-                                                aria-expanded="false">
-                        Opciones
-                        </button>
-                        
-                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                            <a class="dropdown-item" href="index.php?accion=listarCatalogo">Catalogo</a>
-                            <a class="dropdown-item" href="index.php?accion=listarJuegosP">Juegos</a>
-                            <a class="dropdown-item" href="index.php?accion=listarProyectosP">Proyectos</a>
-
-                        </div>
-                    </div>
-
                         <a href="index.php?accion=formLogin" class="btn btn-dark btn-lg">
                         <b><i class="fa-solid fa-circle-user"></i></b>
                         </a>

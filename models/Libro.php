@@ -84,7 +84,7 @@ class Libro {
 
         $stmt = $pdo->prepare(
             "SELECT * FROM libros 
-             ORDER BY titulo ASC 
+             ORDER BY titulo DESC 
              LIMIT :inicio, :cantidad"
         );
         $stmt->bindValue(':inicio', $inicio, PDO::PARAM_INT);

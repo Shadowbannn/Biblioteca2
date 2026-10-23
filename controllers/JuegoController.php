@@ -21,6 +21,27 @@ function listarJuegos() {
     require __DIR__ . '/../views/juegos/verjuegos.php';
 }
 
+function listarJuegosP() {
+    global $pdo;
+
+    $paginaActual = isset($_GET['pagina']) ? (int) $_GET['pagina'] : 1;
+    if ($paginaActual < 1) {
+        $paginaActual = 1;
+    }
+
+    $porPagina = 20;
+    $totalRegistros = Juego::contarTotal($pdo);
+    $totalPaginas = (int) ceil($totalRegistros / $porPagina);
+
+    if ($paginaActual > $totalPaginas && $totalPaginas > 0) {
+        $paginaActual = $totalPaginas;
+    }
+
+    $juegos = Juego::listarPaginado($pdo, $paginaActual, $porPagina);
+
+    require __DIR__ . '/../views/juegos/catalogojuegos.php';
+}
+
 function formCrearJuego() {
     require __DIR__ . '/../views/juegos/form.php';
 }
