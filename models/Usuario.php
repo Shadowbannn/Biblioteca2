@@ -108,14 +108,14 @@ class Usuario
     }
 
 
-    public static function crear(PDO $pdo, string $nombre, string $email, string $password, string $roles = ''): bool
+    public static function crear(PDO $pdo, string $nombre, string $email, string $roles = '', string $password): bool
     {
         $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
-        $stmt = $pdo->prepare("INSERT INTO usuarios (nombre, email, password, roles) 
+        $stmt = $pdo->prepare("INSERT INTO usuarios (nombre, email, roles, password) 
                                VALUES (?, ?, ?, ?)");
 
-        return $stmt->execute([$nombre, $email, $passwordHash, $roles]);
+        return $stmt->execute([$nombre, $email, $roles, $passwordHash]);
     }
 
 

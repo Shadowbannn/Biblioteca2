@@ -120,7 +120,7 @@
 </div>
 
 <div class="mt-3">
-    <a href="index.php" class="btn btn-secondary">← Volver al inicio</a>
+    <a href="index.php?accion=listarLibros" class="btn btn-secondary">← Volver al inicio</a>
 </div>
 
 <?php require __DIR__ . '/../../includes/footer.php'; ?>

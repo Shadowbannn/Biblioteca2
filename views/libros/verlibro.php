@@ -20,6 +20,12 @@
             <a href="index.php?accion=formCrearLibro" class="btn btn-success">
                 ➕ Agregar Libro
             </a>
+                <a href="index.php?accion=formCrearPrestamo" class="btn btn-success">
+                    ➕ Agregar Préstamo
+                </a>
+                    <a href="index.php?accion=listarPrestamos" class="btn btn-success">
+                        ➕ Ver Préstamo
+                    </a>
         </div>
 
 

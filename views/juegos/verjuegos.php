@@ -17,7 +17,16 @@
             <a href="index.php?accion=formCrearJuego" class="btn btn-success">
                 ➕ Agregar Juego
             </a>
+
+            <a href="index.php?accion=formCrearPrestamoJuegos" class="btn btn-success">
+                ➕ Agregar Préstamo
+            </a>
+
+            <a href="index.php?accion=listarPrestamosJuegos" class="btn btn-success">
+                ➕ Ver Préstamos de Juego
+            </a>            
         </div>
+
         <input class="form-control" id="myInput" type="search" placeholder="Buscar juegos..." aria-label="Buscar en los juegos de esta página">
         <br>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">

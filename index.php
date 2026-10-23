@@ -7,9 +7,11 @@ require_once __DIR__ . '/config/conexion.php';
 require_once __DIR__ . '/models/Libro.php';
 require_once __DIR__ . '/models/socio.php';
 require_once __DIR__ . '/models/Prestamo.php';
+require_once __DIR__ . '/models/PrestamoJuego.php';
 require_once __DIR__ . '/models/Usuario.php';
 require_once __DIR__ . '/models/Juego.php';
 require_once __DIR__ . '/models/proyecto.php';
+
 
 require_once __DIR__ . '/controllers/LibroController.php';
 require_once __DIR__ . '/controllers/SocioController.php';
@@ -17,6 +19,7 @@ require_once __DIR__ . '/controllers/PrestamoController.php';
 require_once __DIR__ . '/controllers/UsuarioController.php';
 require_once __DIR__ . '/controllers/JuegoController.php';
 require_once __DIR__ . '/controllers/ProyectoController.php';
+require_once __DIR__ . '/controllers/PrestamoControllerJuego.php';
 
 
 $accion = $_REQUEST['accion'] ?? 'inicio';
@@ -113,6 +116,29 @@ switch ($accion) {
     case 'eliminarPrestamo':
         eliminarPrestamo();
         break;
+
+
+    // PRESTAMOS JUEGOS //
+
+    case 'listarPrestamosJuegos':
+        listarPrestamosJuegos();
+        break;
+    case 'formCrearPrestamoJuegos':
+        formCrearPrestamoJuegos();
+        break;
+    case 'crearPrestamoJuegos':
+        crearPrestamoJuegos();
+        break;
+    case 'formEditarPrestamoJuegos':
+        formEditarPrestamoJuegos(); // CORREGIDO
+        break;
+    case 'editarPrestamoJuegos':
+        editarPrestamoJuegos();     // AGREGADO
+        break;
+    case 'eliminarPrestamoJuegos':
+        eliminarPrestamoJuegos();
+        break;
+
 
     // USUARIOS (cuentas del sistema) //
 

@@ -32,7 +32,8 @@
         <li><a href="index.php"><b>Inicio</b></a></li>
         <li><a href="index.php?accion=listarLibros"><b>Libros</b></a></li>
         <li><a href="index.php?accion=listarSocios"><b>Socios</b></a></li>
-        <li><a href="index.php?accion=listarPrestamos"><b>Prestamos</b></a></li>
+        <li><a href="index.php?accion=listarJuegos"><b>Juegos</b></a></li>
+        <li><a href="index.php?accion=listarProyectos"><b>Proyectos</b></a></li>        
 
             <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
                     <div class="btn-group" role="group">
@@ -44,9 +45,7 @@
                                                 Más
                         </button>
                         <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                            <a class="dropdown-item" href="index.php?accion=listarJuegos">Juegos</a>
                             <a class="dropdown-item" href="index.php?accion=listarUsuarios">Usuarios</a>
-                            <a class="dropdown-item" href="index.php?accion=listarProyectos">Proyectos</a>
                             <a class="dropdown-item" href="index.php?accion=logout">Cerrar Sesión</a>
 
 

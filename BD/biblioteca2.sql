@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-10-2026 a las 07:00:44
+-- Tiempo de generación: 23-10-2026 a las 23:26:32
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -10525,6 +10525,31 @@ INSERT INTO `prestamos` (`id`, `libroId`, `socioId`, `fechaPrestamo`, `fechaDevo
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `prestamosjuegos`
+--
+
+CREATE TABLE `prestamosjuegos` (
+  `creado_en` datetime DEFAULT NULL,
+  `estado` enum('Reservado','Prestado','Devuelto','Cancelado') CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT 'Reservado',
+  `fechaDevolucion` text CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `fechaPrestamo` text CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `id` int(11) NOT NULL,
+  `juegoId` int(11) NOT NULL,
+  `nombreJuego` text DEFAULT NULL,
+  `socioId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `prestamosjuegos`
+--
+
+INSERT INTO `prestamosjuegos` (`creado_en`, `estado`, `fechaDevolucion`, `fechaPrestamo`, `id`, `juegoId`, `nombreJuego`, `socioId`) VALUES
+(NULL, 'Prestado', '2026-10-30', '2026-10-23', 1, 83, NULL, 11),
+(NULL, 'Prestado', '2026-10-30', '2026-10-23', 2, 99, NULL, 22);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `proyectos`
 --
 
@@ -10762,8 +10787,7 @@ INSERT INTO `usuarios` (`id`, `nombre`, `email`, `password`, `fecha_registro`, `
 (1, 'Anthony', 'shadow@gmail.com', '$2y$10$2Jr5pJyEbJftffxQOHFp0eGHDkrR.ls5Ff2MPUWZ/JrEPtEiJDwX.', '2026-09-16 07:29:36', 'GENIO'),
 (2, 'Admin', 'admin@utu.edu.uy', '$2y$10$5MZBE/PoKtlh//QFm/MdHeoLVHgyxTjFMjFhY4Nx3m4aFqR2cp4Pu', '2026-09-18 02:00:36', 'Admin'),
 (4, 'Nacho', 'nacho@gmail.com', '$2y$10$fiMkwlFJJhV.vadYWXr7aOySKtgCntKmnXBJiT5BqRt3g8TwNJ/o2', '2026-10-23 02:00:18', 'GENIO'),
-(5, 'Walter', 'walter@gmail.com', '$2y$10$UxF5FcpkywT.PTShHgx9YOy2cKJ98taI.LNXfPcPxBwsA07PC1b2u', '2026-10-23 02:01:16', '123'),
-(6, 'Tonio', 'tonio@gmail.com', '$2y$10$72HLUHiUF5jl/NUlFOREheH.UKA7Jit/Bq4Lx00yolkKuPCfEY0L6', '2026-10-23 02:02:03', 'estaesmicontraseña');
+(8, 'Walter', 'walter@gmail.com', '$2y$10$GrNnwlrQdg.cPuyF0kiqdOqPshC20P6NYn5A77xeHR7Y8cF4jkmBS', '2026-10-23 19:09:02', 'GENIO');
 
 --
 -- Índices para tablas volcadas
@@ -10791,6 +10815,14 @@ ALTER TABLE `libros`
 ALTER TABLE `prestamos`
   ADD PRIMARY KEY (`id`),
   ADD KEY `libro_id` (`libroId`),
+  ADD KEY `socio_id` (`socioId`);
+
+--
+-- Indices de la tabla `prestamosjuegos`
+--
+ALTER TABLE `prestamosjuegos`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `juego_id` (`juegoId`),
   ADD KEY `socio_id` (`socioId`);
 
 --
@@ -10836,6 +10868,12 @@ ALTER TABLE `prestamos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
+-- AUTO_INCREMENT de la tabla `prestamosjuegos`
+--
+ALTER TABLE `prestamosjuegos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT de la tabla `socios`
 --
 ALTER TABLE `socios`
@@ -10845,7 +10883,7 @@ ALTER TABLE `socios`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Restricciones para tablas volcadas

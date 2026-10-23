@@ -102,7 +102,7 @@ $esEdicion = isset($prestamo) && is_object($prestamo);
                 <?= $esEdicion ? 'Guardar Cambios' : 'Crear Préstamo' ?>
             </button>
 
-            <a href="index.php?accion=listarPrestamos" class="btn btn-danger w-100">
+            <a href="index.php?accion=listarLibros" class="btn btn-danger w-100">
                 Cancelar
             </a>
 
