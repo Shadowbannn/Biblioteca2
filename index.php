@@ -28,7 +28,7 @@ $accion = $_REQUEST['accion'] ?? 'inicio';
 $accionesPublicas = ['formLogin', 'login', 'formCrearUsuario', 'crearUsuario', 'listarCatalogo', 'listarJuegosP', 'listarProyectosP'];
 
 if (empty($_SESSION['usuario_id']) && !in_array($accion, $accionesPublicas, true)) {
-    header('Location: index.php?accion=listarCatalogo');
+    header('Location: inicioo.php');
     exit;
 }
 

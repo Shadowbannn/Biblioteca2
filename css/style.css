@@ -28,6 +28,121 @@ body {
     padding-top: 50px;
 }
 
+/* Fondo de inicio: el desenfoque queda separado del contenido. */
+body.pagina-inicio {
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+    background-image: none;
+    padding-top: 110px;
+}
+
+.pagina-inicio::before {
+    content: "";
+    position: fixed;
+    inset: -20px;
+    z-index: -1;
+    pointer-events: none;
+    background: url("../img/vintage.jpg") center / cover no-repeat;
+    filter: blur(7px) brightness(0.65);
+}
+
+.pagina-inicio .inicio-contenedor {
+    width: 100%;
+    max-width: none;
+    min-height: calc(100vh - 110px);
+    padding: 20px clamp(16px, 4vw, 64px);
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.pagina-inicio #inicio {
+    width: 100%;
+    max-width: 1400px;
+    min-width: 0;
+    margin-inline: auto;
+}
+
+.pagina-inicio .inicio-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.pagina-inicio .inicio-tarjetas .card {
+    min-width: 0;
+}
+
+.pagina-inicio #carouselInicio {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.pagina-inicio #carouselInicio img {
+    object-fit: cover;
+        border-radius: var(--radius-lg);
+
+}
+
+.pagina-inicio #carouselInicio .carousel-caption {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.pagina-inicio #carouselInicio .carousel-caption h1,
+.pagina-inicio #carouselInicio .carousel-caption h2 {
+    font-size: clamp(2rem, 4.5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.pagina-inicio #carouselInicio .carousel-caption p {
+    font-size: clamp(1.1rem, 2vw, 1.75rem);
+    line-height: 1.5;
+}
+
+.pagina-inicio section[id] {
+    scroll-margin-top: 130px;
+}
+
+@media (max-width: 1199px) {
+    .pagina-inicio nav {
+        position: sticky;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .pagina-inicio nav ul {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    body.pagina-inicio {
+        padding-top: 0;
+    }
+
+    .pagina-inicio .inicio-contenedor {
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 767px) {
+    .pagina-inicio .inicio-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .pagina-inicio #carouselInicio img {
+        height: 300px !important;
+    }
+
+    .pagina-inicio section[id] {
+        scroll-margin-top: 220px;
+    }
+}
+
 .titulo {
     text-align: center;
     margin-top: 20px;
@@ -45,6 +160,19 @@ body {
     height: 100%;
     width: 100%;
     padding-bottom: 15px;
+}
+
+.footer-publico {
+    max-width: 1400px;
+    padding-inline: clamp(0px, 2vw, 24px);
+}
+
+.footer-publico address {
+    font-style: normal;
+}
+
+.footer-publico a:hover {
+    text-decoration: underline;
 }
 
 footer {

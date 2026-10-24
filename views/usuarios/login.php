@@ -57,7 +57,7 @@
             </form>
 
               <div class="create-account">
-                <a href="index.php?accion=listarCatalogo">Catalogo <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="inicioo.php">Inicio <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
 

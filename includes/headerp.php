@@ -3,41 +3,47 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Biblioteca</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>    
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
 </head>
 
-<body>
+<body class="<?= htmlspecialchars($bodyClass ?? '', ENT_QUOTES, 'UTF-8') ?>">
+
+<nav>
+    <a href="inicioo.php">
+        <img src="img/logo.png"
+             alt="Inicio" style="width: 270px; height: auto;">
+    </a>
+
+             <ul>
+                <li><a href="inicioo.php#carouselInicio">Inicio</a></li>
+                <li><a href="inicioo.php#destacados">Destacadas</a></li>
+                <li><a href="inicioo.php#noticias">Noticias</a></li>
 
 
-<nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container">
-        <a class="navbar-brand" href="<?= htmlspecialchars($inicioBaseUrl, ENT_QUOTES, 'UTF-8') ?>index.php"><i class="bi bi-book-half me-2"></i>BiblioTech</a>
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-            <span class="navbar-toggler-icon" ></span>
-        </button>
-        <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-                <li class="nav-item"><a class="nav-link active" href="<?= htmlspecialchars($inicioBaseUrl, ENT_QUOTES, 'UTF-8') ?>index.php">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#noticias">Noticias</a></li>
-                <li class="nav-item"><a class="nav-link" href="#destacados">Destacados</a></li>
-                <li class="nav-item"><a class="nav-link" href="#recomendaciones">Recomendaciones</a></li>
-                <li class="nav-item">
-                    <a class="btn btn-sm btn-outline-light ms-lg-2" href="<?= htmlspecialchars($inicioBaseUrl, ENT_QUOTES, 'UTF-8') ?>index.php?accion=login">
+                <li class="dropdown">
+                    <button class="btn btn-sm btn-dark dropdown-toggle" type="button" id="menuExplorar" data-bs-toggle="dropdown" aria-expanded="false">
+                        Explorar
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="menuExplorar">
+                        <a class="dropdown-item" href="index.php?accion=listarCatalogo">Catálogo</a>
+                        <a class="dropdown-item" href="index.php?accion=listarJuegosP">Juegos</a>
+                        <a class="dropdown-item" href="index.php?accion=listarProyectosP">Proyectos</a>
+                    </div>
+                </li>
+                <li>
+                    <a class="btn btn-sm btn-dark ms-lg-2" href="index.php?accion=formLogin">
                         <i class="bi bi-person-circle me-1"></i>Ingresar
                     </a>
                 </li>
             </ul>
-        </div>
-    </div>
 </nav>
+
