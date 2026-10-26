@@ -44,12 +44,12 @@
                             </p>
 
                             <div class="mt-auto d-flex gap-2">
-                                <a href="#"
+                                <a href="index.php?accion=formSolicitudLibro&amp;libro_id=<?= (int) $libro->getId() ?>&amp;tipo=prestamo"
                                    class="btn btn-warning btn-sm">
                                     Pedir
                                 </a>
 
-                                <a href="#"
+                                <a href="index.php?accion=formSolicitudLibro&amp;libro_id=<?= (int) $libro->getId() ?>&amp;tipo=reserva"
                                    class="btn btn-danger btn-sm">
                                     Reservar
                                 </a>

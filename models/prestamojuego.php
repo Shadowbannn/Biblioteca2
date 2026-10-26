@@ -61,7 +61,7 @@ class PrestamoJuego {
     }
 
     public static function buscarPorId(PDO $pdo, int $id): ?PrestamoJuego {
-        $stmt = $pdo->prepare("SELECT p.*, j.nombre AS nombreJuego, j.autor, j.foto, s.nombre AS socioNombre, s.foto AS socioFoto
+        $stmt = $pdo->prepare("SELECT p.*, j.nombre AS nombreJuego, j.foto, s.nombre AS socioNombre, s.foto AS socioFoto
                                FROM prestamosjuegos p
                                INNER JOIN juegos j ON p.juegoId = j.id
                                INNER JOIN socios s ON p.socioId = s.id

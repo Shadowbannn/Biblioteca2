@@ -24,7 +24,9 @@
 
              <ul>
                 <li><a href="inicioo.php">Inicio</a></li>
+                <li><a href="inicioo.php#destacados">Destacadas</a></li>
                 <li><a href="inicioo.php#noticias">Noticias</a></li>
+
                 <li class="dropdown">
                     <button class="btn btn-sm btn-dark dropdown-toggle" type="button" id="menuExplorar" data-bs-toggle="dropdown" aria-expanded="false">
                         Explorar

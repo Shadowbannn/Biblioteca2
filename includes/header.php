@@ -30,8 +30,8 @@
 
         <li>
         <li><a href="index.php"><b>Inicio</b></a></li>
-        <li><a href="index.php?accion=listarLibros"><b>Libros</b></a></li>
         <li><a href="index.php?accion=listarSocios"><b>Socios</b></a></li>
+        <li><a href="index.php?accion=listarLibros"><b>Libros</b></a></li>
         <li><a href="index.php?accion=listarJuegos"><b>Juegos</b></a></li>
         <li><a href="index.php?accion=listarProyectos"><b>Proyectos</b></a></li>        
 
@@ -55,6 +55,26 @@
             </div>
         </li>
 
+        <?php if (!empty($_SESSION['usuario_id'])): ?>
+            <li class="dropdown">
+                <button type="button"
+                        class="btn btn-dark"
+                        id="notificacionesDropdown"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        aria-label="Ver notificaciones">
+                    <i class="fa-solid fa-bell" aria-hidden="true"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end"
+                     aria-labelledby="notificacionesDropdown"
+                     style="min-width: 260px;">
+                    <h6 class="dropdown-header">Notificaciones</h6>
+                    <p class="px-3 py-2 mb-0 text-muted small">
+                        Las notificaciones todav&iacute;a no est&aacute;n habilitadas.
+                    </p>
+                </div>
+            </li>
+        <?php endif; ?>
     </ul>
 </nav>
 

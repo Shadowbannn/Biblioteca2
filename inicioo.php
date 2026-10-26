@@ -53,10 +53,11 @@ require __DIR__ . '/includes/headerp.php';
     <section id="destacados" class="mt-5" aria-labelledby="titulo-destacados">
         <h2 id="titulo-destacados" class="h3 mb-4">Descubre la biblioteca</h2>
         <div class="inicio-tarjetas">
+            
             <!-- Destacado: Catálogo -->
                 <article id="destacado-catalogo" class="card">
-                    <a href="index.php?accion=listarCatalogo" class="d-block">
-                        <img class="card-img-top" src="img/1.png" alt="Catálogo" loading="lazy">
+                    <a href="index.php?accion=listarCatalogo">
+                    <img class="card-img-top" src="img/1.png" alt="Catálogo" loading="lazy">
                     </a>
                     <div class="card-body d-flex flex-column">
                         <h3 class="card-title h5">Catálogo</h3>
@@ -67,8 +68,8 @@ require __DIR__ . '/includes/headerp.php';
 
             <!-- Destacado: Juegos -->
                 <article id="destacado-juegos" class="card">
-                    <a href="index.php?accion=listarJuegosP" class="d-block">
-                        <img class="card-img-top" src="img/6.png" alt="Juegos" loading="lazy">
+                    <a href="index.php?accion=listarJuegosP">
+                    <img class="card-img-top" src="img/6.png" alt="Juegos" loading="lazy">
                     </a>
                     <div class="card-body d-flex flex-column">
                         <h3 class="card-title h5">Juegos</h3>
@@ -79,8 +80,8 @@ require __DIR__ . '/includes/headerp.php';
 
             <!-- Destacado: Proyectos -->
                 <article id="destacado-proyectos" class="card">
-                    <a href="index.php?accion=listarProyectosP" class="d-block">
-                        <img class="card-img-top" src="img/5.png" alt="Proyectos" loading="lazy">
+                    <a href="index.php?accion=listarProyectosP">
+                    <img class="card-img-top" src="img/5.png" alt="Proyectos" loading="lazy">
                     </a>
                     <div class="card-body d-flex flex-column">
                         <h3 class="card-title h5">Proyectos</h3>

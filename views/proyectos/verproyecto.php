@@ -14,11 +14,19 @@
         
  <?php require __DIR__ . '/../../includes/paginadorProyecto.php'; ?>
 
-    <div class="card-body">
+  <div class="card-body">
         <div class="mb-3">
             <a href="index.php?accion=formCrearProyecto" class="btn btn-success">
                 ➕ Agregar Proyecto
             </a>
+
+            <a href="index.php?accion=formCrearPrestamoProyectos" class="btn btn-success">
+                ➕ Agregar Préstamo
+            </a>
+
+            <a href="index.php?accion=listarPrestamosProyectos" class="btn btn-success">
+                ➕ Ver Préstamos de Proyecto
+            </a>            
         </div>
 
 

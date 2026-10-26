@@ -8,6 +8,7 @@ require_once __DIR__ . '/models/Libro.php';
 require_once __DIR__ . '/models/socio.php';
 require_once __DIR__ . '/models/Prestamo.php';
 require_once __DIR__ . '/models/PrestamoJuego.php';
+require_once __DIR__ . '/models/PrestamoProyecto.php';
 require_once __DIR__ . '/models/Usuario.php';
 require_once __DIR__ . '/models/Juego.php';
 require_once __DIR__ . '/models/proyecto.php';
@@ -20,12 +21,15 @@ require_once __DIR__ . '/controllers/UsuarioController.php';
 require_once __DIR__ . '/controllers/JuegoController.php';
 require_once __DIR__ . '/controllers/ProyectoController.php';
 require_once __DIR__ . '/controllers/PrestamoControllerJuego.php';
+require_once __DIR__ . '/controllers/PrestamoControllerProyecto.php';
 
+
+require_once __DIR__ . '/controllers/SolicitudController.php';
 
 $accion = $_REQUEST['accion'] ?? 'inicio';
 
 // Acciones accesibles sin iniciar sesión
-$accionesPublicas = ['formLogin', 'login', 'formCrearUsuario', 'crearUsuario', 'listarCatalogo', 'listarJuegosP', 'listarProyectosP'];
+$accionesPublicas = ['formLogin', 'login', 'formCrearUsuario', 'crearUsuario', 'listarCatalogo', 'listarJuegosP', 'listarProyectosP', 'formSolicitudLibro'];
 
 if (empty($_SESSION['usuario_id']) && !in_array($accion, $accionesPublicas, true)) {
     header('Location: inicioo.php');
@@ -33,7 +37,11 @@ if (empty($_SESSION['usuario_id']) && !in_array($accion, $accionesPublicas, true
 }
 
 // Acciones accesibles con sudo su
+
 switch ($accion) {
+    case 'formSolicitudLibro':
+        formSolicitudLibro();
+        break;
 
     // LOGIN //
 
@@ -139,6 +147,26 @@ switch ($accion) {
         eliminarPrestamoJuegos();
         break;
 
+        // PRESTAMOS PROYECTOS //
+
+    case 'listarPrestamosProyectos':
+        listarPrestamosProyectos();
+        break;
+    case 'formCrearPrestamoProyectos':
+        formCrearPrestamoProyectos();
+        break;
+    case 'crearPrestamoProyectos':
+        crearPrestamoProyectos();
+        break;
+    case 'formEditarPrestamoProyectos':
+        formEditarPrestamoProyectos(); 
+        break;
+    case 'editarPrestamoProyectos':
+        editarPrestamoProyectos();     // AGREGADO
+        break;
+    case 'eliminarPrestamoProyectos':
+        eliminarPrestamoProyectos();
+        break;
 
     // USUARIOS (cuentas del sistema) //
 
