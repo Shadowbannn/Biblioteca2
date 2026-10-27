@@ -24,12 +24,12 @@
                                 <img src="uploads/portadas/<?= htmlspecialchars($libro->getPortada()) ?>"
                                      alt="Portada de <?= htmlspecialchars($libro->getTitulo()) ?>"
                                      class="card-img-top mb-3"
-                                     style="max-height: 400px; object-fit: cover;">
+                                     style="height: 400px; width: 250px">
                             <?php else: ?>
-                                <img src="assets/sin-portada.png"
+                                <img src="assets/sin-portada.webp"
                                      alt="Portada por defecto"
                                      class="card-img-top mb-3"
-                                     style="max-height: 400px; object-fit: cover;">
+                                     style="height: 400px; width: 250px">
                             <?php endif; ?>
 
                             <h5 class="card-title">

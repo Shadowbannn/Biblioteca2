@@ -52,11 +52,23 @@ $esEdicion = isset($libro);
                 <input type="number" name="paginas" id="paginas" class="form-control mb-3"
                        placeholder="Páginas"
                        value="<?= $esEdicion ? $libro->getCantidadPaginas() : '' ?>" required>
-
+                
                 <label for="genero" class="form-label">Género</label>       
                 <input type="text" name="genero" id="genero" class="form-control mb-3"
                        placeholder="Género (ej: Fantasia, Juvenil)"
                        value="<?= $esEdicion ? htmlspecialchars($libro->getGenero()) : '' ?>">
+
+                <?php $disponibilidadActual = $_POST['disponible'] ?? ($esEdicion ? $libro->getDisponible() : 'Sí'); ?>
+                <label for="disponible" class="form-label">Disponibilidad</label>
+                <select name="disponible" id="disponible" class="form-select mb-3" required>
+                    <option value="Sí" <?= $disponibilidadActual === 'Sí' ? 'selected' : '' ?>>Sí</option>
+                    <option value="No" <?= $disponibilidadActual === 'No' ? 'selected' : '' ?>>No</option>
+                </select>
+
+                <label for="stock" class="form-label">Stock</label>
+                <input type="number" name="stock" id="stock" class="form-control mb-3"
+                       min="0" step="1"
+                       value="<?= htmlspecialchars((string) ($_POST['stock'] ?? ($esEdicion ? $libro->getStock() : 1))) ?>" required>
 
                 <?php if ($esEdicion): ?>
                     <label>Portada actual</label><br>

@@ -53,7 +53,7 @@ $esEdicion = isset($proyecto);
                 <label for="Clase" class="form-label">Clase</label>
                 <input type="text" name="clase" id="Clase" class="form-control mb-3"
                        placeholder="Clase"
-                       value="<?= $esEdicion ? $proyecto->getClase() : '' ?>" required>
+                       value="<?= $esEdicion ? htmlspecialchars($proyecto->getClase(), ENT_QUOTES, 'UTF-8') : '' ?>" required>
 
                 <!-- CORREGIDO: name="curso" en minúscula -->
                 <label for="Curso" class="form-label">Curso</label>       

@@ -73,22 +73,74 @@ class Prestamo {
     }
 
     public static function crear(PDO $pdo, int $socioId, int $libroId, string $estado, string $fechaPrestamo, string $fechaDevolucion): bool {
+        return self::guardarConDisponibilidad($pdo, [$libroId], function () use ($pdo, $socioId, $libroId, $estado, $fechaPrestamo, $fechaDevolucion) {
         $stmt = $pdo->prepare("INSERT INTO prestamos (socioId, libroId, estado, fechaPrestamo, fechaDevolucion)
                                VALUES (?, ?, ?, ?, ?)");
         return $stmt->execute([$socioId, $libroId, $estado, $fechaPrestamo, $fechaDevolucion]);
+        });
     }
 
     public static function actualizar(PDO $pdo, int $id, int $socioId, int $libroId, string $estado, string $fechaPrestamo, string $fechaDevolucion): bool {
+        return self::guardarConDisponibilidad($pdo, [$libroId], function () use ($pdo, $id, $socioId, $libroId, $estado, $fechaPrestamo, $fechaDevolucion) {
         $stmt = $pdo->prepare("UPDATE prestamos 
                                SET socioId = ?, libroId = ?, estado = ? ,fechaPrestamo = ? ,fechaDevolucion = ?
                                WHERE id = ?");
         return $stmt->execute([$socioId, $libroId, $estado, $fechaPrestamo, $fechaDevolucion, $id]);
+        }, $id);
     }
 
     public static function eliminar(PDO $pdo, int $id): bool {
+        return self::guardarConDisponibilidad($pdo, [], function () use ($pdo, $id) {
         $stmt = $pdo->prepare("DELETE FROM prestamos 
                                WHERE id = ?");
         return $stmt->execute([$id]);
+        }, $id);
+    }
+
+    private static function guardarConDisponibilidad(PDO $pdo, array $libroIds, callable $guardar, ?int $prestamoId = null): bool {
+        $transaccionPropia = !$pdo->inTransaction();
+        if ($transaccionPropia) {
+            $pdo->beginTransaction();
+        }
+        try {
+            if ($prestamoId !== null) {
+                $stmt = $pdo->prepare('SELECT libroId FROM prestamos WHERE id = ? FOR UPDATE');
+                $stmt->execute([$prestamoId]);
+                $libroAnterior = $stmt->fetchColumn();
+                if ($libroAnterior !== false) {
+                    $libroIds[] = (int) $libroAnterior;
+                }
+            }
+            $libroIds = array_unique($libroIds);
+            sort($libroIds);
+            foreach ($libroIds as $libroId) {
+                $stmt = $pdo->prepare('SELECT id FROM libros WHERE id = ? FOR UPDATE');
+                $stmt->execute([$libroId]);
+                $stmt->fetchColumn();
+            }
+            if (!$guardar()) {
+                throw new RuntimeException('No se pudo guardar el prestamo.');
+            }
+            foreach ($libroIds as $libroId) {
+                self::actualizarDisponibilidad($pdo, $libroId);
+            }
+            if ($transaccionPropia) {
+                $pdo->commit();
+            }
+            return true;
+        } catch (Throwable $e) {
+            if ($transaccionPropia && $pdo->inTransaction()) {
+                $pdo->rollBack();
+            }
+            throw $e;
+        }
+    }
+
+    private static function actualizarDisponibilidad(PDO $pdo, int $libroId): void {
+        $stmt = $pdo->prepare("UPDATE libros SET disponible = CASE
+            WHEN EXISTS (SELECT 1 FROM prestamos WHERE libroId = ? AND estado = 'Prestado')
+            THEN 'No' ELSE 'Sí' END WHERE id = ?");
+        $stmt->execute([$libroId, $libroId]);
     }
 
     public static function contarTotal(PDO $pdo): int {

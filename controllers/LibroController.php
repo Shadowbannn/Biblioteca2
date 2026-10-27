@@ -65,16 +65,24 @@ function crearLibro() {
     $anio    = $_POST['anio'] ?? '';
     $paginas = $_POST['paginas'] ?? '';
     $genero  = trim($_POST['genero'] ?? '');
+    $disponible = trim($_POST['disponible'] ?? '');
+    $stock   = $_POST['stock'] ?? '';
 
-    if ($titulo === '' || $autor === '' || $anio === '' || $paginas === '') {
+    if ($titulo === '' || $autor === '' || $anio === '' || $paginas === '' || $stock === '') {
         $error = "Todos los campos son obligatorios.";
+        require __DIR__ . '/../views/libros/form.php';
+        return;
+    }
+
+    if (!in_array($disponible, ['Sí', 'No'], true)) {
+        $error = 'Seleccioná una disponibilidad válida: Sí o No.';
         require __DIR__ . '/../views/libros/form.php';
         return;
     }
 
     $portada = subirPortada();
 
-    Libro::crear($pdo, $titulo, $autor, (int) $anio, (int) $paginas, $genero, $portada);
+    Libro::crear($pdo, $titulo, $autor, (int) $anio, (int) $paginas, $genero, $disponible, (int) $stock, $portada);
 
     header('Location: index.php?accion=listarLibros');
     exit;
@@ -84,26 +92,37 @@ function editarLibro() {
     global $pdo;
 
     $id      = (int) ($_POST['id'] ?? 0);
+    $disponible = trim($_POST['disponible'] ?? '');
     $titulo  = trim($_POST['titulo'] ?? '');
     $autor   = trim($_POST['autor'] ?? '');
     $anio    = $_POST['anio'] ?? '';
     $paginas = $_POST['paginas'] ?? '';
     $genero  = trim($_POST['genero'] ?? '');
+    $stock   = $_POST['stock'] ?? '';
 
-    if ($titulo === '' || $autor === '' || $anio === '' || $paginas === '') {
+    if ($titulo === '' || $autor === '' || $anio === '' || $paginas === '' || $stock === '') {
         $libro = Libro::buscarPorId($pdo, $id);
         $error = "Todos los campos son obligatorios.";
         require __DIR__ . '/../views/libros/form.php';
         return;
     }
 
+    $libroActual = Libro::buscarPorId($pdo, $id);
+    if (!$libroActual) {
+        die("El libro no existe.");
+    }
+    if (!in_array($disponible, ['Sí', 'No'], true)) {
+        $libro = $libroActual;
+        $error = 'Seleccioná una disponibilidad válida: Sí o No.';
+        require __DIR__ . '/../views/libros/form.php';
+        return;
+    }
     $portadaNueva = subirPortada();
     if ($portadaNueva === null) {
-        $libroActual = Libro::buscarPorId($pdo, $id);
-        $portadaNueva = $libroActual ? $libroActual->getPortada() : null;
+        $portadaNueva = $libroActual->getPortada();
     }
 
-    Libro::actualizar($pdo, $id, $titulo, $autor, (int) $anio, (int) $paginas, $genero, $portadaNueva);
+    Libro::actualizar($pdo, $id, $titulo, $autor, (int) $anio, (int) $paginas, $genero, $disponible, (int) $stock, $portadaNueva);
 
     header('Location: index.php?accion=listarLibros');
     exit;

@@ -76,7 +76,7 @@ function crearProyecto() {
 
     $caratula = subirCaratula();
 
-    Proyecto::crear($pdo, $nombre, $integrantes, (int) $anio, (int) $clase, $curso, $caratula);
+    Proyecto::crear($pdo, $nombre, $integrantes, (int) $anio, (string) $clase, $curso, $caratula);
 
     header('Location: index.php?accion=listarProyectos');
     exit;
@@ -107,7 +107,7 @@ function editarProyecto() {
         $portadaNueva = $proyectoActual ? $proyectoActual->getPortada() : null;
     }
 
-    Proyecto::actualizar($pdo, $id, $nombre, $integrantes, (int) $anio, (int) $clase, $curso, $portadaNueva);
+    Proyecto::actualizar($pdo, $id, $nombre, $integrantes, (int) $anio, (string) $clase, $curso, $portadaNueva);
 
     header('Location: index.php?accion=listarProyectos');
     exit;

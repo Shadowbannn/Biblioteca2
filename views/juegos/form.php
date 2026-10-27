@@ -43,10 +43,17 @@ $esEdicion = isset($juego);
                        placeholder="Editor"
                        value="<?= $esEdicion ? htmlspecialchars($juego->getEditor()) : '' ?>" required>
 
-                <label for="disponible" class="form-label">Disponible (0 = No, 1 = Sí)</label>
-                <input type="number" name="disponible" id="disponible" min="0" max="1" step="1" class="form-control mb-3"
-                       placeholder="Disponible"
-                       value="<?= $esEdicion ? $juego->getDisponible() : '' ?>" required>
+                <label for="stock" class="form-label">Stock</label>
+                <input type="number" name="stock" id="stock" min="0" class="form-control mb-3"
+                       placeholder="Stock"
+                       value="<?= htmlspecialchars((string) ($_POST['stock'] ?? ($esEdicion ? $juego->getStock() : 1))) ?>" required>
+
+                <?php $disponibilidadActual = (string) ($_POST['disponible'] ?? ($esEdicion ? $juego->getDisponible() : 1)); ?>
+                <label for="disponible" class="form-label">Disponibilidad</label>
+                <select name="disponible" id="disponible" class="form-select mb-3" required>
+                    <option value="1" <?= $disponibilidadActual === '1' ? 'selected' : '' ?>>Sí</option>
+                    <option value="0" <?= $disponibilidadActual === '0' ? 'selected' : '' ?>>No</option>
+                </select>
 
 
                 <?php if ($esEdicion): ?>

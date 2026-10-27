@@ -36,7 +36,8 @@
                         <tr>
                             <th scope="col">Foto</th>                            
                             <th scope="col">Nombre</th>
-                            <th scope="col">Editor</th>                            
+                            <th scope="col">Marca</th>
+                            <th scope="col">Stock</th>                            
                             <th scope="col">Disponible</th>
                             <th scope="col">Código</th>
                             <th scope="col">Editar</th>
@@ -63,7 +64,12 @@
                         </td>
                         <td><?= htmlspecialchars($juego->getNombre()) ?></td>
                         <td><?= $juego->getEditor() ?></td>
-                        <td><?= $juego->getDisponible() ?></td>
+                        <td><?= $juego->getStock() ?></td>
+                        <td>
+                            <span class="badge bg-<?= $juego->getDisponible() === 1 ? 'success' : 'danger' ?>">
+                                <?= $juego->getDisponible() === 1 ? 'Sí' : 'No' ?>
+                            </span>
+                        </td>
                         <td><span class="juego-id">#<?= $juego->getId() ?></td>
                         <td><div class="mt-auto d-flex gap-2">
                             

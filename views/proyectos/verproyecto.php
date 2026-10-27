@@ -66,9 +66,9 @@
                         </td>
                         <td><?= htmlspecialchars($proyecto->getNombre()) ?></td>
                         <td><?= $proyecto->getIntegrantes() ?></td>
-                        <td><?= $proyecto->getClase() ?></td>
-                        <td><?= $proyecto->getCurso() ?></td>
+                        <td><?= htmlspecialchars($proyecto->getClase(), ENT_QUOTES, 'UTF-8') ?></td>
                         <td><?= $proyecto->getAnio() ?></td>
+                        <td><?= $proyecto->getCurso() ?></td>
                         <td><span class="proyecto-id">#<?= $proyecto->getId() ?></td>
                         <td><div class="mt-auto d-flex gap-2">
                             

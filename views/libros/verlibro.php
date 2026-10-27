@@ -38,6 +38,8 @@
                             <th scope="col">Título</th>
                             <th scope="col">Autor</th>
                             <th scope="col">Género</th>
+                            <th scope="col">Disponible</th>
+                            <th scope="col">Stock</th>
                             <th scope="col">Año</th>
                             <th scope="col">Código</th>
                             <th scope="col">Editar</th>
@@ -65,6 +67,12 @@
                         <td><?= htmlspecialchars($libro->getTitulo()) ?></td>
                         <td><?= $libro->getAutor() ?></td>
                         <td><?= $libro->getGenero() ?></td>
+                        <td>
+                            <span class="badge bg-<?= $libro->getDisponible() === 'Sí' ? 'success' : 'danger' ?>">
+                                <?= htmlspecialchars($libro->getDisponible()) ?>
+                            </span>
+                        </td>
+                        <td><?= $libro->getStock() ?></td>
                         <td><?= $libro->getAnioPublicacion() ?></td>
                         <td><span class="libro-id">#<?= $libro->getId() ?></span></td>
                         <td><div class="mt-auto d-flex gap-2">

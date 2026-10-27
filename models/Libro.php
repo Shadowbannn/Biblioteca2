@@ -8,18 +8,22 @@ class Libro {
     private int    $anioPublicacion;
     private int    $cantidadPaginas;
     private string $genero;
+    private string    $disponible;
+    private int    $stock;
     private ?string $portada;
 
 
     public function __construct(string $titulo, string $autor,
                                 int $anioPublicacion, int $cantidadPaginas,
-                                ?int $id = null, string $genero = '', ?string $portada = null) {
+                                ?int $id = null, string $genero = '', string $disponible = 'Sí', int $stock = 1, ?string $portada = null) {
         $this->titulo            = $titulo;
         $this->autor             = $autor;
         $this->anioPublicacion   = $anioPublicacion;
         $this->cantidadPaginas   = $cantidadPaginas;
         $this->id                = $id;
+        $this->disponible        = $disponible;
         $this->genero            = $genero;
+        $this->stock             = $stock;
         $this->portada           = $portada;
     }
 
@@ -51,6 +55,14 @@ class Libro {
         return $this->genero;
     }
 
+    public function getDisponible() {
+        return $this->disponible;
+    }
+
+    public function getStock() {
+        return $this->stock;
+    }
+
     public function getPortada() {
         return $this->portada;
     }
@@ -64,6 +76,8 @@ class Libro {
             (int) $f['cantidad_paginas'],
             (int) $f['id'],
             (string) ($f['genero'] ?? ''),
+            (string) ($f['disponible'] ?? 'Sí'),
+            (int) ($f['stock'] ?? 1),
             $f['portada'] ?? null
         );
     }
@@ -163,22 +177,22 @@ class Libro {
     // =========================
 
     public static function crear(PDO $pdo, string $titulo, string $autor, int $anio,
-                                  int $paginas, string $genero, ?string $portada): bool {
+                                  int $paginas, string $genero, string $disponible, int $stock, ?string $portada): bool {
         $stmt = $pdo->prepare(
-            "INSERT INTO libros (titulo, autor, anio_publicacion, cantidad_paginas, genero, portada)
-             VALUES (?, ?, ?, ?, ?, ?)"
+            "INSERT INTO libros (titulo, autor, anio_publicacion, cantidad_paginas, genero, disponible, stock, portada)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
         );
-        return $stmt->execute([$titulo, $autor, $anio, $paginas, $genero, $portada]);
+        return $stmt->execute([$titulo, $autor, $anio, $paginas, $genero, $disponible, $stock, $portada]);
     }
 
     public static function actualizar(PDO $pdo, int $id, string $titulo, string $autor, int $anio,
-                                       int $paginas, string $genero, ?string $portada): bool {
+                                       int $paginas, string $genero, string $disponible, int $stock, ?string $portada): bool {
         $stmt = $pdo->prepare(
             "UPDATE libros
-             SET titulo = ?, autor = ?, anio_publicacion = ?, cantidad_paginas = ?, genero = ?, portada = ?
+             SET titulo = ?, autor = ?, anio_publicacion = ?, cantidad_paginas = ?, genero = ?, disponible = ?, stock = ?, portada = ?
              WHERE id = ?"
         );
-        return $stmt->execute([$titulo, $autor, $anio, $paginas, $genero, $portada, $id]);
+        return $stmt->execute([$titulo, $autor, $anio, $paginas, $genero, $disponible, $stock, $portada, $id]);
     }
 
     public static function eliminar(PDO $pdo, int $id): bool {

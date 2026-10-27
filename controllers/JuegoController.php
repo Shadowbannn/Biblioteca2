@@ -64,9 +64,10 @@ function crearJuego() {
 
     $nombre     = trim($_POST['nombre'] ?? '');
     $editor      = trim($_POST['editor'] ?? '');
+    $stock      = trim($_POST['stock'] ?? '');
     $disponible = $_POST['disponible'] ?? '';
 
-    if ($nombre === '' || $editor === '' || $disponible === '') {
+    if ($nombre === '' || $editor === '' || $stock === '' || $disponible === '') {
         $error = "Todos los campos son obligatorios.";
         require __DIR__ . '/../views/juegos/form.php';
         return;
@@ -80,7 +81,7 @@ function crearJuego() {
 
     $foto = subirFotoJuego();
 
-    Juego::crear($pdo, $nombre, $editor, (int) $disponible, $foto);
+    Juego::crear($pdo, $nombre, $editor, (int) $stock, (int) $disponible, $foto);
 
     header('Location: index.php?accion=listarJuegos');
     exit;
@@ -92,9 +93,10 @@ function editarJuego() {
     $id         = (int) ($_POST['id'] ?? 0);
     $nombre     = trim($_POST['nombre'] ?? '');
     $editor     = trim($_POST['editor'] ?? '');
+    $stock      = trim($_POST['stock'] ?? '');
     $disponible = $_POST['disponible'] ?? '';
 
-    if ($nombre === '' || $editor === '' || $disponible === '') {
+    if ($nombre === '' || $editor === '' || $stock === '' || $disponible === '') {
         $juego = Juego::buscarPorId($pdo, $id);
         $error = "Todos los campos son obligatorios.";
         require __DIR__ . '/../views/juegos/form.php';
@@ -114,7 +116,7 @@ function editarJuego() {
         $fotoNueva = $juegoActual ? $juegoActual->getFoto() : null;
     }
 
-    Juego::actualizar($pdo, $id, $nombre, $editor, (int) $disponible, $fotoNueva);
+    Juego::actualizar($pdo, $id, $nombre, $editor, (int) $stock, (int) $disponible, $fotoNueva);
 
     header('Location: index.php?accion=listarJuegos');
     exit;

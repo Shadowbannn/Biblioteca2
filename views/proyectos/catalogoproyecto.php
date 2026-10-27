@@ -37,7 +37,7 @@
 
                             <p class="card-text">
                                 <b>Integrantes:</b> <?= htmlspecialchars($proyecto->getIntegrantes()) ?><br>
-                                <b>Clase:</b> <?= $proyecto->getClase() ?><br>
+                                <b>Clase:</b> <?= htmlspecialchars($proyecto->getClase(), ENT_QUOTES, 'UTF-8') ?><br>
                                 <b>Curso:</b> <?= $proyecto->getCurso() ?><br>
                                 <b>Año:</b> <?= htmlspecialchars($proyecto->getAnio()) ?><br>
                                 <b>Código:</b> <?= htmlspecialchars($proyecto->getId()) ?><br>

@@ -94,11 +94,50 @@ require __DIR__ . '/includes/headerp.php';
 
     <section id="noticias" class="mt-5" aria-labelledby="titulo-noticias">
         <h2 id="titulo-noticias" class="h3 mb-4">Noticias</h2>
-        <div class="card">
-            <div class="card-body">
-                <h3 class="card-title h5">Novedades de la biblioteca</h3>
-                <p class="card-text mb-0">se vienen cositas...</p>
-            </div>
+            <div class="card-group">
+                <div class="card">
+                    <a href="https://www.utu.edu.uy/noticias/concurso-abierto-para-disenar-el-afiche-oficial-de-la-48-a-feria-internacional-del-libro-de-montevideo/" target="_blank" rel="noopener noreferrer">
+                    <img class="card-img-top" src="https://www.utu.edu.uy/wp-content/uploads/2026/06/UTU_8864-edited.jpg" alt="Card image cap">
+                    </a>
+
+                    <div class="card-body">
+                    <h5 class="card-title">Concurso abierto para diseñar el afiche oficial de la 48.ª Feria Internacional del Libro de Montevideo</h5>
+                    </div>
+
+                    <div class="card-footer">
+                    <small class="text-muted">Actualizado 67 minutos atrás</small>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="https://www.utu.edu.uy/la-literatura-y-la-inclusion-protagonizaron-dia-nacional-del-libro-en-utu-con-la-muestra-modo-lectura/" target="_blank" rel="noopener noreferrer">
+                        <img class="card-img-top" src="https://www.utu.edu.uy/wp-content/uploads/2026/05/DSC08045.jpg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                    <h5 class="card-title">La literatura y la inclusión protagonizaron el Día Nacional del Libro en UTU con la muestra «Modo Lectura»</h5>
+                    </div>
+                    
+
+                    <div class="card-footer">
+                    <small class="text-muted">Actualizado 7 minutos atrás</small>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="https://www.utu.edu.uy/noticias/utu-presenta-nuevos-libros-de-inglés-elaborados-por-docentes-uruguayos-para-fortalecer-la-formación-técnica/" target="_blank" rel="noopener noreferrer">
+                        <img class="card-img-top" src="https://www.utu.edu.uy/wp-content/uploads/2026/04/DSC5232-1024x684.jpg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                    <h5 class="card-title">UTU presenta nuevos libros de inglés elaborados por docentes uruguayos para fortalecer la formación técnica</h5>
+                    </div>
+
+                    <div class="card-footer">
+                    <small class="text-muted">Actualizado 9 minutos atrás</small>
+                    </div>
+                </div>
+
+            </div>          
+            
         </div>
     </section>
 </main>

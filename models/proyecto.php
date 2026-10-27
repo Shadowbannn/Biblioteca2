@@ -6,13 +6,13 @@ class Proyecto {
     private string $nombre;
     private string $integrantes;
     private int    $anio;
-    private int    $clase;
+    private string $clase;
     private string $curso;
     private ?string $portada;
 
 
     public function __construct(string $nombre, string $integrantes,
-                                int $anio, int $clase,
+                                int $anio, string $clase,
                                 ?int $id = null, string $curso = '', ?string $portada = null) {
         $this->nombre            = $nombre;
         $this->integrantes             = $integrantes;
@@ -67,11 +67,11 @@ class Proyecto {
     private static function desdeFila(array $f): Proyecto {
         return new Proyecto(
             $f['nombre'],
-            $f['integrantes'],
+            (string) ($f['integrantes'] ?? ''),
             (int) $f['anio'],
-            (int) $f['clase'],
+            (string) ($f['clase'] ?? ''),
             (int) $f['id'],
-            $f['curso'],
+            (string) ($f['curso'] ?? ''),
             $f['portada']
         );
     }
@@ -107,16 +107,16 @@ class Proyecto {
     }
 
     public static function crear(PDO $pdo, string $nombre, string $integrantes, int $anio,
-                                   int $clase, string $curso, ?string $portada): bool {
+                                   string $clase, string $curso, ?string $portada): bool {
         $stmt = $pdo->prepare(
             "INSERT INTO proyectos (nombre, integrantes, anio, clase, curso, portada)
              VALUES (?, ?, ?, ?, ?, ?)"
         );
-        return $stmt->execute([$nombre, $integrantes, $anio, $paginas, $curso, $portada]);
+        return $stmt->execute([$nombre, $integrantes, $anio, $clase, $curso, $portada]);
     }
 
     public static function actualizar(PDO $pdo, int $id, string $nombre, string $integrantes, int $anio,
-                                     int $clase, string $curso,  ?string $portada): bool {
+                                     string $clase, string $curso,  ?string $portada): bool {
         $stmt = $pdo->prepare(
             "UPDATE proyectos
              SET nombre = ?, integrantes = ?, anio = ?, clase = ?, curso = ?, portada = ?

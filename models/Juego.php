@@ -5,6 +5,7 @@ class Juego {
     private ?int    $id;
     private string  $nombre;
     private string  $editor;
+    private int     $stock;
     private int     $disponible;
     private ?string $foto;
 
@@ -12,13 +13,15 @@ class Juego {
     public function __construct(
         string $nombre,
         string $editor,
-        int $disponible,
+        int $stock = 1,
+        int $disponible = 1,
         ?int $id = null,
         ?string $foto = null
     ) {
         $this->id = $id;
         $this->nombre = $nombre;
         $this->editor = $editor;
+        $this->stock = $stock;
         $this->disponible = $disponible;
         $this->foto = $foto;
     }
@@ -39,6 +42,10 @@ class Juego {
         return $this->editor;
     }
 
+    public function getStock() {
+        return $this->stock;
+    }
+
     public function getDisponible() {
         return $this->disponible;
     }
@@ -53,6 +60,7 @@ class Juego {
         return new Juego(
             $f['nombre'],
             $f['editor'] ?? '',
+            (int) ($f['stock'] ?? 1),
             (int) $f['disponible'],
             (int) $f['id'],
             $f['foto'] ?? null
@@ -103,23 +111,23 @@ class Juego {
     // CRUD
     // =========================
 
-    public static function crear(PDO $pdo, string $nombre, string $editor, int $disponible,
+    public static function crear(PDO $pdo, string $nombre, string $editor, int $stock, int $disponible,
                                  ?string $foto): bool {
         $stmt = $pdo->prepare(
-            "INSERT INTO juegos (nombre, editor, disponible, foto)
-             VALUES (?, ?, ?, ?)"
+            "INSERT INTO juegos (nombre, editor, stock, disponible, foto)
+             VALUES (?, ?, ?, ?, ?)"
         );
-        return $stmt->execute([$nombre, $editor, $disponible, $foto]);
+        return $stmt->execute([$nombre, $editor, $stock, $disponible, $foto]);
     }
 
-    public static function actualizar(PDO $pdo, int $id, string $nombre, string $editor, int $disponible,
+    public static function actualizar(PDO $pdo, int $id, string $nombre, string $editor, int $stock, int $disponible,
                                      ?string $foto): bool {
         $stmt = $pdo->prepare(
             "UPDATE juegos
-             SET nombre = ?, editor = ?, disponible = ?, foto = ?
+             SET nombre = ?, editor = ?, stock = ?, disponible = ?, foto = ?
              WHERE id = ?"
         );
-        return $stmt->execute([$nombre, $editor, $disponible, $foto, $id]);
+        return $stmt->execute([$nombre, $editor, $stock, $disponible, $foto, $id]);
     }
 
     public static function eliminar(PDO $pdo, int $id): bool {
