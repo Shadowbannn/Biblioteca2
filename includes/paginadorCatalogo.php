@@ -4,6 +4,9 @@ if (!function_exists('urlPagina')) {
     {
         return '?' . http_build_query([
             'accion' => 'listarCatalogo',
+            'buscar' => $_GET['buscar'] ?? '',
+            'genero' => $_GET['genero'] ?? '',
+            'disponibilidad' => $_GET['disponibilidad'] ?? '',
             'pagina' => $pagina,
         ]);
     }

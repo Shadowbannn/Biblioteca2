@@ -55,6 +55,19 @@ class Proyecto {
         return $this->portada;
     }
 
+    public function getRutaPortada(): string {
+        if (!$this->portada) {
+            return 'assets/sin-portada.webp';
+        }
+
+        if (strpos($this->portada, 'uploads/proyectos/') === 0 ||
+            strpos($this->portada, 'uploads/portadas/') === 0) {
+            return $this->portada;
+        }
+
+        return 'uploads/portadas/' . $this->portada;
+    }
+
     public function mostrarInfo(): void {
         echo "  PROYECTO\n";
         echo "  Nombre              : {$this->nombre}\n";

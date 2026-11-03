@@ -29,7 +29,7 @@
 
         <input class="form-control" id="myInput" type="search" placeholder="Buscar juegos..." aria-label="Buscar en los juegos de esta página">
         <br>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="table-responsive">
 
                  <table class="table table-striped table-dark">
                     <thead>

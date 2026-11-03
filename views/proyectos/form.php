@@ -65,7 +65,7 @@ $esEdicion = isset($proyecto);
                     <label>Portada actual</label><br>
                     <div class="mb-2">
                         <?php if (!empty($proyecto->getPortada())): ?>
-                            <img src="uploads/portadas/<?= htmlspecialchars($proyecto->getPortada()) ?>"
+                            <img src="<?= htmlspecialchars($proyecto->getRutaPortada(), ENT_QUOTES, 'UTF-8') ?>"
                                  alt="Portada actual" class="portada-preview" style="max-width:150px;">
                         <?php else: ?>
                             <p class="text-muted">Este proyecto no tiene portada.</p>

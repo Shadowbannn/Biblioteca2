@@ -1,7 +1,4 @@
 <?php require __DIR__ . '/../../includes/header.php'; ?>
-<h1 class="titulo mt-5"><b>Libros</b></h1>
-
-
 
 <div class="card">
         <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center flex-wrap gap-2">
@@ -12,10 +9,10 @@
         </div>
 
 
-<?php require __DIR__ . '/../../includes/filtroLibros.php'; ?>
-   <?php require __DIR__ . '/../../includes/paginador.php'; ?>
+
 
     <div class="card-body">
+        <?php require __DIR__ . '/../../includes/filtroLibros.php'; ?>
         <div class="mb-3">
             <a href="index.php?accion=formCrearLibro" class="btn btn-success">
                 ➕ Agregar Libro
@@ -24,7 +21,7 @@
                     ➕ Agregar Préstamo
                 </a>
                     <a href="index.php?accion=listarPrestamos" class="btn btn-success">
-                        ➕ Ver Préstamo
+                        ➕ Ver Préstamos
                     </a>
         </div>
 

@@ -12,6 +12,7 @@ require_once __DIR__ . '/models/PrestamoProyecto.php';
 require_once __DIR__ . '/models/Usuario.php';
 require_once __DIR__ . '/models/Juego.php';
 require_once __DIR__ . '/models/proyecto.php';
+require_once __DIR__ . '/models/solicitud.php';
 
 
 require_once __DIR__ . '/controllers/LibroController.php';
@@ -29,7 +30,9 @@ require_once __DIR__ . '/controllers/SolicitudController.php';
 $accion = $_REQUEST['accion'] ?? 'inicio';
 
 // Acciones accesibles sin iniciar sesión
-$accionesPublicas = ['formLogin', 'login', 'formCrearUsuario', 'crearUsuario', 'listarCatalogo', 'listarJuegosP', 'listarProyectosP', 'formSolicitudLibro'];
+$accionesPublicas = ['formLogin', 'login', 'formCrearUsuario', 'crearUsuario', 
+                    'listarCatalogo', 'listarJuegosP', 'listarProyectosP', 
+                    'formSolicitudLibro', 'guardarSolicitudLibro'];
 
 if (empty($_SESSION['usuario_id']) && !in_array($accion, $accionesPublicas, true)) {
     header('Location: inicioo.php');
@@ -39,8 +42,14 @@ if (empty($_SESSION['usuario_id']) && !in_array($accion, $accionesPublicas, true
 // Acciones accesibles con sudo su
 
 switch ($accion) {
+    case 'listarSolicitudes':
+        listarSolicitudes();
+        break;
     case 'formSolicitudLibro':
         formSolicitudLibro();
+        break;
+    case 'guardarSolicitudLibro':
+        guardarSolicitudLibro();
         break;
 
     // LOGIN //

@@ -105,7 +105,7 @@ require __DIR__ . '/includes/headerp.php';
                     </div>
 
                     <div class="card-footer">
-                    <small class="text-muted">Actualizado 67 minutos atrás</small>
+                    <small class="text-muted">25/06/2026</small>
                     </div>
                 </div>
 
@@ -119,12 +119,12 @@ require __DIR__ . '/includes/headerp.php';
                     
 
                     <div class="card-footer">
-                    <small class="text-muted">Actualizado 7 minutos atrás</small>
+                    <small class="text-muted">27/05/2026</small>
                     </div>
                 </div>
 
                 <div class="card">
-                    <a href="https://www.utu.edu.uy/noticias/utu-presenta-nuevos-libros-de-inglés-elaborados-por-docentes-uruguayos-para-fortalecer-la-formación-técnica/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.utu.edu.uy/utu-presenta-nuevos-libros-de-ingles-elaborados-por-docentes-uruguayos-para-fortalecer-la-formacion-tecnica/" target="_blank" rel="noopener noreferrer">
                         <img class="card-img-top" src="https://www.utu.edu.uy/wp-content/uploads/2026/04/DSC5232-1024x684.jpg" alt="Card image cap">
                     </a>
                     <div class="card-body">
@@ -132,7 +132,7 @@ require __DIR__ . '/includes/headerp.php';
                     </div>
 
                     <div class="card-footer">
-                    <small class="text-muted">Actualizado 9 minutos atrás</small>
+                    <small class="text-muted">10/04/2026</small>
                     </div>
                 </div>
 

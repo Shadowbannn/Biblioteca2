@@ -155,6 +155,25 @@ class Socio
         return self::desdeFila($f);
     }
 
+    public static function buscarPorCedula(PDO $pdo, string $cedula): ?Socio {
+        $stmt = $pdo->prepare(
+            "SELECT *
+             FROM socios
+             WHERE cedula = ?"
+        );
+
+        $stmt->execute([$cedula]);
+
+        $f = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if (!$f) {
+            return null;
+        }
+
+        return self::desdeFila($f);
+    }
+
+
    
     public static function crear(
         PDO $pdo,

@@ -3,20 +3,19 @@
 function listarCatalogo() {
     global $pdo;
 
-    $paginaActual = isset($_GET['pagina']) ? (int) $_GET['pagina'] : 1;
-    if ($paginaActual < 1) {
-        $paginaActual = 1;
-    }
+    $buscar = trim((string) ($_GET['buscar'] ?? ''));
+    $campo = 'todos';
+    $genero = (string) ($_GET['genero'] ?? '');
+    $generos = Libro::listarGeneros($pdo);
+    $disponibilidad = (string) ($_GET['disponibilidad'] ?? '');
+    if (!in_array($disponibilidad, ['', '1', '0'], true)) $disponibilidad = '';
 
+    $paginaActual = max(1, (int) ($_GET['pagina'] ?? 1));
     $porPagina = 20;
-    $totalRegistros = Libro::contarTotal($pdo);
-    $totalPaginas = (int) ceil($totalRegistros / $porPagina);
-
-    if ($paginaActual > $totalPaginas && $totalPaginas > 0) {
-        $paginaActual = $totalPaginas;
-    }
-
-    $libros = Libro::listarPaginado($pdo, $paginaActual, $porPagina);
+    $totalRegistros = Libro::contarFiltrados($pdo, $buscar, $campo, $disponibilidad, $genero);
+    $totalPaginas = max(1, (int) ceil($totalRegistros / $porPagina));
+    $paginaActual = min($paginaActual, $totalPaginas);
+    $libros = Libro::buscarPaginado($pdo, $paginaActual, $porPagina, $buscar, $campo, $disponibilidad, $genero);
 
     require __DIR__ . '/../views/libros/catalogo.php';
 }
@@ -25,17 +24,18 @@ function listarLibros() {
     global $pdo;
 
     $buscar = trim((string) ($_GET['buscar'] ?? ''));
-    $campo = (string) ($_GET['campo'] ?? 'todos');
-    if (!in_array($campo, ['todos', 'titulo', 'autor', 'genero'], true)) $campo = 'todos';
+    $campo = 'todos';
+    $genero = (string) ($_GET['genero'] ?? '');
+    $generos = Libro::listarGeneros($pdo);
     $disponibilidad = (string) ($_GET['disponibilidad'] ?? '');
     if (!in_array($disponibilidad, ['', '1', '0'], true)) $disponibilidad = '';
 
     $paginaActual = max(1, (int) ($_GET['pagina'] ?? 1));
     $porPagina = 20;
-    $totalRegistros = Libro::contarFiltrados($pdo, $buscar, $campo, $disponibilidad);
+    $totalRegistros = Libro::contarFiltrados($pdo, $buscar, $campo, $disponibilidad, $genero);
     $totalPaginas = max(1, (int) ceil($totalRegistros / $porPagina));
     $paginaActual = min($paginaActual, $totalPaginas);
-    $libros = Libro::buscarPaginado($pdo, $paginaActual, $porPagina, $buscar, $campo, $disponibilidad);
+    $libros = Libro::buscarPaginado($pdo, $paginaActual, $porPagina, $buscar, $campo, $disponibilidad, $genero);
 
     require __DIR__ . '/../views/libros/verlibro.php';
 }

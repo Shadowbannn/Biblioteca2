@@ -10,6 +10,7 @@
     </div>
 
     <div class="card-body">
+        <?php require __DIR__ . '/../../includes/filtroCatalogo.php'; ?>
         <?php require __DIR__ . '/../../includes/paginadorCatalogo.php'; ?>
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">

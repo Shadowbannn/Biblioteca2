@@ -46,6 +46,7 @@
                         </button>
                         <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                             <a class="dropdown-item" href="index.php?accion=listarUsuarios">Usuarios</a>
+                            <a class="dropdown-item" href="index.php?accion=listarSolicitudes">Solicitudes</a>
                             <a class="dropdown-item" href="index.php?accion=logout">Cerrar Sesión</a>
 
 

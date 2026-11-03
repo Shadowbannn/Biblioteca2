@@ -9,17 +9,18 @@
             <h4 class="mb-0">Cuentas del sistema</h4>  
         </div>
         <br>  
-    <div class="mb-3">
+
+
+    <div class="card-body">
+            <div class="mb-3">
         <a href="index.php?accion=formCrearUsuario" class="btn btn-success">
             ➕ Agregar usuario
         </a>
     </div>    
-
-    <div class="card-body">
         <input class="form-control" id="myInput" type="text" placeholder="Search..">
         <br>
 
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="table-responsive">
 
 
 

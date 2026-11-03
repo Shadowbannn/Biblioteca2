@@ -20,12 +20,12 @@
                         <div class="card-body d-flex flex-column">
 
                             <?php if ($proyecto->getPortada()): ?>
-                                <img src="uploads/portadas/<?= htmlspecialchars($proyecto->getPortada()) ?>"
+                                <img src="<?= htmlspecialchars($proyecto->getRutaPortada(), ENT_QUOTES, 'UTF-8') ?>"
                                      alt="Portada de <?= htmlspecialchars($proyecto->getNombre()) ?>"
                                      class="card-img-top mb-3"
                                      style="max-height: 400px; object-fit: cover;">
                             <?php else: ?>
-                                <img src="assets/sin-portada.png"
+                                <img src="assets/sin-portada.webp"
                                      alt="Portada por defecto"
                                      class="card-img-top mb-3"
                                      style="max-height: 400px; object-fit: cover;">
@@ -62,8 +62,8 @@
 
             <?php endforeach; ?>
 
-            <?php if (empty($libros)): ?>
-                <p class="text-muted">Todavía no hay libros cargados.</p>
+            <?php if (empty($proyectos)): ?>
+                <p class="text-muted">Todavía no hay proyectos cargados.</p>
             <?php endif; ?>
 
         </div>

@@ -10,10 +10,7 @@
                 Total de proyectos: <?= number_format((int) ($totalRegistros ?? 0), 0, ',', '.') ?>
             </span>
         </div>
-       
-        
- <?php require __DIR__ . '/../../includes/paginadorProyecto.php'; ?>
-
+       <br>
   <div class="card-body">
         <div class="mb-3">
             <a href="index.php?accion=formCrearProyecto" class="btn btn-success">
@@ -28,9 +25,9 @@
                 ➕ Ver Préstamos de Proyecto
             </a>            
         </div>
+        <br>
 
-
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="table-responsive">
 
                  <table class="table table-striped table-dark">
                     <thead>
@@ -53,15 +50,15 @@
 
                         <td>
                             <?php if ($proyecto->getPortada()): ?>
-                                <img src="uploads/portadas/<?= htmlspecialchars($proyecto->getPortada()) ?>"
+                                <img src="<?= htmlspecialchars($proyecto->getRutaPortada(), ENT_QUOTES, 'UTF-8') ?>"
                                      alt="Portada de <?= htmlspecialchars($proyecto->getNombre()) ?>"
                                      class="card-img-top mb-3"
-                                     style="height: 76px; withd: 54px;">
+                                     style="height: 76px; width: 54px; object-fit: cover;">
                             <?php else: ?>
                                 <img src="assets/sin-portada.webp"
                                      alt="Portada por defecto"
                                      class="card-img-top mb-3"
-                                     style="height: 76px; withd: 54px;">
+                                     style="height: 76px; width: 54px; object-fit: cover;">
                             <?php endif; ?>
                         </td>
                         <td><?= htmlspecialchars($proyecto->getNombre()) ?></td>
