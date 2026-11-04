@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Biblioteca</title>
 
@@ -12,17 +13,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/navegacion.js" defer></script>
 </head>
 
 <body>
 
-<nav>
+<nav class="navegacion-principal" aria-label="Navegación principal">
     <a href="inicioo.php">
         <img src="img/logo.png"
              alt="Inicio" style="width: 270px; height: auto;">
     </a>
 
-             <ul>
+             <button type="button" class="menu-movil btn btn-dark" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir o cerrar menú"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+    <ul id="menu-principal">
                 <li><a href="inicioo.php">Inicio</a></li>
                 <li><a href="inicioo.php#destacados">Destacadas</a></li>
                 <li><a href="inicioo.php#noticias">Noticias</a></li>

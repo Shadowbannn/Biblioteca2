@@ -8,6 +8,7 @@ class Usuario
     private string $password;
     private string $fecha_registro;
     private string $roles;
+    private ?string $foto;
 
     public function __construct(
         string $nombre,
@@ -15,7 +16,8 @@ class Usuario
         string $password,
         string $fecha_registro = '',
         string $roles = '',
-        ?int   $id = null
+        ?int   $id = null,
+        ?string $foto = null
     ) {
         $this->nombre           = $nombre;
         $this->email            = $email;
@@ -23,6 +25,7 @@ class Usuario
         $this->fecha_registro   = $fecha_registro;
         $this->roles            = $roles;
         $this->id               = $id;
+        $this->foto             = $foto;
     }
 
     // =========================
@@ -60,6 +63,11 @@ class Usuario
         return $this->roles;
     }
 
+    public function getFoto(): ?string
+    {
+        return $this->foto;
+    }
+
     private static function desdeFila(array $f): Usuario
     {
         return new Usuario(
@@ -68,7 +76,8 @@ class Usuario
             (string) $f['password'],
             (string) ($f['fecha_registro'] ?? ''),
             (string) ($f['roles'] ?? ''),
-            isset($f['id']) ? (int) $f['id'] : null
+            isset($f['id']) ? (int) $f['id'] : null,
+            $f['foto'] ?? null
         );
     }
 
@@ -108,14 +117,14 @@ class Usuario
     }
 
 
-    public static function crear(PDO $pdo, string $nombre, string $email, string $roles = '', string $password): bool
+    public static function crear(PDO $pdo, string $nombre, string $email, string $roles, string $password, ?string $foto = null): bool
     {
         $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
-        $stmt = $pdo->prepare("INSERT INTO usuarios (nombre, email, roles, password) 
-                               VALUES (?, ?, ?, ?)");
+        $stmt = $pdo->prepare("INSERT INTO usuarios (nombre, email, roles, password, foto)
+                               VALUES (?, ?, ?, ?, ?)");
 
-        return $stmt->execute([$nombre, $email, $roles, $passwordHash]);
+        return $stmt->execute([$nombre, $email, $roles, $passwordHash, $foto]);
     }
 
 
@@ -141,15 +150,15 @@ class Usuario
     }
 
     // Si $password viene vacío se conserva la contraseña actual
-    public static function actualizar(PDO $pdo, int $id, string $nombre, string $email, string $password = '', string $roles = ''): bool
+    public static function actualizar(PDO $pdo, int $id, string $nombre, string $email, string $password = '', string $roles = '', ?string $foto = null): bool
     {
         if ($password !== '') {
-            $stmt = $pdo->prepare("UPDATE usuarios SET nombre = ?, email = ?, password = ?, roles = ? WHERE id = ?");
-            return $stmt->execute([$nombre, $email, password_hash($password, PASSWORD_DEFAULT), $roles, $id]);
+            $stmt = $pdo->prepare("UPDATE usuarios SET nombre = ?, email = ?, password = ?, roles = ?, foto = COALESCE(?, foto) WHERE id = ?");
+            return $stmt->execute([$nombre, $email, password_hash($password, PASSWORD_DEFAULT), $roles, $foto, $id]);
         }
 
-        $stmt = $pdo->prepare("UPDATE usuarios SET nombre = ?, email = ?, roles = ? WHERE id = ?" );
-        return $stmt->execute([$nombre, $email, $roles, $id]);
+        $stmt = $pdo->prepare("UPDATE usuarios SET nombre = ?, email = ?, roles = ?, foto = COALESCE(?, foto) WHERE id = ?" );
+        return $stmt->execute([$nombre, $email, $roles, $foto, $id]);
     }
 
     public static function validarCredenciales(PDO $pdo, string $email, string $password): ?Usuario

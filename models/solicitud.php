@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/notificacion.php';
 
 class Solicitud
 {
@@ -41,6 +42,7 @@ class Solicitud
             (libro_id, socio_id, nuevo_socio, cedula, nombre, clase, telefono, tipo, estado)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'pendiente')");
         $stmt->execute([$libroId, $socioId, (int) $nuevoSocio, $cedula, $nombre, $clase, $telefono, $tipo]);
+        Notificacion::nuevaSolicitud($pdo, 'libros', (int) $pdo->lastInsertId());
     }
 
     public static function tienePendiente(PDO $pdo, int $libroId, string $cedula, string $tipo): bool
@@ -55,5 +57,22 @@ class Solicitud
 
         $stmt->execute([$libroId, $cedula, $tipo]);
         return $stmt->fetchColumn() !== false;
+    }
+
+    public static function revisar(PDO $pdo, int $id, string $estado, int $usuarioId): bool
+    {
+        if (!in_array($estado, ['aceptada', 'rechazada'], true)) {
+            throw new InvalidArgumentException('Estado de revision no valido.');
+        }
+        if ($estado === 'aceptada') {
+            $stmt = $pdo->prepare("DELETE FROM solicitudes_libros WHERE id = ? AND estado = 'pendiente'");
+            $stmt->execute([$id]);
+            return $stmt->rowCount() === 1;
+        }
+        $stmt = $pdo->prepare("UPDATE solicitudes_libros
+            SET estado = ?, revisada_en = NOW(), revisada_por = ?
+            WHERE id = ? AND estado = 'pendiente'");
+        $stmt->execute([$estado, $usuarioId, $id]);
+        return $stmt->rowCount() === 1;
     }
 }

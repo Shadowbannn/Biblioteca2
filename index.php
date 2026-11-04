@@ -13,7 +13,8 @@ require_once __DIR__ . '/models/Usuario.php';
 require_once __DIR__ . '/models/Juego.php';
 require_once __DIR__ . '/models/proyecto.php';
 require_once __DIR__ . '/models/solicitud.php';
-
+require_once __DIR__ . '/models/solicitudjuego.php';
+require_once __DIR__ . '/models/solicitudproyecto.php';
 
 require_once __DIR__ . '/controllers/LibroController.php';
 require_once __DIR__ . '/controllers/SocioController.php';
@@ -26,13 +27,17 @@ require_once __DIR__ . '/controllers/PrestamoControllerProyecto.php';
 
 
 require_once __DIR__ . '/controllers/SolicitudController.php';
+require_once __DIR__ . '/controllers/RevisionSolicitudController.php';
+require_once __DIR__ . '/controllers/NotificacionController.php';
+require_once __DIR__ . '/controllers/SolicitudJuegoController.php';
+require_once __DIR__ . '/controllers/SolicitudProyectoController.php';
 
 $accion = $_REQUEST['accion'] ?? 'inicio';
 
 // Acciones accesibles sin iniciar sesión
 $accionesPublicas = ['formLogin', 'login', 'formCrearUsuario', 'crearUsuario', 
                     'listarCatalogo', 'listarJuegosP', 'listarProyectosP', 
-                    'formSolicitudLibro', 'guardarSolicitudLibro'];
+                    'formSolicitudLibro', 'guardarSolicitudLibro', 'formSolicitudJuego', 'guardarSolicitudJuego', 'formSolicitudProyecto', 'guardarSolicitudProyecto'];
 
 if (empty($_SESSION['usuario_id']) && !in_array($accion, $accionesPublicas, true)) {
     header('Location: inicioo.php');
@@ -42,6 +47,12 @@ if (empty($_SESSION['usuario_id']) && !in_array($accion, $accionesPublicas, true
 // Acciones accesibles con sudo su
 
 switch ($accion) {
+    case 'gestionarNotificacion':
+        gestionarNotificacion();
+        break;
+    case 'revisarSolicitud':
+        revisarSolicitud();
+        break;
     case 'listarSolicitudes':
         listarSolicitudes();
         break;
@@ -50,8 +61,27 @@ switch ($accion) {
         break;
     case 'guardarSolicitudLibro':
         guardarSolicitudLibro();
-        break;
+        break; 
 
+        
+    case 'listarSolicitudesJuegos':
+        listarSolicitudesJuegos();
+        break;
+    case 'formSolicitudJuego':
+        formSolicitudJuego();
+        break;
+    case 'guardarSolicitudJuego':
+        guardarSolicitudJuego();
+        break; 
+    case 'listarSolicitudesProyectos':
+        listarSolicitudesProyectos();
+        break;
+    case 'formSolicitudProyecto':
+        formSolicitudProyecto();
+        break;
+    case 'guardarSolicitudProyecto':
+        guardarSolicitudProyecto();
+        break;
     // LOGIN //
 
     case 'formLogin':

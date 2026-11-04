@@ -102,7 +102,16 @@ function crearUsuario() {
         return;
     }
 
-    Usuario::crear($pdo, $nombre, $email, $roles, $password);
+    $foto = null;
+    try {
+        $foto = subirFotoUsuario();
+        Usuario::crear($pdo, $nombre, $email, $roles, $password, $foto);
+    } catch (Throwable $e) {
+        if ($foto !== null) unlink(__DIR__ . '/../uploads/usuarios/' . $foto);
+        $error = $e instanceof InvalidArgumentException ? $e->getMessage() : 'No se pudo guardar el usuario. Intenta nuevamente.';
+        require __DIR__ . '/../views/usuarios/form.php';
+        return;
+    }
 
     // Si ya hay sesión, vuelve al listado; si no, al login
     if (!empty($_SESSION['usuario_id'])) {
@@ -139,7 +148,17 @@ function editarUsuario() {
         return;
     }
 
-    Usuario::actualizar($pdo, $id, $nombre, $email, $password, $roles);
+    $foto = null;
+    try {
+        $foto = subirFotoUsuario();
+        Usuario::actualizar($pdo, $id, $nombre, $email, $password, $roles, $foto);
+    } catch (Throwable $e) {
+        if ($foto !== null) unlink(__DIR__ . '/../uploads/usuarios/' . $foto);
+        $usuario = Usuario::buscarPorId($pdo, $id);
+        $error = $e instanceof InvalidArgumentException ? $e->getMessage() : 'No se pudo guardar el usuario. Intenta nuevamente.';
+        require __DIR__ . '/../views/usuarios/form.php';
+        return;
+    }
 
     if ($id === (int) ($_SESSION['usuario_id'] ?? 0)) {
         $_SESSION['usuario'] = $nombre;
@@ -164,4 +183,27 @@ function eliminarUsuario() {
 
     header('Location: index.php?accion=listarUsuarios');
     exit;
+}
+
+function subirFotoUsuario(): ?string
+{
+    $archivo = $_FILES['foto'] ?? null;
+    if ($archivo === null || ($archivo['error'] ?? null) === UPLOAD_ERR_NO_FILE) return null;
+    if (!is_array($archivo) || ($archivo['error'] ?? null) !== UPLOAD_ERR_OK) {
+        throw new InvalidArgumentException('No se pudo subir la foto. Elige un archivo de hasta 2 MB.');
+    }
+    $temporal = $archivo['tmp_name'] ?? '';
+    if (!is_string($temporal) || !is_uploaded_file($temporal) || filesize($temporal) > 2 * 1024 * 1024) {
+        throw new InvalidArgumentException('La foto debe pesar como máximo 2 MB.');
+    }
+    $mime = (new finfo(FILEINFO_MIME_TYPE))->file($temporal);
+    $extensiones = ['image/jpeg' => 'jpg', 'image/png' => 'png', 'image/webp' => 'webp'];
+    if (!isset($extensiones[$mime]) || !@getimagesize($temporal)) {
+        throw new InvalidArgumentException('La foto debe ser una imagen JPG, PNG o WEBP válida.');
+    }
+    $directorio = __DIR__ . '/../uploads/usuarios';
+    if (!is_dir($directorio) && !mkdir($directorio, 0755, true)) throw new RuntimeException('No se pudo crear la carpeta de fotos.');
+    $nombre = bin2hex(random_bytes(16)) . '.' . $extensiones[$mime];
+    if (!move_uploaded_file($temporal, $directorio . '/' . $nombre)) throw new RuntimeException('No se pudo guardar la foto.');
+    return $nombre;
 }

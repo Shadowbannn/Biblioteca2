@@ -42,12 +42,12 @@
                         </p>
 
                             <div class="mt-auto d-flex gap-2">
-                                <a href="#"
+                                <a href="index.php?accion=formSolicitudJuego&amp;juego_id=<?= (int) $juego->getId() ?>&amp;tipo=prestamo"
                                    class="btn btn-warning btn-sm">
                                     Pedir
                                 </a>
 
-                                <a href="#"
+                                <a href="index.php?accion=formSolicitudJuego&amp;juego_id=<?= (int) $juego->getId() ?>&amp;tipo=reserva"
                                    class="btn btn-danger btn-sm">
                                     Reservar
                                 </a>

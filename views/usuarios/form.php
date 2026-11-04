@@ -14,6 +14,7 @@ $esEdicion = isset($usuario);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="css/log.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
@@ -33,11 +34,20 @@ $esEdicion = isset($usuario);
                 </div>
             <?php endif; ?>
 
-            <form method="POST" action="index.php?accion=<?= $esEdicion ? 'editarUsuario' : 'crearUsuario' ?>">
+            <form method="POST" enctype="multipart/form-data" action="index.php?accion=<?= $esEdicion ? 'editarUsuario' : 'crearUsuario' ?>">
 
                 <?php if ($esEdicion): ?>
                     <input type="hidden" name="id" value="<?= $usuario->getId() ?>">
                 <?php endif; ?>
+
+                <div class="mb-3">
+                    <label for="foto" class="form-label">Foto de perfil (opcional)</label>
+                    <?php if ($esEdicion && $usuario->getFoto()): ?>
+                        <img src="uploads/usuarios/<?= htmlspecialchars($usuario->getFoto(), ENT_QUOTES, 'UTF-8') ?>" alt="Foto actual" class="rounded-circle d-block mb-2" style="width: 64px; height: 64px; object-fit: cover;">
+                    <?php endif; ?>
+                    <input id="foto" type="file" name="foto" class="form-control" accept="image/jpeg,image/png,image/webp" aria-describedby="foto-ayuda">
+                    <small id="foto-ayuda">JPG, PNG o WEBP. Máximo 2 MB.</small>
+                </div>
 
                 <div class="input-container">
                     <i class="fa-solid fa-user"></i>

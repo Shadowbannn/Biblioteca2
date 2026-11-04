@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Biblioteca</title>
 
@@ -11,14 +12,15 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/navegacion.js" defer></script>
 </head>
 
 <body>
 
 
-<nav>
+<nav class="navegacion-principal" aria-label="Navegación principal">
     <a href="index.php">
         <img src="img/logo.png"
              alt="Inicio" style="width: 270px; height: auto;">
@@ -26,15 +28,16 @@
 
 
 
-    <ul>
+    <button type="button" class="menu-movil btn btn-dark" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir o cerrar menú"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+    <ul id="menu-principal">
 
-        <li>
         <li><a href="index.php"><b>Inicio</b></a></li>
         <li><a href="index.php?accion=listarSocios"><b>Socios</b></a></li>
         <li><a href="index.php?accion=listarLibros"><b>Libros</b></a></li>
         <li><a href="index.php?accion=listarJuegos"><b>Juegos</b></a></li>
         <li><a href="index.php?accion=listarProyectos"><b>Proyectos</b></a></li>        
 
+        <li>
             <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
                     <div class="btn-group" role="group">
                         
@@ -57,24 +60,8 @@
         </li>
 
         <?php if (!empty($_SESSION['usuario_id'])): ?>
-            <li class="dropdown">
-                <button type="button"
-                        class="btn btn-dark"
-                        id="notificacionesDropdown"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                        aria-label="Ver notificaciones">
-                    <i class="fa-solid fa-bell" aria-hidden="true"></i>
-                </button>
-                <div class="dropdown-menu dropdown-menu-end"
-                     aria-labelledby="notificacionesDropdown"
-                     style="min-width: 260px;">
-                    <h6 class="dropdown-header">Notificaciones</h6>
-                    <p class="px-3 py-2 mb-0 text-muted small">
-                        Las notificaciones todav&iacute;a no est&aacute;n habilitadas.
-                    </p>
-                </div>
-            </li>
+            <?php require __DIR__ . '/notificaciones.php'; ?>
+            <?php require __DIR__ . '/perfilUsuario.php'; ?>
         <?php endif; ?>
     </ul>
 </nav>

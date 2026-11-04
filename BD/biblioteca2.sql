@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-11-2026 a las 15:46:12
+-- Tiempo de generación: 04-11-2026 a las 15:37:19
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -110,7 +110,7 @@ INSERT INTO `juegos` (`id`, `stock`, `numero_inventario`, `nombre`, `contenido`,
 (80, 1, 80, 'Esquinados', '100 cartas', 'Maldón', 'COORDINAC BIBLIOTECAS', '2026-10-05', 1, NULL, NULL, NULL, NULL),
 (81, 1, 81, 'Trivia', '180 tarjetas', 'Uruguay natural', 'COORDINAC BIBLIOTECAS', '2026-10-05', 1, NULL, NULL, NULL, NULL),
 (82, 1, 82, 'Camaleón', '112 cartas', 'Royal', 'COORDINAC BIBLIOTECAS', '2026-10-05', 1, NULL, NULL, 'El Camaleón (Dmitri Smerdyakov, en inglés original: Chameleon) es un supervillano ruso que aparece en los cómics estadounidenses publicados por Marvel Comics. Creado por el escritor Stan Lee y el artista Steve Ditko, el personaje apareció por primera vez en el número debut de The Amazing Spider-Man en marzo de 1963 como el primer supercriminal en enfrentarse al superhéroe Spider-Man. Desde entonces, el Camaleón se ha mantenido como uno de los enemigos más recurrentes de Spider-Man, perteneciente al colectivo de adversarios que conforman su galería de villanos.\nEn el Universo Marvel, el Camaleón es un maestro del disfraz capaz de imitar a prácticamente cualquier persona.', '2026-10-30 01:11:27'),
-(83, 1, 83, 'Vale todo', '112 cartas', 'Didacta', 'COORDINAC BIBLIOTECAS', '2026-10-05', 0, 'foto_6ad6d2de3dcaa1.54806166.jpeg', NULL, NULL, NULL),
+(83, 1, 83, 'Vale todo', '112 cartas', 'Didacta', 'COORDINAC BIBLIOTECAS', '2026-10-05', 1, 'foto_6ad6d2de3dcaa1.54806166.jpeg', NULL, NULL, NULL),
 (84, 1, 84, 'Jenga', '48 piezas', 'Milton Bradley', 'COORDINAC BIBLIOTECAS', '2026-10-05', 1, 'foto_6ad6d275a10556.97153023.webp', NULL, NULL, NULL),
 (86, 1, 86, 'Dominó', '28 piezas', NULL, 'COORDINAC BIBLIOTECAS', '2026-10-05', 1, NULL, NULL, 'Domino puede referirse a:', '2026-10-30 01:11:27'),
 (87, 1, 87, 'Snap snap', NULL, 'Chau pantallas', 'COORDINAC BIBLIOTECAS', '2026-10-05', 1, NULL, NULL, NULL, NULL),
@@ -10450,6 +10450,27 @@ CREATE TABLE `notificaciones` (
   `creada_en` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `notificaciones`
+--
+
+INSERT INTO `notificaciones` (`id`, `usuario_id`, `mensaje`, `enlace`, `leida`, `creada_en`) VALUES
+(46, 2, 'Nueva solicitud de libros #23.', 'index.php?accion=listarSolicitudes', 1, '2026-11-04 05:50:53'),
+(47, 9, 'Nueva solicitud de libros #23.', 'index.php?accion=listarSolicitudes', 0, '2026-11-04 05:50:53'),
+(48, 4, 'Nueva solicitud de libros #23.', 'index.php?accion=listarSolicitudes', 0, '2026-11-04 05:50:53'),
+(49, 1, 'Nueva solicitud de libros #23.', 'index.php?accion=listarSolicitudes', 0, '2026-11-04 05:50:53'),
+(50, 8, 'Nueva solicitud de libros #23.', 'index.php?accion=listarSolicitudes', 0, '2026-11-04 05:50:53'),
+(53, 2, 'Nueva solicitud de libros #24.', 'index.php?accion=listarSolicitudes', 1, '2026-11-04 05:51:08'),
+(54, 9, 'Nueva solicitud de libros #24.', 'index.php?accion=listarSolicitudes', 0, '2026-11-04 05:51:08'),
+(55, 4, 'Nueva solicitud de libros #24.', 'index.php?accion=listarSolicitudes', 0, '2026-11-04 05:51:08'),
+(56, 1, 'Nueva solicitud de libros #24.', 'index.php?accion=listarSolicitudes', 0, '2026-11-04 05:51:08'),
+(57, 8, 'Nueva solicitud de libros #24.', 'index.php?accion=listarSolicitudes', 0, '2026-11-04 05:51:08'),
+(60, 2, 'Nueva solicitud de juegos #7.', 'index.php?accion=listarSolicitudesJuegos', 1, '2026-11-04 05:51:27'),
+(61, 9, 'Nueva solicitud de juegos #7.', 'index.php?accion=listarSolicitudesJuegos', 0, '2026-11-04 05:51:27'),
+(62, 4, 'Nueva solicitud de juegos #7.', 'index.php?accion=listarSolicitudesJuegos', 0, '2026-11-04 05:51:27'),
+(63, 1, 'Nueva solicitud de juegos #7.', 'index.php?accion=listarSolicitudesJuegos', 0, '2026-11-04 05:51:27'),
+(64, 8, 'Nueva solicitud de juegos #7.', 'index.php?accion=listarSolicitudesJuegos', 0, '2026-11-04 05:51:27');
+
 -- --------------------------------------------------------
 
 --
@@ -10503,7 +10524,6 @@ CREATE TABLE `prestamosjuegos` (
 --
 
 INSERT INTO `prestamosjuegos` (`creado_en`, `estado`, `fechaDevolucion`, `fechaPrestamo`, `id`, `juegoId`, `nombreJuego`, `socioId`) VALUES
-(NULL, 'Prestado', '2026-10-30', '2026-10-23', 1, 83, NULL, 11),
 (NULL, 'Prestado', '2026-10-30', '2026-10-23', 2, 99, NULL, 22);
 
 -- --------------------------------------------------------
@@ -10750,6 +10770,29 @@ INSERT INTO `socios` (`id`, `nombre`, `email`, `cedula`, `telefono`, `fecha_regi
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `solicitudes_juegos`
+--
+
+CREATE TABLE `solicitudes_juegos` (
+  `id` int(11) NOT NULL,
+  `cedula` varchar(20) NOT NULL,
+  `clase` varchar(100) NOT NULL DEFAULT '',
+  `creada_en` timestamp NOT NULL DEFAULT current_timestamp(),
+  `estado` enum('pendiente','aceptada','rechazada') NOT NULL DEFAULT 'pendiente',
+  `juego_id` int(11) NOT NULL,
+  `nombre` varchar(150) NOT NULL DEFAULT '',
+  `nuevo_socio` tinyint(1) NOT NULL DEFAULT 0,
+  `prestamo_id` int(11) DEFAULT NULL,
+  `revisada_en` datetime DEFAULT NULL,
+  `revisada_por` int(11) DEFAULT NULL,
+  `socio_id` int(11) DEFAULT NULL,
+  `telefono` varchar(40) NOT NULL DEFAULT '',
+  `tipo` enum('reserva','prestamo') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `solicitudes_libros`
 --
 
@@ -10771,13 +10814,29 @@ CREATE TABLE `solicitudes_libros` (
   `revisada_en` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+
 --
--- Volcado de datos para la tabla `solicitudes_libros`
+-- Estructura de tabla para la tabla `solicitudes_proyectos`
 --
 
-INSERT INTO `solicitudes_libros` (`id`, `libro_id`, `socio_id`, `nuevo_socio`, `cedula`, `nombre`, `clase`, `telefono`, `tipo`, `estado`, `observacion`, `prestamo_id`, `revisada_por`, `creada_en`, `revisada_en`) VALUES
-(17, 8644, 22, 0, '55118417', '', '', '', 'prestamo', 'pendiente', '', NULL, NULL, '2026-10-28 02:52:44', NULL),
-(18, 9785, 11, 0, '55118416', '', '', '', 'prestamo', 'pendiente', '', NULL, NULL, '2026-10-28 03:15:03', NULL);
+CREATE TABLE `solicitudes_proyectos` (
+  `id` int(11) NOT NULL,
+  `cedula` varchar(20) NOT NULL,
+  `clase` varchar(100) NOT NULL DEFAULT '',
+  `creada_en` timestamp NOT NULL DEFAULT current_timestamp(),
+  `estado` enum('pendiente','aceptada','rechazada') NOT NULL DEFAULT 'pendiente',
+  `proyecto_id` int(11) NOT NULL,
+  `nombre` varchar(150) NOT NULL DEFAULT '',
+  `nuevo_socio` tinyint(1) NOT NULL DEFAULT 0,
+  `observacion` varchar(500) NOT NULL DEFAULT '',
+  `prestamo_id` int(11) DEFAULT NULL,
+  `revisada_en` datetime DEFAULT NULL,
+  `revisada_por` int(11) DEFAULT NULL,
+  `socio_id` int(11) DEFAULT NULL,
+  `telefono` varchar(40) NOT NULL DEFAULT '',
+  `tipo` enum('reserva','prestamo') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -10791,19 +10850,20 @@ CREATE TABLE `usuarios` (
   `email` varchar(150) NOT NULL,
   `password` varchar(255) NOT NULL,
   `fecha_registro` timestamp NOT NULL DEFAULT current_timestamp(),
-  `roles` varchar(20) DEFAULT NULL
+  `roles` varchar(20) DEFAULT NULL,
+  `foto` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nombre`, `email`, `password`, `fecha_registro`, `roles`) VALUES
-(1, 'Anthony Silva', 'shadow@gmail.com', '$2y$10$RWNphRGS8Aum1m0qlZzhBOAmUTTmJ2M/EX1/zACmgrVdHl3U..V.6', '2026-09-16 07:29:36', 'Desarrollador'),
-(2, 'Admin', 'admin@utu.edu.uy', '$2y$10$5MZBE/PoKtlh//QFm/MdHeoLVHgyxTjFMjFhY4Nx3m4aFqR2cp4Pu', '2026-09-18 02:00:36', 'Admin'),
-(4, 'Nacho Palermo', 'nacho@gmail.com', '$2y$10$fiMkwlFJJhV.vadYWXr7aOySKtgCntKmnXBJiT5BqRt3g8TwNJ/o2', '2026-10-23 02:00:18', 'Desarrollador'),
-(8, 'Walter Montejo', 'walter@gmail.com', '$2y$10$GrNnwlrQdg.cPuyF0kiqdOqPshC20P6NYn5A77xeHR7Y8cF4jkmBS', '2026-10-23 19:09:02', 'Desarrollador'),
-(9, 'Maria Antonieta', 'maria@gmail.com', '$2y$10$70yiXZGc8CpIJjzTfrPjguWUaRpUqMZ5XtD7wYNnrblwt3QcyiyAS', '2026-10-25 23:55:35', 'Bibliotecaria');
+INSERT INTO `usuarios` (`id`, `nombre`, `email`, `password`, `fecha_registro`, `roles`, `foto`) VALUES
+(1, 'Anthony Silva', 'shadow@gmail.com', '$2y$10$RWNphRGS8Aum1m0qlZzhBOAmUTTmJ2M/EX1/zACmgrVdHl3U..V.6', '2026-09-16 07:29:36', 'Desarrollador', NULL),
+(2, 'Admin', 'admin@utu.edu.uy', '$2y$10$5MZBE/PoKtlh//QFm/MdHeoLVHgyxTjFMjFhY4Nx3m4aFqR2cp4Pu', '2026-09-18 02:00:36', 'Admin', NULL),
+(4, 'Nacho Palermo', 'nacho@gmail.com', '$2y$10$fiMkwlFJJhV.vadYWXr7aOySKtgCntKmnXBJiT5BqRt3g8TwNJ/o2', '2026-10-23 02:00:18', 'Desarrollador', NULL),
+(8, 'Walter Montejo', 'walter@gmail.com', '$2y$10$GrNnwlrQdg.cPuyF0kiqdOqPshC20P6NYn5A77xeHR7Y8cF4jkmBS', '2026-10-23 19:09:02', 'Desarrollador', NULL),
+(9, 'Maria Antonieta', 'maria@gmail.com', '$2y$10$70yiXZGc8CpIJjzTfrPjguWUaRpUqMZ5XtD7wYNnrblwt3QcyiyAS', '2026-10-25 23:55:35', 'Bibliotecaria', NULL);
 
 --
 -- Índices para tablas volcadas
@@ -10870,9 +10930,23 @@ ALTER TABLE `socios`
   ADD UNIQUE KEY `cedula` (`cedula`);
 
 --
+-- Indices de la tabla `solicitudes_juegos`
+--
+ALTER TABLE `solicitudes_juegos`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idx_estado_fecha` (`estado`,`creada_en`);
+
+--
 -- Indices de la tabla `solicitudes_libros`
 --
 ALTER TABLE `solicitudes_libros`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idx_estado_fecha` (`estado`,`creada_en`);
+
+--
+-- Indices de la tabla `solicitudes_proyectos`
+--
+ALTER TABLE `solicitudes_proyectos`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idx_estado_fecha` (`estado`,`creada_en`);
 
@@ -10903,7 +10977,7 @@ ALTER TABLE `libros`
 -- AUTO_INCREMENT de la tabla `notificaciones`
 --
 ALTER TABLE `notificaciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
 
 --
 -- AUTO_INCREMENT de la tabla `prestamos`
@@ -10930,16 +11004,28 @@ ALTER TABLE `socios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
+-- AUTO_INCREMENT de la tabla `solicitudes_juegos`
+--
+ALTER TABLE `solicitudes_juegos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
 -- AUTO_INCREMENT de la tabla `solicitudes_libros`
 --
 ALTER TABLE `solicitudes_libros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- AUTO_INCREMENT de la tabla `solicitudes_proyectos`
+--
+ALTER TABLE `solicitudes_proyectos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Restricciones para tablas volcadas

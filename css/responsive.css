@@ -1,0 +1,62 @@
+/* Reglas compartidas por las páginas y los formularios. */
+img { max-width: 100%; }
+.menu-movil { display: none; }
+.table-responsive { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.form-card, .card-body, .login-right { min-width: 0; }
+
+@media (max-width: 1199px) {
+    body, body.pagina-inicio { padding-top: 0; }
+    nav.navegacion-principal, .pagina-inicio nav.navegacion-principal {
+        position: sticky; top: 0; flex-wrap: wrap; gap: 12px;
+        padding: 12px 16px; background: rgba(20, 20, 20, .96);
+    }
+    .navegacion-principal > a { max-width: calc(100% - 70px); }
+    .navegacion-principal > a img { width: 210px !important; }
+    .navegacion-principal > ul { width: 100%; flex-wrap: wrap; gap: 10px; align-items: center; }
+    .menu-listo .menu-movil { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; margin-left: auto; }
+    .menu-listo .navegacion-principal > ul { display: none; }
+    .menu-listo .navegacion-principal.menu-abierto > ul { display: flex; }
+    .navegacion-principal > ul > li { flex: 1 1 140px; }
+    .navegacion-principal > ul > li > a { display: block; padding: 10px 0; }
+    .navegacion-principal .dropdown-menu { max-width: calc(100vw - 32px); }
+    .navegacion-principal #notificacionesDropdown + .dropdown-menu { right: auto; left: 0; }
+    .navegacion-principal .perfil-usuario { flex-basis: 100%; }
+    .pagina-inicio .inicio-contenedor { min-height: 0; }
+    .container { min-width: 0; }
+}
+
+@media (max-width: 767px) {
+    body { background-attachment: scroll; }
+    .container, .container-fluid { padding-left: 12px; padding-right: 12px; }
+    .titulo { font-size: 1.7rem; margin-bottom: 20px; overflow-wrap: anywhere; }
+    .titulo.mt-5 { margin-top: 24px !important; }
+    .card-body { padding: 14px; }
+    .card:hover { transform: none; }
+    .card-header h4 { font-size: 1.1rem; }
+    .table { font-size: .85rem; }
+    .table th, .table td { min-width: 85px; padding: 10px 8px; }
+    .table .btn { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+    input.form-control, select.form-select, textarea.form-control, .input-container input { font-size: 16px; }
+    .form-control, .form-select, .btn { min-height: 44px; }
+    .form-card { width: 100%; padding: 22px 16px; }
+    .form-card h2 { font-size: 1.6rem; overflow-wrap: anywhere; }
+    .form-card .d-flex { flex-wrap: wrap; }
+    .form-card .d-flex > .btn { flex: 1 1 auto; }
+    .card-img-top { max-width: 100%; object-fit: contain; }
+    .paginador .pagination { flex-wrap: wrap; gap: 4px; }
+    .paginador .page-link { min-width: 40px; min-height: 44px; display: flex; align-items: center; justify-content: center; }
+    .login-card { flex-direction: column; width: 100%; max-width: 500px; min-height: 0; margin: auto; }
+    .login-left, .reg-left { display: none; }
+    .login-right { padding: 30px 20px; }
+    .login-right h1 { margin-bottom: 25px; }
+    .create-account { padding-top: 25px; }
+    body:has(.login-card) { height: auto; min-height: 100vh; min-height: 100dvh; padding: 20px 12px; box-sizing: border-box; }
+    #carouselInicio img { height: 260px !important; object-fit: cover; }
+    .pagina-inicio .inicio-tarjetas { grid-template-columns: 1fr; }
+    footer { padding: 20px 12px; overflow-wrap: anywhere; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .login-card { animation: none; }
+    .card, .btn, .input-container input { transition: none; }
+}

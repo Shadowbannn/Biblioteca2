@@ -13,6 +13,7 @@ $esEdicion = isset($prestamo) && is_object($prestamo);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>   
     <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
