@@ -1,0 +1,63 @@
+:root {
+    --bt-oscuro: #1c1917;
+    --bt-acento: #b8793e;
+    --bt-fondo: #faf7f2;
+}
+body { font-family: 'Inter', sans-serif; background: var(--bt-fondo); color: #2b2622; }
+h1, h2, h3, .navbar-brand { font-family: 'Playfair Display', serif; }
+
+.navbar { background: var(--bt-oscuro); }
+.navbar-brand { color: #fff !important; font-weight: 700; letter-spacing: .5px; }
+.navbar .nav-link { color: #d6cfc7; }
+.navbar .nav-link:hover, .navbar .nav-link.active { color: #fff; }
+
+/* Portada */
+.hero {
+    background:
+        linear-gradient(rgba(28,25,23,.78), rgba(28,25,23,.78)),
+        url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1600&q=70') center/cover;
+    color: #fff;
+    padding: 5rem 0;
+}
+.hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; }
+.hero .lead { color: #e7dfd5; }
+
+/* Secciones */
+.seccion { padding: 3.5rem 0; }
+.seccion-titulo { font-weight: 700; margin-bottom: .25rem; }
+.seccion-titulo::after {
+    content: ''; display: block; width: 56px; height: 3px;
+    background: var(--bt-acento); margin-top: .5rem; border-radius: 2px;
+}
+.ver-mas { color: var(--bt-acento); text-decoration: none; font-weight: 500; }
+.ver-mas:hover { text-decoration: underline; }
+
+/* Noticias */
+.card-noticia { border: 0; border-left: 4px solid var(--bt-acento); box-shadow: 0 2px 10px rgba(0,0,0,.06); height: 100%; }
+.badge-cat { background: #efe3d3; color: #7a4f24; font-weight: 500; }
+
+/* Libros destacados */
+.card-libro { border: 0; box-shadow: 0 2px 10px rgba(0,0,0,.08); transition: transform .2s, box-shadow .2s; height: 100%; }
+.card-libro:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,.14); }
+.portada {
+    height: 190px; display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,.9); font-size: 3.5rem;
+}
+.card-libro .card-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; }
+
+/* Recomendaciones */
+.bloque-recomendaciones { background: #f1e9de; }
+.card-reco { border: 0; background: #fff; border-radius: .75rem; box-shadow: 0 2px 10px rgba(0,0,0,.05); height: 100%; }
+.card-reco .bi-quote { font-size: 2rem; color: var(--bt-acento); line-height: 1; }
+
+footer { background: var(--bt-oscuro); color: #b9b0a6; }
+footer a { color: #d6cfc7; text-decoration: none; }
+footer a:hover { color: #fff; }
+.navbar-toggler-icon { filter: invert(1); }
+.recomendacion-autor { color: var(--bt-acento); }
+.portada-color-0 { background: #8d5a3b; }
+.portada-color-1 { background: #3b5d8d; }
+.portada-color-2 { background: #5a8d6b; }
+.portada-color-3 { background: #8d3b5a; }
+.portada-color-4 { background: #6b5a8d; }
+.portada-color-5 { background: #8d7a3b; }

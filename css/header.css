@@ -1,0 +1,140 @@
+/* Estilos limitados al header de administración. */
+body.with-site-header {
+    padding-top: 50px;
+}
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+    background: rgba(0, 0, 0, 0.35);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(10px);
+}
+.site-header .site-navigation {
+    position: static;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    padding: 18px 5%;
+    background: transparent;
+    border: 0;
+    backdrop-filter: none;
+    gap: 16px;
+}
+.site-header .site-brand {
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+}
+.site-brand img {
+    display: block;
+    width: 270px;
+    max-width: 100%;
+    height: auto;
+}
+.site-header .navbar-nav {
+    gap: 6px;
+}
+.site-header .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border: 0;
+    border-radius: 10px;
+    color: #d5dde8;
+    background: transparent;
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+.site-header .nav-link:hover,
+.site-header .nav-link:focus-visible {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+}
+.site-header .nav-link.active {
+    color: #a9ddfa;
+    background: rgba(78, 163, 224, 0.16);
+}
+.site-header .dropdown-menu {
+    display: none;
+    padding: 8px;
+    min-width: 210px;
+    background: #182333;
+    border: 1px solid #354356;
+    border-radius: 12px;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.3);
+}
+.site-header .dropdown-menu.show {
+    display: block;
+}
+.site-header .dropdown-item {
+    padding: 10px 12px;
+    border-radius: 6px;
+    color: #d5dde8;
+    font-size: 0.92rem;
+}
+.site-header .dropdown-item i {
+    width: 22px;
+}
+.site-header .dropdown-item:hover,
+.site-header .dropdown-item:focus,
+.site-header .dropdown-item.active {
+    color: #a9ddfa;
+    background: #253b53;
+}
+.site-header .dropdown-divider {
+    border-color: #354356;
+}
+.site-header .header-logout {
+    color: #ffb5b5;
+}
+.site-header :is(a, button):focus-visible,
+.header-skip-link:focus-visible {
+    outline: 2px solid #a9ddfa;
+    outline-offset: 4px;
+}
+.header-skip-link {
+    position: fixed;
+    top: -100px;
+    left: 16px;
+    z-index: 1040;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: #fff;
+    color: #142337;
+}
+.header-skip-link:focus {
+    top: 12px;
+}
+.site-content {
+    margin-top: 50px;
+    padding-top: 10px;
+}
+@media (max-width: 991.98px) {
+    .site-brand img {
+        width: clamp(160px, 40vw, 270px);
+    }
+    .site-header .navbar-collapse {
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+    .site-header .navbar-nav {
+        padding: 12px 0 4px;
+    }
+    .site-header .nav-link {
+        width: 100%;
+        text-align: left;
+    }
+    .site-header .dropdown-menu {
+        margin-top: 6px;
+    }
+    .site-content {
+        margin-top: 50px;
+    }
+}

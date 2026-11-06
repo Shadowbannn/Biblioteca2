@@ -1,0 +1,227 @@
+/* Mantenemos tu fondo intacto */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/mine.png');
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+}
+
+/* =========================================
+   1. ANIMACIONES BASE (KEYFRAMES)
+   ========================================= */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px); /* Empieza un poco más abajo */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Sube a su posición normal */
+    }
+}
+
+/* =========================================
+   2. ESTILOS DE LA TARJETA CON ANIMACIÓN
+   ========================================= */
+.login-card {
+    display: flex;
+    width: 850px;
+    max-width: 95%;
+    min-height: 500px;
+    
+    /* Efecto Glassmorphism */
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+
+    /* Animación de entrada */
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Mitad izquierda (Imagen) */
+.login-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Mejor transparente para el fondo dark */
+    overflow: hidden; /* Necesario para que el zoom no se salga de los bordes */
+}
+
+.login-left img {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+    transition: transform 0.6s ease; /* Transición suave para el hover */
+}
+
+.reg-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Mejor transparente para el fondo dark */
+    overflow: hidden; /* Necesario para que el zoom no se salga de los bordes */
+}
+
+.reg-left img {
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+    transition: transform 0.6s ease; /* Transición suave para el hover */
+}
+
+/* Animación de zoom sutil en la imagen al pasar el mouse */
+.login-left:hover img {
+    transform: scale(1.08); 
+}
+
+/* Mitad derecha (Formulario) */
+.login-right {
+    flex: 1;
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.login-right h1 {
+    font-size: 26px;
+    color: white;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+/* =========================================
+   3. CAMPOS DE TEXTO (INPUTS)
+   ========================================= */
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-container i {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 15px 15px 15px 50px;
+    background-color: #e9ecef;
+    border: 2px solid transparent; /* Borde invisible preparado para animarse */
+    border-radius: 30px;
+    font-size: 15px;
+    color: #495057;
+    outline: none;
+    transition: all 0.3s ease-in-out; /* Transición para todo (color, borde, sombra) */
+    box-sizing: border-box;
+}
+
+/* Animación al hacer clic (focus) en un campo de texto */
+.input-container input:focus {
+    background-color: #ffffff;
+    border: 2px solid blue;
+    box-shadow: 0 5px 15px rgba(0, 0, 255, 0.2);
+    transform: translateY(-2px); /* Se levanta un poquito */
+}
+
+/* Que el ícono cambie de color cuando clickeas el input */
+.input-container input:focus + i,
+.input-container input:focus ~ i {
+    color: blue;
+}
+
+/* =========================================
+   4. BOTÓN (HOVER Y CLIC)
+   ========================================= */
+.btn-ingresar {
+    width: 100%;
+    padding: 15px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Suaviza los cambios */
+    margin-top: 15px;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.btn-ingresar:hover {
+    background-color: #0000cc; /* Un azul un poco más oscuro */
+    transform: translateY(-3px); /* Flota hacia arriba */
+    box-shadow: 0 8px 15px rgba(0, 0, 255, 0.4); /* Genera sombra */
+}
+
+/* Efecto al hacer clic en el botón */
+.btn-ingresar:active {
+    transform: translateY(1px); /* Se hunde al presionarlo */
+    box-shadow: 0 2px 5px rgba(0, 0, 255, 0.4);
+}
+
+/* =========================================
+   5. ENLACES Y FLECHAS
+   ========================================= */
+.links-container {
+    margin-top: 20px;
+}
+
+.links-container a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.links-container a:hover {
+    color: #a0c4ff;
+}
+
+.create-account {
+    margin-top: auto;
+    padding-top: 40px;
+    font-size: 14px;
+    color: white;
+}
+
+.create-account a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.create-account a i {
+    transition: transform 0.3s ease; /* Transición para la flechita */
+}
+
+/* Animación de la flecha al pasar el mouse por "Crear una cuenta" */
+.create-account a:hover i {
+    transform: translateX(8px); /* La flecha se desliza a la derecha */
+}
+
+.create-account a:hover {
+    color: #a0c4ff;
+}
