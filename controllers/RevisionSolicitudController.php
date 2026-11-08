@@ -31,7 +31,7 @@ function revisarSolicitud(): void
     try {
         $actualizada = $categorias[$listado]::revisar($pdo, $id, $estado, (int) $_SESSION['usuario_id']);
         $_SESSION['revision_solicitud_mensaje'] = $actualizada
-            ? ($estado === 'aceptada' ? 'Solicitud aceptada y eliminada.' : 'Solicitud rechazada.')
+            ? ($estado === 'aceptada' ? 'Solicitud aceptada.' : 'Solicitud rechazada.')
             : 'La solicitud ya fue revisada o no existe.';
     } catch (Throwable $e) {
         error_log('Error al revisar solicitud: ' . $e->getMessage());

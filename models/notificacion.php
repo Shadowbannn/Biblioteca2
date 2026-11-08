@@ -46,4 +46,17 @@ class Notificacion
         $stmt = $pdo->prepare('UPDATE notificaciones SET leida = 1 WHERE usuario_id = ? AND leida = 0');
         $stmt->execute([$usuarioId]);
     }
+
+    public static function eliminar(PDO $pdo, int $id, int $usuarioId): bool
+    {
+        $stmt = $pdo->prepare('DELETE FROM notificaciones WHERE id = ? AND usuario_id = ?');
+        $stmt->execute([$id, $usuarioId]);
+        return $stmt->rowCount() === 1;
+    }
+
+    public static function eliminarTodas(PDO $pdo, int $usuarioId): void
+    {
+        $stmt = $pdo->prepare('DELETE FROM notificaciones WHERE usuario_id = ?');
+        $stmt->execute([$usuarioId]);
+    }
 }

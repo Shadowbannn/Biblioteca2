@@ -78,9 +78,18 @@
                 </section>
             </div>
         </div>
-        <hr class="border-secondary">
     <?php endif; ?>
-    © 2026 Quantum Dev - All rights reserved
+   
+
+    <nav class="footer-legal" aria-label="Información legal">
+        <a href="legal.php#licencia">Licencia</a>
+        <a href="legal.php#terminos">Términos del servicio</a>
+        <a href="legal.php#privacidad">Privacidad</a>
+        <a href="legal.php#reembolsos">Reembolsos</a>
+        <a href="legal.php#cookies">Preferencias de cookies</a>
+         © 2026 Quantum Dev
+    </nav>
+    
 </footer>
 
 </body>

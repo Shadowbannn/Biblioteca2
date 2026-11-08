@@ -19,6 +19,14 @@ function gestionarNotificacion(): void
     $destino = 'index.php';
     if (($_POST['operacion'] ?? '') === 'todas') {
         Notificacion::marcarTodasLeidas($pdo, (int) $_SESSION['usuario_id']);
+    } elseif (($_POST['operacion'] ?? '') === 'eliminar') {
+        $id = filter_var($_POST['id'] ?? null, FILTER_VALIDATE_INT, ['options' => ['min_range' => 1]]);
+        if (!$id || !Notificacion::eliminar($pdo, $id, (int) $_SESSION['usuario_id'])) {
+            http_response_code(404);
+            exit('La notificacion no existe.');
+        }
+    } elseif (($_POST['operacion'] ?? '') === 'eliminar_todas') {
+        Notificacion::eliminarTodas($pdo, (int) $_SESSION['usuario_id']);
     } elseif (($_POST['operacion'] ?? '') === 'abrir') {
         $id = filter_var($_POST['id'] ?? null, FILTER_VALIDATE_INT, ['options' => ['min_range' => 1]]);
         $destino = $id ? Notificacion::abrir($pdo, $id, (int) $_SESSION['usuario_id']) : null;

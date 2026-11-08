@@ -219,6 +219,13 @@ $inicioBaseUrl = ($inicioDirectorio === '.' ? '' : $inicioDirectorio) . '/';
             </div>
         </div>
     </div>
+        <nav class="footer-legal" aria-label="Información legal">
+            <a href="<?= htmlspecialchars($inicioBaseUrl, ENT_QUOTES, 'UTF-8') ?>legal.php#licencia">Licencia</a>
+            <a href="<?= htmlspecialchars($inicioBaseUrl, ENT_QUOTES, 'UTF-8') ?>legal.php#terminos">Términos del servicio</a>
+            <a href="<?= htmlspecialchars($inicioBaseUrl, ENT_QUOTES, 'UTF-8') ?>legal.php#privacidad">Privacidad</a>
+            <a href="<?= htmlspecialchars($inicioBaseUrl, ENT_QUOTES, 'UTF-8') ?>legal.php#reembolsos">Reembolsos</a>
+            <a href="<?= htmlspecialchars($inicioBaseUrl, ENT_QUOTES, 'UTF-8') ?>legal.php#cookies">Preferencias de cookies</a>
+        </nav>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

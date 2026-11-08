@@ -4,7 +4,7 @@
     <?php unset($_SESSION['revision_solicitud_mensaje']); ?>
 <?php endif; ?>
 <form method="get" action="index.php" class="d-flex align-items-center flex-wrap gap-2 mb-3">
-    <label for="tipo-solicitudes" class="form-label mb-0">Ver solicitudes de:</label>
+    <label for="tipo-solicitudes" class="form-label mb-0 text-white">Ver solicitudes de:</label>
     <select id="tipo-solicitudes" name="accion" class="form-select w-auto" onchange="this.form.submit()">
         <option value="listarSolicitudes" <?= $accionSolicitudes === 'listarSolicitudes' ? 'selected' : '' ?>>Libros</option>
         <option value="listarSolicitudesProyectos" <?= $accionSolicitudes === 'listarSolicitudesProyectos' ? 'selected' : '' ?>>Proyectos</option>

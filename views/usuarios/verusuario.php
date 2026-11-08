@@ -27,6 +27,7 @@
                 <table class="table table-striped table-dark">
                     <thead>
                         <tr>
+                        <th scope="col">Foto</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Email</th>
                         <th scope="col">Registrado</th>
@@ -42,11 +43,24 @@
                         <?php foreach ($usuarios as $u): ?>
 
                             <tr>
+                                <td>
+                                    <?php if (method_exists($u, 'getFoto') && $u->getFoto()): ?>
+                                        <img src="/carpeta2/uploads/usuarios/<?= htmlspecialchars($u->getFoto()) ?>"
+                                             alt="Foto de <?= htmlspecialchars($u->getNombre()) ?>"
+                                             class="rounded-circle"
+                                             style="max-height: 50px; max-width: 50px;">
+                                    <?php else: ?>
+                                        <img src="https://static.vecteezy.com/system/resources/previews/019/879/186/large_2x/user-icon-on-transparent-background-free-png.png"
+                                                alt="Imagen por defecto"
+                                                class="rounded-circle"
+                                                style="max-height: 50px; max-width: 50px;">
+                                    <?php endif; ?>
                                 <td><?= htmlspecialchars($u->getNombre()) ?></td>
                                 <td><?= $u->getEmail() ?></td>
                                 <td><?= $u->getFechaRegistro() !== '' ? date('d/m/Y', strtotime($u->getFechaRegistro())) : '-' ?></td>
                                 <td><?= htmlspecialchars($u->getRoles()) ?></td>
                                 <td><?= $u->getId() ?></td>
+                               
                                 <td>
                                     <div class="d-flex gap-2">
                                         <a href="index.php?accion=formEditarUsuario&id=<?= $u->getId() ?>"

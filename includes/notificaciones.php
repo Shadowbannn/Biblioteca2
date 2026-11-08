@@ -1,37 +1,85 @@
 <?php
 require_once __DIR__ . '/../models/notificacion.php';
-$notificaciones = Notificacion::recientes($pdo, (int) $_SESSION['usuario_id']);
-$sinLeer = Notificacion::contarPendientes($pdo, (int) $_SESSION['usuario_id']);
+$usuarioNotificacionesId = (int) $_SESSION['usuario_id'];
+$notificaciones = Notificacion::recientes($pdo, $usuarioNotificacionesId);
+$sinLeer = Notificacion::contarPendientes($pdo, $usuarioNotificacionesId);
 $_SESSION['notificaciones_csrf'] ??= bin2hex(random_bytes(32));
 $escNotificacion = static fn($valor): string => htmlspecialchars((string) $valor, ENT_QUOTES, 'UTF-8');
+$fechaNotificacion = static function ($valor) use ($escNotificacion): string {
+    try {
+        return (new DateTime((string) $valor))->format('d/m/Y · H:i');
+    } catch (Throwable $e) {
+        return $escNotificacion($valor);
+    }
+};
 ?>
-<li class="dropdown">
-    <button type="button" class="btn btn-dark" id="notificacionesDropdown" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Ver notificaciones: <?= $sinLeer ?> sin leer">
+<li class="dropdown notificaciones-dropdown">
+    <button type="button" class="btn btn-dark notificaciones-toggle" id="notificacionesDropdown"
+        data-bs-toggle="dropdown" aria-expanded="false"
+        aria-label="Ver notificaciones: <?= $sinLeer ?> sin leer">
         <i class="fa-solid fa-bell" aria-hidden="true"></i>
-        <?php if ($sinLeer > 0): ?><span class="badge bg-danger"><?= $sinLeer ?></span><?php endif; ?>
+        <?php if ($sinLeer > 0): ?><span class="badge bg-danger"><?= $sinLeer > 99 ? '99+' : $sinLeer ?></span><?php endif; ?>
     </button>
-    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="notificacionesDropdown" style="width: 340px; max-width: 90vw; max-height: 420px; overflow-y: auto;">
-        <h6 class="dropdown-header">Notificaciones</h6>
+
+    <div class="dropdown-menu dropdown-menu-end dropdown-menu-dark notificaciones-menu" aria-labelledby="notificacionesDropdown">
+        <div class="notificaciones-encabezado">
+            <div>
+                <span class="notificaciones-titulo-icono"><i class="fa-regular fa-bell" aria-hidden="true"></i></span>
+                <div><h2>Notificaciones</h2><span><?= $sinLeer === 1 ? '1 pendiente' : $sinLeer . ' pendientes' ?></span></div>
+            </div>
+            <?php if ($notificaciones): ?>
+                <form method="post" action="index.php?accion=gestionarNotificacion">
+                    <input type="hidden" name="csrf" value="<?= $escNotificacion($_SESSION['notificaciones_csrf']) ?>">
+                    <input type="hidden" name="operacion" value="eliminar_todas">
+                    <button class="btn btn-outline-danger btn-sm" type="submit"
+                        onclick="return confirm('¿Eliminar todas tus notificaciones?')">
+                        <i class="fa-solid fa-trash-can" aria-hidden="true"></i>
+                        <span>Eliminar todas</span>
+                    </button>
+                </form>
+            <?php endif; ?>
+        </div>
+
         <?php if ($sinLeer > 0): ?>
-            <form method="post" action="index.php?accion=gestionarNotificacion" class="px-3 mb-2">
+            <form method="post" action="index.php?accion=gestionarNotificacion" class="notificaciones-marcar">
                 <input type="hidden" name="csrf" value="<?= $escNotificacion($_SESSION['notificaciones_csrf']) ?>">
                 <input type="hidden" name="operacion" value="todas">
-                <button class="btn btn-outline-secondary btn-sm" type="submit">Marcar todas como leídas</button>
-            </form>
-        <?php endif; ?>
-        <?php if (!$notificaciones): ?>
-            <p class="px-3 py-2 mb-0 text-muted small">No hay notificaciones.</p>
-        <?php endif; ?>
-        <?php foreach ($notificaciones as $notificacion): ?>
-            <form method="post" action="index.php?accion=gestionarNotificacion">
-                <input type="hidden" name="csrf" value="<?= $escNotificacion($_SESSION['notificaciones_csrf']) ?>">
-                <input type="hidden" name="operacion" value="abrir">
-                <input type="hidden" name="id" value="<?= (int) $notificacion['id'] ?>">
-                <button type="submit" class="dropdown-item text-wrap <?= !$notificacion['leida'] ? 'fw-bold' : '' ?>">
-                    <?= $escNotificacion($notificacion['mensaje']) ?>
-                    <small class="d-block text-muted"><?= $escNotificacion($notificacion['creada_en']) ?></small>
+                <button class="btn btn-link btn-sm" type="submit">
+                    <i class="fa-solid fa-check-double" aria-hidden="true"></i> Marcar todas como leídas
                 </button>
             </form>
-        <?php endforeach; ?>
+        <?php endif; ?>
+
+        <?php if (!$notificaciones): ?>
+            <div class="notificaciones-vacias">
+                <i class="fa-regular fa-bell-slash" aria-hidden="true"></i>
+                <p>No hay notificaciones</p>
+            </div>
+        <?php else: ?>
+            <div class="notificaciones-lista">
+                <?php foreach ($notificaciones as $notificacion): ?>
+                    <div class="notificacion-item <?= empty($notificacion['leida']) ? 'no-leida' : '' ?>">
+                        <form method="post" action="index.php?accion=gestionarNotificacion" class="notificacion-abrir">
+                            <input type="hidden" name="csrf" value="<?= $escNotificacion($_SESSION['notificaciones_csrf']) ?>">
+                            <input type="hidden" name="operacion" value="abrir">
+                            <input type="hidden" name="id" value="<?= (int) $notificacion['id'] ?>">
+                            <button type="submit" class="notificacion-mensaje">
+                                <span class="notificacion-texto"><?= $escNotificacion($notificacion['mensaje']) ?></span>
+                                <small><i class="fa-regular fa-clock" aria-hidden="true"></i> <?= $fechaNotificacion($notificacion['creada_en']) ?></small>
+                            </button>
+                        </form>
+                        <form method="post" action="index.php?accion=gestionarNotificacion" class="notificacion-eliminar">
+                            <input type="hidden" name="csrf" value="<?= $escNotificacion($_SESSION['notificaciones_csrf']) ?>">
+                            <input type="hidden" name="operacion" value="eliminar">
+                            <input type="hidden" name="id" value="<?= (int) $notificacion['id'] ?>">
+                            <button type="submit" class="btn btn-sm" title="Eliminar notificación"
+                                aria-label="Eliminar notificación: <?= $escNotificacion($notificacion['mensaje']) ?>">
+                                <i class="fa-solid fa-trash-can" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
     </div>
 </li>

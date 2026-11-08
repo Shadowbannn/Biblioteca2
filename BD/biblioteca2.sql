@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-11-2026 a las 15:37:19
+-- Tiempo de generación: 08-11-2026 a las 09:39:41
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -4346,7 +4346,7 @@ INSERT INTO `libros` (`id`, `stock`, `titulo`, `autor`, `anio_publicacion`, `can
 (4213, 1, 'Smart lavado', '2º Administración', 0, 0, 'Sí', 'Matemat', NULL, 4218, NULL, '2018-11-20', '43424.0 | Fecha de ingreso inferida de serial Excel; pendiente de cotejar con fuente original.', NULL, 'Matemat', NULL, NULL, NULL),
 (4214, 1, 'Recetas internacionales familiares favoritas', 'Kalenuik, Ron', 0, 0, 'Sí', 'Gastronomía', NULL, 4219, NULL, '2024-08-23', '45527.0 | Fecha de ingreso inferida de serial Excel; pendiente de cotejar con fuente original.', 'Donación', 'Gastronomía', NULL, NULL, NULL),
 (4215, 1, 'La pastelería en casa', 'De Diego, Mariano', 0, 0, 'Sí', 'Gastronomía', NULL, 4220, NULL, '2024-08-23', '45527.0 | Fecha de ingreso inferida de serial Excel; pendiente de cotejar con fuente original.', 'Donación', 'Gastronomía', NULL, NULL, NULL),
-(4216, 1, 'Sweet peppers SRL  SEXSHOP', '2º Administración', 0, 0, 'Sí', 'Matemat', NULL, 4221, NULL, '2018-11-20', '43424.0 | Fecha de ingreso inferida de serial Excel; pendiente de cotejar con fuente original.', NULL, 'Matemat', NULL, NULL, NULL),
+(4216, 1, 'Sweet peppers SRL  SEXSHOP', '2º Administración', 0, 0, 'No', 'Matemat', NULL, 4221, NULL, '2018-11-20', '43424.0 | Fecha de ingreso inferida de serial Excel; pendiente de cotejar con fuente original.', NULL, 'Matemat', NULL, NULL, NULL),
 (4217, 1, 'Matemática Tercer Año del Ciclo Básico GAUSS 3 e. 50', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 'Sí', 'Matemat', NULL, 4222, NULL, NULL, NULL, NULL, 'Matemat', NULL, NULL, NULL),
 (4218, 1, 'Matemática Tercer Año del Ciclo Básico GAUSS 3 e. 51', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 'Sí', 'Matemat', NULL, 4223, NULL, NULL, NULL, NULL, 'Matemat', NULL, NULL, NULL),
 (4219, 1, 'Matemática Tercer Año del Ciclo Básico GAUSS 3 e. 52', 'Belcredi, Luis; Zambra, Mónica  La flor del Itapebi', 0, 0, 'Sí', 'Matemat', NULL, 4224, NULL, NULL, NULL, NULL, 'Matemat', NULL, NULL, NULL),
@@ -10455,21 +10455,21 @@ CREATE TABLE `notificaciones` (
 --
 
 INSERT INTO `notificaciones` (`id`, `usuario_id`, `mensaje`, `enlace`, `leida`, `creada_en`) VALUES
-(46, 2, 'Nueva solicitud de libros #23.', 'index.php?accion=listarSolicitudes', 1, '2026-11-04 05:50:53'),
 (47, 9, 'Nueva solicitud de libros #23.', 'index.php?accion=listarSolicitudes', 0, '2026-11-04 05:50:53'),
 (48, 4, 'Nueva solicitud de libros #23.', 'index.php?accion=listarSolicitudes', 0, '2026-11-04 05:50:53'),
-(49, 1, 'Nueva solicitud de libros #23.', 'index.php?accion=listarSolicitudes', 0, '2026-11-04 05:50:53'),
 (50, 8, 'Nueva solicitud de libros #23.', 'index.php?accion=listarSolicitudes', 0, '2026-11-04 05:50:53'),
-(53, 2, 'Nueva solicitud de libros #24.', 'index.php?accion=listarSolicitudes', 1, '2026-11-04 05:51:08'),
 (54, 9, 'Nueva solicitud de libros #24.', 'index.php?accion=listarSolicitudes', 0, '2026-11-04 05:51:08'),
 (55, 4, 'Nueva solicitud de libros #24.', 'index.php?accion=listarSolicitudes', 0, '2026-11-04 05:51:08'),
-(56, 1, 'Nueva solicitud de libros #24.', 'index.php?accion=listarSolicitudes', 0, '2026-11-04 05:51:08'),
 (57, 8, 'Nueva solicitud de libros #24.', 'index.php?accion=listarSolicitudes', 0, '2026-11-04 05:51:08'),
-(60, 2, 'Nueva solicitud de juegos #7.', 'index.php?accion=listarSolicitudesJuegos', 1, '2026-11-04 05:51:27'),
 (61, 9, 'Nueva solicitud de juegos #7.', 'index.php?accion=listarSolicitudesJuegos', 0, '2026-11-04 05:51:27'),
 (62, 4, 'Nueva solicitud de juegos #7.', 'index.php?accion=listarSolicitudesJuegos', 0, '2026-11-04 05:51:27'),
-(63, 1, 'Nueva solicitud de juegos #7.', 'index.php?accion=listarSolicitudesJuegos', 0, '2026-11-04 05:51:27'),
-(64, 8, 'Nueva solicitud de juegos #7.', 'index.php?accion=listarSolicitudesJuegos', 0, '2026-11-04 05:51:27');
+(64, 8, 'Nueva solicitud de juegos #7.', 'index.php?accion=listarSolicitudesJuegos', 0, '2026-11-04 05:51:27'),
+(108, 9, 'Nueva solicitud de libros #27.', 'index.php?accion=listarSolicitudes', 0, '2026-11-04 14:39:57'),
+(109, 4, 'Nueva solicitud de libros #27.', 'index.php?accion=listarSolicitudes', 0, '2026-11-04 14:39:57'),
+(111, 8, 'Nueva solicitud de libros #27.', 'index.php?accion=listarSolicitudes', 0, '2026-11-04 14:39:57'),
+(113, 9, 'Nueva solicitud de libros #28.', 'index.php?accion=listarSolicitudes', 0, '2026-11-08 07:35:17'),
+(114, 4, 'Nueva solicitud de libros #28.', 'index.php?accion=listarSolicitudes', 0, '2026-11-08 07:35:17'),
+(116, 8, 'Nueva solicitud de libros #28.', 'index.php?accion=listarSolicitudes', 0, '2026-11-08 07:35:17');
 
 -- --------------------------------------------------------
 
@@ -10500,7 +10500,8 @@ INSERT INTO `prestamos` (`id`, `libroId`, `socioId`, `fechaPrestamo`, `fechaDevo
 (18, 9809, 25, '2026-10-22', '2026-10-29', NULL, 'Prestado', '2026-10-21 22:19:01'),
 (19, 1145, 24, '2026-10-22', '2026-10-29', NULL, 'Prestado', '2026-10-21 23:12:37'),
 (20, 2779, 26, '2026-10-22', '2026-10-29', NULL, 'Devuelto', '2026-10-21 23:12:56'),
-(28, 9995, 22, '2026-10-25', '2026-11-01', NULL, 'Prestado', '2026-10-25 21:39:18');
+(28, 9995, 22, '2026-10-25', '2026-11-01', NULL, 'Prestado', '2026-10-25 21:39:18'),
+(29, 4216, 22, '2026-11-08', '2026-11-15', NULL, 'Prestado', '2026-11-08 04:39:14');
 
 -- --------------------------------------------------------
 
@@ -10814,6 +10815,14 @@ CREATE TABLE `solicitudes_libros` (
   `revisada_en` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `solicitudes_libros`
+--
+
+INSERT INTO `solicitudes_libros` (`id`, `libro_id`, `socio_id`, `nuevo_socio`, `cedula`, `nombre`, `clase`, `telefono`, `tipo`, `estado`, `observacion`, `prestamo_id`, `revisada_por`, `creada_en`, `revisada_en`) VALUES
+(27, 9668, 11, 0, '55118416', '', '', '', 'prestamo', 'pendiente', '', NULL, NULL, '2026-11-04 14:39:57', NULL),
+(28, 4216, 22, 0, '55118417', '', '', '', 'prestamo', 'aceptada', '', 0, 2, '2026-11-08 07:35:17', '2026-11-08 04:39:14');
+
 -- --------------------------------------------------------
 
 --
@@ -10859,11 +10868,11 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `email`, `password`, `fecha_registro`, `roles`, `foto`) VALUES
-(1, 'Anthony Silva', 'shadow@gmail.com', '$2y$10$RWNphRGS8Aum1m0qlZzhBOAmUTTmJ2M/EX1/zACmgrVdHl3U..V.6', '2026-09-16 07:29:36', 'Desarrollador', NULL),
-(2, 'Admin', 'admin@utu.edu.uy', '$2y$10$5MZBE/PoKtlh//QFm/MdHeoLVHgyxTjFMjFhY4Nx3m4aFqR2cp4Pu', '2026-09-18 02:00:36', 'Admin', NULL),
-(4, 'Nacho Palermo', 'nacho@gmail.com', '$2y$10$fiMkwlFJJhV.vadYWXr7aOySKtgCntKmnXBJiT5BqRt3g8TwNJ/o2', '2026-10-23 02:00:18', 'Desarrollador', NULL),
-(8, 'Walter Montejo', 'walter@gmail.com', '$2y$10$GrNnwlrQdg.cPuyF0kiqdOqPshC20P6NYn5A77xeHR7Y8cF4jkmBS', '2026-10-23 19:09:02', 'Desarrollador', NULL),
-(9, 'Maria Antonieta', 'maria@gmail.com', '$2y$10$70yiXZGc8CpIJjzTfrPjguWUaRpUqMZ5XtD7wYNnrblwt3QcyiyAS', '2026-10-25 23:55:35', 'Bibliotecaria', NULL);
+(1, 'Anthony Silva', 'shadow@gmail.com', '$2y$10$RWNphRGS8Aum1m0qlZzhBOAmUTTmJ2M/EX1/zACmgrVdHl3U..V.6', '2026-09-16 07:29:36', 'Desarrollador', 'b8ad648fc8551aecc1c73d5d45610302.png'),
+(2, 'Admin', 'admin@utu.edu.uy', '$2y$10$5MZBE/PoKtlh//QFm/MdHeoLVHgyxTjFMjFhY4Nx3m4aFqR2cp4Pu', '2026-09-18 02:00:36', 'Admin', 'b4d2953e468dc12b4063acce677c1d7b.jpg'),
+(4, 'Nacho Palermo', 'nacho@gmail.com', '$2y$10$fiMkwlFJJhV.vadYWXr7aOySKtgCntKmnXBJiT5BqRt3g8TwNJ/o2', '2026-10-23 02:00:18', 'Desarrollador', '3ff8a4f673b9a41c8da9077ed5722812.jpg'),
+(8, 'Walter Montejo', 'walterfire@gmail.com', '$2y$10$GrNnwlrQdg.cPuyF0kiqdOqPshC20P6NYn5A77xeHR7Y8cF4jkmBS', '2026-10-23 19:09:02', 'Desarrollador', '9b8572dd0375e0d6d88107d386e53f74.jpg'),
+(9, 'Maria Antonieta', 'biblio@gmail.com', '$2y$10$70yiXZGc8CpIJjzTfrPjguWUaRpUqMZ5XtD7wYNnrblwt3QcyiyAS', '2026-10-25 23:55:35', 'Bibliotecaria', 'b6ef731996804078efb446e1dce83f64.png');
 
 --
 -- Índices para tablas volcadas
@@ -10977,13 +10986,13 @@ ALTER TABLE `libros`
 -- AUTO_INCREMENT de la tabla `notificaciones`
 --
 ALTER TABLE `notificaciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
 
 --
 -- AUTO_INCREMENT de la tabla `prestamos`
 --
 ALTER TABLE `prestamos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT de la tabla `prestamosjuegos`
@@ -11013,7 +11022,7 @@ ALTER TABLE `solicitudes_juegos`
 -- AUTO_INCREMENT de la tabla `solicitudes_libros`
 --
 ALTER TABLE `solicitudes_libros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT de la tabla `solicitudes_proyectos`

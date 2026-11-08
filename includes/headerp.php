@@ -25,8 +25,11 @@
              alt="Inicio" style="width: 270px; height: auto;">
     </a>
 
-             <button type="button" class="menu-movil btn btn-dark" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir o cerrar menú"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
-    <ul id="menu-principal">
+             <button type="button" class="menu-movil btn btn-dark" aria-controls="menu-principal" 
+             aria-expanded="false" aria-label="Abrir o cerrar menú">
+             <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <ul id="menu-principal">
                 <li><a href="inicioo.php#carouselInicio">Inicio</a></li>
                 <li><a href="inicioo.php#destacados">Destacadas</a></li>
                 <li><a href="inicioo.php#noticias">Noticias</a></li>

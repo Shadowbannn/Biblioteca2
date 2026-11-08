@@ -1,4 +1,4 @@
-<?php require __DIR__ . '/../includes/header.php'; ?>
+<?php require __DIR__ . '/../includes/headerIndex.php'; ?>
 
 <div class="d-flex justify-content-center mt-3">
     <a href="#" class="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">

@@ -225,3 +225,12 @@ body {
 .create-account a:hover {
     color: #a0c4ff;
 }
+
+.footer-legal-auth {
+    position: fixed; right: 0; bottom: 0; left: 0; z-index: 2;
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 22px;
+    padding: 14px 16px; background: #183451;
+}
+.footer-legal-auth a { color: #e8eef5; font-size: .82rem; text-decoration: none; }
+.footer-legal-auth a:hover, .footer-legal-auth a:focus { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 575px) { .footer-legal-auth { gap: 8px 14px; padding: 10px; } .footer-legal-auth a { font-size: .74rem; } }
