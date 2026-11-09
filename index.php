@@ -35,12 +35,19 @@ require_once __DIR__ . '/controllers/SolicitudProyectoController.php';
 $accion = $_REQUEST['accion'] ?? 'inicio';
 
 // Acciones accesibles sin iniciar sesión
-$accionesPublicas = ['formLogin', 'login', 'formCrearUsuario', 'crearUsuario', 
+$accionesPublicas = ['formLogin', 'login', 'formLoginSocio', 'loginSocio', 'formCrearUsuario', 'crearUsuario',
                     'listarCatalogo', 'listarJuegosP', 'listarProyectosP', 
                     'formSolicitudLibro', 'guardarSolicitudLibro', 'formSolicitudJuego', 'guardarSolicitudJuego', 'formSolicitudProyecto', 'guardarSolicitudProyecto'];
 
 if (empty($_SESSION['usuario_id']) && !in_array($accion, $accionesPublicas, true)) {
-    header('Location: inicioo.php');
+    if (empty($_SESSION['socio_id']) || !in_array($accion, ['misPrestamos', 'cambiarPasswordSocio', 'logout'], true)) {
+        header('Location: inicioo.php');
+        exit;
+    }
+}
+
+if (!empty($_SESSION['socio_id']) && empty($_SESSION['usuario_id']) && !in_array($accion, ['misPrestamos', 'cambiarPasswordSocio', 'logout'], true) && !in_array($accion, $accionesPublicas, true)) {
+    header('Location: index.php?accion=misPrestamos');
     exit;
 }
 
@@ -89,6 +96,18 @@ switch ($accion) {
         break;
     case 'login':
         login();
+        break;
+    case 'formLoginSocio':
+        formLoginSocio();
+        break;
+    case 'loginSocio':
+        loginSocio();
+        break;
+    case 'misPrestamos':
+        misPrestamos();
+        break;
+    case 'cambiarPasswordSocio':
+        cambiarPasswordSocio();
         break;
     case 'logout':
         logout();

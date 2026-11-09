@@ -16,6 +16,12 @@ function formSolicitudLibro(): void {
         http_response_code(404);
         exit('El libro no existe.');
     }
+    $socioSesion = !empty($_SESSION['socio_id']) ? Socio::buscarPorId($pdo, (int) $_SESSION['socio_id']) : null;
+    if (!empty($_SESSION['socio_id']) && !$socioSesion) {
+        unset($_SESSION['socio_id'], $_SESSION['socio_nombre']);
+        header('Location: index.php?accion=formLoginSocio');
+        exit;
+    }
     $tipo = $_GET['tipo'] ?? 'prestamo';
     if (!in_array($tipo, ['prestamo', 'reserva'], true)) {
         $tipo = 'prestamo';
@@ -47,6 +53,19 @@ function guardarSolicitudLibro(): void {
     $telefono = $leer('telefono');
     $error = '';
     $socio = null;
+    $socioSesion = !empty($_SESSION['socio_id']) ? Socio::buscarPorId($pdo, (int) $_SESSION['socio_id']) : null;
+    if (!empty($_SESSION['socio_id']) && !$socioSesion) {
+        unset($_SESSION['socio_id'], $_SESSION['socio_nombre']);
+        header('Location: index.php?accion=formLoginSocio');
+        exit;
+    }
+    if ($socioSesion) {
+        $modalidad = 'existente';
+        $cedula = $socioSesion->getCedula();
+        $nombre = $socioSesion->getNombre();
+        $clase = $socioSesion->getClase();
+        $telefono = $socioSesion->getTelefono();
+    }
 
     if (empty($_SESSION['solicitud_csrf']) || !hash_equals($_SESSION['solicitud_csrf'], $leer('csrf'))) {
         $error = 'El formulario venció. Volvé a enviarlo.';

@@ -90,6 +90,7 @@ $inicioBaseUrl = ($inicioDirectorio === '.' ? '' : $inicioDirectorio) . '/';
                         <i class="bi bi-person-circle me-1"></i>Ingresar
                     </a>
                 </li>
+                <li class="nav-item"><a class="btn btn-sm btn-light ms-lg-2" href="<?= htmlspecialchars($inicioBaseUrl, ENT_QUOTES, 'UTF-8') ?>index.php?accion=formLoginSocio">Acceso de socios</a></li>
             </ul>
         </div>
     </div>

@@ -198,7 +198,7 @@ nav {
     align-items: center;
     z-index: 1000;
     backdrop-filter: blur(10px);
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.70);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 

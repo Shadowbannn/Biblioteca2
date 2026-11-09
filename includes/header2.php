@@ -31,21 +31,24 @@
                 <li><a href="inicioo.php#destacados">Destacadas</a></li>
                 <li><a href="inicioo.php#noticias">Noticias</a></li>
 
-                <li class="dropdown">
-                    <button class="btn btn-sm btn-dark dropdown-toggle" type="button" id="menuExplorar" data-bs-toggle="dropdown" aria-expanded="false">
-                        Explorar
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="menuExplorar">
-                        <a class="dropdown-item" href="index.php?accion=listarCatalogo">Catálogo</a>
-                        <a class="dropdown-item" href="index.php?accion=listarJuegosP">Juegos</a>
-                        <a class="dropdown-item" href="index.php?accion=listarProyectosP">Proyectos</a>
-                    </div>
-                </li>
-                <li>
-                    <a class="btn btn-sm btn-dark ms-lg-2" href="index.php?accion=formLogin">
-                        <i class="bi bi-person-circle me-1"></i>Ingresar
-                    </a>
-                </li>
+                <?php if (!empty($_SESSION['socio_id'])): ?>
+                    <?php require __DIR__ . '/perfilSocio.php'; ?>
+                    <?php require __DIR__ . '/notificacionesSocio.php'; ?>
+            <li class="dropdown menu-mas-dropdown">
+                <button id="menuMasDropdown" type="button" class="menu-mas-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Abrir más opciones">
+                   <i class="fa-solid fa-bars" style="color: rgb(255, 255, 255);"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-dark menu-mas-panel" aria-labelledby="menuMasDropdown">
+                    <a class="dropdown-item" href="index.php?accion=listarCatalogo"><i class="fa-solid fa-book-open me-1"></i>Catálogo</a>
+                    <a class="dropdown-item" href="index.php?accion=listarJuegosP"><i class="fa-solid fa-dice" aria-hidden="true"></i>Juegos</a>
+                    <a class="dropdown-item" href="index.php?accion=listarProyectosP"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Proyectos</a>
+                    <a class="dropdown-item" href="index.php?accion=misPrestamos"><i class="fa-solid fa-book-open me-1"></i>Mis préstamos</a>
+                </div>
+            </li>
+
+                <?php else: ?>
+                    <li><a class="btn btn-sm btn-dark ms-lg-2" href="index.php?accion=formLogin"><i class="bi bi-person-circle me-1"></i>Ingresar</a></li>
+                <?php endif; ?>
             </ul>
 </nav>
 

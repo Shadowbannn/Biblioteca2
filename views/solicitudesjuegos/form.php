@@ -17,6 +17,11 @@
             <input type="hidden" name="csrf" value="<?= htmlspecialchars($_SESSION['solicitud_csrf'], ENT_QUOTES, 'UTF-8') ?>">
             <input type="hidden" name="juego_id" value="<?= (int) $juego->getId() ?>">
             <input type="hidden" name="tipo" value="<?= htmlspecialchars($tipo) ?>">
+            <?php if (!empty($socioSesion)): ?>
+                <div class="alert alert-info">Solicitud como socio: <strong><?= htmlspecialchars($socioSesion->getNombre(), ENT_QUOTES, 'UTF-8') ?></strong></div>
+                <input type="hidden" name="modalidad" value="existente">
+                <input type="hidden" name="cedula" value="<?= htmlspecialchars($socioSesion->getCedula(), ENT_QUOTES, 'UTF-8') ?>">
+            <?php else: ?>
             <label for="modalidad" class="form-label">¿Ya sos socio de la biblioteca?</label>
 
             <select name="modalidad" id="modalidad" class="form-select mb-3">
@@ -46,6 +51,7 @@
             <label for="telefono" class="form-label">Teléfono de contacto <span id="telefono-opcional">(opcional)</span></label>
             <input id="telefono" name="telefono" type="tel" class="form-control mb-3" maxlength="40" 
                    value="<?= htmlspecialchars($_POST['telefono'] ?? '') ?>">
+            <?php endif; ?>
 
             <button class="btn btn-success" type="submit">
                 Enviar solicitud
@@ -61,6 +67,7 @@
 <script>
 (() => {
     const modalidad = document.getElementById('modalidad');
+    if (!modalidad) return;
     function actualizar() {
         const nuevo = modalidad.value === 'nuevo';
         document.getElementById('datos-nuevo').hidden = !nuevo;

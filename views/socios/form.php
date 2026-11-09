@@ -48,6 +48,9 @@ $esEdicion = isset($socio);
                        placeholder="Cedula"
                        value="<?= $esEdicion ? htmlspecialchars($socio->getCedula()) : '' ?>" required>
 
+                <label for="password" class="form-label"><?= $esEdicion ? 'Nueva contraseña (opcional)' : 'Contraseña de acceso (opcional)' ?></label>
+                <input type="password" name="password" id="password" class="form-control mb-3" minlength="8" autocomplete="new-password">
+
                 <label for="telefono" class="form-label">Teléfono</label>
                 <input type="number" name="telefono" id="telefono" class="form-control mb-3"
                        placeholder="Telefono"

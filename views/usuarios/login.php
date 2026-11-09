@@ -19,7 +19,9 @@
     <div class="login-card">
 
         <div class="login-left">
-            <img src="https://gestioneducativa.utu.edu.uy/wp-content/uploads/2023/03/LOGO-BIBLIOTECA-BLANCO-1280x683.png" alt="Ilustración Login">
+            <a href="inicioo.php">
+                <img src="https://gestioneducativa.utu.edu.uy/wp-content/uploads/2023/03/LOGO-BIBLIOTECA-BLANCO-1280x683.png" alt="Ilustración Login">
+            </a>
         </div>
 
         <div class="login-right">
@@ -58,16 +60,12 @@
             </form>
 
               <div class="create-account">
+                <a href="index.php?accion=formLoginSocio">Acceso para socios <i class="fa-solid fa-arrow-right"></i></a><br>
                 <a href="inicioo.php">Inicio <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
 
         </div>
     </div>
-    <nav class="footer-legal footer-legal-auth" aria-label="Información legal">
-        <a href="legal.php#licencia">Licencia</a><a href="legal.php#terminos">Términos del servicio</a>
-        <a href="legal.php#privacidad">Privacidad</a><a href="legal.php#reembolsos">Reembolsos</a>
-        <a href="legal.php#cookies">Preferencias de cookies</a>
-    </nav>
 </body>
 </html>

@@ -47,6 +47,7 @@ function crearSocio() {
     $cedula         = trim($_POST['cedula'] ?? '');
     $telefono       = trim($_POST['telefono'] ?? '');
     $fecha_registro = $_POST['fecha_registro'] ?? '';
+    $password = (string) ($_POST['password'] ?? '');
 
     if ($nombre === '' || $clase === '' || $cedula === '' || $telefono === '' || $fecha_registro === '') {
         $error = "Todos los campos son obligatorios.";
@@ -56,7 +57,8 @@ function crearSocio() {
 
     $foto = subirFoto();
 
-    Socio::crear($pdo, $nombre, $clase, $cedula, (string) $telefono, (string) $fecha_registro, $foto);
+    $passwordHash = $password !== '' ? password_hash($password, PASSWORD_DEFAULT) : null;
+    Socio::crear($pdo, $nombre, $clase, $cedula, (string) $telefono, (string) $fecha_registro, $foto, $passwordHash);
 
     header('Location: index.php?accion=listarSocios');
     exit;
@@ -71,6 +73,7 @@ function editarSocio() {
     $cedula         = trim($_POST['cedula'] ?? '');
     $telefono       = (string) trim($_POST['telefono'] ?? '');
     $fecha_registro = $_POST['fecha_registro'] ?? '';
+    $password = (string) ($_POST['password'] ?? '');
 
     if ($nombre === '' || $clase === '' || $cedula === '' || $telefono === '' || $fecha_registro === '') {
         $socio = Socio::buscarPorId($pdo, $id);
@@ -86,7 +89,8 @@ function editarSocio() {
     }
 
     // CORREGIDO: Se llama a Socio::actualizar (antes decía Socio::crear)
-    Socio::actualizar($pdo, $id, $nombre, $clase, $cedula, (string) $telefono, (string) $fecha_registro, $fotoNueva);
+    $passwordHash = $password !== '' ? password_hash($password, PASSWORD_DEFAULT) : null;
+    Socio::actualizar($pdo, $id, $nombre, $clase, $cedula, (string) $telefono, (string) $fecha_registro, $fotoNueva, $passwordHash);
 
     // CORREGIDO: Redirección a listarSocios (en plural)
     header('Location: index.php?accion=listarSocios');

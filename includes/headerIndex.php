@@ -34,7 +34,7 @@
 
 
         <?php if (!empty($_SESSION['usuario_id'])): ?>
-            <?php require __DIR__ . '/perfilUsuario.php'; ?>            
+            <?php require __DIR__ . '/perfilUsuario.php'; ?>
             <?php require __DIR__ . '/notificaciones.php'; ?>
             <li class="dropdown menu-mas-dropdown">
                 <button id="menuMasDropdown" type="button" class="menu-mas-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Abrir más opciones">
@@ -49,7 +49,6 @@
                     <a class="dropdown-item" href="index.php?accion=listarProyectos"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Proyectos</a>
                 </div>
             </li>
-                         
         <?php endif; ?>
     </ul>
 </nav>

@@ -182,12 +182,13 @@ class Socio
         string $cedula,
         string $telefono,
         string $fecha_registro,
-        string $foto = null
+        string $foto = null,
+        ?string $passwordHash = null
     ): bool {
         $stmt = $pdo->prepare(
             "INSERT INTO socios
-            (nombre, clase, cedula, telefono, fecha_registro, foto)
-            VALUES (?, ?, ?, ?, ?, ?)"
+            (nombre, clase, cedula, telefono, fecha_registro, foto, password)
+            VALUES (?, ?, ?, ?, ?, ?, ?)"
         );
 
         return $stmt->execute([
@@ -196,7 +197,8 @@ class Socio
             $cedula,
             $telefono,
             $fecha_registro,
-            $foto
+            $foto,
+            $passwordHash
         ]);
     }
 
@@ -210,11 +212,12 @@ class Socio
         string $cedula,
         string $telefono,
         string $fecha_registro,
-        string $foto = null
+        string $foto = null,
+        ?string $passwordHash = null
     ): bool {
         $stmt = $pdo->prepare(
             "UPDATE socios
-             SET nombre = ?, clase = ?, cedula = ?, telefono = ?, fecha_registro = ?, foto = ?
+             SET nombre = ?, clase = ?, cedula = ?, telefono = ?, fecha_registro = ?, foto = ?, password = COALESCE(?, password)
              WHERE id = ?"
         );
 
@@ -225,6 +228,7 @@ class Socio
             $telefono,
             $fecha_registro,
             $foto,
+            $passwordHash,
             $id
         ]);
     }

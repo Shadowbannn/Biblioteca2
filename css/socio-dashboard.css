@@ -1,0 +1,91 @@
+body.socio-dashboard {
+    min-height: 100vh;
+    padding: 0;
+    color: #f7f5f0;
+    background-color: #17201d;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.socio-dashboard * { box-sizing: border-box; }
+.socio-dashboard .socio-topbar { background: rgba(14, 24, 21, .94); border-bottom: 1px solid rgba(255,255,255,.1); box-shadow: 0 8px 28px rgba(0,0,0,.18); }
+.socio-topbar-inner { width: min(1120px, calc(100% - 40px)); min-height: 76px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.socio-brand { display: inline-flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; }
+.socio-brand:hover { color: #fff; }
+.socio-brand-icon { width: 42px; height: 42px; border-radius: 13px; display: grid; place-items: center; background: #c99b57; color: #1e211d; font-size: 19px; }
+.socio-brand strong, .socio-brand small { display: block; line-height: 1.25; }
+.socio-brand strong { font-size: 15px; letter-spacing: .02em; }
+.socio-brand small { margin-top: 3px; color: #bdc8c1; font-size: 11px; }
+.socio-nav { display: flex; align-items: center; gap: 8px; }
+.socio-nav a { padding: 10px 13px; border-radius: 9px; color: #e3e9e5; text-decoration: none; font-size: 13px; font-weight: 600; transition: background .2s, color .2s; }
+.socio-nav a:hover { background: rgba(255,255,255,.1); color: #fff; }
+.socio-nav a i { margin-right: 6px; color: #d5b47e; }
+.socio-nav .socio-logout { margin-left: 6px; border: 1px solid rgba(255,255,255,.22); }
+
+.socio-main { width: min(1000px, calc(100% - 36px)); margin: 0 auto; padding: 48px 0 64px; }
+.socio-welcome { margin-bottom: 25px; padding: 30px 32px; display: flex; justify-content: space-between; align-items: center; gap: 22px; border: 1px solid rgba(255,255,255,.14); border-radius: 18px; background: #0c0c0c; }
+.socio-eyebrow { margin: 0 0 8px; color: #d8b579; font-size: 10px; font-weight: 800; letter-spacing: .17em; }
+.socio-welcome h1 { margin: 0; color: #fff; font-family: 'Inter', Arial, sans-serif; font-size: clamp(25px, 4vw, 34px); font-weight: 700; letter-spacing: -.03em; }
+.socio-greeting { margin: 7px 0 0; color: #c6d0ca; font-size: 14px; }
+.socio-summary { min-width: 190px; padding: 13px 16px; display: flex; align-items: center; gap: 13px; border: 1px solid rgba(255,255,255,.12); border-radius: 13px; background: rgba(255,255,255,.07); }
+.socio-summary-icon { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; color: #e3c48d; background: rgba(201,155,87,.16); }
+.socio-summary strong, .socio-summary small { display: block; }
+.socio-summary strong { color: #fff; font-size: 20px; line-height: 1.1; }
+.socio-summary small { margin-top: 4px; color: #c6d0ca; font-size: 11px; }
+
+.socio-loan-card, .socio-account-card { margin-bottom: 20px; padding: 24px 26px; border: 1px solid rgba(255,255,255,.13); border-radius: 16px; background: #0c0c0c; color: #f5f5f5; box-shadow: 0 14px 36px rgba(0,0,0,.2); }
+.socio-card-heading { margin-bottom: 22px; display: flex; align-items: center; gap: 13px; }
+.socio-type-icon { width: 44px; height: 44px; flex: 0 0 44px; display: grid; place-items: center; border-radius: 13px; background: rgba(255,255,255,.09); color: #a8c2ad; font-size: 17px; }
+.socio-card-heading h2 { margin: 0; color: #f8f8f8; font-family: 'Inter', Arial, sans-serif; font-size: 18px; font-weight: 700; }
+.socio-card-heading p { margin: 3px 0 0; color: #b7b7b7; font-size: 12px; }
+.socio-loan-section + .socio-loan-section { margin-top: 22px; padding-top: 19px; border-top: 1px solid #393735; }
+.socio-loan-section h3 { margin: 0 0 12px; display: flex; align-items: center; gap: 8px; color: #d0d0d0; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.status-dot { width: 8px; height: 8px; border-radius: 50%; }
+.status-active { background: #4a9b6d; box-shadow: 0 0 0 3px #e2f1e7; }
+.status-history { background: #9aa29c; box-shadow: 0 0 0 3px #eceeeb; }
+.section-count { margin-left: auto; min-width: 24px; padding: 3px 7px; border-radius: 20px; background: #343331; color: #d2d2d2; text-align: center; font-size: 10px; letter-spacing: 0; }
+.socio-empty { margin: 0; padding: 13px 15px; border-radius: 10px; background:#3b3b3b; color: #bdbdbd; font-size: 13px; }
+.socio-empty i { margin-right: 7px; color: #55916b; }
+.socio-table { --bs-table-bg: #212529; --bs-table-color: #f8f9fa; --bs-table-striped-bg: #2c3034; --bs-table-striped-color: #f8f9fa; --bs-table-border-color: #373b3e; font-size: 13px; }
+.socio-table thead th { padding: 10px 12px; border-bottom: 1px solid #464a4e; color: #d3d6d8; font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+.socio-table tbody td { padding: 12px; vertical-align: middle; }
+.socio-table tbody tr:last-child td { border-bottom: 0; }
+.socio-table .article-name { color: #fff; font-weight: 600; }
+.status-pill { display: inline-flex; padding: 5px 9px; border-radius: 30px; font-size: 10px; font-weight: 700; white-space: nowrap; }
+.is-loaned { background: #e5f3e9; color: #32704a; }
+.is-reserved { background: #fff1d9; color: #92681d; }
+.is-history { background: #eceeeb; color: #69736c; }
+
+.socio-account-card { scroll-margin-top: 20px; }
+.account-icon { background: rgba(255,255,255,.09); color: #d2b77e; }
+.socio-account-card .form-label { margin-bottom: 6px; color: #d6d6d6; font-size: 12px; font-weight: 700; }
+.socio-account-card .form-control { min-height: 44px; border-color: #dce2dc; border-radius: 9px; color: #26342c; font-size: 13px; }
+.socio-account-card .form-control:focus { border-color: #78957f; box-shadow: 0 0 0 .2rem rgba(75,119,87,.14); }
+.socio-submit { padding: 11px 17px; border: 0; border-radius: 9px; background: #315744; color: #fff; font-size: 13px; font-weight: 700; transition: background .2s, transform .2s; }
+.socio-submit:hover { transform: translateY(-1px); background: #244532; }
+.socio-submit i { margin-right: 6px; }
+.socio-account-card .alert { border: 0; border-radius: 9px; font-size: 13px; }
+
+.socio-footer { border-top: 1px solid rgba(255,255,255,.1); background: rgba(12,20,17,.91); }
+.socio-footer-inner { width: min(1000px, calc(100% - 36px)); min-height: 112px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.socio-footer-inner strong { color: #fff; font-size: 13px; }
+.socio-footer-inner p { margin: 3px 0 0; color: #aab6ae; font-size: 11px; }
+.socio-footer-inner nav { display: flex; flex-wrap: wrap; gap: 18px; }
+.socio-footer-inner nav a { color: #c8d0ca; text-decoration: none; font-size: 11px; }
+.socio-footer-inner nav a:hover { color: #fff; text-decoration: underline; }
+.socio-footer-inner > small { color: #94a198; font-size: 10px; }
+
+@media (max-width: 700px) {
+    .socio-topbar-inner { width: calc(100% - 28px); min-height: 68px; }
+    .socio-nav { gap: 2px; }
+    .socio-nav a { padding: 9px; font-size: 0; }
+    .socio-nav a i { margin: 0; font-size: 15px; }
+    .socio-nav .socio-logout { margin-left: 2px; }
+    .socio-main { width: calc(100% - 24px); padding: 28px 0 42px; }
+    .socio-welcome { align-items: flex-start; flex-direction: column; padding: 23px 21px; }
+    .socio-summary { min-width: 0; width: 100%; }
+    .socio-loan-card, .socio-account-card { padding: 19px 16px; }
+    .socio-footer-inner { width: calc(100% - 28px); padding: 22px 0; align-items: flex-start; flex-direction: column; gap: 13px; }
+}

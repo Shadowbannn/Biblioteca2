@@ -34,6 +34,12 @@ function login() {
 }
 
 function logout() {
+    if (!empty($_SESSION['socio_id']) && empty($_SESSION['usuario_id'])) {
+        unset($_SESSION['socio_id'], $_SESSION['socio_nombre']);
+        session_regenerate_id(true);
+        header('Location: index.php?accion=formLoginSocio');
+        exit;
+    }
     $_SESSION = [];
 
     if (ini_get('session.use_cookies')) {
@@ -45,6 +51,81 @@ function logout() {
 
     header('Location: index.php?accion=formLogin');
     exit;
+}
+
+// Acceso separado para socios. La contraseña se guarda con password_hash en socios.password.
+function formLoginSocio() {
+    if (!empty($_SESSION['socio_id'])) {
+        header('Location: index.php?accion=misPrestamos');
+        exit;
+    }
+    require __DIR__ . '/../views/usuarios/loginSocio.php';
+}
+
+function loginSocio() {
+    global $pdo;
+    $cedula = trim($_POST['cedula'] ?? '');
+    $password = $_POST['password'] ?? '';
+    $stmt = $pdo->prepare('SELECT id, nombre, password FROM socios WHERE cedula = ? LIMIT 1');
+    $stmt->execute([$cedula]);
+    $socio = $stmt->fetch(PDO::FETCH_ASSOC);
+    $credencialValida = $socio && ($socio['password']
+        ? password_verify($password, $socio['password'])
+        : hash_equals($cedula, $password));
+    if (!$credencialValida) {
+        $error = 'Cédula o contraseña incorrectas. La contraseña inicial es tu cédula.';
+        require __DIR__ . '/../views/usuarios/loginSocio.php';
+        return;
+    }
+    session_regenerate_id(true);
+    unset($_SESSION['usuario_id'], $_SESSION['usuario']);
+    $_SESSION['socio_id'] = (int) $socio['id'];
+    $_SESSION['socio_nombre'] = $socio['nombre'];
+    header('Location: index.php?accion=misPrestamos');
+    exit;
+}
+
+function cambiarPasswordSocio() {
+    global $pdo;
+    $socioId = (int) $_SESSION['socio_id'];
+    $actual = (string) ($_POST['password_actual'] ?? '');
+    $nueva = (string) ($_POST['password_nueva'] ?? '');
+    $confirmacion = (string) ($_POST['password_confirmacion'] ?? '');
+    $stmt = $pdo->prepare('SELECT cedula, password FROM socios WHERE id = ?');
+    $stmt->execute([$socioId]);
+    $socio = $stmt->fetch(PDO::FETCH_ASSOC);
+    $actualValida = $socio && ($socio['password']
+        ? password_verify($actual, $socio['password'])
+        : hash_equals((string) $socio['cedula'], $actual));
+    if (!$actualValida || strlen($nueva) < 8 || $nueva !== $confirmacion) {
+        $_SESSION['mensaje_password'] = !$actualValida
+            ? 'La contraseña actual no coincide.'
+            : ($nueva !== $confirmacion ? 'La confirmación no coincide.' : 'La nueva contraseña debe tener al menos 8 caracteres.');
+        header('Location: index.php?accion=misPrestamos#cambiar-contrasena');
+        exit;
+    }
+    $stmt = $pdo->prepare('UPDATE socios SET password = ? WHERE id = ?');
+    $stmt->execute([password_hash($nueva, PASSWORD_DEFAULT), $socioId]);
+    $_SESSION['mensaje_password'] = 'Contraseña actualizada.';
+    header('Location: index.php?accion=misPrestamos#cambiar-contrasena');
+    exit;
+}
+
+function misPrestamos() {
+    global $pdo;
+    $socioId = (int) $_SESSION['socio_id'];
+    $prestamosPorTipo = [];
+    $consultas = [
+        'Libros' => "SELECT p.fechaPrestamo, p.fechaDevolucion, p.estado, COALESCE(l.titulo, p.libroTitulo, 'Libro') AS articulo, l.portada AS imagen FROM prestamos p LEFT JOIN libros l ON l.id = p.libroId WHERE p.socioId = ? ORDER BY p.fechaPrestamo DESC, p.id DESC",
+        'Juegos' => "SELECT p.fechaPrestamo, p.fechaDevolucion, p.estado, COALESCE(j.nombre, p.nombreJuego, 'Juego') AS articulo, j.foto AS imagen FROM prestamosjuegos p LEFT JOIN juegos j ON j.id = p.juegoId WHERE p.socioId = ? ORDER BY p.fechaPrestamo DESC, p.id DESC",
+        'Proyectos' => "SELECT p.fechaPrestamo, p.fechaDevolucion, p.estado, COALESCE(pr.nombre, p.nombreProyecto, 'Proyecto') AS articulo, pr.portada AS imagen FROM prestamosproyecto p LEFT JOIN proyectos pr ON pr.id = p.proyectoId WHERE p.socioId = ? ORDER BY p.fechaPrestamo DESC, p.id DESC",
+    ];
+    foreach ($consultas as $tipo => $sql) {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$socioId]);
+        $prestamosPorTipo[$tipo] = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    require __DIR__ . '/../views/socios/misPrestamos.php';
 }
 
 // ===== CRUD DE USUARIOS =====
