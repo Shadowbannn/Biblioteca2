@@ -31,7 +31,8 @@
                 </div>
                 <button type="submit" class="btn-ingresar">INGRESAR</button>
             </form>
-            <div class="create-account"><a href="inicioo.php">Volver al inicio <i class="fa-solid fa-arrow-right"></i></a></div>
+            <br>
+            <div class="create-account"><a href="index.php?accion=formLogin"><i class="fa-solid fa-school"></i><i class="fa-solid fa-arrow-right"></i></a></div>
         </div>
     </div>
 </body>

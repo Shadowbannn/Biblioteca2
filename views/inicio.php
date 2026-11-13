@@ -1,4 +1,4 @@
-<?php require __DIR__ . '/../includes/headerIndex.php'; ?>
+<?php require __DIR__ . '/../includes/header.php'; ?>
 
 <div class="d-flex justify-content-center mt-3">
     <a href="#" class="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">
@@ -33,17 +33,23 @@
         </div>
     </div>
 
-    <!--------------->
-    <! Ver Usuarios>
-    <!--------------->
-
+    <?php if (usuarioTieneRol('Admin')): ?>
     <div class="col-md-4 mb-4">
-        <div class="card">
+        <div class="card h-100">
             <a href="index.php?accion=listarUsuarios">
                 <img class="card-img-top" src="/carpeta2/img/3.png" alt="Usuarios">
             </a>
         </div>
-    </div>    
+    </div>
+    <?php elseif (usuarioTieneRol('Bibliotecaria')): ?>
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <a href="index.php?accion=listarSolicitudes">
+                <img class="card-img-top" src="/carpeta2/img/7.png" alt="Solicitudes">
+            </a>
+        </div>
+    </div>
+    <?php endif; ?>
 
     <!--------------->
     <! Ver Prestamos >

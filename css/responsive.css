@@ -56,6 +56,31 @@ img { max-width: 100%; }
     footer { padding: 20px 12px; overflow-wrap: anywhere; }
 }
 
+@media (max-width: 575px) {
+    .navegacion-principal > ul > li.notificaciones-dropdown { position: static; }
+    .navegacion-principal .notificaciones-menu {
+        inset: 100% 12px auto !important;
+        width: auto !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        max-height: min(72dvh, 540px);
+        margin-top: 8px !important;
+    }
+    .acciones-libros {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px;
+    }
+    .acciones-libros .btn {
+        display: inline-flex;
+        width: 100%;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        white-space: normal;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .login-card { animation: none; }
     .card, .btn, .input-container input { transition: none; }

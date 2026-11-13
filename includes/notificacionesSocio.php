@@ -14,7 +14,7 @@ $escAvisoSocio = static fn($valor): string => htmlspecialchars((string) $valor, 
 ?>
 <li class="dropdown notificaciones-dropdown notificaciones-socio">
     <button type="button" class="btn btn-dark notificaciones-toggle" id="notificacionesSocioDropdown"
-        data-bs-toggle="dropdown" aria-expanded="false"
+        data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false"
         aria-label="Avisos de devolución: <?= count($avisosSocio) ?>">
         <i class="fa-solid fa-bell" aria-hidden="true"></i>
         <?php if ($avisosSocio): ?><span class="badge bg-danger"><?= count($avisosSocio) > 99 ? '99+' : count($avisosSocio) ?></span><?php endif; ?>

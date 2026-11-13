@@ -13,7 +13,7 @@
 
     <div class="card-body">
         <?php require __DIR__ . '/../../includes/filtroLibros.php'; ?>
-        <div class="mb-3">
+        <div class="acciones-libros mb-3">
             <a href="index.php?accion=formCrearLibro" class="btn btn-success">
                 ➕ Agregar Libro
             </a>
@@ -38,7 +38,7 @@
                             <th scope="col">Disponible</th>
                             <th scope="col">Stock</th>
                             <th scope="col">Año</th>
-                            <th scope="col">Código</th>
+                            <th scope="col">Dewey (estimado)</th>
                             <th scope="col">Editar</th>
                             <th scope="col">Eliminar</th>
                         </tr>
@@ -63,7 +63,7 @@
                         </td>
                         <td><?= htmlspecialchars($libro->getTitulo()) ?></td>
                         <td><?= $libro->getAutor() ?></td>
-                        <td><?= $libro->getGenero() ?></td>
+                        <td><?= htmlspecialchars($libro->getGenero(), ENT_QUOTES, 'UTF-8') ?></td>
                         <td>
                             <span class="badge bg-<?= $libro->getDisponible() === 'Sí' ? 'success' : 'danger' ?>">
                                 <?= htmlspecialchars($libro->getDisponible()) ?>
@@ -71,7 +71,7 @@
                         </td>
                         <td><?= $libro->getStock() ?></td>
                         <td><?= $libro->getAnioPublicacion() ?></td>
-                        <td><span class="libro-id">#<?= $libro->getId() ?></span></td>
+                        <td><span class="libro-id"><?= htmlspecialchars($libro->getCodigoDewey(), ENT_QUOTES, 'UTF-8') ?></span></td>
                         <td><div class="mt-auto d-flex gap-2">
 
                                 <a href="index.php?accion=formEditarLibro&id=<?= $libro->getId() ?>"

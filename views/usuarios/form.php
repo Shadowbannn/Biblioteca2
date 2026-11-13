@@ -1,5 +1,7 @@
 <?php
 $esEdicion = isset($usuario);
+$esAdmin = usuarioTieneRol('Admin');
+$esCuentaPropia = $esEdicion && !$esAdmin && (int) $usuario->getId() === (int) ($_SESSION['usuario_id'] ?? 0);
 $escUsuario = static fn($valor): string => htmlspecialchars((string) $valor, ENT_QUOTES, 'UTF-8');
 ?>
 <!DOCTYPE html>
@@ -13,7 +15,7 @@ $escUsuario = static fn($valor): string => htmlspecialchars((string) $valor, ENT
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/log.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/usuario-form.css">
+    <link rel="stylesheet" href="css/usuario-form.css?v=3">
 </head>
 <body class="usuario-form-page">
     <main class="login-card usuario-form-card">
@@ -31,7 +33,7 @@ $escUsuario = static fn($valor): string => htmlspecialchars((string) $valor, ENT
                 <div class="alert alert-danger" role="alert"><?= $escUsuario($error) ?></div>
             <?php endif; ?>
 
-            <form class="usuario-form" method="POST" enctype="multipart/form-data" action="index.php?accion=<?= $esEdicion ? 'editarUsuario' : 'crearUsuario' ?>">
+            <form class="usuario-form" id="foto-form" method="POST" enctype="multipart/form-data" action="index.php?accion=<?= $esEdicion ? 'editarUsuario' : 'crearUsuario' ?>">
                 <?php if ($esEdicion): ?>
                     <input type="hidden" name="id" value="<?= (int) $usuario->getId() ?>">
                 <?php endif; ?>
@@ -46,10 +48,22 @@ $escUsuario = static fn($valor): string => htmlspecialchars((string) $valor, ENT
                     </div>
                     <div class="usuario-foto-control">
                         <label for="foto">Foto de perfil <span>(opcional)</span></label>
-                        <input id="foto" type="file" name="foto" class="form-control" accept="image/jpeg,image/png,image/webp" aria-describedby="foto-ayuda">
-                        <small id="foto-ayuda">JPG, PNG o WEBP. Máximo 2 MB.</small>
+                        <input id="foto" type="file" name="foto" class="form-control" accept="image/jpeg,image/png,image/webp" aria-describedby="foto-ayuda" data-max-size="5242880" data-max-size-label="5 MB">
+                        <small id="foto-ayuda">JPG, PNG o WEBP. Máximo 5 MB.</small>
                     </div>
                 </div>
+
+                <div class="usuario-cropper" id="foto-editor" hidden>
+                    <div class="usuario-cropper-preview">
+                        <canvas id="foto-canvas" width="320" height="320" aria-label="Previsualización recortada de la foto"></canvas>
+                    </div>
+                    <div class="usuario-cropper-controls">
+                        <label for="foto-zoom">Acercar imagen</label>
+                        <input id="foto-zoom" type="range" min="1" max="3" step="0.05" value="1">
+                        <small>Arrastra la imagen para ajustar el encuadre.</small>
+                    </div>
+                </div>
+                <p class="usuario-foto-status" id="foto-status" role="status" aria-live="polite"></p>
 
                 <div class="usuario-form-grid">
                     <div class="usuario-field">
@@ -60,11 +74,13 @@ $escUsuario = static fn($valor): string => htmlspecialchars((string) $valor, ENT
                         <label for="email">Correo electrónico</label>
                         <div class="input-container"><i class="fa-solid fa-envelope" aria-hidden="true"></i><input id="email" type="email" name="email" autocomplete="email" placeholder="nombre@correo.com" value="<?= $escUsuario($_POST['email'] ?? ($esEdicion ? $usuario->getEmail() : '')) ?>" required></div>
                     </div>
-                    <div class="usuario-field usuario-field-wide">
-                        <label for="roles">Rol o permisos</label>
-                        <div class="input-container"><i class="fa-solid fa-user-shield" aria-hidden="true"></i><input id="roles" type="text" name="roles" placeholder="Ej. Bibliotecaria" value="<?= $escUsuario($_POST['roles'] ?? ($esEdicion ? $usuario->getRoles() : '')) ?>"></div>
-                        <small>Si corresponde, escribe los roles separados por comas.</small>
-                    </div>
+                    <?php if ($esAdmin): ?>
+                        <div class="usuario-field usuario-field-wide">
+                            <label for="roles">Rol o permisos</label>
+                            <div class="input-container"><i class="fa-solid fa-user-shield" aria-hidden="true"></i><input id="roles" type="text" name="roles" placeholder="Ej. Bibliotecaria" value="<?= $escUsuario($_POST['roles'] ?? ($esEdicion ? $usuario->getRoles() : '')) ?>"></div>
+                            <small>Si corresponde, escribe los roles separados por comas.</small>
+                        </div>
+                    <?php endif; ?>
                     <div class="usuario-field">
                         <label for="password"><?= $esEdicion ? 'Nueva contraseña' : 'Contraseña' ?> <?= $esEdicion ? '<span>(opcional)</span>' : '' ?></label>
                         <div class="input-container"><i class="fa-solid fa-lock" aria-hidden="true"></i><input id="password" type="password" name="password" autocomplete="new-password" placeholder="<?= $esEdicion ? 'Dejar en blanco para conservarla' : 'Crea una contraseña' ?>" <?= $esEdicion ? '' : 'required' ?>></div>
@@ -79,7 +95,9 @@ $escUsuario = static fn($valor): string => htmlspecialchars((string) $valor, ENT
             </form>
 
             <div class="usuario-form-back">
-                <?php if ($esEdicion || !empty($_SESSION['usuario_id'])): ?>
+                <?php if ($esCuentaPropia): ?>
+                    <a href="index.php?accion=inicio"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Volver al inicio</a>
+                <?php elseif ($esEdicion || !empty($_SESSION['usuario_id'])): ?>
                     <a href="index.php?accion=listarUsuarios"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Volver al listado</a>
                 <?php else: ?>
                     <a href="index.php?accion=formLogin"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Ya tengo una cuenta</a>
@@ -87,5 +105,6 @@ $escUsuario = static fn($valor): string => htmlspecialchars((string) $valor, ENT
             </div>
         </section>
     </main>
+    <script src="js/editar-cuenta-foto.js" defer></script>
 </body>
 </html>

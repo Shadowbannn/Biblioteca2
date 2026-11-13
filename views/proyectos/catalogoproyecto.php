@@ -11,6 +11,18 @@
 
     <div class="card-body">
 
+        <form method="GET" action="index.php" class="row g-2 align-items-end mb-4">
+            <input type="hidden" name="accion" value="listarProyectosP">
+            <div class="col-12 col-md-8">
+                <label class="form-label" for="buscar">Buscar proyectos</label>
+                <input id="buscar" type="search" name="buscar" class="form-control" placeholder="Nombre, integrantes, clase o curso..." value="<?= htmlspecialchars($buscar, ENT_QUOTES, 'UTF-8') ?>">
+            </div>
+            <div class="col-12 col-md-4 d-flex gap-2">
+                <button class="btn btn-primary flex-fill" type="submit">Buscar</button>
+                <a class="btn btn-outline-secondary" href="index.php?accion=listarProyectosP" title="Limpiar búsqueda">Limpiar</a>
+            </div>
+        </form>
+
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
 
             <?php foreach ($proyectos as $proyecto): ?>
@@ -63,7 +75,7 @@
             <?php endforeach; ?>
 
             <?php if (empty($proyectos)): ?>
-                <p class="text-muted">Todavía no hay proyectos cargados.</p>
+                <p class="text-muted">No se encontraron proyectos.</p>
             <?php endif; ?>
 
         </div>

@@ -15,6 +15,16 @@
     </div>
 
     <div class="card-body">
+        <?php if (($_GET['error'] ?? '') === 'prestamo_activo'): ?>
+            <div class="alert alert-danger" role="alert">
+                No se puede borrar este socio porque tiene un préstamo activo.
+            </div>
+        <?php elseif (($_GET['error'] ?? '') === 'prestamos_asociados'): ?>
+            <div class="alert alert-danger" role="alert">
+                No se puede borrar este socio porque tiene préstamos asociados a su historial.
+            </div>
+        <?php endif; ?>
+
         <input class="form-control" id="myInput" type="search" placeholder="Buscar socios..." aria-label="Buscar en los socios de esta página">
         <br>
         <?php if (!empty($socios)): ?>
@@ -27,7 +37,6 @@
                             <th scope="col">Cedula</th>
                             <th scope="col">Telefono</th>
                             <th scope="col">Registrado</th>
-                            <th scope="col">Clase</th>
                             <th scope="col">Código</th>
                             <th scope="col">Editar</th>
                             <th scope="col">Eliminar</th>
@@ -53,7 +62,6 @@
                         <td><?= $socio->getCedula() ?></td>
                         <td><?= $socio->getTelefono() ?></td>
                         <td><?= date('d/m/Y', strtotime($socio->getFecharegistro())) ?></td>
-                        <td><?= $socio->getClase() ?></td>
                         <td><span class="socio-id">#<?= $socio->getId() ?></td>
 
                         <!-- Acciones -->
@@ -90,8 +98,6 @@
 <div class="mt-3">
     <a href="index.php" class="btn btn-secondary">← Volver al inicio</a>
 </div>
-
-
 
 <script>
 document.getElementById('myInput').addEventListener('input', function () {

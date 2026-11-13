@@ -33,6 +33,7 @@ $accionSolicitudes = 'listarSolicitudesProyectos';
                             <th scope="col">Código</th>
                             <th scope="col">Aceptar</th>
                             <th scope="col">Rechazar</th>
+                            <th scope="col">Eliminar</th>
                         </tr>
                     </thead>
                     <tbody id="myTable">
@@ -54,6 +55,7 @@ $accionSolicitudes = 'listarSolicitudesProyectos';
                                 <td>
                                     <?php $accionRevision = 'rechazada'; require __DIR__ . '/../../includes/accionesSolicitud.php'; ?>
                                 </td>
+                                <td><?php require __DIR__ . '/../../includes/accionEliminarSolicitud.php'; ?></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

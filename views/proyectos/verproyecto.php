@@ -12,6 +12,18 @@
         </div>
        <br>
   <div class="card-body">
+        <form method="GET" action="index.php" class="row g-2 align-items-end mb-4">
+            <input type="hidden" name="accion" value="listarProyectos">
+            <div class="col-12 col-md-8">
+                <label class="form-label" for="buscar">Buscar proyectos</label>
+                <input id="buscar" type="search" name="buscar" class="form-control" placeholder="Nombre, integrantes, clase o curso..." value="<?= htmlspecialchars($buscar, ENT_QUOTES, 'UTF-8') ?>">
+            </div>
+            <div class="col-12 col-md-4 d-flex gap-2">
+                <button class="btn btn-primary flex-fill" type="submit">Buscar</button>
+                <a class="btn btn-outline-secondary" href="index.php?accion=listarProyectos" title="Limpiar búsqueda">Limpiar</a>
+            </div>
+        </form>
+
         <div class="mb-3">
             <a href="index.php?accion=formCrearProyecto" class="btn btn-success">
                 ➕ Agregar Proyecto

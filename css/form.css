@@ -160,6 +160,105 @@ body {
     background-color: #eee;
 }
 
+.generos-selector {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.28);
+}
+
+.generos-seleccionados {
+    min-height: 48px;
+    padding: 0.55rem 0.7rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.generos-seleccionados strong {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 0.82rem;
+}
+
+.generos-etiquetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.genero-etiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    background: #0b4578;
+    color: #fff;
+    font-size: 0.82rem;
+}
+
+.genero-etiqueta button {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.generos-opciones {
+    max-height: 220px;
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 0.3rem;
+}
+
+.form-card .generos-opciones .genero-opcion {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin: 0;
+    padding: 0.4rem 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.genero-opcion:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.genero-opcion input {
+    accent-color: #2684d8;
+}
+
+.genero-opcion span {
+    overflow-wrap: anywhere;
+}
+
+.genero-agregar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.genero-agregar .btn {
+    min-width: 90px;
+}
+
+#genero-nuevo-mensaje {
+    color: #d7eaff;
+    font-size: 0.82rem;
+}
+
+@media (max-width: 420px) {
+    .genero-agregar {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
 .portada-preview {
     width: 120px;
     height: 170px;

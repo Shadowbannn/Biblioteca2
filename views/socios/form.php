@@ -77,7 +77,8 @@ $esEdicion = isset($socio);
                     <label>Foto</label>
                 <?php endif; ?>
 
-                <input type="file" name="foto" class="form-control mb-3" accept="image/*">
+                <input type="file" name="foto" class="form-control mb-1" accept="image/*">
+                <small class="form-text text-muted d-block mb-3">Tamaño máximo: 5 MB.</small>
 
 
                 <button type="submit" class="btn btn-success w-100 mb-2">

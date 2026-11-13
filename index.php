@@ -3,6 +3,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
+require_once __DIR__ . '/includes/permisos.php';
 require_once __DIR__ . '/config/conexion.php';
 require_once __DIR__ . '/models/Libro.php';
 require_once __DIR__ . '/models/socio.php';
@@ -34,21 +35,56 @@ require_once __DIR__ . '/controllers/SolicitudProyectoController.php';
 
 $accion = $_REQUEST['accion'] ?? 'inicio';
 
+if (!empty($_SESSION['usuario_id'])) {
+    $stmtRol = $pdo->prepare('SELECT roles FROM usuarios WHERE id = ?');
+    $stmtRol->execute([(int) $_SESSION['usuario_id']]);
+    $rolesUsuario = $stmtRol->fetchColumn();
+    if ($rolesUsuario === false) {
+        unset($_SESSION['usuario_id'], $_SESSION['usuario'], $_SESSION['usuario_roles']);
+        session_regenerate_id(true);
+        header('Location: index.php?accion=formLogin');
+        exit;
+    }
+    $_SESSION['usuario_roles'] = (string) $rolesUsuario;
+} else {
+    unset($_SESSION['usuario_roles']);
+}
+$esAdmin = usuarioTieneRol('Admin');
+
 // Acciones accesibles sin iniciar sesión
-$accionesPublicas = ['formLogin', 'login', 'formLoginSocio', 'loginSocio', 'formCrearUsuario', 'crearUsuario',
+$accionesPublicas = ['formLogin', 'login', 'formLoginSocio', 'loginSocio',
                     'listarCatalogo', 'listarJuegosP', 'listarProyectosP', 
                     'formSolicitudLibro', 'guardarSolicitudLibro', 'formSolicitudJuego', 'guardarSolicitudJuego', 'formSolicitudProyecto', 'guardarSolicitudProyecto'];
 
 if (empty($_SESSION['usuario_id']) && !in_array($accion, $accionesPublicas, true)) {
-    if (empty($_SESSION['socio_id']) || !in_array($accion, ['misPrestamos', 'cambiarPasswordSocio', 'logout'], true)) {
+    if (empty($_SESSION['socio_id']) || !in_array($accion, ['misPrestamos', 'editarCuentaSocio', 'actualizarFotoSocio', 'cambiarPasswordSocio', 'logout'], true)) {
         header('Location: inicioo.php');
         exit;
     }
 }
 
-if (!empty($_SESSION['socio_id']) && empty($_SESSION['usuario_id']) && !in_array($accion, ['misPrestamos', 'cambiarPasswordSocio', 'logout'], true) && !in_array($accion, $accionesPublicas, true)) {
+if (!empty($_SESSION['socio_id']) && empty($_SESSION['usuario_id']) && !in_array($accion, ['misPrestamos', 'editarCuentaSocio', 'actualizarFotoSocio', 'cambiarPasswordSocio', 'logout'], true) && !in_array($accion, $accionesPublicas, true)) {
     header('Location: index.php?accion=misPrestamos');
     exit;
+}
+
+$accionesSoloAdmin = [
+    'listarUsuarios',
+    'formCrearUsuario',
+    'crearUsuario',
+    'eliminarUsuario',
+];
+if (in_array($accion, $accionesSoloAdmin, true) && !$esAdmin) {
+    http_response_code(403);
+    exit('Solo el administrador puede gestionar usuarios.');
+}
+if (!$esAdmin && $accion === 'formEditarUsuario' && (int) ($_GET['id'] ?? 0) !== (int) ($_SESSION['usuario_id'] ?? 0)) {
+    http_response_code(403);
+    exit('Solo puedes editar tu propia cuenta.');
+}
+if (!$esAdmin && $accion === 'editarUsuario' && (int) ($_POST['id'] ?? 0) !== (int) ($_SESSION['usuario_id'] ?? 0)) {
+    http_response_code(403);
+    exit('Solo puedes editar tu propia cuenta.');
 }
 
 // Acciones accesibles con sudo su
@@ -59,6 +95,9 @@ switch ($accion) {
         break;
     case 'revisarSolicitud':
         revisarSolicitud();
+        break;
+    case 'eliminarSolicitudAceptada':
+        eliminarSolicitudAceptada();
         break;
     case 'listarSolicitudes':
         listarSolicitudes();
@@ -105,6 +144,12 @@ switch ($accion) {
         break;
     case 'misPrestamos':
         misPrestamos();
+        break;
+    case 'editarCuentaSocio':
+        editarCuentaSocio();
+        break;
+    case 'actualizarFotoSocio':
+        actualizarFotoSocio();
         break;
     case 'cambiarPasswordSocio':
         cambiarPasswordSocio();

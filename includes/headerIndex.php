@@ -44,7 +44,9 @@
                     <a class="dropdown-item" href="index.php?accion=listarSocios"><i class="fa-solid fa-users" aria-hidden="true"></i>Socios</a>
                     <a class="dropdown-item" href="index.php?accion=listarLibros"><i class="fa-solid fa-book" aria-hidden="true"></i>Libros</a>
                     <a class="dropdown-item" href="index.php?accion=listarJuegos"><i class="fa-solid fa-dice" aria-hidden="true"></i>Juegos</a>
-                    <a class="dropdown-item" href="index.php?accion=listarUsuarios"><i class="fa-solid fa-user-gear" aria-hidden="true"></i>Usuarios</a>
+                    <?php if (usuarioTieneRol('Admin')): ?>
+                        <a class="dropdown-item" href="index.php?accion=listarUsuarios"><i class="fa-solid fa-user-gear" aria-hidden="true"></i>Usuarios</a>
+                    <?php endif; ?>
                     <a class="dropdown-item" href="index.php?accion=listarSolicitudes"><i class="fa-solid fa-inbox" aria-hidden="true"></i>Solicitudes</a>
                     <a class="dropdown-item" href="index.php?accion=listarProyectos"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Proyectos</a>
                 </div>

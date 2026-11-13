@@ -41,7 +41,7 @@
                                 <b>Autor:</b> <?= htmlspecialchars($libro->getAutor()) ?><br>
                                 <b>Año:</b> <?= $libro->getAnioPublicacion() ?><br>
                                 <b>Páginas:</b> <?= $libro->getCantidadPaginas() ?><br>
-                                <b>Género:</b> <?= htmlspecialchars($libro->getGenero()) ?><br>
+                                <b>Género:</b> <?= htmlspecialchars($libro->getGenero(), ENT_QUOTES, 'UTF-8') ?><br>
                             </p>
 
                             <div class="mt-auto d-flex gap-2">

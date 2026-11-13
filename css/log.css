@@ -199,18 +199,23 @@ body {
 }
 
 .create-account {
-    margin-top: auto;
-    padding-top: 40px;
-    font-size: 14px;
-    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 
 .create-account a {
-    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    transition: color 0.3s;
+    background-color: #6d7b8a6b;
+    color: white;
+    transition: 0.3s;
 }
 
 .create-account a i {
@@ -223,7 +228,7 @@ body {
 }
 
 .create-account a:hover {
-    color: #a0c4ff;
+    background-color: #0056b3;
 }
 
 .footer-legal-auth {

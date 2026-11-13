@@ -9,8 +9,9 @@
     <div class="col-6 col-lg-3">
         <select id="genero" name="genero" class="form-select" aria-label="Género">
             <option value="">Todos los géneros</option>
+            <option value="sin_genero" <?= ($genero ?? '') === 'sin_genero' ? 'selected' : '' ?>>Sin género</option>
             <?php foreach ($generos as $opcionGenero): ?>
-                <option value="<?= htmlspecialchars($opcionGenero, ENT_QUOTES, 'UTF-8') ?>" <?= ($genero ?? '') === $opcionGenero ? 'selected' : '' ?>><?= htmlspecialchars($opcionGenero, ENT_QUOTES, 'UTF-8') ?></option>
+                <option value="<?= (int) $opcionGenero['id'] ?>" <?= (string) ($genero ?? '') === (string) $opcionGenero['id'] ? 'selected' : '' ?>><?= htmlspecialchars($opcionGenero['nombre'], ENT_QUOTES, 'UTF-8') ?></option>
             <?php endforeach; ?>
         </select>
     </div>

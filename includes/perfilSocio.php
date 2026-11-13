@@ -19,13 +19,11 @@ $escPerfilSocio = static fn($valor): string => htmlspecialchars((string) $valor,
                 <strong><?= $escPerfilSocio($perfilSocio->getNombre()) ?></strong>
                 <span><i class="fa-solid fa-id-card" aria-hidden="true"></i> Socio · <?= $escPerfilSocio($perfilSocio->getCedula()) ?></span>
             </div>
-            <a class="dropdown-item" href="index.php?accion=misPrestamos">
-                <i class="fa-solid fa-book-open" aria-hidden="true"></i> Mis préstamos
-            </a>
-            <a class="dropdown-item" href="index.php?accion=misPrestamos#cambiar-contrasena">
-                <i class="fa-solid fa-key" aria-hidden="true"></i> Cambiar contraseña
-            </a>
+
             <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="index.php?accion=editarCuentaSocio">
+                <i class="fa-solid fa-user-pen" aria-hidden="true"></i> Editar cuenta
+            </a>
             <a class="dropdown-item perfil-usuario-salir" href="index.php?accion=logout">
                 <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i> Cerrar sesión
             </a>

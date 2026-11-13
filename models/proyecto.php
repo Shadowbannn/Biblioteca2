@@ -112,6 +112,51 @@ class Proyecto {
         return $proyectos;
     }
 
+    private static function filtroBusqueda(string $buscar): array {
+        if ($buscar === '') {
+            return ['', []];
+        }
+
+        $like = '%' . $buscar . '%';
+        return [
+            ' WHERE nombre LIKE :nombre OR integrantes LIKE :integrantes OR clase LIKE :clase OR curso LIKE :curso OR CAST(anio AS CHAR) LIKE :anio',
+            [
+                ':nombre' => $like,
+                ':integrantes' => $like,
+                ':clase' => $like,
+                ':curso' => $like,
+                ':anio' => $like,
+            ],
+        ];
+    }
+
+    public static function contarFiltrados(PDO $pdo, string $buscar = ''): int {
+        [$where, $params] = self::filtroBusqueda($buscar);
+        $stmt = $pdo->prepare('SELECT COUNT(*) FROM proyectos' . $where);
+        $stmt->execute($params);
+        return (int) $stmt->fetchColumn();
+    }
+
+    public static function buscarPaginado(PDO $pdo, int $pagina, int $porPagina, string $buscar = ''): array {
+        [$where, $params] = self::filtroBusqueda($buscar);
+        $inicio = (max(1, $pagina) - 1) * $porPagina;
+        $stmt = $pdo->prepare(
+            'SELECT * FROM proyectos' . $where . ' ORDER BY nombre, id LIMIT :inicio, :cantidad'
+        );
+        foreach ($params as $clave => $valor) {
+            $stmt->bindValue($clave, $valor, PDO::PARAM_STR);
+        }
+        $stmt->bindValue(':inicio', $inicio, PDO::PARAM_INT);
+        $stmt->bindValue(':cantidad', $porPagina, PDO::PARAM_INT);
+        $stmt->execute();
+
+        $proyectos = [];
+        foreach ($stmt->fetchAll(PDO::FETCH_ASSOC) as $fila) {
+            $proyectos[] = self::desdeFila($fila);
+        }
+        return $proyectos;
+    }
+
     public static function buscarPorId(PDO $pdo, int $id): ?Proyecto {
         $stmt = $pdo->prepare("SELECT * FROM proyectos WHERE id = ?");
         $stmt->execute([$id]);

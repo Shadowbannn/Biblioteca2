@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.3
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-11-2026 a las 09:39:41
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Tiempo de generación: 10-11-2026 a las 21:22:04
+-- Versión del servidor: 10.11.16-MariaDB
+-- Versión de PHP: 8.3.36
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -148,6 +148,7 @@ CREATE TABLE `libros` (
   `genero` varchar(120) DEFAULT NULL,
   `portada` varchar(255) DEFAULT NULL,
   `numero_inventario` int(11) DEFAULT NULL,
+  `codigo_dewey` varchar(20) NOT NULL DEFAULT '000',
   `editorial` varchar(500) DEFAULT NULL,
   `fecha_ingreso` date DEFAULT NULL,
   `observaciones` text DEFAULT NULL,
@@ -9621,7 +9622,7 @@ INSERT INTO `libros` (`id`, `stock`, `titulo`, `autor`, `anio_publicacion`, `can
 (9665, 1, 'Capitán América', 'Marvel', 0, 0, 'Sí', 'NOV. GRÁFICAS', NULL, 9676, NULL, '2016-09-30', NULL, 'Donación', 'NOV. GRÁFICAS', NULL, NULL, NULL),
 (9666, 1, 'Thor', 'Marvel', 0, 0, 'Sí', 'NOV. GRÁFICAS', NULL, 9677, NULL, '2016-10-17', NULL, 'Donación', 'NOV. GRÁFICAS', NULL, NULL, NULL),
 (9667, 1, 'Pautas de referencia sobre tipos lectores y escritos en español como primera lengua', 'ANEP, Políticas linguisticas, PROLEE', 0, 0, 'Sí', 'Idioma Esp', NULL, 9678, NULL, '2016-10-21', NULL, 'Donación', 'Idioma Esp', NULL, NULL, NULL),
-(9668, 1, 'Wolverine', 'Marvel', 2014, 128, 'Sí', 'NOV. GRÁFICAS', 'portada_6ae42b69c10de2.06333802.jpg', 9679, 'Marvel Enterprises', '2016-10-28', NULL, 'Donación', 'NOV. GRÁFICAS', '9780785190325', NULL, '2026-10-30 02:30:17'),
+(9668, 1, 'Wolverine', 'Marvel', 2014, 128, 'No', 'NOV. GRÁFICAS', 'portada_6ae42b69c10de2.06333802.jpg', 9679, 'Marvel Enterprises', '2016-10-28', NULL, 'Donación', 'NOV. GRÁFICAS', '9780785190325', NULL, '2026-10-30 02:30:17'),
 (9669, 1, 'Cómo hacer reir una vieja sin que pierda la dentadura', 'Pedrozo, Sebastián', 0, 0, 'Sí', 'Literat', NULL, 9680, 'Santillana loqueleo', '2016-11-14', 'Santillana loqueleo', 'COMPRA RIFA', 'Literat', NULL, NULL, NULL),
 (9670, 1, 'Tranquilos, no hay viejas en la costa', 'Pedrozo, Sebastián', 0, 0, 'Sí', 'Literat', NULL, 9681, 'Santillana loqueleo', '2016-11-14', 'Santillana loqueleo', 'COMPRA RIFA', 'Literat', NULL, NULL, NULL),
 (9671, 1, 'La novia del incendiario e.1', 'Pedrozo, Sebastián', 0, 0, 'Sí', 'Literat', NULL, 9682, 'Alfaguara', '2016-11-14', 'Alfaguara', 'COMPRA RIFA', 'Literat', NULL, NULL, NULL),
@@ -10501,7 +10502,8 @@ INSERT INTO `prestamos` (`id`, `libroId`, `socioId`, `fechaPrestamo`, `fechaDevo
 (19, 1145, 24, '2026-10-22', '2026-10-29', NULL, 'Prestado', '2026-10-21 23:12:37'),
 (20, 2779, 26, '2026-10-22', '2026-10-29', NULL, 'Devuelto', '2026-10-21 23:12:56'),
 (28, 9995, 22, '2026-10-25', '2026-11-01', NULL, 'Prestado', '2026-10-25 21:39:18'),
-(29, 4216, 22, '2026-11-08', '2026-11-15', NULL, 'Prestado', '2026-11-08 04:39:14');
+(29, 4216, 22, '2026-11-08', '2026-11-15', NULL, 'Prestado', '2026-11-08 04:39:14'),
+(30, 9668, 11, '2026-11-10', '2026-11-17', NULL, 'Prestado', '2026-11-10 17:08:36');
 
 -- --------------------------------------------------------
 
@@ -10511,9 +10513,9 @@ INSERT INTO `prestamos` (`id`, `libroId`, `socioId`, `fechaPrestamo`, `fechaDevo
 
 CREATE TABLE `prestamosjuegos` (
   `creado_en` datetime DEFAULT NULL,
-  `estado` enum('Reservado','Prestado','Devuelto','Cancelado') CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT 'Reservado',
-  `fechaDevolucion` text CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `fechaPrestamo` text CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `estado` enum('Reservado','Prestado','Devuelto','Cancelado') CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL DEFAULT 'Reservado',
+  `fechaDevolucion` text CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
+  `fechaPrestamo` text CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
   `id` int(11) NOT NULL,
   `juegoId` int(11) NOT NULL,
   `nombreJuego` text DEFAULT NULL,
@@ -10751,6 +10753,7 @@ CREATE TABLE `socios` (
   `nombre` varchar(100) NOT NULL,
   `email` varchar(100) DEFAULT NULL,
   `cedula` varchar(20) NOT NULL,
+  `password` varchar(255) DEFAULT NULL,
   `telefono` varchar(20) DEFAULT NULL,
   `fecha_registro` date DEFAULT curdate(),
   `clase` varchar(50) DEFAULT NULL,
@@ -10761,12 +10764,12 @@ CREATE TABLE `socios` (
 -- Volcado de datos para la tabla `socios`
 --
 
-INSERT INTO `socios` (`id`, `nombre`, `email`, `cedula`, `telefono`, `fecha_registro`, `clase`, `foto`) VALUES
-(11, 'Anthony Silva', 'antoniotoniosigma@gmail.com', '55118416', '094759451', '2026-07-21', '3°MH', 'foto_6ade98dd872da3.73940442.png'),
-(22, 'Ezequiel Mello', NULL, '55118417', '12345678', '2026-10-14', '3°MH', 'foto_6ade98f17beed2.70244232.png'),
-(24, 'Walter Montejo', NULL, '57654367', '12345678', '2026-10-21', '3°MH', NULL),
-(25, 'Jose Palermo', NULL, '56754367', '093678345', '2026-10-21', '3°MH', NULL),
-(26, 'Camila Muniz', NULL, '54436217', '094677352', '2026-10-21', '3°MH', 'foto_6ad98b6f7a56a1.15017745.png');
+INSERT INTO `socios` (`id`, `nombre`, `email`, `cedula`, `password`, `telefono`, `fecha_registro`, `clase`, `foto`) VALUES
+(11, 'Anthony Silva', 'antoniotoniosigma@gmail.com', '55118416', NULL, '094759451', '2026-07-21', '3°MH', 'foto_6ade98dd872da3.73940442.png'),
+(22, 'Ezequiel Mello', NULL, '55118417', NULL, '12345678', '2026-10-14', '3°MH', 'foto_6ade98f17beed2.70244232.png'),
+(24, 'Walter Montejo', NULL, '57654367', NULL, '12345678', '2026-10-21', '3°MH', NULL),
+(25, 'Jose Palermo', NULL, '56754367', NULL, '093678345', '2026-10-21', '3°MH', NULL),
+(26, 'Camila Muniz', NULL, '54436217', NULL, '094677352', '2026-10-21', '3°MH', 'foto_6ad98b6f7a56a1.15017745.png');
 
 -- --------------------------------------------------------
 
@@ -10820,7 +10823,7 @@ CREATE TABLE `solicitudes_libros` (
 --
 
 INSERT INTO `solicitudes_libros` (`id`, `libro_id`, `socio_id`, `nuevo_socio`, `cedula`, `nombre`, `clase`, `telefono`, `tipo`, `estado`, `observacion`, `prestamo_id`, `revisada_por`, `creada_en`, `revisada_en`) VALUES
-(27, 9668, 11, 0, '55118416', '', '', '', 'prestamo', 'pendiente', '', NULL, NULL, '2026-11-04 14:39:57', NULL),
+(27, 9668, 11, 0, '55118416', '', '', '', 'prestamo', 'aceptada', '', 0, 2, '2026-11-04 14:39:57', '2026-11-10 17:08:36'),
 (28, 4216, 22, 0, '55118417', '', '', '', 'prestamo', 'aceptada', '', 0, 2, '2026-11-08 07:35:17', '2026-11-08 04:39:14');
 
 -- --------------------------------------------------------
@@ -10992,7 +10995,7 @@ ALTER TABLE `notificaciones`
 -- AUTO_INCREMENT de la tabla `prestamos`
 --
 ALTER TABLE `prestamos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de la tabla `prestamosjuegos`
@@ -11046,6 +11049,356 @@ ALTER TABLE `usuarios`
 ALTER TABLE `prestamos`
   ADD CONSTRAINT `prestamos_ibfk_1` FOREIGN KEY (`libroId`) REFERENCES `libros` (`id`),
   ADD CONSTRAINT `prestamos_ibfk_2` FOREIGN KEY (`socioId`) REFERENCES `socios` (`id`);
+
+--
+-- Estructura y normalización de géneros de libros
+--
+
+SET NAMES utf8mb4;
+
+CREATE TABLE IF NOT EXISTS `generos` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(120) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_generos_nombre` (`nombre`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS `libro_generos` (
+  `libro_id` int(11) NOT NULL,
+  `genero_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`libro_id`, `genero_id`),
+  KEY `idx_libro_generos_genero` (`genero_id`),
+  CONSTRAINT `fk_libro_generos_libro` FOREIGN KEY (`libro_id`) REFERENCES `libros` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `fk_libro_generos_genero` FOREIGN KEY (`genero_id`) REFERENCES `generos` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TEMPORARY TABLE `migracion_generos_libros` (
+  `legado` varchar(120) NOT NULL,
+  `nombre` varchar(120) NOT NULL,
+  PRIMARY KEY (`legado`, `nombre`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT INTO `migracion_generos_libros` (`legado`, `nombre`) VALUES
+('Adm Pers', 'Administración de personal'),
+('Administ', 'Administración'),
+('Arquitect.', 'Arquitectura'),
+('Arte', 'Arte'),
+('Biología', 'Biología'),
+('Carp', 'Carpintería'),
+('Cerrajería', 'Cerrajería'),
+('Comics', 'Cómics'),
+('Construcc', 'Construcción'),
+('Contab', 'Contabilidad'),
+('Derecho', 'Derecho'),
+('Dibujo', 'Dibujo'),
+('dicc- atlas', 'Diccionarios'),
+('dicc- atlas', 'Atlas'),
+('Economía', 'Economía'),
+('Educac. Fis.', 'Educación física'),
+('Educación', 'Educación'),
+('Electronica', 'Electrónica'),
+('Electrotec', 'Electrotecnia'),
+('Filosofia', 'Filosofía'),
+('Fisica', 'Física'),
+('Follet y Proy', 'Folletos'),
+('Gastronomía', 'Gastronomía'),
+('Geograf', 'Geografía'),
+('Historia', 'Historia'),
+('Histórico', 'Histórico'),
+('Horror, Ficción', 'Terror'),
+('Horror, Ficción', 'Ficción'),
+('Idioma Esp', 'Idioma español'),
+('Infantil', 'Infantil'),
+('Informat', 'Informática'),
+('Ingles-Fr-Port', 'Inglés'),
+('Ingles-Fr-Port', 'Francés'),
+('Ingles-Fr-Port', 'Portugués'),
+('Juvenil', 'Juvenil'),
+('Juvenil, Romance', 'Juvenil'),
+('Juvenil, Romance', 'Romance'),
+('Laborat', 'Laboratorio'),
+('Literat', 'Literatura'),
+('Literatura, Ficción', 'Literatura'),
+('Literatura, Ficción', 'Ficción'),
+('Logística', 'Logística'),
+('Mark- Pub-Cal', 'Marketing'),
+('Mark- Pub-Cal', 'Publicidad'),
+('Mark- Pub-Cal', 'Calidad'),
+('Matemat', 'Matemática'),
+('Mecánica', 'Mecánica'),
+('NOV. GRÁFICAS', 'Novelas gráficas'),
+('Peluquería Profesional', 'Peluquería profesional'),
+('Quimica', 'Química'),
+('Revistas', 'Revistas'),
+('Revistas, Infantíl', 'Revistas'),
+('Revistas, Infantíl', 'Infantil'),
+('Romance, Juvenil', 'Romance'),
+('Romance, Juvenil', 'Juvenil'),
+('Segurid Ind', 'Seguridad industrial'),
+('Sociol- Antrop', 'Sociología'),
+('Sociol- Antrop', 'Antropología'),
+('Tecnolog', 'Tecnología'),
+('Thriller, Romance, Juvenil, Fantasía, Misterio', 'Suspenso'),
+('Thriller, Romance, Juvenil, Fantasía, Misterio', 'Romance'),
+('Thriller, Romance, Juvenil, Fantasía, Misterio', 'Juvenil'),
+('Thriller, Romance, Juvenil, Fantasía, Misterio', 'Fantasía'),
+('Thriller, Romance, Juvenil, Fantasía, Misterio', 'Misterio'),
+('Trabajos', 'Trabajos'),
+('Turismo', 'Turismo');
+
+INSERT IGNORE INTO `generos` (`nombre`)
+SELECT DISTINCT `nombre`
+FROM `migracion_generos_libros`;
+
+INSERT IGNORE INTO `generos` (`nombre`)
+SELECT DISTINCT TRIM(l.`genero`)
+FROM `libros` l
+LEFT JOIN `migracion_generos_libros` m ON TRIM(l.`genero`) COLLATE utf8mb4_unicode_ci = m.`legado`
+WHERE l.`genero` IS NOT NULL
+  AND TRIM(l.`genero`) <> ''
+  AND TRIM(l.`genero`) <> 'Sin género'
+  AND m.`legado` IS NULL;
+
+INSERT IGNORE INTO `libro_generos` (`libro_id`, `genero_id`)
+SELECT l.`id`, g.`id`
+FROM `libros` l
+INNER JOIN `migracion_generos_libros` m ON TRIM(l.`genero`) COLLATE utf8mb4_unicode_ci = m.`legado`
+INNER JOIN `generos` g ON g.`nombre` = m.`nombre`;
+
+INSERT IGNORE INTO `libro_generos` (`libro_id`, `genero_id`)
+SELECT l.`id`, g.`id`
+FROM `libros` l
+INNER JOIN `generos` g ON g.`nombre` = TRIM(l.`genero`) COLLATE utf8mb4_unicode_ci
+LEFT JOIN `migracion_generos_libros` m ON TRIM(l.`genero`) COLLATE utf8mb4_unicode_ci = m.`legado`
+WHERE l.`genero` IS NOT NULL
+  AND TRIM(l.`genero`) <> ''
+  AND TRIM(l.`genero`) <> 'Sin género'
+  AND m.`legado` IS NULL;
+
+UPDATE `libros`
+SET `genero` = NULL;
+
+UPDATE `libros` l
+SET l.`codigo_dewey` = COALESCE(
+  CASE
+    WHEN l.`categoria_inventario` = 'Adm Pers' THEN '658.3'
+    WHEN l.`categoria_inventario` = 'Administ' THEN '658'
+    WHEN l.`categoria_inventario` = 'Arquitect.' THEN '720'
+    WHEN l.`categoria_inventario` = 'Arte' THEN '700'
+    WHEN l.`categoria_inventario` = 'Biología' THEN '570'
+    WHEN l.`categoria_inventario` = 'Carp' THEN '684'
+    WHEN l.`categoria_inventario` = 'Cerrajería' THEN '683'
+    WHEN l.`categoria_inventario` = 'Comics' THEN '741.5'
+    WHEN l.`categoria_inventario` = 'Construcc' THEN '690'
+    WHEN l.`categoria_inventario` = 'Contab' THEN '657'
+    WHEN l.`categoria_inventario` = 'Derecho' THEN '340'
+    WHEN l.`categoria_inventario` = 'Dibujo' THEN '741.2'
+    WHEN l.`categoria_inventario` = 'dicc- atlas' THEN
+      CASE WHEN LOWER(l.`titulo`) LIKE '%atlas%' THEN '912' ELSE '030' END
+    WHEN l.`categoria_inventario` = 'Economía' THEN '330'
+    WHEN l.`categoria_inventario` = 'Educac. Fis.' THEN '796'
+    WHEN l.`categoria_inventario` = 'Educación' THEN '370'
+    WHEN l.`categoria_inventario` = 'Electronica' THEN '621.38'
+    WHEN l.`categoria_inventario` = 'Electrotec' THEN '621.3'
+    WHEN l.`categoria_inventario` = 'Filosofia' THEN '100'
+    WHEN l.`categoria_inventario` = 'Fisica' THEN '530'
+    WHEN l.`categoria_inventario` = 'Follet y Proy' THEN '000'
+    WHEN l.`categoria_inventario` = 'Gastronomía' THEN '641.5'
+    WHEN l.`categoria_inventario` = 'Geograf' THEN '910'
+    WHEN l.`categoria_inventario` = 'Historia' THEN '900'
+    WHEN l.`categoria_inventario` = 'Idioma Esp' THEN '460'
+    WHEN l.`categoria_inventario` = 'Informat' THEN '004'
+    WHEN l.`categoria_inventario` = 'Ingles-Fr-Port' THEN '400'
+    WHEN l.`categoria_inventario` = 'Laborat' THEN '507'
+    WHEN l.`categoria_inventario` = 'Literat' THEN '800'
+    WHEN l.`categoria_inventario` = 'Logística' THEN '658.5'
+    WHEN l.`categoria_inventario` = 'Mark- Pub-Cal' THEN '658'
+    WHEN l.`categoria_inventario` = 'Matemat' THEN '510'
+    WHEN l.`categoria_inventario` = 'Mecánica' THEN '621.8'
+    WHEN l.`categoria_inventario` = 'NOV. GRÁFICAS' THEN '741.5'
+    WHEN l.`categoria_inventario` = 'Peluquería Profesional' THEN '646.72'
+    WHEN l.`categoria_inventario` = 'Quimica' THEN '540'
+    WHEN l.`categoria_inventario` = 'Revistas' THEN '050'
+    WHEN l.`categoria_inventario` = 'Segurid Ind' THEN '363.11'
+    WHEN l.`categoria_inventario` = 'Sociol- Antrop' THEN '300'
+    WHEN l.`categoria_inventario` = 'Tecnolog' THEN '600'
+    WHEN l.`categoria_inventario` = 'Turismo' THEN '910.2'
+    ELSE NULL
+  END,
+  (
+    SELECT CASE g.`nombre`
+      WHEN 'Administración' THEN '658'
+      WHEN 'Administración de personal' THEN '658.3'
+      WHEN 'Antropología' THEN '301.2'
+      WHEN 'Arquitectura' THEN '720'
+      WHEN 'Arte' THEN '700'
+      WHEN 'Atlas' THEN '912'
+      WHEN 'Biología' THEN '570'
+      WHEN 'Calidad' THEN '658.56'
+      WHEN 'Carpintería' THEN '684'
+      WHEN 'Cerrajería' THEN '683'
+      WHEN 'Cómics' THEN '741.5'
+      WHEN 'Construcción' THEN '690'
+      WHEN 'Contabilidad' THEN '657'
+      WHEN 'Derecho' THEN '340'
+      WHEN 'Dibujo' THEN '741.2'
+      WHEN 'Diccionarios' THEN '030'
+      WHEN 'Economía' THEN '330'
+      WHEN 'Educación' THEN '370'
+      WHEN 'Educación física' THEN '796'
+      WHEN 'Electrónica' THEN '621.38'
+      WHEN 'Electrotecnia' THEN '621.3'
+      WHEN 'Fantasía' THEN '800'
+      WHEN 'Ficción' THEN '800'
+      WHEN 'Filosofía' THEN '100'
+      WHEN 'Física' THEN '530'
+      WHEN 'Folletos' THEN '000'
+      WHEN 'Francés' THEN '440'
+      WHEN 'Gastronomía' THEN '641.5'
+      WHEN 'Geografía' THEN '910'
+      WHEN 'Historia' THEN '900'
+      WHEN 'Histórico' THEN '900'
+      WHEN 'Idioma español' THEN '460'
+      WHEN 'Infantil' THEN '800'
+      WHEN 'Informática' THEN '004'
+      WHEN 'Inglés' THEN '420'
+      WHEN 'Juvenil' THEN '800'
+      WHEN 'Laboratorio' THEN '507'
+      WHEN 'Literatura' THEN '800'
+      WHEN 'Logística' THEN '658.5'
+      WHEN 'Marketing' THEN '658.8'
+      WHEN 'Matemática' THEN '510'
+      WHEN 'Mecánica' THEN '621.8'
+      WHEN 'Misterio' THEN '800'
+      WHEN 'Novelas gráficas' THEN '741.5'
+      WHEN 'Peluquería profesional' THEN '646.72'
+      WHEN 'Portugués' THEN '469'
+      WHEN 'Publicidad' THEN '659.1'
+      WHEN 'Química' THEN '540'
+      WHEN 'Revistas' THEN '050'
+      WHEN 'Romance' THEN '800'
+      WHEN 'Seguridad industrial' THEN '363.11'
+      WHEN 'Sociología' THEN '301'
+      WHEN 'Suspenso' THEN '800'
+      WHEN 'Tecnología' THEN '600'
+      WHEN 'Terror' THEN '800'
+      WHEN 'Trabajos' THEN '000'
+      WHEN 'Turismo' THEN '910.2'
+      ELSE NULL
+    END
+    FROM `libro_generos` lg
+    INNER JOIN `generos` g ON g.`id` = lg.`genero_id`
+    WHERE lg.`libro_id` = l.`id`
+      AND g.`nombre` IN (
+        'Administración', 'Administración de personal', 'Antropología', 'Arquitectura', 'Arte',
+        'Atlas', 'Biología', 'Calidad', 'Carpintería', 'Cerrajería', 'Cómics', 'Construcción',
+        'Contabilidad', 'Derecho', 'Dibujo', 'Diccionarios', 'Economía', 'Educación',
+        'Educación física', 'Electrónica', 'Electrotecnia', 'Fantasía', 'Ficción', 'Filosofía',
+        'Física', 'Folletos', 'Francés', 'Gastronomía', 'Geografía', 'Historia', 'Histórico',
+        'Idioma español', 'Infantil', 'Informática', 'Inglés', 'Juvenil', 'Laboratorio',
+        'Literatura', 'Logística', 'Marketing', 'Matemática', 'Mecánica', 'Misterio',
+        'Novelas gráficas', 'Peluquería profesional', 'Portugués', 'Publicidad', 'Química',
+        'Revistas', 'Romance', 'Seguridad industrial', 'Sociología', 'Suspenso', 'Tecnología',
+        'Terror', 'Trabajos', 'Turismo'
+      )
+    ORDER BY g.`nombre`
+    LIMIT 1
+  ),
+  CASE
+    WHEN LOWER(l.`titulo`) LIKE '%atlas%' THEN '912'
+    WHEN LOWER(l.`titulo`) LIKE '%dicc%' OR LOWER(l.`titulo`) LIKE '%enciclop%' THEN '030'
+    ELSE NULL
+  END,
+  '000'
+);
+
+ALTER TABLE `proyectos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+INSERT INTO `proyectos` (
+  `stock`,
+  `nombre`,
+  `integrantes`,
+  `anio`,
+  `cantidad_paginas`,
+  `disponible`,
+  `portada`,
+  `numero_inventario`,
+  `fecha_ingreso`,
+  `observaciones`,
+  `categoria_inventario`,
+  `curso`,
+  `clase`
+)
+SELECT
+  l.`stock`,
+  l.`titulo`,
+  'Sin autor registrado',
+  l.`anio_publicacion`,
+  l.`cantidad_paginas`,
+  CASE
+    WHEN UPPER(l.`titulo`) LIKE '%BAJA%' THEN 0
+    WHEN HEX(l.`disponible`) = '53C3AD' THEN 1
+    ELSE 0
+  END,
+  l.`portada`,
+  l.`numero_inventario`,
+  l.`fecha_ingreso`,
+  CONCAT_WS(
+    CHAR(10),
+    NULLIF(TRIM(l.`observaciones`), ''),
+    CASE
+      WHEN NULLIF(TRIM(l.`editorial`), '') IS NOT NULL
+      THEN CONCAT('Editorial original: ', TRIM(l.`editorial`))
+      ELSE NULL
+    END,
+    CASE
+      WHEN NULLIF(TRIM(l.`isbn`), '') IS NOT NULL
+      THEN CONCAT('ISBN original: ', TRIM(l.`isbn`))
+      ELSE NULL
+    END,
+    CONCAT('Autor original: ', TRIM(l.`autor`))
+  ),
+  'Proyectos',
+  TRIM(
+    REPLACE(
+      REPLACE(
+        REPLACE(
+          REPLACE(
+            REPLACE(
+              REPLACE(
+                CASE
+                  WHEN TRIM(l.`autor`) LIKE 'Proyecto de %'
+                  THEN SUBSTRING(TRIM(l.`autor`), 13)
+                  ELSE SUBSTRING(TRIM(l.`autor`), 10)
+                END,
+                '2º', ''
+              ),
+              '3º', ''
+            ),
+            '3ro', ''
+          ),
+          '4to', ''
+        ),
+        '7º', ''
+      ),
+      ' Año', ''
+    )
+  ),
+  CASE
+    WHEN TRIM(l.`autor`) LIKE '%2º%' THEN '2°'
+    WHEN TRIM(l.`autor`) LIKE '%3º%' OR TRIM(l.`autor`) LIKE '%3ro%' THEN '3°'
+    WHEN TRIM(l.`autor`) LIKE '%4to%' THEN '4°'
+    WHEN TRIM(l.`autor`) LIKE '%7º%' THEN '7°'
+    ELSE ''
+  END
+FROM `libros` l
+WHERE LOWER(TRIM(l.`autor`)) LIKE 'proyecto %';
+
+DELETE FROM `libros`
+WHERE LOWER(TRIM(`autor`)) LIKE 'proyecto %';
+
+DROP TEMPORARY TABLE `migracion_generos_libros`;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

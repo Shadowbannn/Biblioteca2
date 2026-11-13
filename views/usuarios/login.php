@@ -27,12 +27,6 @@
         <div class="login-right">
             <h1>Iniciar Sesión</h1>
 
-            <?php if (isset($_GET['registro']) && $_GET['registro'] === 'exito'): ?>
-                <div class="alert alert-success" style="color: #155724; background-color: #d4edda; border-color: #c3e6cb; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
-                    Registro exitoso. Puedes iniciar sesión con tu nueva cuenta.
-                </div>
-            <?php endif; ?>
-
             <?php if (!empty($error)): ?>
                 <div class="alert alert-danger" style="margin-bottom: 15px;">
                     <?= htmlspecialchars($error) ?>
@@ -54,14 +48,18 @@
 
                 <button type="submit" class="btn-ingresar">INGRESAR</button>
 
-                <div class="links-container">
-                    <a href="img/car.mp4">¿Olvidaste tu <strong>usuario</strong> o <strong>contraseña</strong>?</a>
-                </div>
             </form>
+                <br>
+            <div class="create-account">
+                <a href="index.php?accion=formLoginSocio">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
 
-              <div class="create-account">
-                <a href="index.php?accion=formLoginSocio">Acceso para socios <i class="fa-solid fa-arrow-right"></i></a><br>
-                <a href="inicioo.php">Inicio <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="index.php?accion=formLogin">
+                    <i class="fa-solid fa-school"></i>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
             </div>
 
 

@@ -15,7 +15,7 @@ $fechaNotificacion = static function ($valor) use ($escNotificacion): string {
 ?>
 <li class="dropdown notificaciones-dropdown">
     <button type="button" class="btn btn-dark notificaciones-toggle" id="notificacionesDropdown"
-        data-bs-toggle="dropdown" aria-expanded="false"
+        data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false"
         aria-label="Ver notificaciones: <?= $sinLeer ?> sin leer">
         <i class="fa-solid fa-bell" aria-hidden="true"></i>
         <?php if ($sinLeer > 0): ?><span class="badge bg-danger"><?= $sinLeer > 99 ? '99+' : $sinLeer ?></span><?php endif; ?>

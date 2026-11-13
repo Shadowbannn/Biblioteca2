@@ -13,6 +13,18 @@
 
 
     <div class="card-body">
+        <form method="GET" action="index.php" class="row g-2 align-items-end mb-4">
+            <input type="hidden" name="accion" value="listarJuegos">
+            <div class="col-12 col-md-8">
+                <label class="form-label" for="buscar">Buscar juegos</label>
+                <input id="buscar" type="search" name="buscar" class="form-control" placeholder="Nombre o editor..." value="<?= htmlspecialchars($buscar, ENT_QUOTES, 'UTF-8') ?>">
+            </div>
+            <div class="col-12 col-md-4 d-flex gap-2">
+                <button class="btn btn-primary flex-fill" type="submit">Buscar</button>
+                <a class="btn btn-outline-secondary" href="index.php?accion=listarJuegos" title="Limpiar búsqueda">Limpiar</a>
+            </div>
+        </form>
+
         <div class="mb-3">
             <a href="index.php?accion=formCrearJuego" class="btn btn-success">
                 ➕ Agregar Juego
@@ -27,8 +39,6 @@
             </a>            
         </div>
 
-        <input class="form-control" id="myInput" type="search" placeholder="Buscar juegos..." aria-label="Buscar en los juegos de esta página">
-        <br>
         <div class="table-responsive">
 
                  <table class="table table-striped table-dark">
@@ -115,14 +125,3 @@
 
 
 <?php require __DIR__ . '/../../includes/footer.php'; ?>
-
-<script>
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#myTable tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});
-</script>    

@@ -2,10 +2,10 @@
 if (!function_exists('urlPagina')) {
     function urlPagina($pagina)
     {
-        return '?' . http_build_query([
-            'accion' => 'listarJuegosP',
-            'pagina' => $pagina,
-        ]);
+        $parametros = $_GET;
+        $parametros['accion'] = 'listarJuegosP';
+        $parametros['pagina'] = $pagina;
+        return 'index.php?' . http_build_query($parametros);
     }
 }
 
@@ -21,11 +21,11 @@ if ($totalPaginas <= 1) {
     <ul class="pagination justify-content-center flex-wrap">
 
         <li class="page-item <?= $paginaActual <= 1 ? 'disabled' : '' ?>">
-            <a class="page-link" href="<?= urlPagina(1) ?>">« Primera</a>
+            <a class="page-link" href="<?= htmlspecialchars(urlPagina(1), ENT_QUOTES, 'UTF-8') ?>">« Primera</a>
         </li>
 
         <li class="page-item <?= $paginaActual <= 1 ? 'disabled' : '' ?>">
-            <a class="page-link" href="<?= urlPagina($paginaActual - 1) ?>">Anterior</a>
+            <a class="page-link" href="<?= htmlspecialchars(urlPagina(max(1, $paginaActual - 1)), ENT_QUOTES, 'UTF-8') ?>">Anterior</a>
         </li>
 
         <?php
@@ -40,7 +40,7 @@ if ($totalPaginas <= 1) {
 
         <?php for ($i = $inicio; $i <= $fin; $i++): ?>
             <li class="page-item <?= $i == $paginaActual ? 'active' : '' ?>">
-                <a class="page-link" href="<?= urlPagina($i) ?>"><?= $i ?></a>
+                <a class="page-link" href="<?= htmlspecialchars(urlPagina($i), ENT_QUOTES, 'UTF-8') ?>"><?= $i ?></a>
             </li>
         <?php endfor; ?>
 
@@ -49,11 +49,11 @@ if ($totalPaginas <= 1) {
         <?php endif; ?>
 
         <li class="page-item <?= $paginaActual >= $totalPaginas ? 'disabled' : '' ?>">
-            <a class="page-link" href="<?= urlPagina($paginaActual + 1) ?>">Siguiente</a>
+            <a class="page-link" href="<?= htmlspecialchars(urlPagina(min($totalPaginas, $paginaActual + 1)), ENT_QUOTES, 'UTF-8') ?>">Siguiente</a>
         </li>
 
         <li class="page-item <?= $paginaActual >= $totalPaginas ? 'disabled' : '' ?>">
-            <a class="page-link" href="<?= urlPagina($totalPaginas) ?>">Última »</a>
+            <a class="page-link" href="<?= htmlspecialchars(urlPagina($totalPaginas), ENT_QUOTES, 'UTF-8') ?>">Última »</a>
         </li>
 
     </ul>

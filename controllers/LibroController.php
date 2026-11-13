@@ -6,6 +6,7 @@ function listarCatalogo() {
     $buscar = trim((string) ($_GET['buscar'] ?? ''));
     $campo = 'todos';
     $genero = (string) ($_GET['genero'] ?? '');
+    if ($genero !== 'sin_genero' && $genero !== '' && !ctype_digit($genero)) $genero = '';
     $generos = Libro::listarGeneros($pdo);
     $disponibilidad = (string) ($_GET['disponibilidad'] ?? '');
     if (!in_array($disponibilidad, ['', '1', '0'], true)) $disponibilidad = '';
@@ -26,6 +27,7 @@ function listarLibros() {
     $buscar = trim((string) ($_GET['buscar'] ?? ''));
     $campo = 'todos';
     $genero = (string) ($_GET['genero'] ?? '');
+    if ($genero !== 'sin_genero' && $genero !== '' && !ctype_digit($genero)) $genero = '';
     $generos = Libro::listarGeneros($pdo);
     $disponibilidad = (string) ($_GET['disponibilidad'] ?? '');
     if (!in_array($disponibilidad, ['', '1', '0'], true)) $disponibilidad = '';
@@ -41,6 +43,9 @@ function listarLibros() {
 }
 
 function formCrearLibro() {
+    global $pdo;
+
+    $generos = Libro::listarGeneros($pdo);
     require __DIR__ . '/../views/libros/form.php';
 }
 
@@ -54,22 +59,51 @@ function formEditarLibro() {
         die("El libro no existe.");
     }
 
+    $generos = Libro::listarGeneros($pdo);
     require __DIR__ . '/../views/libros/form.php';
+}
+
+function obtenerGenerosNuevosEnviados(): array {
+    $nuevosGeneros = $_POST['generos_nuevos'] ?? [];
+    if (!is_array($nuevosGeneros)) {
+        throw new InvalidArgumentException('La lista de géneros nuevos no es válida.');
+    }
+    foreach ($nuevosGeneros as $nombre) {
+        if (!is_string($nombre)) {
+            throw new InvalidArgumentException('El nombre de un género nuevo no es válido.');
+        }
+    }
+
+    $nuevoGenero = $_POST['nuevo_genero'] ?? '';
+    if (!is_string($nuevoGenero)) {
+        throw new InvalidArgumentException('El nombre del género nuevo no es válido.');
+    }
+    if (trim($nuevoGenero) !== '') {
+        $nuevosGeneros[] = $nuevoGenero;
+    }
+
+    return $nuevosGeneros;
 }
 
 function crearLibro() {
     global $pdo;
 
+    $generos = Libro::listarGeneros($pdo);
     $titulo  = trim($_POST['titulo'] ?? '');
     $autor   = trim($_POST['autor'] ?? '');
     $anio    = $_POST['anio'] ?? '';
     $paginas = $_POST['paginas'] ?? '';
-    $genero  = trim($_POST['genero'] ?? '');
     $disponible = trim($_POST['disponible'] ?? '');
     $stock   = $_POST['stock'] ?? '';
+    $codigoDewey = $_POST['codigo_dewey'] ?? '';
 
     if ($titulo === '' || $autor === '' || $anio === '' || $paginas === '' || $stock === '') {
         $error = "Todos los campos son obligatorios.";
+        require __DIR__ . '/../views/libros/form.php';
+        return;
+    }
+    if (!is_string($codigoDewey)) {
+        $error = 'El código Dewey no es válido.';
         require __DIR__ . '/../views/libros/form.php';
         return;
     }
@@ -80,9 +114,25 @@ function crearLibro() {
         return;
     }
 
+    try {
+        $generoIds = Libro::normalizarGeneroIds($pdo, $_POST['generos'] ?? []);
+        $nuevosGeneros = Libro::normalizarGenerosNuevos(obtenerGenerosNuevosEnviados());
+        $codigoDewey = Libro::normalizarCodigoDewey($codigoDewey);
+    } catch (InvalidArgumentException $e) {
+        $error = $e->getMessage();
+        require __DIR__ . '/../views/libros/form.php';
+        return;
+    }
+
     $portada = subirPortada();
 
-    Libro::crear($pdo, $titulo, $autor, (int) $anio, (int) $paginas, $genero, $disponible, (int) $stock, $portada);
+    try {
+        Libro::crear($pdo, $titulo, $autor, (int) $anio, (int) $paginas, $generoIds, $disponible, (int) $stock, $portada, $nuevosGeneros, $codigoDewey);
+    } catch (InvalidArgumentException $e) {
+        $error = $e->getMessage();
+        require __DIR__ . '/../views/libros/form.php';
+        return;
+    }
 
     header('Location: index.php?accion=listarLibros');
     exit;
@@ -91,18 +141,25 @@ function crearLibro() {
 function editarLibro() {
     global $pdo;
 
+    $generos = Libro::listarGeneros($pdo);
     $id      = (int) ($_POST['id'] ?? 0);
     $disponible = trim($_POST['disponible'] ?? '');
     $titulo  = trim($_POST['titulo'] ?? '');
     $autor   = trim($_POST['autor'] ?? '');
     $anio    = $_POST['anio'] ?? '';
     $paginas = $_POST['paginas'] ?? '';
-    $genero  = trim($_POST['genero'] ?? '');
     $stock   = $_POST['stock'] ?? '';
+    $codigoDewey = $_POST['codigo_dewey'] ?? '';
 
     if ($titulo === '' || $autor === '' || $anio === '' || $paginas === '' || $stock === '') {
         $libro = Libro::buscarPorId($pdo, $id);
         $error = "Todos los campos son obligatorios.";
+        require __DIR__ . '/../views/libros/form.php';
+        return;
+    }
+    if (!is_string($codigoDewey)) {
+        $libro = Libro::buscarPorId($pdo, $id);
+        $error = 'El código Dewey no es válido.';
         require __DIR__ . '/../views/libros/form.php';
         return;
     }
@@ -117,12 +174,30 @@ function editarLibro() {
         require __DIR__ . '/../views/libros/form.php';
         return;
     }
+    try {
+        $generoIds = Libro::normalizarGeneroIds($pdo, $_POST['generos'] ?? []);
+        $nuevosGeneros = Libro::normalizarGenerosNuevos(obtenerGenerosNuevosEnviados());
+        $codigoDewey = Libro::normalizarCodigoDewey($codigoDewey);
+    } catch (InvalidArgumentException $e) {
+        $libro = $libroActual;
+        $error = $e->getMessage();
+        require __DIR__ . '/../views/libros/form.php';
+        return;
+    }
+
     $portadaNueva = subirPortada();
     if ($portadaNueva === null) {
         $portadaNueva = $libroActual->getPortada();
     }
 
-    Libro::actualizar($pdo, $id, $titulo, $autor, (int) $anio, (int) $paginas, $genero, $disponible, (int) $stock, $portadaNueva);
+    try {
+        Libro::actualizar($pdo, $id, $titulo, $autor, (int) $anio, (int) $paginas, $generoIds, $disponible, (int) $stock, $portadaNueva, $nuevosGeneros, $codigoDewey);
+    } catch (InvalidArgumentException $e) {
+        $libro = $libroActual;
+        $error = $e->getMessage();
+        require __DIR__ . '/../views/libros/form.php';
+        return;
+    }
 
     header('Location: index.php?accion=listarLibros');
     exit;

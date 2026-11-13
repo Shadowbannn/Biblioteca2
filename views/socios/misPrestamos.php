@@ -1,5 +1,13 @@
 <?php
 $esc = static fn($v): string => htmlspecialchars((string) $v, ENT_QUOTES, 'UTF-8');
+$formatDate = static function ($value) use ($esc): string {
+    if (!$value) {
+        return '—';
+    }
+
+    $timestamp = strtotime((string) $value);
+    return $timestamp === false ? $esc($value) : date('d-m-y', $timestamp);
+};
 $activos = ['Prestado', 'Reservado'];
 $totalActivos = 0;
 foreach ($prestamosPorTipo as $lista) {
@@ -15,7 +23,7 @@ foreach ($prestamosPorTipo as $lista) {
     <section class="socio-welcome">
         <div>
             <h1>Mis préstamos</h1>
-            <p class="socio-greeting">Hola, <?= $esc($_SESSION['socio_nombre'] ?? 'socio') ?>. Aquí puedes consultar tus recursos.</p>
+            <p class="socio-greeting">Hola, <?= $esc($_SESSION['socio_nombre'] ?? 'socio') ?>. Aquí puedes consultar tus préstamos.</p>
         </div>
         <div class="socio-summary" aria-label="Cantidad de préstamos activos">
             <span class="socio-summary-icon"><i class="fa-solid fa-book-open" style="color: rgb(255, 255, 255);"></i></i></span>
@@ -24,6 +32,7 @@ foreach ($prestamosPorTipo as $lista) {
     </section>
 
     <?php foreach ($prestamosPorTipo as $tipo => $lista): ?>
+        
         <?php $carpetaImagen = ['Libros' => 'portadas', 'Juegos' => 'juegos', 'Proyectos' => 'Proyectos'][$tipo]; ?>
         <?php $activosTipo = array_values(array_filter($lista, static fn($p) => in_array($p['estado'], $activos, true))); ?>
         <?php $historialTipo = array_values(array_filter($lista, static fn($p) => !in_array($p['estado'], $activos, true))); ?>
@@ -59,7 +68,7 @@ foreach ($prestamosPorTipo as $lista) {
                                  style="max-height:100px;max-width:50px;object-fit:cover">
                                 </td>
                                 <td class="article-name"><?= $esc($p['articulo']) ?></td>
-                                <td><span class="badge rounded-pill <?= $p['estado'] === 'Prestado' ? 'text-bg-primary' : 'text-bg-warning' ?>"><?= $esc($p['estado']) ?></span></td><td><?= $esc($p['fechaPrestamo'] ?: '—') ?></td><td><?= $esc($p['fechaDevolucion'] ?: '—') ?></td></tr><?php endforeach; ?>
+                                <td><span class="badge rounded-pill <?= $p['estado'] === 'Prestado' ? 'text-bg-primary' : 'text-bg-warning' ?>"><?= $esc($p['estado']) ?></span></td><td><?= $formatDate($p['fechaPrestamo']) ?></td><td><?= $formatDate($p['fechaDevolucion']) ?></td></tr><?php endforeach; ?>
                     </tbody></table></div>
                 <?php endif; ?>
             </div>
@@ -69,13 +78,16 @@ foreach ($prestamosPorTipo as $lista) {
                     <p class="socio-empty">Todavía no hay préstamos anteriores.</p>
                 <?php else: ?>
                     <div class="table-responsive"><table class="table table-striped table-dark socio-table align-middle mb-0"><thead><tr><th>Portada</th><th>Artículo</th><th>Estado</th><th>Préstamo</th><th>Devolución</th></tr></thead><tbody>
-                        <?php foreach ($historialTipo as $p): ?><tr><td><img src="<?= $p['imagen'] ? '/carpeta2/uploads/' . rawurlencode($carpetaImagen) . '/' . rawurlencode(basename($p['imagen'])) : '/carpeta2/assets/sin-portada.webp' ?>" alt="Portada de <?= $esc($p['articulo']) ?>" class="portada-prestamo" style="max-height:100px;max-width:50px;object-fit:cover"></td><td class="article-name"><?= $esc($p['articulo']) ?></td><td><span class="badge rounded-pill <?= ['Devuelto' => 'text-bg-success', 'Cancelado' => 'text-bg-danger'][$p['estado']] ?? 'text-bg-secondary' ?>"><?= $esc($p['estado']) ?></span></td><td><?= $esc($p['fechaPrestamo'] ?: '—') ?></td><td><?= $esc($p['fechaDevolucion'] ?: '—') ?></td></tr><?php endforeach; ?>
+                        <?php foreach ($historialTipo as $p): ?><tr><td><img src="<?= $p['imagen'] ? '/carpeta2/uploads/' . rawurlencode($carpetaImagen) . '/' . rawurlencode(basename($p['imagen'])) : '/carpeta2/assets/sin-portada.webp' ?>" alt="Portada de <?= $esc($p['articulo']) ?>" class="portada-prestamo" style="max-height:100px;max-width:50px;object-fit:cover"></td><td class="article-name"><?= $esc($p['articulo']) ?></td><td><span class="badge rounded-pill <?= ['Devuelto' => 'text-bg-success', 'Cancelado' => 'text-bg-danger'][$p['estado']] ?? 'text-bg-secondary' ?>"><?= $esc($p['estado']) ?></span></td><td><?= $formatDate($p['fechaPrestamo']) ?></td><td><?= $formatDate($p['fechaDevolucion']) ?></td></tr><?php endforeach; ?>
                     </tbody></table></div>
                 <?php endif; ?>
             </div>
         </section>
     <?php endforeach; ?>
+    </div>
 </main>
+
+
 
 <?php require __DIR__ . '/../../includes/footer2.php'; ?>
 

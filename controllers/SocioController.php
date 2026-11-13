@@ -55,7 +55,13 @@ function crearSocio() {
         return;
     }
 
-    $foto = subirFoto();
+    try {
+        $foto = subirFoto();
+    } catch (InvalidArgumentException $e) {
+        $error = $e->getMessage();
+        require __DIR__ . '/../views/Socios/form.php';
+        return;
+    }
 
     $passwordHash = $password !== '' ? password_hash($password, PASSWORD_DEFAULT) : null;
     Socio::crear($pdo, $nombre, $clase, $cedula, (string) $telefono, (string) $fecha_registro, $foto, $passwordHash);
@@ -82,7 +88,14 @@ function editarSocio() {
         return;
     }
 
-    $fotoNueva = subirFoto();
+    try {
+        $fotoNueva = subirFoto();
+    } catch (InvalidArgumentException $e) {
+        $socio = Socio::buscarPorId($pdo, $id);
+        $error = $e->getMessage();
+        require __DIR__ . '/../views/Socios/form.php';
+        return;
+    }
     if ($fotoNueva === null) {
         $socioActual = Socio::buscarPorId($pdo, $id);
         $fotoNueva = $socioActual ? $socioActual->getFoto() : null;
@@ -102,10 +115,24 @@ function eliminarSocio() {
 
     $id = (int) ($_GET['id'] ?? 0);
 
+    if (Socio::tienePrestamoActivo($pdo, $id)) {
+        header('Location: index.php?accion=listarSocios&error=prestamo_activo');
+        exit;
+    }
+
     $socio = Socio::buscarPorId($pdo, $id);
     $rutaFoto = __DIR__ . '/../uploads/fotos/';
 
-    Socio::eliminar($pdo, $id);
+    try {
+        Socio::eliminar($pdo, $id);
+    } catch (PDOException $e) {
+        if ($e->getCode() !== '23000') {
+            throw $e;
+        }
+
+        header('Location: index.php?accion=listarSocios&error=prestamos_asociados');
+        exit;
+    }
 
    if ($socio && $socio->getFoto() && file_exists($rutaFoto . $socio->getFoto())) {
         unlink($rutaFoto . $socio->getFoto());
@@ -118,8 +145,24 @@ function eliminarSocio() {
 
 
 function subirFoto(): ?string {
-    if (!isset($_FILES['foto']) || $_FILES['foto']['error'] !== UPLOAD_ERR_OK) {
+    if (!isset($_FILES['foto']) || !is_array($_FILES['foto']) || ($_FILES['foto']['error'] ?? null) === UPLOAD_ERR_NO_FILE) {
         return null;
+    }
+
+    if (($_FILES['foto']['error'] ?? null) !== UPLOAD_ERR_OK) {
+        if (in_array($_FILES['foto']['error'], [UPLOAD_ERR_INI_SIZE, UPLOAD_ERR_FORM_SIZE], true)) {
+            throw new InvalidArgumentException('La foto debe pesar como máximo 5 MB.');
+        }
+        return null;
+    }
+
+    $temporal = $_FILES['foto']['tmp_name'] ?? '';
+    $tamano = is_string($temporal) && is_uploaded_file($temporal) ? filesize($temporal) : false;
+    if ($tamano === false) {
+        return null;
+    }
+    if ($tamano > 5 * 1024 * 1024) {
+        throw new InvalidArgumentException('La foto debe pesar como máximo 5 MB.');
     }
 
     $extensionesPermitidas = ['jpg', 'jpeg', 'png', 'jfif', 'webp', 'gif'];
@@ -132,7 +175,7 @@ function subirFoto(): ?string {
     $nombreArchivo = uniqid('foto_', true) . '.' . $extension;
     $destino = __DIR__ . '/../uploads/fotos/' . $nombreArchivo;
 
-    if (move_uploaded_file($_FILES['foto']['tmp_name'], $destino)) {
+    if (move_uploaded_file($temporal, $destino)) {
         return $nombreArchivo;
     }
 

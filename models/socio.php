@@ -133,7 +133,6 @@ class Socio
         return $socios;
     }
 
-
     public static function buscarPorId(
         PDO $pdo,
         int $id
@@ -233,6 +232,25 @@ class Socio
         ]);
     }
 
+
+    public static function actualizarFoto(PDO $pdo, int $id, string $foto): bool
+    {
+        $stmt = $pdo->prepare("UPDATE socios SET foto = ? WHERE id = ?");
+        return $stmt->execute([$foto, $id]);
+    }
+
+
+ public static function tienePrestamoActivo(PDO $pdo, int $id): bool {
+        $stmt = $pdo->prepare(
+            "SELECT 1
+             FROM prestamos
+             WHERE socioId = ? AND estado IN ('Prestado', 'Reservado')
+             LIMIT 1"
+        );
+        $stmt->execute([$id]);
+
+        return $stmt->fetchColumn() !== false;
+    }
 
  public static function eliminar(PDO $pdo, int $id): bool {
         $stmt = $pdo->prepare("DELETE FROM socios WHERE id = ?");

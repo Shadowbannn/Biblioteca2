@@ -3,20 +3,13 @@
 function listarProyectos() {
     global $pdo;
 
-    $paginaActual = isset($_GET['pagina']) ? (int) $_GET['pagina'] : 1;
-    if ($paginaActual < 1) {
-        $paginaActual = 1;
-    }
-
+    $buscar = trim((string) ($_GET['buscar'] ?? ''));
+    $paginaActual = max(1, (int) ($_GET['pagina'] ?? 1));
     $porPagina = 20;
-    $totalRegistros = Proyecto::contarTotal($pdo);
-    $totalPaginas = (int) ceil($totalRegistros / $porPagina);
-
-    if ($paginaActual > $totalPaginas && $totalPaginas > 0) {
-        $paginaActual = $totalPaginas;
-    }
-
-    $proyectos = Proyecto::listarPaginado($pdo, $paginaActual, $porPagina);
+    $totalRegistros = Proyecto::contarFiltrados($pdo, $buscar);
+    $totalPaginas = max(1, (int) ceil($totalRegistros / $porPagina));
+    $paginaActual = min($paginaActual, $totalPaginas);
+    $proyectos = Proyecto::buscarPaginado($pdo, $paginaActual, $porPagina, $buscar);
 
     require __DIR__ . '/../views/proyectos/verproyecto.php';
 }
@@ -24,20 +17,13 @@ function listarProyectos() {
 function listarProyectosP() {
     global $pdo;
 
-    $paginaActual = isset($_GET['pagina']) ? (int) $_GET['pagina'] : 1;
-    if ($paginaActual < 1) {
-        $paginaActual = 1;
-    }
-
+    $buscar = trim((string) ($_GET['buscar'] ?? ''));
+    $paginaActual = max(1, (int) ($_GET['pagina'] ?? 1));
     $porPagina = 20;
-    $totalRegistros = Proyecto::contarTotal($pdo);
-    $totalPaginas = (int) ceil($totalRegistros / $porPagina);
-
-    if ($paginaActual > $totalPaginas && $totalPaginas > 0) {
-        $paginaActual = $totalPaginas;
-    }
-
-    $proyectos = Proyecto::listarPaginado($pdo, $paginaActual, $porPagina);
+    $totalRegistros = Proyecto::contarFiltrados($pdo, $buscar);
+    $totalPaginas = max(1, (int) ceil($totalRegistros / $porPagina));
+    $paginaActual = min($paginaActual, $totalPaginas);
+    $proyectos = Proyecto::buscarPaginado($pdo, $paginaActual, $porPagina, $buscar);
 
     require __DIR__ . '/../views/proyectos/catalogoproyecto.php';
 }

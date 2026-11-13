@@ -99,6 +99,45 @@ class Juego {
         return $juegos;
     }
 
+    private static function filtroBusqueda(string $buscar): array {
+        if ($buscar === '') {
+            return ['', []];
+        }
+
+        $like = '%' . $buscar . '%';
+        return [
+            ' WHERE nombre LIKE :nombre OR editor LIKE :editor',
+            [':nombre' => $like, ':editor' => $like],
+        ];
+    }
+
+    public static function contarFiltrados(PDO $pdo, string $buscar = ''): int {
+        [$where, $params] = self::filtroBusqueda($buscar);
+        $stmt = $pdo->prepare('SELECT COUNT(*) FROM juegos' . $where);
+        $stmt->execute($params);
+        return (int) $stmt->fetchColumn();
+    }
+
+    public static function buscarPaginado(PDO $pdo, int $pagina, int $porPagina, string $buscar = ''): array {
+        [$where, $params] = self::filtroBusqueda($buscar);
+        $inicio = (max(1, $pagina) - 1) * $porPagina;
+        $stmt = $pdo->prepare(
+            'SELECT * FROM juegos' . $where . ' ORDER BY nombre DESC, id ASC LIMIT :inicio, :cantidad'
+        );
+        foreach ($params as $clave => $valor) {
+            $stmt->bindValue($clave, $valor, PDO::PARAM_STR);
+        }
+        $stmt->bindValue(':inicio', $inicio, PDO::PARAM_INT);
+        $stmt->bindValue(':cantidad', $porPagina, PDO::PARAM_INT);
+        $stmt->execute();
+
+        $juegos = [];
+        foreach ($stmt->fetchAll(PDO::FETCH_ASSOC) as $fila) {
+            $juegos[] = self::desdeFila($fila);
+        }
+        return $juegos;
+    }
+
     public static function buscarPorId(PDO $pdo, int $id): ?Juego {
         $stmt = $pdo->prepare("SELECT * FROM juegos WHERE id = ?");
         $stmt->execute([$id]);

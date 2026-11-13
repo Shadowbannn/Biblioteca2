@@ -3,20 +3,13 @@
 function listarJuegos() {
     global $pdo;
 
-    $paginaActual = isset($_GET['pagina']) ? (int) $_GET['pagina'] : 1;
-    if ($paginaActual < 1) {
-        $paginaActual = 1;
-    }
-
+    $buscar = trim((string) ($_GET['buscar'] ?? ''));
+    $paginaActual = max(1, (int) ($_GET['pagina'] ?? 1));
     $porPagina = 20;
-    $totalRegistros = Juego::contarTotal($pdo);
-    $totalPaginas = (int) ceil($totalRegistros / $porPagina);
-
-    if ($paginaActual > $totalPaginas && $totalPaginas > 0) {
-        $paginaActual = $totalPaginas;
-    }
-
-    $juegos = Juego::listarPaginado($pdo, $paginaActual, $porPagina);
+    $totalRegistros = Juego::contarFiltrados($pdo, $buscar);
+    $totalPaginas = max(1, (int) ceil($totalRegistros / $porPagina));
+    $paginaActual = min($paginaActual, $totalPaginas);
+    $juegos = Juego::buscarPaginado($pdo, $paginaActual, $porPagina, $buscar);
 
     require __DIR__ . '/../views/juegos/verjuegos.php';
 }
@@ -24,20 +17,13 @@ function listarJuegos() {
 function listarJuegosP() {
     global $pdo;
 
-    $paginaActual = isset($_GET['pagina']) ? (int) $_GET['pagina'] : 1;
-    if ($paginaActual < 1) {
-        $paginaActual = 1;
-    }
-
+    $buscar = trim((string) ($_GET['buscar'] ?? ''));
+    $paginaActual = max(1, (int) ($_GET['pagina'] ?? 1));
     $porPagina = 20;
-    $totalRegistros = Juego::contarTotal($pdo);
-    $totalPaginas = (int) ceil($totalRegistros / $porPagina);
-
-    if ($paginaActual > $totalPaginas && $totalPaginas > 0) {
-        $paginaActual = $totalPaginas;
-    }
-
-    $juegos = Juego::listarPaginado($pdo, $paginaActual, $porPagina);
+    $totalRegistros = Juego::contarFiltrados($pdo, $buscar);
+    $totalPaginas = max(1, (int) ceil($totalRegistros / $porPagina));
+    $paginaActual = min($paginaActual, $totalPaginas);
+    $juegos = Juego::buscarPaginado($pdo, $paginaActual, $porPagina, $buscar);
 
     require __DIR__ . '/../views/juegos/catalogojuegos.php';
 }

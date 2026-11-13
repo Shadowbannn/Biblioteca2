@@ -46,7 +46,7 @@ body.usuario-form-page {
 .usuario-form-heading p { margin: 0; color: #aeb7c1; font-size: 13px; }
 .usuario-form .alert { border-radius: 11px; font-size: 13px; }
 
-.usuario-foto-field { margin-bottom: 24px; padding: 14px; display: flex; align-items: center; gap: 15px; border: 1px solid rgba(255,255,255,.1); border-radius: 14px; background: rgba(255,255,255,.045); }
+.usuario-foto-field { margin-bottom: 24px; padding: 14px; display: flex; align-items: center; gap: 15px; border: 1px solid rgba(255,255,255,.1); border-radius: 14px; background: #757575bd; }
 .usuario-foto-preview { width: 64px; height: 64px; flex: 0 0 64px; overflow: hidden; display: grid; place-items: center; border: 2px solid rgba(255,255,255,.18); border-radius: 50%; background: #2d3845; color: #ffffff; font-size: 22px; }
 .usuario-foto-preview img { width: 100%; height: 100%; object-fit: cover; }
 .usuario-foto-control { min-width: 0; flex: 1; }
@@ -55,13 +55,24 @@ body.usuario-form-page {
 .usuario-foto-control .form-control { padding: 7px 10px; border: 1px solid #46515d; border-radius: 9px; background: #242d37; color: #dce3e9; font-size: 11px; }
 .usuario-foto-control .form-control::file-selector-button { margin: -7px 10px -7px -10px; padding: 9px 11px; border: 0; border-right: 1px solid #46515d; background: #303b47; color: #fff; }
 .usuario-foto-control small, .usuario-field > small { margin-top: 6px; display: block; color: #94a0ad; font-size: 10px; }
+.usuario-cropper { margin: 0 0 16px; padding: 14px; display: flex; align-items: center; gap: 16px; border: 1px solid rgba(255,255,255,.1); border-radius: 14px; background: rgba(25,33,42,.72); }
+.usuario-cropper[hidden] { display: none; }
+.usuario-cropper-preview { width: 150px; height: 150px; flex: 0 0 150px; overflow: hidden; border: 2px solid rgba(255,255,255,.22); border-radius: 50%; background: #202a35; }
+.usuario-cropper-preview canvas { display: block; width: 100%; height: 100%; border-radius: 50%; clip-path: circle(50%); touch-action: none; cursor: grab; }
+.usuario-cropper-preview canvas:active { cursor: grabbing; }
+.usuario-cropper-controls { min-width: 0; flex: 1; }
+.usuario-cropper-controls label { display: block; margin-bottom: 8px; color: #fff !important; font-size: 12px; font-weight: 700; }
+.usuario-cropper-controls input { width: 100%; accent-color: #3183a2; }
+.usuario-cropper-controls small, .usuario-foto-status { color: #fff !important; font-size: 11px; }
+.usuario-foto-status { min-height: 0; margin: 0; }
+.usuario-foto-status:not(:empty) { margin: 0 0 12px; }
 
 .usuario-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 16px; }
 .usuario-field { min-width: 0; margin-bottom: 15px; }
 .usuario-field-wide { grid-column: 1 / -1; }
 .usuario-field .input-container { margin: 0; }
 .usuario-field .input-container i { z-index: 1; left: 15px; color: #98a6b4; font-size: 14px; }
-.usuario-field .input-container input { min-height: 47px; padding: 11px 14px 11px 42px; border: 1px solid #3f4b58; border-radius: 10px; background: #29292903; color: #f3f6f8; font-size: 13px; }
+.usuario-field .input-container input { min-height: 47px; padding: 11px 14px 11px 42px; border: 1px solid #3f4b58; border-radius: 10px; background: #757575bd; color: #f3f6f8; font-size: 13px; }
 .usuario-field .input-container input::placeholder { color: #8e9aa7; opacity: 1; }
 .usuario-field .input-container input:focus { border-color: #79a8bc; background: #293541; box-shadow: 0 0 0 3px rgba(121,168,188,.16); transform: none; }
 .usuario-form .btn-ingresar { margin-top: 8px; padding: 13px 18px; border-radius: 10px; background: #276b88; font-size: 13px; letter-spacing: .03em; }
@@ -89,4 +100,6 @@ body.usuario-form-page {
     .usuario-form-content { padding: 24px 20px 30px; }
     .usuario-form-grid { grid-template-columns: 1fr; gap: 0; }
     .usuario-field-wide { grid-column: auto; }
+    .usuario-cropper { align-items: center; flex-direction: column; }
+    .usuario-cropper-controls { width: 100%; }
 }

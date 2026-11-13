@@ -29,10 +29,7 @@
         <h2>Privacidad</h2>
         <p>La información ingresada se utiliza para administrar las cuentas y solicitudes del servicio. Para consultas sobre tus datos, comunícate con la biblioteca mediante los canales publicados en el sitio.</p>
     </section>
-    <section id="reembolsos">
-        <h2>Reembolsos</h2>
-        <p>Este sitio permite gestionar recursos y solicitudes de biblioteca; no ofrece compras ni pagos en línea. Si tienes una consulta sobre un cobro relacionado con la biblioteca, comunícate directamente con ella.</p>
-    </section>
+
     <section id="cookies">
         <h2>Preferencias de cookies</h2>
         <p>El sistema puede utilizar cookies técnicas para mantener la sesión iniciada. Puedes administrar o borrar las cookies desde la configuración de tu navegador; al bloquearlas, algunas funciones que requieren iniciar sesión podrían dejar de estar disponibles.</p>

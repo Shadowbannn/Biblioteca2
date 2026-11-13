@@ -59,6 +59,13 @@ class SolicitudJuego
         return $stmt->fetchColumn() !== false;
     }
 
+    public static function eliminarAceptada(PDO $pdo, int $id): bool
+    {
+        $stmt = $pdo->prepare("DELETE FROM solicitudes_juegos WHERE id = ? AND estado = 'aceptada'");
+        $stmt->execute([$id]);
+        return $stmt->rowCount() === 1;
+    }
+
     public static function revisar(PDO $pdo, int $id, string $estado, int $usuarioId): bool
     {
         if (!in_array($estado, ['aceptada', 'rechazada'], true)) {
