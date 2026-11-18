@@ -53,6 +53,7 @@ $esAdmin = usuarioTieneRol('Admin');
 
 // Acciones accesibles sin iniciar sesión
 $accionesPublicas = ['formLogin', 'login', 'formLoginSocio', 'loginSocio',
+                    'formRegistroSocio', 'registrarSocio',
                     'listarCatalogo', 'listarJuegosP', 'listarProyectosP', 
                     'formSolicitudLibro', 'guardarSolicitudLibro', 'formSolicitudJuego', 'guardarSolicitudJuego', 'formSolicitudProyecto', 'guardarSolicitudProyecto'];
 
@@ -141,6 +142,12 @@ switch ($accion) {
         break;
     case 'loginSocio':
         loginSocio();
+        break;
+    case 'formRegistroSocio':
+        formRegistroSocio();
+        break;
+    case 'registrarSocio':
+        registrarSocio();
         break;
     case 'misPrestamos':
         misPrestamos();

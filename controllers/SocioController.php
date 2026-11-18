@@ -25,6 +25,106 @@ function formCrearSocio() {
     require __DIR__ . '/../views/Socios/form.php';
 }
 
+function formRegistroSocio() {
+    $_SESSION['registro_socio_csrf'] ??= bin2hex(random_bytes(32));
+    require __DIR__ . '/../views/socios/registro.php';
+}
+
+function registrarSocio() {
+    global $pdo;
+
+    $csrf = $_POST['csrf'] ?? null;
+    $csrfEsperado = $_SESSION['registro_socio_csrf'] ?? null;
+    if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST'
+        || !is_string($csrf)
+        || !is_string($csrfEsperado)
+        || !hash_equals($csrfEsperado, $csrf)) {
+        $error = 'La solicitud no es válida. Completa nuevamente el formulario.';
+        $_SESSION['registro_socio_csrf'] = bin2hex(random_bytes(32));
+        require __DIR__ . '/../views/socios/registro.php';
+        return;
+    }
+
+    $nombre = trim(is_string($_POST['nombre'] ?? null) ? $_POST['nombre'] : '');
+    $clase = trim(is_string($_POST['clase'] ?? null) ? $_POST['clase'] : '');
+    $cedula = trim(is_string($_POST['cedula'] ?? null) ? $_POST['cedula'] : '');
+    $telefono = trim(is_string($_POST['telefono'] ?? null) ? $_POST['telefono'] : '');
+    $password = is_string($_POST['password'] ?? null) ? $_POST['password'] : '';
+    $confirmacion = is_string($_POST['confirmacion'] ?? null) ? $_POST['confirmacion'] : '';
+    $excedeLongitud = static function (string $valor, int $maximo): bool {
+        $longitud = preg_match_all('/./us', $valor);
+        return $longitud === false || $longitud > $maximo;
+    };
+
+    if ($nombre === '' || $clase === '' || $cedula === '' || $telefono === ''
+        || $password === '' || $confirmacion === '') {
+        $error = 'Todos los campos son obligatorios.';
+    } elseif ($excedeLongitud($nombre, 100) || $excedeLongitud($clase, 50)
+        || $excedeLongitud($cedula, 20) || $excedeLongitud($telefono, 20)) {
+        $error = 'Revisa la longitud de los datos ingresados.';
+    } elseif (strlen($password) < 8 || strlen($password) > 72) {
+        $error = 'La contraseña debe tener entre 8 y 72 caracteres.';
+    } elseif ($password !== $confirmacion) {
+        $error = 'La confirmación de contraseña no coincide.';
+    } elseif (Socio::buscarPorCedula($pdo, $cedula)) {
+        $error = 'Ya existe una cuenta registrada con esa cédula.';
+    }
+
+    if (isset($error)) {
+        require __DIR__ . '/../views/socios/registro.php';
+        return;
+    }
+
+    try {
+        $foto = subirFotoSocio();
+    } catch (InvalidArgumentException $e) {
+        $error = $e->getMessage();
+        require __DIR__ . '/../views/socios/registro.php';
+        return;
+    }
+
+    try {
+        $creado = Socio::crear(
+            $pdo,
+            $nombre,
+            $clase,
+            $cedula,
+            $telefono,
+            date('Y-m-d'),
+            $foto,
+            password_hash($password, PASSWORD_DEFAULT)
+        );
+    } catch (Throwable $e) {
+        if ($foto !== null) {
+            $rutaFoto = __DIR__ . '/../uploads/fotos/' . basename($foto);
+            if (is_file($rutaFoto) && !unlink($rutaFoto)) {
+                throw new RuntimeException('No se pudo limpiar la foto después de un error al guardar.', 0, $e);
+            }
+        }
+        if ($e instanceof PDOException && $e->getCode() === '23000') {
+            $error = 'Ya existe una cuenta registrada con esa cédula.';
+            require __DIR__ . '/../views/socios/registro.php';
+            return;
+        }
+        throw $e;
+    }
+
+    if (!$creado) {
+        if ($foto !== null) {
+            $rutaFoto = __DIR__ . '/../uploads/fotos/' . basename($foto);
+            if (is_file($rutaFoto) && !unlink($rutaFoto)) {
+                throw new RuntimeException('No se pudo limpiar la foto después de un error al guardar.');
+            }
+        }
+        throw new RuntimeException('No se pudo completar el registro del socio.');
+    }
+
+    unset($_SESSION['registro_socio_csrf']);
+    $_SESSION['mensaje_registro_socio'] = 'Tu cuenta fue creada. Ya puedes iniciar sesión.';
+    header('Location: index.php?accion=formLoginSocio');
+    exit;
+}
+
 function formEditarSocio() {
     global $pdo;
 

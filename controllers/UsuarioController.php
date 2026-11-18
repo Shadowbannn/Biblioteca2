@@ -59,6 +59,8 @@ function formLoginSocio() {
         header('Location: index.php?accion=inicio');
         exit;
     }
+    $mensajeRegistroSocio = $_SESSION['mensaje_registro_socio'] ?? null;
+    unset($_SESSION['mensaje_registro_socio']);
     require __DIR__ . '/../views/usuarios/loginSocio.php';
 }
 
@@ -81,7 +83,7 @@ function loginSocio() {
     unset($_SESSION['usuario_id'], $_SESSION['usuario']);
     $_SESSION['socio_id'] = (int) $socio['id'];
     $_SESSION['socio_nombre'] = $socio['nombre'];
-    header('Location: index.php?accion=Inicio');
+    header('Location: index.php?accion=inicio');
     exit;
 }
 

@@ -105,6 +105,10 @@ body {
     margin-bottom: 40px;
 }
 
+.login-right .registro-socio-prompt {
+    color: #fff;
+}
+
 /* =========================================
    3. CAMPOS DE TEXTO (INPUTS)
    ========================================= */

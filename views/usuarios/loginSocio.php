@@ -20,6 +20,7 @@
         <div class="login-right">
             <h1>Acceso de socio</h1>
             <?php if (!empty($error)): ?><div class="alert alert-danger"><?= htmlspecialchars($error, ENT_QUOTES, 'UTF-8') ?></div><?php endif; ?>
+            <?php if (!empty($mensajeRegistroSocio)): ?><div class="alert alert-success"><?= htmlspecialchars($mensajeRegistroSocio, ENT_QUOTES, 'UTF-8') ?></div><?php endif; ?>
             <form method="POST" action="index.php?accion=loginSocio">
                 <div class="input-container">
                     <i class="fa-solid fa-id-card"></i>
@@ -32,6 +33,7 @@
                 <button type="submit" class="btn-ingresar">INGRESAR</button>
             </form>
             <br>
+            <p class="registro-socio-prompt">¿Todavía no eres socio? <a href="index.php?accion=formRegistroSocio">Regístrate</a></p>
             <div class="create-account"><a href="index.php?accion=formLogin"><i class="fa-solid fa-school"></i><i class="fa-solid fa-arrow-right"></i></a></div>
         </div>
     </div>

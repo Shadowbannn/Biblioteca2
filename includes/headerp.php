@@ -42,7 +42,8 @@
             </li>
 
                 <?php else: ?>
-                    <li><a class="btn btn-sm btn-dark ms-lg-2" href="index.php?accion=formLogin"><i class="bi bi-person-circle me-1"></i>Ingresar</a></li>
+                    <li><a class="btn btn-sm btn-dark ms-lg-2" href="index.php?accion=formLoginSocio"><i class="bi bi-person-circle me-1"></i>Ingresar</a></li>
+                    <li><a class="btn btn-sm btn-dark ms-lg-2" href="index.php?accion=formRegistroSocio">Registrarme</a></li>
                 <?php endif; ?>
             </ul>
 </nav>
